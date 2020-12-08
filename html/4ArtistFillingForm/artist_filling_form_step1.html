@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="../../css/4ArtistFillingForm/artist_filling_form_step1_desktop.css" />
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../../css/4ArtistFillingForm/artist_filling_form_step1_tablet.css" /> 
+
+    
+    <title>Форма заявки для артиста 3 шаг 1</title>
+</head>
+
+<body>
+    <header>
+        <img src="../../images/logo.png" alt="KleverCRM" />
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="cover"><img src="../../images/cover.png" alt="Обложка"></div>
+            <div class="text">
+                <div class="h2">
+                    Уважаемый артист!
+                </div>
+                <p>Для загрузки Вашего трека на цифровые площадки (iTunes, VK, Boom, YouTube music, Apple Music,
+                    Spotify, Deezer, Google Play, Яндекс.Музыка) требуется заполнить форму ниже. ВАЖНО! Ф.И.О.
+                    заполняется полностью, без сокращений.
+                </p>
+            </div>
+        </div>
+    </main>
+    <div class="request">
+        <ul class="steps">
+            <li>1. Основная информ.</li>
+            <li>2. Дополнительная информ.</li>
+            <li>3. Текст песни</li>
+            <li>4. Развернутое описание</li>
+            <li>5. Социальные сети</li>
+            <li>6. Персональная информ.</li>
+        </ul>
+        <div class="progress-bar">
+            <div class="passed"></div>
+            <div class="left"></div>
+        </div>
+
+        <div class="wrapper">
+            <div class="h3">Основная информация о треке</div>
+
+            <form action="get">
+
+                <div class="field">
+                    <label for="nickname">Никнейм <span class="red-dot"><sup>&#8226;</sup></span><span class="question" tooltip="Ваш псевдоним">?</span></label>
+                    <input type="text" id="nickname" name="nickname-field" required>
+                </div>
+
+                <div class="field">
+                    <label for="track">Название трека <span class="red-dot"><sup>&#8226;</sup></span></label>
+                    <input type="text" id="track" name="track-field" required>
+                </div>
+
+                <div class="field">
+                    <label for="track_url">Ссылка на трек 
+                        <span class="red-dot"><sup>&#8226;</sup></span>
+                        <span class="question" tooltip="Ссылка на файлообменник для загрузки
+                        трека в формате .wav">?</span>
+                    </label>
+                    <input type="text" id="track_url" name="trackurl-field" required>
+                </div>
+
+                <div class="field">
+                    <label for="cover_url">Ссылка на обложку<span class="question" tooltip="Ссылка на файлообменник для загрузки
+                         обложки трека в формате .png">?</span></label>
+                    <input type="text" id="cover_url" name="coverurl-field">
+                </div>
+
+
+
+            </form>
+        </div>
+        <div class="request-bottom">
+            <div class="empty"></div>
+            <div class="pages">1 / 6</div>
+            <a href="#" class="next-step"><img src="../../images/arrow_to_right.png" alt = 'Следующий шаг'/><p>
+                Следующий
+            </p>   </a>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">© 2020 KleverCrm - Ivan Kostyashov</div>
+    </footer>
+</body>
+
+</html>
