@@ -16,7 +16,6 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: 1px solid #EBEFF2;
     width: 100%;
     height: 60px;
     display: flex;
@@ -25,6 +24,7 @@ header {
     padding-left: 26px;
     background-color: white;
     margin-top: 0;
+    border-bottom: 1px solid #EBEFF2;
 }
 
 .hamburger-menu,
@@ -32,45 +32,16 @@ header {
     display: none;
 }
 
-main .wrapper {
-    width: 95%;
-    margin: 0 auto 30px auto;
-    display: flex;
-    padding-top: 90px;
-}
-
-.cover-mobile {
-    display: none;
-}
-
-main .cover img {
-    display: block;
-}
-
-.h2 {
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-    font-weight: 600;
-}
-
-main .text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 26px;
-}
-
-main .text p {
-    margin: 13px 0 0 0;
-    line-height: 1.375rem;
-}
-
 .request {
     width: 100%;
     background-color: #fff;
     box-shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
+    padding-top: 0;
+    border-radius: 0;
+    margin-top: 60px;
 }
 
-.steps-mobile {
+.request .steps-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -114,17 +85,18 @@ main .text p {
 }
 
 .progress-bar .passed {
-    width: calc(100%/6);
+    width: calc(100%/6*2);
     content: '';
     background: linear-gradient(270deg, #C0E8FF 0%, #D1FFD5 100%);
 }
 
 .request {
     padding-bottom: 36px;
+    box-shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
 }
 
 .request .wrapper {
-    width: 60%;
+    width: 80%;
     margin: 34px auto 0 auto;
 }
 
@@ -138,18 +110,35 @@ main .text p {
 
 form {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 form .field {
     display: flex;
     flex-direction: column;
-    margin-bottom: 26px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
-.field:first-child,
-.field:nth-child(2) {
-    margin-bottom: 30px;
+form .small-fields {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+form .small-fields .field:first-child {
+    width: 100%;
+    margin-right: 24px;
+}
+
+form .field.seconds {
+    width: 100%;
+}
+
+form .field.seconds input {
+    width: 30%;
 }
 
 .request label {
@@ -158,11 +147,6 @@ form .field {
     line-height: 0.875rem;
     text-transform: uppercase;
     margin-bottom: 6px;
-}
-
-.red-dot {
-    color: red;
-    font-weight: 900;
 }
 
 .question {
@@ -226,19 +210,56 @@ form .field {
     padding-left: 22px;
 }
 
+.request input::placeholder {
+    color: #B1BDBD;
+}
+
 .request input:active,
 .request input:focus {
     border: 1px solid #21BAA8;
     outline: none;
     border-radius: 12px;
-    box-sizing: content-box;
 }
 
 .request-bottom {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px auto 0 auto;
+    width: 90%;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 }
 
 .request-bottom-mobile {
+    display: none;
+}
+
+.step {
+    width: 200px;
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1A1A1A;
+}
+
+.step p {
+    margin-right: 42px;
+    font-weight: 500;
+}
+
+.step.prev {
+    background: #F7FAFB;
+}
+
+.step.next {
+    background: linear-gradient(270deg, #C0E8FF 0%, #D1FFD5 100%);
+}
+
+.pages {
     display: none;
 }
 
