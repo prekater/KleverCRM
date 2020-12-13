@@ -147,14 +147,10 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 70px auto 0 auto;
+    margin: 45px auto 0 auto;
     width: 90%;
     font-size: 0.875rem;
     line-height: 1.25rem;
-}
-
-.request-bottom-mobile {
-    display: none;
 }
 
 .step {

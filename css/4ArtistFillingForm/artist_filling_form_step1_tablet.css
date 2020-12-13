@@ -147,9 +147,8 @@ form .field {
     margin-bottom: 26px;
 }
 
-.field:first-child,
-.field:nth-child(2) {
-    margin-bottom: 30px;
+.field:last-child {
+    margin-bottom: 0px;
 }
 
 .request label {
@@ -239,7 +238,34 @@ form .field {
 }
 
 .request-bottom-mobile {
-    display: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    margin-top: 45px;
+}
+
+.next-step {
+    width: 200px;
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(270deg, #C0E8FF 0%, #D1FFD5 100%);
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1A1A1A;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.next-step img {
+    margin-left: 22px;
+}
+
+.next-step p {
+    margin-right: 42px;
+    font-weight: 500;
 }
 
 .copyright {

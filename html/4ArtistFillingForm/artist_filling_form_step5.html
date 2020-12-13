@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/normalize.css" />
 
-    <link rel="stylesheet" media="screen and (min-width: 992px)" href="../../css/4ArtistFillingForm/artist_filling_form_step3_desktop.css" />
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="../../css/4ArtistFillingForm/artist_filling_form_step5_desktop.css" />
 
 
-    <link rel="stylesheet" media="screen and (max-width: 991.9px)" href="../../css/4ArtistFillingForm/artist_filling_form_step3_tablet.css" />
+    <link rel="stylesheet" media="screen and (max-width: 991.9px)" href="../../css/4ArtistFillingForm/artist_filling_form_step5_tablet.css" />
 
-    <link rel="stylesheet" media="screen and (max-width: 575.9px)" href="../../css/4ArtistFillingForm/artist_filling_form_step3_mobile.css" />
+    <link rel="stylesheet" media="screen and (max-width: 575.9px)" href="../../css/4ArtistFillingForm/artist_filling_form_step5_mobile.css" />
 
 
-    <title>Форма заявки для артиста, шаг 3</title>
+    <title>Форма заявки для артиста, шаг 5</title>
 </head>
 
 <body>
@@ -79,35 +79,46 @@
             <div class="left"></div>
         </div>
         <div class="steps-mobile">
-            <div class="pages-mobile">3 / 6</div>
-            <a href="#" class="next-step-tablet">Шаг 4 - Развернутое описание <img
+            <div class="pages-mobile">5 / 6</div>
+            <a href="#" class="next-step-tablet">Шаг 6 - Персональная информация<img
                     src="../../images/arrow_to_right_green.png" alt="Следующий шаг" /></a>
-            <a href="#" class="next-step-mobile">4. Развернутое описание <img
-                    src="../../images/arrow_to_right_green.png" alt="Следующий шаг" /></a>
+            <a href="#" class="next-step-mobile">6. Персональная инф. <img src="../../images/arrow_to_right_green.png"
+                    alt="Следующий шаг" /></a>
         </div>
         <div class="wrapper">
-            <div class="h3">Текст песни</div>
+            <div class="h3">Социальные сети</div>
 
             <form action="get">
-                <textarea name="song-text-field" id="song_text" cols="130" rows="10"></textarea>
-                <!-- <textarea name="song-text-field" id="song_text" cols="50" rows="10" class="small-textarea"></textarea> -->
 
-                <label for="song_text">
-                    <p>
-                        Припев должен отделяться от куплета однострочным интервалом.
-                    </p>
-                    <p>
-                        Не включайте текст, который не слышен, такой как: заголовки разделов или имя вокалиста.
-                        Например: не включайте заголовки разделов, такие как Intro, Verse, Chorus, Hook, Outro и тп.
-                    </p>
-                    <p>
-                        Начните каждую строку с заглавной буквы.
-                    </p>
-                    <p>
-                        Не используйте точки или запятые в конце строки или раздела.
-                    </p>
-                </label>
+                <div class="field">
+                    <label for="insta">Ссылка на Instagram артиста</label>
+                    <input type="text" id="insta_artist" name="insta-artist-field" placeholder="instagram.com/nickname/">
+                </div>
 
+                <div class="field">
+                    <label for="insta_second">Ссылка на Instagram второго исполнителя (при наличии)</label>
+                    <input type="text" id="insta_second" name="insta-second-field" placeholder="instagram.com/nickname/">
+                </div>
+
+                <div class="field">
+                    <label for="vk">Ссылка на паблик VK артиста</label>
+                    <input type="text" id="vk" name="vk-field" placeholder="vk.com/nickname">
+                </div>
+
+                <div class="field">
+                    <label for="web">Ссылка на сайт артиста (при наличии)</label>
+                    <input type="text" id="web" name="web-field" placeholder="artist.ru">
+                </div>
+
+                <div class="field">
+                    <label for="apple">Ссылка на карточку музыканта на площадке Apple (Apple ID)</label>
+                    <input type="text" id="apple" name="apple-field" placeholder="nickname@yandex.ru">
+                </div>
+
+                <div class="field">
+                    <label for="spotify">Ссылка на карточку музыканта на площадке Spotify</label>
+                    <input type="text" id="spotify" name="spotify-field" placeholder="nickname@yandex.ru">
+                </div>
 
             </form>
         </div>
@@ -117,7 +128,7 @@
                     Предыдущий
                 </p>
             </a>
-            <div class="pages">3 / 6</div>
+            <div class="pages">5 / 6</div>
             <a href="#" class="step next"><img src="../../images/arrow_to_right.png" alt='Следующий шаг' />
                 <p>
                     Следующий

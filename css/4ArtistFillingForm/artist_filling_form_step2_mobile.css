@@ -278,6 +278,7 @@ form .small-fields .field:nth-child(2) {
 
 form .field.seconds {
     width: 100%;
+    margin-bottom: 0;
 }
 
 form .field.seconds input {
@@ -373,19 +374,15 @@ form .field.seconds input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 70px auto 0 auto;
+    margin: 25px auto 0 auto;
     width: 90%;
     font-size: 0.8125rem;
     line-height: 1rem;
 }
 
-.request-bottom-mobile {
-    display: none;
-}
-
 .step {
     width: 138px;
-    height: 52px;
+    height: 36px;
     display: flex;
     justify-content: space-around;
     align-items: center;

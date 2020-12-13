@@ -85,7 +85,7 @@ header {
 }
 
 .progress-bar .passed {
-    width: calc(100%/6*4);
+    width: calc(100%/6*5);
     content: '';
     background: linear-gradient(270deg, #C0E8FF 0%, #D1FFD5 100%);
 }
@@ -104,65 +104,86 @@ header {
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.625rem;
-    margin: 20px auto 7px auto;
+    margin-bottom: 26px;
     text-align: center;
-}
-
-.h3 .desktop {
-    display: none;
 }
 
 form {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .field {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .request label {
     color: #768989;
-    font-size: 0.8125rem;
-    line-height: 1rem;
+    font-size: 0.6875rem;
+    line-height: 0.875rem;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    position: relative;
 }
 
-.request textarea {
+.request input {
     background-color: #F3F8FA;
     border-radius: 12px;
+    height: 52px;
     border: 1px solid transparent;
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 500;
     box-sizing: content-box;
-    padding: 10px 22px 10px 22px;
-    height: 410px;
-    width: 100%;
+    padding-left: 22px;
 }
 
-.request textarea::placeholder {
+.request label:after {
+    position: absolute;
+    content: " ";
+    width: 25px;
+    height: 25px;
+    z-index: 10;
+    top: 35px;
+    left: 90%;
+    background-image: url('../../images/socials/insta.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.request label[for=insta_second]:after {
+    background-image: url('../../images/socials/insta.png');
+}
+
+.request label[for=vk]:after {
+    background-image: url('../../images/socials/vk.png');
+}
+
+.request label[for=web]:after {
+    background-image: url('../../images/socials/web.png');
+}
+
+.request label[for=apple]:after {
+    background-image: url('../../images/socials/apple.png');
+}
+
+.request label[for=spotify]:after {
+    background-image: url('../../images/socials/spotify.png');
+}
+
+.request input::placeholder {
     color: #B1BDBD;
 }
 
-.request textarea:active,
-.request textarea:focus {
+.request input:active,
+.request input:focus {
     border: 1px solid #21BAA8;
     outline: none;
     border-radius: 12px;
-}
-
-.request p {
-    color: #1A1A1A;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
-.request .example p {
-    color: #768989;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    margin-top: 35px;
 }
 
 .request-bottom {
@@ -173,10 +194,6 @@ form {
     width: 90%;
     font-size: 0.875rem;
     line-height: 1.25rem;
-}
-
-.request-bottom-mobile {
-    display: none;
 }
 
 .step {
@@ -190,14 +207,9 @@ form {
     color: #1A1A1A;
 }
 
-.step img {
-    margin-left: 22px;
-}
-
-.request .request-bottom .step p {
+.step p {
     margin-right: 42px;
     font-weight: 500;
-    width: auto;
 }
 
 .step.prev {
