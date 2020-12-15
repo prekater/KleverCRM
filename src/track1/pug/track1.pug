@@ -1,0 +1,15 @@
+//-
+//- Верстка данного трека должна быть реализована в файле ../html/track1.html
+//- Файлы *.pug предназначены для компиляции итоговых файлов треков.
+//-
+//- The markyp of this track should be implemented in ../html/track1.html
+//- *.pug files are only for compilation of outcome track files
+//-
+
+extends ../../common/pug/_wrapper
+
+block trackContent
+    | <style>
+    include ../../../css/track1.css
+    | </style>
+    include ../html/track1.html
