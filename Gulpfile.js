@@ -1,12 +1,10 @@
 const pug          = require('gulp-pug');
 const gulp         = require('gulp');
-const rename       = require('gulp-rename');
 const scss         = require('gulp-sass');
 const include      = require('gulp-file-include');
 const browserSync  = require('browser-sync').create();
+const rename       = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
-const cssBase64    = require('gulp-base64');
-const htmlBase64   = require('gulp-base64-inline');
 const gcmq         = require('gulp-group-css-media-queries');
 
 gulp.task('pug', () => {
@@ -15,6 +13,13 @@ gulp.task('pug', () => {
         .pipe(include({
             prefix: '@@',
             basepath: '@file'
+        }))
+        .pipe(rename((p) => {
+          return {
+            dirname: '',
+            basename: p.basename,
+            extname: p.extname
+          };
         }))
         .pipe(gulp.dest('./build'));
 });
@@ -25,6 +30,13 @@ gulp.task('scss', () => {
         .pipe(gcmq())
         .pipe(autoprefixer({
             cascade: false
+        }))
+        .pipe(rename((p) => {
+            return {
+                dirname: '',
+                basename: p.basename,
+                extname: p.extname
+            };
         }))
         .pipe(gulp.dest('./css'));
 });
@@ -38,7 +50,9 @@ gulp.task('browser', (cb) => {
         },
         files: [
             'build/*.html'
-        ]
+        ],
+      open: false,
+      notify: false
     });
     cb();
 });
@@ -51,4 +65,4 @@ gulp.task('watch', (cb) => {
     cb();
 });
 
-gulp.task('default', gulp.series('scss', 'pug', 'browser'));
+gulp.task('default', gulp.series('scss', 'pug', 'watch', 'browser'));

@@ -9,7 +9,5 @@
 extends ../../common/pug/_wrapper
 
 block trackContent
-    | <style>
-    include ../../../css/track1.css
-    | </style>
+    link(rel='stylesheet', href='../css/track1.css')
     include ../html/track1.html

@@ -4,7 +4,7 @@
   "description": "Templates klever CRM",
   "main": "index.js",
   "scripts": {
-    "start": "gulp && gulp watch"
+    "start": "gulp"
   },
   "keywords": [
     "markup",
@@ -16,11 +16,9 @@
   "author": "kleverCRM",
   "license": "MIT",
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-base64": "^0.1.3",
-    "gulp-base64-inline": "^1.0.6",
     "gulp-file-include": "^2.2.2",
     "gulp-include": "^2.4.1",
     "gulp-pug": "^4.0.1",
