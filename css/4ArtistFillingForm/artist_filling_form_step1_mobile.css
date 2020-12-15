@@ -25,6 +25,7 @@ header {
     background-color: white;
     margin-top: 0;
     border-bottom: 1px solid #EBEFF2;
+    z-index: 100;
 }
 
 .logo {
@@ -321,7 +322,7 @@ form .field {
 
 .red-dot {
     position: relative;
-    z-index: 1;
+    /*z-index: 1;*/
     color: red;
     font-weight: 900;
 }
@@ -338,7 +339,7 @@ form .field {
     width: 14px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1;
+    /*z-index: 1;*/
 }
 
 .question:hover::after {
