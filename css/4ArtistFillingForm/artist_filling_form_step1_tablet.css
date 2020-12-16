@@ -213,6 +213,10 @@ form .field {
     z-index: 1;
 }
 
+.popup__overlay {
+    display: none;
+}
+
 .request input {
     background-color: #F3F8FA;
     border-radius: 12px;

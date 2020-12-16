@@ -120,29 +120,18 @@ form .field {
     margin-bottom: 30px;
 }
 
-form .small-fields {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 48%;
-    margin-bottom: 30px;
-}
-
-form .small-fields .field:first-child {
-    width: 50%;
-    margin-right: 24px;
-}
-
-form .field.seconds input {
-    width: 30%;
-}
-
 .request label {
     color: #768989;
     font-size: 0.6875rem;
     line-height: 0.875rem;
     text-transform: uppercase;
     margin-bottom: 6px;
+}
+
+.input-wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .request input {
@@ -157,36 +146,35 @@ form .field.seconds input {
     padding-left: 22px;
 }
 
-.request label:after {
+.input-wrapper:after {
     position: absolute;
     content: " ";
     width: 25px;
     height: 25px;
-    z-index: 10;
-    top: 35px;
-    left: 90%;
+    right: 16px;
+    bottom: 16px;
     background-image: url('../../images/socials/insta.png');
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.request label[for=insta_second]:after {
+.request label[for=insta_second]+.input-wrapper:after {
     background-image: url('../../images/socials/insta.png');
 }
 
-.request label[for=vk]:after {
+.request label[for=vk]+.input-wrapper:after {
     background-image: url('../../images/socials/vk.png');
 }
 
-.request label[for=web]:after {
+.request label[for=web]+.input-wrapper:after {
     background-image: url('../../images/socials/web.png');
 }
 
-.request label[for=apple]:after {
+.request label[for=apple]+.input-wrapper:after {
     background-image: url('../../images/socials/apple.png');
 }
 
-.request label[for=spotify]:after {
+.request label[for=spotify]+.input-wrapper:after {
     background-image: url('../../images/socials/spotify.png');
 }
 
