@@ -343,38 +343,67 @@ form .field {
 }
 
 .question:hover::after {
-    width: 290px;
-    height: 50px;
-    position: absolute;
-    top: -16px;
-    left: 25px;
-    content: attr(tooltip);
-    display: flex;
-    text-align: left;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 0.8125rem;
-    line-height: 1rem;
-    font-weight: normal;
-    text-transform: none;
-    color: #000;
-    background-color: white;
-    border-radius: 12px;
-    filter: drop-shadow(0px 4px 15px rgba(54, 88, 103, 0.1));
-    pointer-events: none;
-    padding-left: 20px;
-    box-shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
+    display: none;
 }
 
 .question:hover::before {
+    display: none;
+}
+
+.popup__overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    text-align: center
+}
+
+
+/* Added for IE<9 compatibility */
+
+.popup__overlay_ie {
+    background: #000;
+    opacity: .7;
+    filter: alpha(opacity=70)
+}
+
+.popup {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 12px 12px 0px 0px;
+    outline: 0;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.popup__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup__close {
+    color: #768989;
     position: absolute;
-    left: 15px;
-    top: 3px;
-    content: '';
-    border-top: 5px solid transparent;
-    border-right: 10px solid white;
-    border-bottom: 5px solid transparent;
-    z-index: 1;
+    top: 14px;
+    right: 17px;
+    font-size: 2rem;
+    font-weight: 700;
+    opacity: .5;
+    text-decoration: none;
+}
+
+.popup__close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
 }
 
 .request input {

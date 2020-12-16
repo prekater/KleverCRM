@@ -11,6 +11,7 @@
     <link rel="stylesheet" media="screen and (max-width: 991.9px)" href="../../css/4ArtistFillingForm/artist_filling_form_step1_tablet.css" />
 
     <link rel="stylesheet" media="screen and (max-width: 575.9px)" href="../../css/4ArtistFillingForm/artist_filling_form_step1_mobile.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 
     <title>Форма заявки для артиста, шаг 1</title>
 </head>
@@ -112,19 +113,26 @@
                 <div class="field">
                     <label for="track_url">Ссылка на трек
                         <span class="red-dot"><sup>&#8226;</sup></span>
-                        <span class="question" tooltip="Ссылка на файлообменник для загрузки
-                        трека в формате .wav">?</span>
+                        <span class="question" tooltip="Ссылка на файлообменник для загрузки трека в формате .wav">?</span>
                     </label>
                     <input type="text" id="track_url" name="trackurl-field" required>
                 </div>
 
                 <div class="field">
-                    <label for="cover_url">Ссылка на обложку<span class="question" tooltip="Ссылка на файлообменник для загрузки
-                         обложки трека в формате .png">?</span></label>
+                    <label for="cover_url">Ссылка на обложку<span class="question" tooltip="Ссылка на файлообменник для загрузки обложки трека в формате .png">?</span></label>
                     <input type="text" id="cover_url" name="coverurl-field">
                 </div>
 
+                <div class="popup__overlay">
+                    <div class="popup">
 
+
+                        <a href="#close" title="Close" class="popup__close">×</a>
+
+                        <div class="popup__content">tyutyutyu</div>
+
+                    </div>
+                </div>
 
             </form>
         </div>
@@ -147,6 +155,7 @@
     <footer>
         <div class="copyright">© 2020 KleverCrm - Ivan Kostyashov</div>
     </footer>
+    <script src="../../script/4ArtistFillingForm/openModal.js"></script>
 </body>
 
 </html>
