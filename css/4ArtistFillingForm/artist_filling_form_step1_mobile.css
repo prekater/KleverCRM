@@ -286,6 +286,7 @@ main .text p {
 .request .wrapper {
     width: 90%;
     margin: 17px auto 0 auto;
+    position: relative;
 }
 
 .h3 {
@@ -424,6 +425,20 @@ form .field {
     outline: none;
     border-radius: 12px;
     box-sizing: content-box;
+}
+
+.warning {
+    display: none;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    position: absolute;
+    color: #F75B46;
+    border: 1px solid #F75B46;
+    border-radius: 12px;
+    bottom: -35px;
+    left: 0;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 }
 
 .request-bottom {

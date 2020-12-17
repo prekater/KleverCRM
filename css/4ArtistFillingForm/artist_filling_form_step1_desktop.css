@@ -122,6 +122,7 @@ main .text p {
 .request .wrapper {
     width: 80%;
     margin: 34px auto 0 auto;
+    position: relative;
 }
 
 .h3 {
@@ -226,11 +227,25 @@ form .field {
     padding-left: 22px;
 }
 
-.request input:active,
-.request input:focus {
+input:active,
+input:focus {
     border: 1px solid #21BAA8;
     outline: none;
     border-radius: 12px;
+}
+
+.warning {
+    display: none;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    position: absolute;
+    color: #F75B46;
+    border: 1px solid #F75B46;
+    border-radius: 12px;
+    bottom: -40px;
+    left: 20%;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 }
 
 .request-bottom {
