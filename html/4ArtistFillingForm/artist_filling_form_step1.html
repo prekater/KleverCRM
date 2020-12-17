@@ -5,15 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/normalize.css" />
-
     <link rel="stylesheet" media="screen and (min-width: 992px)" href="../../css/4ArtistFillingForm/artist_filling_form_step1_desktop.css" />
-
     <link rel="stylesheet" media="screen and (max-width: 991.9px)" href="../../css/4ArtistFillingForm/artist_filling_form_step1_tablet.css" />
-
     <link rel="stylesheet" media="screen and (max-width: 575.9px)" href="../../css/4ArtistFillingForm/artist_filling_form_step1_mobile.css" />
-
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-
     <title>Форма заявки для артиста, шаг 1</title>
 </head>
 
@@ -68,8 +63,6 @@
             <div class="cover"><img src="../../images/cover.png" alt="Обложка"></div>
             <div class="cover-mobile"><img src="../../images/cover84.png" alt="Обложка"></div>
             <div class="text">
-
-
                 <div class="h2">
                     Уважаемый артист!
                 </div>
@@ -98,7 +91,6 @@
         </div>
         <div class="wrapper">
             <div class="h3">Основная информация о треке</div>
-
             <form action="get">
 
                 <div class="field">
@@ -126,12 +118,8 @@
 
                 <div class="popup__overlay">
                     <div class="popup">
-
-
                         <a href="#close" title="Close" class="popup__close">×</a>
-
                         <div class="popup__content"></div>
-
                     </div>
                 </div>
 
@@ -140,14 +128,14 @@
         <div class="request-bottom">
             <div class="empty"></div>
             <div class="pages">1 / 6</div>
-            <a href="artist_filling_form_step2.html" class="next-step" title='Следующий шаг' onClick='submit()'><img src="../../images/arrow_to_right.png" alt='Следующий шаг' />
+            <a href="#nickname" class="next-step" title='Следующий шаг' onClick='submit()'><img src="../../images/arrow_to_right.png" alt='Следующий шаг' />
                 <p>
                     Следующий
                 </p>
             </a>
         </div>
         <div class="request-bottom-mobile">
-            <a href="#" class="next-step" onClick='submit()'>
+            <a href="#nickname" class="next-step">
                 <img src="../../images/arrow_to_right.png" alt='Следующий шаг' />
                 <p> Следующий</p>
             </a>
@@ -157,6 +145,8 @@
         <div class="copyright">© 2020 KleverCrm - Ivan Kostyashov</div>
     </footer>
     <script src="../../script/4ArtistFillingForm/openModal.js"></script>
+    <script src="../../script/4ArtistFillingForm/fieldsCheck.js"></script>
+
 </body>
 
 </html>

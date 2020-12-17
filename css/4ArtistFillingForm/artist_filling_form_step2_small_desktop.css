@@ -163,8 +163,8 @@
      width: 290px;
      height: 50px;
      position: absolute;
-     top: -16px;
-     left: 25px;
+     top: -60px;
+     right: -90px;
      content: attr(tooltip);
      display: flex;
      text-align: left;
@@ -185,13 +185,17 @@
  
  .question:hover::before {
      position: absolute;
-     left: 15px;
-     top: 3px;
+     left: 2px;
+     top: -10px;
      content: '';
-     border-top: 5px solid transparent;
-     border-right: 10px solid white;
-     border-bottom: 5px solid transparent;
+     border-right: 5px solid transparent;
+     border-top: 10px solid white;
      z-index: 1;
+     border-left: 5px solid transparent;
+ }
+ 
+ .popup__overlay {
+     display: none;
  }
  
  .request input {

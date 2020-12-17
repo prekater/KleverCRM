@@ -115,6 +115,7 @@ form .field {
     flex-direction: column;
     width: 48%;
     margin-bottom: 30px;
+    position: relative;
 }
 
 form .small-fields {
@@ -159,8 +160,8 @@ form .field.seconds input {
     width: 290px;
     height: 50px;
     position: absolute;
-    top: -16px;
-    left: 25px;
+    top: -60px;
+    right: -90px;
     content: attr(tooltip);
     display: flex;
     text-align: left;
@@ -181,16 +182,20 @@ form .field.seconds input {
 
 .question:hover::before {
     position: absolute;
-    left: 15px;
-    top: 3px;
+    left: 2px;
+    top: -10px;
     content: '';
-    border-top: 5px solid transparent;
-    border-right: 10px solid white;
-    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid white;
     z-index: 1;
+    border-left: 5px solid transparent;
 }
 
-.request input {
+.popup__overlay {
+    display: none;
+}
+
+input {
     background-color: #F3F8FA;
     border-radius: 12px;
     height: 52px;
@@ -200,17 +205,33 @@ form .field.seconds input {
     font-weight: 500;
     box-sizing: content-box;
     padding-left: 22px;
+    color: #1A1A1A;
+}
+
+input:active,
+input:focus {
+    border: 1px solid #21BAA8;
+    outline: none;
+    border-radius: 12px;
+}
+
+input.invalid,
+input.invalid:focus,
+input.invalid:active {
+    border: 1px solid #F75B46;
+    color: #F75B46;
+    position: relative;
 }
 
 .request input::placeholder {
     color: #B1BDBD;
 }
 
-.request input:active,
-.request input:focus {
-    border: 1px solid #21BAA8;
-    outline: none;
-    border-radius: 12px;
+.error {
+    display: none;
+    position: absolute;
+    color: #F75B46;
+    top: 75px;
 }
 
 .request-bottom {
