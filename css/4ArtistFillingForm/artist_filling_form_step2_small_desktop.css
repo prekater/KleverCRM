@@ -25,6 +25,7 @@
      background-color: white;
      margin-top: 0;
      border-bottom: 1px solid #EBEFF2;
+     z-index: 100;
  }
  
  .hamburger-menu,
@@ -115,6 +116,7 @@
      flex-direction: column;
      width: 48%;
      margin-bottom: 30px;
+     position: relative;
  }
  
  form .small-fields {
@@ -214,11 +216,49 @@
      color: #B1BDBD;
  }
  
- .request input:active,
- .request input:focus {
+ input:active,
+ input:focus {
      border: 1px solid #21BAA8;
      outline: none;
      border-radius: 12px;
+ }
+ 
+ input.invalid,
+ input.invalid:focus,
+ input.invalid:active {
+     border: 1px solid #F75B46;
+     color: #F75B46;
+     position: relative;
+ }
+ 
+ .error-author,
+ .error-singer,
+ .error-arranger,
+ .error-composer,
+ .error-genre,
+ .error-date {
+     display: none;
+     position: absolute;
+     color: #F75B46;
+     top: 75px;
+ }
+ 
+ .input-wrapper {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .input-wrapper:after {
+     position: absolute;
+     content: " ";
+     width: 25px;
+     height: 25px;
+     right: 16px;
+     bottom: 16px;
+     background-image: url('../../images/calendar.png');
+     background-repeat: no-repeat;
+     background-position: center;
  }
  
  .request-bottom {
@@ -241,6 +281,14 @@
      border-radius: 12px;
      text-decoration: none;
      color: #1A1A1A;
+     border: 1px solid #fff;
+ }
+ 
+ .step:focus,
+ .step:active {
+     border: 1px solid #21BAA8;
+     border-radius: 12px;
+     outline: none;
  }
  
  .step p {

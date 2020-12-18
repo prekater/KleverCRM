@@ -228,11 +228,6 @@ header {
     box-shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
 }
 
-.request .wrapper {
-    width: 90%;
-    margin: 17px auto 0 auto;
-}
-
 .h3 {
     font-weight: bold;
     font-size: 0.875rem;
@@ -251,6 +246,11 @@ form .field {
     flex-direction: column;
     /* border: 1px solid #000; */
     margin-bottom: 5px;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 17px auto 0 auto;
 }
 
 .request label {
@@ -324,7 +324,14 @@ form .field {
     align-items: center;
     border-radius: 12px;
     text-decoration: none;
-    color: #1A1A1A;
+    border: 1px solid #fff;
+}
+
+.step:focus,
+.step:active {
+    border: 1px solid #21BAA8;
+    border-radius: 12px;
+    outline: none;
 }
 
 .step p {
@@ -347,6 +354,18 @@ form .field {
 
 .step.send p {
     margin: auto;
+}
+
+button {
+    border: 0px;
+    outline: none;
+}
+
+button:focus,
+button:active {
+    border: 1px solid #21BAA8;
+    border-radius: 12px;
+    outline: none;
 }
 
 .pages {

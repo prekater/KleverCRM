@@ -85,40 +85,40 @@
             <a href="#" class="next-step-mobile">6. Персональная инф. <img src="../../images/arrow_to_right_green.png"
                     alt="Следующий шаг" /></a>
         </div>
-        <div class="wrapper">
-            <div class="h3">Персональная информация</div>
 
-            <form action="get">
 
+        <form action="get">
+
+            <div class="wrapper">
+                <div class="h3">Персональная информация</div>
                 <div class="field">
                     <label for="email">Ваш e-mail</label>
                     <input type="text" id="email" name="email-field">
+                    <div class="error"></div>
                 </div>
                 <div class="field">
                     <label for="bank_info"> Ваши банковские реквизиты</label>
                     <textarea name="bank-info-field" id="bank_info" rows="5"></textarea>
                 </div>
+            </div>
 
+            <div class="request-bottom">
+                <a href="#" class="step prev"><img src="../../images/arrow_to_left.png" alt='Предыдущий шаг' />
+                    <p>
+                        Предыдущий
+                    </p>
+                </a>
+                <div class="pages">6 / 6</div>
 
-            </form>
-        </div>
-        <div class="request-bottom">
-            <a href="#" class="step prev"><img src="../../images/arrow_to_left.png" alt='Предыдущий шаг' />
-                <p>
-                    Предыдущий
-                </p>
-            </a>
-            <div class="pages">6 / 6</div>
-            <a href="#" class="step send">
-                <p>
-                    Отправить заявку
-                </p>
-            </a>
-        </div>
+                <button type="submit" class="step send">Отправить заявку</button>
+            </div>
+
+        </form>
     </div>
     <footer>
         <div class="copyright">© 2020 KleverCrm - Ivan Kostyashov</div>
     </footer>
+    <script src='../../script/4ArtistFillingForm/validateFieldsStep6.js'></script>
 </body>
 
 </html>

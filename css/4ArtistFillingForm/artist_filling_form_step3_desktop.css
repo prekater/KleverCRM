@@ -165,6 +165,14 @@ form {
     border-radius: 12px;
     text-decoration: none;
     color: #1A1A1A;
+    border: 1px solid #fff;
+}
+
+.step:focus,
+.step:active {
+    border: 1px solid #21BAA8;
+    border-radius: 12px;
+    outline: none;
 }
 
 .step p {

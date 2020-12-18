@@ -92,18 +92,6 @@ header {
     padding-bottom: 36px;
 }
 
-.request .wrapper {
-    width: 80%;
-    margin: 34px auto 0 auto;
-}
-
-.h3 {
-    font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-    margin-bottom: 26px;
-}
-
 form {
     display: flex;
     flex-wrap: wrap;
@@ -116,9 +104,22 @@ form .field {
     flex-direction: column;
     width: 50%;
     margin-bottom: 30px;
+    position: relative;
 }
 
-.request label {
+.wrapper {
+    width: 80%;
+    margin: 34px auto 0 auto;
+}
+
+.h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    margin-bottom: 26px;
+}
+
+label {
     color: #768989;
     font-size: 0.6875rem;
     line-height: 0.875rem;
@@ -127,7 +128,7 @@ form .field {
     position: relative;
 }
 
-.request input {
+input {
     background-color: #F3F8FA;
     border-radius: 12px;
     height: 52px;
@@ -137,6 +138,28 @@ form .field {
     font-weight: 500;
     box-sizing: content-box;
     padding-left: 22px;
+}
+
+input:active,
+input:focus {
+    border: 1px solid #21BAA8;
+    outline: none;
+    border-radius: 12px;
+}
+
+input.invalid,
+input.invalid:focus,
+input.invalid:active {
+    border: 1px solid #F75B46;
+    color: #F75B46;
+    position: relative;
+}
+
+.error {
+    display: none;
+    position: absolute;
+    color: #F75B46;
+    top: 75px;
 }
 
 .request textarea {
@@ -192,6 +215,14 @@ form .field {
     border-radius: 12px;
     text-decoration: none;
     color: #1A1A1A;
+    border: 1px solid #fff;
+}
+
+.step:focus,
+.step:active {
+    border: 1px solid #21BAA8;
+    border-radius: 12px;
+    outline: none;
 }
 
 .step p {
@@ -209,6 +240,18 @@ form .field {
 
 .step.send p {
     margin: auto;
+}
+
+button {
+    border: 0px;
+    outline: none;
+}
+
+button:focus,
+button:active {
+    border: 1px solid #21BAA8;
+    border-radius: 12px;
+    outline: none;
 }
 
 .pages {

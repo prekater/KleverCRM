@@ -96,7 +96,7 @@ header {
 }
 
 .request .wrapper {
-    width: 80%;
+    width: 70%;
     margin: 34px auto 0 auto;
 }
 
@@ -119,6 +119,7 @@ form .field {
     flex-direction: column;
     width: 100%;
     margin-bottom: 30px;
+    position: relative;
 }
 
 form .small-fields {
@@ -129,8 +130,11 @@ form .small-fields {
 }
 
 form .small-fields .field:first-child {
-    width: 100%;
-    margin-right: 24px;
+    width: 65%;
+}
+
+form .small-fields .field:last-child {
+    width: 35%;
 }
 
 form .field.seconds {
@@ -218,11 +222,53 @@ form .field.seconds input {
     color: #B1BDBD;
 }
 
-.request input:active,
-.request input:focus {
+input:active,
+input:focus {
     border: 1px solid #21BAA8;
     outline: none;
     border-radius: 12px;
+}
+
+input.invalid,
+input.invalid:focus,
+input.invalid:active {
+    border: 1px solid #F75B46;
+    color: #F75B46;
+    position: relative;
+}
+
+.request input::placeholder {
+    color: #B1BDBD;
+}
+
+.error-author,
+.error-singer,
+.error-arranger,
+.error-composer,
+.error-genre,
+.error-date {
+    display: none;
+    position: absolute;
+    color: #F75B46;
+    top: 75px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper:after {
+    position: absolute;
+    content: " ";
+    width: 25px;
+    height: 25px;
+    right: 16px;
+    bottom: 16px;
+    background-image: url('../../images/calendar.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .request-bottom {
@@ -244,6 +290,14 @@ form .field.seconds input {
     border-radius: 12px;
     text-decoration: none;
     color: #1A1A1A;
+    border: 1px solid #fff;
+}
+
+.step:focus,
+.step:active {
+    border: 1px solid #21BAA8;
+    border-radius: 12px;
+    outline: none;
 }
 
 .step p {

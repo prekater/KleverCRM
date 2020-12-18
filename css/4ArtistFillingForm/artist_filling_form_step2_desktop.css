@@ -121,12 +121,11 @@ form .field {
 form .small-fields {
     display: flex;
     flex-wrap: nowrap;
-    width: 48%;
+    width: 47%;
     margin-bottom: 30px;
 }
 
 form .small-fields .field:first-child {
-    width: 50%;
     margin-right: 24px;
 }
 
@@ -227,11 +226,34 @@ input.invalid:active {
     color: #B1BDBD;
 }
 
-.error {
+.error-author,
+.error-singer,
+.error-arranger,
+.error-composer,
+.error-genre,
+.error-date {
     display: none;
     position: absolute;
     color: #F75B46;
     top: 75px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper:after {
+    position: absolute;
+    content: " ";
+    width: 25px;
+    height: 25px;
+    right: 16px;
+    bottom: 16px;
+    background-image: url('../../images/calendar.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .request-bottom {
@@ -254,6 +276,14 @@ input.invalid:active {
     border-radius: 12px;
     text-decoration: none;
     color: #1A1A1A;
+    border: 1px solid #fff;
+}
+
+.step:focus,
+.step:active {
+    border: 1px solid #21BAA8;
+    border-radius: 12px;
+    outline: none;
 }
 
 .step p {

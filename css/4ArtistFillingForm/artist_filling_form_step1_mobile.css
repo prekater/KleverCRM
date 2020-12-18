@@ -466,6 +466,13 @@ form .field {
     line-height: 1.25rem;
 }
 
+.next-step:focus,
+.next-step:active {
+    border: 1px solid #21BAA8;
+    border-radius: 12px;
+    outline: none;
+}
+
 .next-step img {
     margin-left: 22px;
 }

@@ -261,7 +261,6 @@ form .field {
     justify-content: flex-end;
     align-items: center;
     padding-right: 20px;
-    margin-top: 45px;
 }
 
 .next-step {
@@ -278,6 +277,13 @@ form .field {
     line-height: 1.25rem;
 }
 
+.next-step:focus,
+.next-step:active {
+    border: 1px solid #21BAA8;
+    border-radius: 12px;
+    outline: none;
+}
+
 .next-step img {
     margin-left: 22px;
 }
@@ -285,6 +291,21 @@ form .field {
 .next-step p {
     margin-right: 42px;
     font-weight: 500;
+}
+
+.request-bottom-mobile .next-step {
+    width: 138px;
+    height: 36px;
+    font-size: 0.8125rem;
+    line-height: 1rem;
+}
+
+.request-bottom-mobile .next-step img {
+    margin-right: 10px;
+}
+
+.request-bottom-mobile .next-step p {
+    margin-right: 17px;
 }
 
 .copyright {

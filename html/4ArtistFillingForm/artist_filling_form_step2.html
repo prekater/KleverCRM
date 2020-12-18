@@ -95,31 +95,41 @@
                 <div class="field">
                     <label for="text_author">Автор слов</label>
                     <input type="text" id="text_author" name="text-author-field" placeholder="ФИО">
-                    <div class="error"></div>
-
+                    <div class="error-author"></div>
                 </div>
+
                 <div class="field">
                     <label for="singer">Исполнитель</label>
                     <input type="text" id="singer" name="singer-field" placeholder="ФИО">
+                    <div class="error-singer"></div>
                 </div>
 
                 <div class="field">
                     <label for="arranger">Аранжировщик</label>
                     <input type="text" id="arranger" name="arranger-field" placeholder="ФИО">
+                    <div class="error-arranger"></div>
                 </div>
 
                 <div class="field">
                     <label for="composer">Композитор</label>
                     <input type="text" id="composer" name="composer-field" placeholder="ФИО">
+                    <div class="error-composer"></div>
                 </div>
+
                 <div class="small-fields">
                     <div class="field">
                         <label for="genre">Жанр вашей песни</label>
                         <input type="text" id="genre" name="genre-field">
+                        <div class="error-genre"></div>
+
                     </div>
                     <div class="field">
                         <label for="date">Дата релиза</label>
-                        <input type="date" id="date" name="date-field">
+                        <div class="input-wrapper">
+                            <input type="text" id="date" name="date-field" placeholder="дд.мм.гггг">
+                        </div>
+                        <div class="error-date"></div>
+
                     </div>
                 </div>
                 <div class="field seconds">
