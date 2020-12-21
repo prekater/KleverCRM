@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,UAAU,CAAC;EACP,QAAQ,EAAE,KAAK;EACf,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,MAAM;EAClB,KAAK,ECDI,OAAO;EDEhB,MAAM,EAAE,mBAAmB;ECsB3B,SAAS,EAAE,SAAS;EACpB,WAAW,EAAE,QAAQ;EACrB,WAAW,EAAE,MAAM;CDtBtB",
+    "sources": [
+        "../../scss/4ArtistFillingForm/footer.scss",
+        "../../scss/4ArtistFillingForm/_variables.scss"
+    ],
+    "names": [],
+    "file": "footer.css"
+}

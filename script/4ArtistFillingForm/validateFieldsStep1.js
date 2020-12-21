@@ -60,6 +60,7 @@ btn.onclick = function() {
         document.location.href = "artist_filling_form_step2.html";
     } else {
         warning.style.display = 'block';
+        warning.classList.add('field');
     }
 }
 btnMobile.onclick = function() {
@@ -67,6 +68,7 @@ btnMobile.onclick = function() {
         document.location.href = "artist_filling_form_step2.html";
     } else {
         warning.style.display = 'block';
+        warning.classList.add('field');
 
     }
 }

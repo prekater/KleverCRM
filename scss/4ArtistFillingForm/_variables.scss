@@ -1,0 +1,73 @@
+$black: #1A1A1A;
+$green: #21BAA8;
+$red: #E2432D;
+$main-gradient: linear-gradient(270deg, #C0E8FF 0%, #D1FFD5 100%);
+$white: #ffffff;
+$light-gray: #B1BDBD;
+$dark-gray: #768989;
+$main-bg: #F7FAFB;
+$input-bg: #F3F8FA;
+$line: #EBEFF2;
+@mixin fontSize24 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-weight: 600;
+}
+
+@mixin fontSize12 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: normal;
+}
+
+@mixin fontSize20 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+}
+
+@mixin fontSize11 {
+    font-size: 0.6875rem;
+    line-height: 0.875rem;
+    font-weight: normal;
+}
+
+@mixin fontSize14 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+@mixin fontSize13 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+    font-weight: normal;
+}
+
+@mixin fontSize18 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+@mixin input {
+    background-color: #F3F8FA;
+    border-radius: 12px;
+    height: 52px;
+    border: 1px solid transparent;
+    box-sizing: content-box;
+    padding-left: 22px;
+}
+
+@mixin flexCenter ($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin focusBlock {
+    border: 1px solid #21BAA8;
+    outline: none;
+    border-radius: 12px;
+}
