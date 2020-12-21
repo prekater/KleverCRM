@@ -1,30 +1,38 @@
+let pageStep6 = document.getElementById('step6');
 let email = document.getElementById('email');
-let error = document.querySelector('.error');
-let btn = document.querySelector('button');
-let form = document.querySelector('form');
+let errorEmail = document.querySelector('.error-email');
+let formStep6 = document.getElementById('step6_form');
 
 let checkEmail = function() {
-    for (let char of email.value) {
-        if (!(email.value.includes('@') && email.value.includes('.'))) {
-            email.classList.add('invalid');
-            error.style.display = 'block';
-            error.innerHTML = 'Пожалуйста, введите e-mail в формате qwe@asd.zxc';
-            return false;
-        } else {
-            return true;
+    if ((email.value == null) || (email.value == "") || (email.value == undefined)) {
+        return true;
+    } else {
+        for (let char of email.value) {
+            if (!(email.value.includes('@') && email.value.includes('.'))) {
+                email.classList.add('invalid');
+                errorEmail.style.display = 'block';
+                errorEmail.innerHTML = 'Пожалуйста, введите e-mail в формате qwe@asd.zxc';
+                window.scrollTo(0, 0);
+                return false;
+            } else {
+                return true;
+            }
         }
     }
+
 }
-form.onsubmit = function(evt) {
+formStep6.onsubmit = function(evt) {
     evt.preventDefault();
     checkEmail();
     if (checkEmail()) {
-        form.submit();
+        formStep6.submit();
+        step6.style.display = 'none';
+        finish.style.display = 'block';
     }
 }
 email.oninput = function() {
     if (this.classList.contains('invalid')) {
         this.classList.remove('invalid');
-        error.style.display = 'none';
+        errorEmail.style.display = 'none';
     }
 }

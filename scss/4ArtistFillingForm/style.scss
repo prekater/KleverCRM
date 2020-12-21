@@ -465,6 +465,7 @@
         
         form#step1_form {
             .field {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 width: 48%;
@@ -639,7 +640,9 @@
                     margin-bottom: 27px;
                 }
                 &:last-child {
-                    margin-bottom: 0;
+                    @media (max-width: 991.9px) {
+                        margin-bottom: 0;
+                    }
                 }
             }
             label {
@@ -701,9 +704,7 @@
                 @media (max-width: 991.9px) {
                     width: 100%;
                 }
-                @media (max-width: 575.9px) {
-                    margin-bottom: 5px;
-                }
+                @media (max-width: 575.9px) {}
                 &:last-child {
                     @media (max-width: 991.9px) {
                         margin-bottom: 280px;
@@ -851,27 +852,28 @@
             }
         }
         
+        .error-nickname,
+        .error-track,
+        .error-track-url,
         .error-author,
         .error-singer,
         .error-arranger,
         .error-composer,
         .error-genre,
-        .error-date {
+        .error-date,
+        .error-email {
+            margin-top: 3px;
             display: none;
             position: absolute;
             color: #F75B46;
             top: 75px;
-            @media (max-wodth: 575.9px) {
+            @include fontSize12();
+            @media (max-width: 575.9px) {
+                top: 75px;
+                margin-top: 1px;
                 font-size: 0.7rem;
-                line-height: 0.9rem;
+                line-height: 0.8rem;
             }
-        }
-        
-        .error {
-            display: none;
-            position: absolute;
-            color: #F75B46;
-            top: 75px;
         }
         
         .warning {
@@ -1061,8 +1063,8 @@
             }
         }
         
-        main,
-        .request#step1,
+        //main,
+        // .request#step1,
         .request#step2,
         .request#step3,
         .request#step4,

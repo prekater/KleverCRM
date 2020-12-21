@@ -95,11 +95,13 @@
                 <div class="field">
                     <label for="nickname">Никнейм <span class="red-dot"><sup>&#8226;</sup></span><span class="question" tooltip="Ваш псевдоним">?</span></label>
                     <input type="text" id="nickname" name="nickname-field" required>
+                    <div class="error-nickname">Пожалуйста, заполните это поле</div>
                 </div>
 
                 <div class="field">
                     <label for="track">Название трека <span class="red-dot"><sup>&#8226;</sup></span></label>
                     <input type="text" id="track" name="track-field" required>
+                    <div class="error-track">Пожалуйста, заполните это поле</div>
                 </div>
 
                 <div class="field">
@@ -108,6 +110,7 @@
                         <span class="question" tooltip="Ссылка на файлообменник для загрузки трека в формате .wav">?</span>
                     </label>
                     <input type="text" id="track_url" name="trackurl-field" required>
+                    <div class="error-track-url">Пожалуйста, заполните это поле</div>
                 </div>
 
                 <div class="field">
@@ -123,20 +126,20 @@
                 </div>
 
             </form>
-            <div class="warning">Пожалуйста, заполните обязательные поля (отмечены красной точкой)</div>
+            <!-- <div class="warning">Пожалуйста, заполните обязательные поля (отмечены красной точкой)</div> -->
         </div>
 
         <div class="request-bottom">
             <div class="empty"></div>
             <div class="pages">1 / 6</div>
-            <a href="#nickname" class="next-step" title='Следующий шаг' onClick='submit()'><img src="../../images/arrow_to_right.svg" alt='Следующий шаг' />
+            <a href="#" class="next-step" title='Следующий шаг'><img src="../../images/arrow_to_right.svg" alt='Следующий шаг' />
                 <p>
                     Следующий
                 </p>
             </a>
         </div>
         <div class="request-bottom-mobile">
-            <a href="#nickname" class="next-step">
+            <a href="#" class="next-step">
                 <img src="../../images/arrow_to_right.svg" alt='Следующий шаг' />
                 <p> Следующий</p>
             </a>
@@ -219,7 +222,7 @@
             </form>
         </div>
         <div class="request-bottom">
-            <a href="#" class="step prev"><img src="../../images/arrow_to_left.svg" alt='Предыдущий шаг' />
+            <a href="#step1" class="step prev"><img src="../../images/arrow_to_left.svg" alt='Предыдущий шаг' />
                 <p>
                     Предыдущий
                 </p>
@@ -440,14 +443,14 @@
         </div>
 
 
-        <form action="get" id="step6_form">
+        <form id="step6_form">
 
             <div class="wrapper">
                 <div class="h3">Персональная информация</div>
                 <div class="field">
                     <label for="email">Ваш e-mail</label>
                     <input type="text" id="email" name="email-field">
-                    <div class="error"></div>
+                    <div class="error-email"></div>
                 </div>
                 <div class="field">
                     <label for="bank_info"> Ваши банковские реквизиты</label>
@@ -477,10 +480,13 @@
     <footer>
         <div class="copyright ">© 2020 KleverCrm - Ivan Kostyashov</div>
     </footer>
-    <!-- <script src="../../script/4ArtistFillingForm/openModal.js "></script>
+    <script src="../../script/4ArtistFillingForm/openModal.js "></script>
     <script src="../../script/4ArtistFillingForm/validateFieldsStep1.js "></script>
-    <script src="../../script/4ArtistFillingForm/validateFieldsStep2.js "></script> -->
+    <script src="../../script/4ArtistFillingForm/validateFieldsStep2.js "></script>
+    <script src="../../script/4ArtistFillingForm/validateFieldsStep6.js "></script>
+    <script src="../../script/4ArtistFillingForm/nextStep.js "></script>
 
+    <script src="../../script/4ArtistFillingForm/prevStep.js "></script>
 
 </body>
 

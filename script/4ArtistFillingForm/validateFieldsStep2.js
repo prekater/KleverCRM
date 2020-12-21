@@ -16,71 +16,138 @@ let errorGenre = document.querySelector('.error-genre');
 let date = document.getElementById('date');
 let errorDate = document.querySelector('.error-date');
 
-let btn = document.querySelector('.next');
+let btnStep2 = document.querySelector('.next');
 let form = document.querySelector('form');
 
+let page2Step1 = document.getElementById('step1');
+let page2Step2 = document.getElementById('step2');
+let page2Step3 = document.getElementById('step3');
+
+
+
 let checkAuthor = function(field) {
-    for (let char of field.value) {
-        if (!char.match(/[\p{L}\p{Zs}-]/gu)) {
-            field.classList.add('invalid');
-            errorAuthor.style.display = 'block';
-            errorAuthor.innerHTML = 'Пожалуйста, вводите только буквы, пробел, дефис.';
+    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+        return true;
+    } else {
+        for (let char of field.value) {
+            if (!char.match(/[\p{L}\p{Zs}-]/gu)) {
+                field.classList.add('invalid');
+                errorAuthor.style.display = 'block';
+                errorAuthor.innerHTML = 'Пожалуйста, вводите только буквы, пробел, дефис.';
+                return false;
+            } else {
+                return true;
+            }
         }
     }
 }
 let checkSinger = function(field) {
-    for (let char of field.value) {
-        if (!char.match(/[\p{L}\p{Zs}-]/gu)) {
-            field.classList.add('invalid');
-            errorSinger.style.display = 'block';
-            errorSinger.innerHTML = 'Пожалуйста, вводите только буквы, пробел, дефис.';
+    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+        return true;
+    } else {
+        for (let char of field.value) {
+            if (!char.match(/[\p{L}\p{Zs}-]/gu)) {
+                field.classList.add('invalid');
+                errorSinger.style.display = 'block';
+                errorSinger.innerHTML = 'Пожалуйста, вводите только буквы, пробел, дефис.';
+                return false;
+            } else {
+                return true;
+            }
         }
     }
 }
 
+
+
 let checkArranger = function(field) {
-    for (let char of field.value) {
-        if (!char.match(/[\p{L}\p{Zs}-]/gu)) {
-            field.classList.add('invalid');
-            errorArranger.style.display = 'block';
-            errorArranger.innerHTML = 'Пожалуйста, вводите только буквы, пробел, дефис.';
+    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+        return true;
+    } else {
+        for (let char of field.value) {
+            if (!char.match(/[\p{L}\p{Zs}-]/gu)) {
+                field.classList.add('invalid');
+                errorArranger.style.display = 'block';
+                errorArranger.innerHTML = 'Пожалуйста, вводите только буквы, пробел, дефис.';
+                return false;
+            } else {
+                return true;
+            }
         }
     }
+
 }
 
 let checkComposer = function(field) {
-    for (let char of field.value) {
-        if (!char.match(/[\p{L}\p{Zs}-]/gu)) {
-            field.classList.add('invalid');
-            errorComposer.style.display = 'block';
-            errorComposer.innerHTML = 'Пожалуйста, вводите только буквы, пробел, дефис.';
+    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+        return true;
+    } else {
+        for (let char of field.value) {
+            if (!char.match(/[\p{L}\p{Zs}-]/gu)) {
+                field.classList.add('invalid');
+                errorComposer.style.display = 'block';
+                errorComposer.innerHTML = 'Пожалуйста, вводите только буквы, пробел, дефис.';
+                return false;
+            } else {
+                return true;
+            }
         }
     }
+
 }
 let checkGenre = function(field) {
-    for (let char of field.value) {
-        if (!char.match(/[\p{L}\p{Zs}\u{27}-]/gu)) {
-            field.classList.add('invalid');
-            errorGenre.style.display = 'block';
-            errorGenre.innerHTML = 'Пожалуйста, вводите только буквы, пробел, дефис, апостроф.';
+
+    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+        return true;
+    } else {
+        for (let char of field.value) {
+            if (!char.match(/[\p{L}\p{Zs}\u{27}-]/gu)) {
+                field.classList.add('invalid');
+                errorGenre.style.display = 'block';
+                errorGenre.innerHTML = 'Пожалуйста, вводите только буквы, пробел, дефис, апостроф.';
+
+                return false;
+            } else {
+                return true;
+            }
         }
     }
+
 }
 let checkDate = function(field) {
     let regexp = /\d\d.\d\d.\d\d\d\d/;
-    if (!regexp.test(field.value) && field.value != "") {
-        field.classList.add('invalid');
-        errorDate.style.display = 'block';
-        errorDate.innerHTML = 'Пожалуйста, вводите дату в формате дд.мм.гггг.';
+    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+        return true;
+    } else {
+        for (let char of field.value) {
+            if (!regexp.test(field.value) && field.value != "") {
+                field.classList.add('invalid');
+                errorDate.style.display = 'block';
+                errorDate.innerHTML = 'Пожалуйста, введите дату в формате дд.мм.гггг';
+
+
+                return false;
+            } else {
+                return true;
+            }
+        }
     }
+
+
+
+
 }
-btn.onclick = function() {
+btnStep2.onclick = function() {
     checkAuthor(textAuthor);
     checkSinger(singer);
     checkArranger(arranger);
     checkComposer(composer);
     checkGenre(genre);
     checkDate(date);
+    if (checkAuthor(textAuthor) && checkSinger(singer) && checkArranger(arranger) && checkComposer(composer) && checkGenre(genre) && checkDate(date)) {
+        page2Step2.style.display = 'none';
+        page2Step3.style.display = 'block';
+    }
 }
 textAuthor.oninput = function() {
     if (this.classList.contains('invalid')) {

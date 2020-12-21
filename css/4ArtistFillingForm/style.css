@@ -865,6 +865,7 @@ textarea::placeholder {
 }
 
 form#step1_form .field {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1175,8 +1176,10 @@ form#step5_form .field {
   }
 }
 
-form#step5_form .field:last-child {
-  margin-bottom: 0;
+@media (max-width: 991.9px) {
+  form#step5_form .field:last-child {
+    margin-bottom: 0;
+  }
 }
 
 form#step5_form label {
@@ -1273,12 +1276,6 @@ form#step6_form .field {
 @media (max-width: 991.9px) {
   form#step6_form .field {
     width: 100%;
-  }
-}
-
-@media (max-width: 575.9px) {
-  form#step6_form .field {
-    margin-bottom: 5px;
   }
 }
 
@@ -1482,35 +1479,42 @@ form#step6_form .field label {
   color: #B1BDBD;
 }
 
+.error-nickname,
+.error-track,
+.error-track-url,
 .error-author,
 .error-singer,
 .error-arranger,
 .error-composer,
 .error-genre,
-.error-date {
+.error-date,
+.error-email {
+  margin-top: 3px;
   display: none;
   position: absolute;
   color: #F75B46;
   top: 75px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: normal;
 }
 
-@media (max-wodth: 575.9px) {
+@media (max-width: 575.9px) {
+  .error-nickname,
+  .error-track,
+  .error-track-url,
   .error-author,
   .error-singer,
   .error-arranger,
   .error-composer,
   .error-genre,
-  .error-date {
+  .error-date,
+  .error-email {
+    top: 75px;
+    margin-top: 1px;
     font-size: 0.7rem;
-    line-height: 0.9rem;
+    line-height: 0.8rem;
   }
-}
-
-.error {
-  display: none;
-  position: absolute;
-  color: #F75B46;
-  top: 75px;
 }
 
 .warning {
@@ -1882,8 +1886,6 @@ form#step6_form .field label {
   border-radius: 12px;
 }
 
-main,
-.request#step1,
 .request#step2,
 .request#step3,
 .request#step4,
