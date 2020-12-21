@@ -6,17 +6,28 @@
             src: url(../../fonts/Inter-Regular.woff);
         }
         
+        html,
+        body {
+            height: 100%;
+        }
+        
         body {
             font-family: "Inter", "PT Sans", "Arial", sans-serif;
             @include fontSize14();
             color: $black;
             background-color: $main-bg;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            justify-content: space-between;
         }
         
         main {
+            flex: 1 0 auto;
             .wrapper {
                 width: 60%;
-                margin: 0 auto 50px auto;
+                margin: 0 auto 70px auto;
                 display: flex;
                 padding-top: 110px;
                 @media (max-width: 991.9px) {
@@ -73,6 +84,7 @@
         }
         
         .request {
+            flex: 0 0 auto;
             margin: 0 auto;
             margin-top: 100px;
             width: 90%;
@@ -108,9 +120,11 @@
             }
         }
         
-        // .request#step1 {
-        //     margin: 0 auto;
-        // }
+        .request#step1 {
+            flex: 1 0 auto;
+            margin: 0 auto;
+        }
+        
         .request#step3 {
             .wrapper {
                 @media (max-width: 991.9px) {
@@ -1047,7 +1061,8 @@
             }
         }
         
-        main, // .request#step1,
+        // main,
+        // .request#step1,
         .request#step2,
         .request#step3,
         .request#step4,

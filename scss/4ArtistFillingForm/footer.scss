@@ -1,8 +1,7 @@
 @import 'variables';
 .copyright {
-    position: fixed;
+    flex: 0 0 auto;
     width: 100%;
-    bottom: 0;
     text-align: center;
     color: $light-gray;
     margin: 25px auto 17px auto;
