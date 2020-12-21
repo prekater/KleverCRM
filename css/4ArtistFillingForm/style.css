@@ -1882,6 +1882,8 @@ form#step6_form .field label {
   border-radius: 12px;
 }
 
+main,
+.request#step1,
 .request#step2,
 .request#step3,
 .request#step4,
