@@ -123,7 +123,6 @@ gulp.task('browser', (cb) => {
 });
 
 gulp.task('watch', (cb) => {
-
     gulp.watch('src/**/*.scss', gulp.series('scss', 'pug'));
     gulp.watch('src/**/*.pug', gulp.series('pug'));
     gulp.watch('src/**/*.html', gulp.series('pug'));
