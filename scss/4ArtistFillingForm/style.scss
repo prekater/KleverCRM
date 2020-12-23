@@ -456,7 +456,7 @@
             padding: 10px 22px 10px 22px;
             &:active,
             &:focus {
-                @include focusBlock();
+                @include focusInput();
             }
             &::placeholder {
                 color: $light-gray;
@@ -838,7 +838,7 @@
             padding-left: 22px;
             &:active,
             &:focus {
-                @include focusBlock();
+                @include focusInput();
             }
             &.invalid,
             &.invalid:focus,
@@ -947,7 +947,7 @@
                 }
                 &:focus,
                 &:active {
-                    @include focusBlock();
+                    @include focusButton();
                 }
                 &.prev {
                     background-color: $line;
@@ -1008,7 +1008,7 @@
             @include fontSize14();
             &:focus,
             &:active {
-                @include focusBlock();
+                @include focusButton();
             }
             p {
                 font-weight: 500;
@@ -1059,7 +1059,7 @@
             }
             button:focus,
             button:active {
-                @include focusBlock();
+                @include focusButton();
             }
         }
         

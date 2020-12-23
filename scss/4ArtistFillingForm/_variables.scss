@@ -8,6 +8,14 @@ $dark-gray: #768989;
 $main-bg: #F7FAFB;
 $input-bg: #F3F8FA;
 $line: #EBEFF2;
+$shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
+$newRequestHighlight: 0px 1px 6px rgba(33, 186, 168, 0.3);
+$newRequestHighlightHover: 0px 7px 10px rgba(21, 186, 176, 0.3);
+@mixin boxRaduisShadow {
+    box-shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
+    border-radius: 12px;
+}
+
 @mixin fontSize24 {
     font-size: 1.5rem;
     line-height: 1.875rem;
@@ -66,8 +74,19 @@ $line: #EBEFF2;
     align-items: center;
 }
 
-@mixin focusBlock {
-    border: 1px solid #21BAA8;
+@mixin flex ($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin focusInput {
+    border: 1px solid $light-gray;
+    outline: none;
+    border-radius: 12px;
+}
+
+@mixin focusButton {
+    border: 1px solid $color;
     outline: none;
     border-radius: 12px;
 }
