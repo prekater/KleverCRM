@@ -269,6 +269,7 @@
             </div>
         </div>
         <div class="main-block main-block_padding">
+
             <div class="main-info main-info_padding flex-row flex-row_center_vertical flex-row_between">
                 <div class="avatar avatar_margin flex-row flex-row_center_vertical">
                     <img src="././images/avatar_big.png" alt="Фотография пользователя" />
@@ -284,12 +285,14 @@
                     <a href="" class="log-out flex-row flex-row_between flex-row_top_vertical"> <img src="././images/log-out.svg" alt="Выйти" class="log-out__img" /> Выйти</a>
                 </div>
             </div>
+
             <div class="tabs tabs_margin flex-row">
-                <div class="tabs__profile-settings tabs_active">Настройки профиля</div>
-                <div class="tabs__change-password">Смена пароля</div>
+                <div class="tabs__tab tabs__tab_active tabs__tab_margin" id="tab-profile-settings">Настройки профиля</div>
+                <div class="tabs__tab " id="tab-change-password">Смена пароля</div>
             </div>
+
             <div class="flex-row flex-row_center_vertical flex-row_center">
-                <form action="" class=" main-form block block__rounded profile-settings main-form_margin main-form_padding flex-column" id="profile-settings">
+                <form action="" class="main-form main-form_profile-settings block block__rounded profile-settings main-form_margin main-form_padding flex-column" id="profile-settings">
                     <label for="login" class="main-form__label main-form__label_readonly">Логин</label>
                     <input type="text" id="login" readonly class="main-form__input main-form__input_margin" value="Екатерина">
                     <label for="full-name" class="main-form__label">ФИО</label>
@@ -322,6 +325,7 @@
 
                 </form>
             </div>
+
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>

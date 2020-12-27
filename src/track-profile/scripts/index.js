@@ -4,7 +4,6 @@ let $sidebarProfit = $(".li-sidebar_profit");
 let $expandProfitImg = $profit.find(".li-sidebar__expand").find("img");
 let $settings = $("#settings");
 let $settingsIcon = $settings.find($('.li-sidebar__img'));
-
 let $sidebarSettings = $(".li-sidebar_settings");
 let $expandSettingsImg = $settings.find(".li-sidebar__expand").find("img");
 let $sidebar = $(".sidebar");
@@ -14,6 +13,25 @@ let $arrowToExpand = $sidebarCollapsed.find($("#arrow-to-expand"));
 let $arrowToCollapse = $sidebarExpanded.find($("#arrow-to-collapse"));
 let $mainBlock = $(".main-block");
 let $searchForm = $('.search-form');
+let $tabProfileSettings = $('#tab-profile-settings');
+let $tabChangePassword = $('#tab-change-password');
+let $formProfileSettings = $("#profile-settings");
+let $formChangePassword = $("#change-password");
+
+$tabProfileSettings.on("click", function() {
+    $(this).addClass("tabs__tab_active");
+    $tabChangePassword.removeClass("tabs__tab_active");
+    $formProfileSettings.css("display", "flex");
+    $formChangePassword.css("display", "none");
+});
+$tabChangePassword.on("click", function() {
+    $(this).addClass("tabs__tab_active");
+    $tabProfileSettings.removeClass("tabs__tab_active");
+    $formProfileSettings.css("display", "none");
+    $formChangePassword.css("display", "flex");
+
+});
+
 
 let inactivateProfitItem = function() {
     $profit.removeClass('li-sidebar_active');
