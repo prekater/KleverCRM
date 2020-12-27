@@ -1,14 +1,13 @@
 @import "src/common/scss/common.scss";
 @import "src/common/scss/normalize.scss";
-@import "variables  ";
+@import "variables";
 // @import "src/common/scss/header.scss";
 // @import "src/common/scss/footer.scss";
 @import "src/common/scss/font.scss";
-@font-face {
-    font-family: Inter;
-    src: url('../../../saved_23122020/fonts/Inter-Regular.woff');
-}
-
+// @font-face {
+//     font-family: Inter;
+//     src: url('./fonts/Inter-Regular.woff');
+// }
 // div,
 // ul,
 // li,
@@ -24,7 +23,7 @@
     background-color: $main-bg;
     width: 100%;
     // max-height: 1100px;
-    height: 1500px;
+    // height: 1500px;
 }
 
 .flex-row {
@@ -65,7 +64,7 @@
 }
 
 .sidebar {
-    position: relative;
+    position: fixed;
     z-index: 100;
     box-shadow: $shadow;
     width: 226px;
@@ -225,6 +224,7 @@
         @include fontSize13();
     }
     &__img {
+        align-self: start;
         display: block;
         margin-right: 21px;
         height: 18px;
@@ -256,9 +256,9 @@
     &_img-width {
         width: 18px;
     }
-    // &_height-hidden {
-    //     height: 30px;
-    // }
+    &_img-height {
+        height: 40px;
+    }
 }
 
 .main-block {
@@ -325,11 +325,64 @@
     }
 }
 
-.profile-settings {
+.main-form {
     width: 450px;
-    height: 517px;
+    box-sizing: border-box;
     &_margin {
         margin-top: 29px;
         margin-bottom: 44px;
+    }
+    &_padding {
+        padding: 31px 34px 36px 35px;
+    }
+    &__label {
+        color: $dark-gray;
+        @include fontSize11();
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        &_readonly {
+            color: $light-gray;
+        }
+    }
+    &__input {
+        &_margin {
+            margin-bottom: 26px;
+        }
+        @include input();
+        @include fontSize14();
+        &:active,
+        &:focus {
+            @include focusInput();
+        }
+        &:read-only {
+            background-color: $main-bg;
+            color: $input-disabled;
+        }
+        &::placeholder {
+            color: $light-gray;
+        }
+    }
+}
+
+.button {
+    width: 180px;
+    height: 52px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: $main-gradient;
+    outline: none;
+    &:hover {
+        background: $light-gradient;
+    }
+    &:focus {
+        @include focusInput();
+    }
+    &_pressed,
+    &:active {
+        @include focusInput();
+        background: $dark-gradient;
+    }
+    &_cancel {
+        background: $line;
     }
 }
