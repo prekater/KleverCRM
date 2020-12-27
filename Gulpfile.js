@@ -1,20 +1,20 @@
-const pug          = require('gulp-pug');
-const uglify       = require('gulp-uglify');
-const fs           = require('fs');
-const gulp         = require('gulp');
-const scss         = require('gulp-sass');
-const include      = require('gulp-file-include');
-const browserSync  = require('browser-sync').create();
-const rename       = require('gulp-rename');
+const pug = require('gulp-pug');
+const uglify = require('gulp-uglify');
+const fs = require('fs');
+const gulp = require('gulp');
+const scss = require('gulp-sass');
+const include = require('gulp-file-include');
+const browserSync = require('browser-sync').create();
+const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
-const gcmq         = require('gulp-group-css-media-queries');
-const path         = require('path');
+const gcmq = require('gulp-group-css-media-queries');
+const path = require('path');
 
 const getFolders = (dir) => {
-  return fs.readdirSync(dir)
-    .filter(function(file) {
-      return fs.statSync(path.join(dir, file)).isDirectory();
-    });
+    return fs.readdirSync(dir)
+        .filter(function(file) {
+            return fs.statSync(path.join(dir, file)).isDirectory();
+        });
 }
 
 gulp.task('pug', () => {
@@ -25,11 +25,11 @@ gulp.task('pug', () => {
             basepath: '@file'
         }))
         .pipe(rename((p) => {
-          return {
-            dirname: p.basename,
-            basename: 'index',
-            extname: p.extname
-          };
+            return {
+                dirname: p.basename,
+                basename: 'index',
+                extname: p.extname
+            };
         }))
         .pipe(gulp.dest('./build'));
 });
@@ -53,7 +53,7 @@ gulp.task('scss', () => {
 
 gulp.task('scripts', () => {
     return gulp.src('./src/track*/scripts/index.js')
-      // .pipe(uglify())
+        // .pipe(uglify())
         .pipe(rename((p) => {
             return {
                 dirname: p.dirname,
@@ -63,7 +63,6 @@ gulp.task('scripts', () => {
         }))
         .pipe(gulp.dest('./build'));
 });
-
 gulp.task('images', () => {
     return gulp.src('./src/track*/images/*')
         .pipe(rename((p) => {
@@ -76,34 +75,34 @@ gulp.task('images', () => {
         .pipe(gulp.dest('./build'));
 });
 
-gulp.task('fonts', async () => {
-  const folders = getFolders('./build');
+gulp.task('fonts', async() => {
+    const folders = getFolders('./build');
 
-  return folders.map((folder) => {
-    gulp.src('./src/common/fonts/*')
-      .pipe(rename((p) => {
-        return {
-          dirname: `./${folder}/fonts`,
-          basename: p.basename,
-          extname: p.extname
-        };
-      }))
-      .pipe(gulp.dest('./build'));
-  })
+    return folders.map((folder) => {
+        gulp.src('./src/common/fonts/*')
+            .pipe(rename((p) => {
+                return {
+                    dirname: `./${folder}/fonts`,
+                    basename: p.basename,
+                    extname: p.extname
+                };
+            }))
+            .pipe(gulp.dest('./build'));
+    })
 });
 
-gulp.task('common-images', async () => {
-  const folders = getFolders('./build');
+gulp.task('common-images', async() => {
+    const folders = getFolders('./build');
 
-  return folders.map((folder) => {
-    gulp.src('./src/common/images/*')
-      .pipe(rename((p) => ({
-          dirname: `./${folder}/images`,
-          basename: p.basename,
-          extname: p.extname
-        })))
-      .pipe(gulp.dest(`./build`));
-  })
+    return folders.map((folder) => {
+        gulp.src('./src/common/images/*')
+            .pipe(rename((p) => ({
+                dirname: `./${folder}/images`,
+                basename: p.basename,
+                extname: p.extname
+            })))
+            .pipe(gulp.dest(`./build`));
+    })
 });
 
 
@@ -116,8 +115,8 @@ gulp.task('browser', (cb) => {
         files: [
             'build/*.html'
         ],
-      open: false,
-      notify: false
+        open: false,
+        notify: false
     });
     cb();
 });
