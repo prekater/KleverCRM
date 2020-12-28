@@ -7,9 +7,6 @@
     &_fixed {
         position: fixed;
     }
-    // @media (max-width: 991.9px) {
-    //     display: none;
-    // }
 }
 
 .header-tablet {
@@ -33,6 +30,28 @@
         cursor: pointer;
     }
     &__logo {
+        @media (max-width: 575.9px) {
+            display: none;
+        }
+    }
+}
+
+.user {
+    @include fontSize13();
+    &_margin {
+        margin-right: 36px;
+        @media (max-width: 575.9px) {
+            margin-right: 0;
+        }
+    }
+    &__avatar {
+        margin-right: 14px;
+        @media (max-width: 575.9px) {
+            margin-right: 0;
+        }
+    }
+    &__name {
+        @include fontSize13();
         @media (max-width: 575.9px) {
             display: none;
         }

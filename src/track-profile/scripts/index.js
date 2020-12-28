@@ -21,7 +21,6 @@ let $formChangePassword = $("#change-password");
 let $hamburger = $("#hamburger");
 let $bodyOverlay = $(".body__overlay");
 let $body = $('body');
-console.log('превед!');
 $tabProfileSettings.on("click", function() {
     $(this).addClass("tabs__tab_active");
     $tabChangePassword.removeClass("tabs__tab_active");
@@ -90,7 +89,7 @@ $(function() {
         $arrowToCollapse.on("click", function() {
             $sidebarExpanded.css("left", "-250px");
             $sidebarCollapsed.css("left", "0");
-            $sidebarExpanded.toggleClass("sidebar_hidden");
+
             $mainBlock.css("padding-left", "70px");
             $searchForm.css("margin-left", "76px");
             inactivateProfitItem();

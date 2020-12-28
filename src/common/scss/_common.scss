@@ -1,4 +1,8 @@
 @import 'variables';
+html {
+    overflow-y: scroll;
+}
+
 .body {
     font-family: "Inter", "PT Sans", "Arial", sans-serif;
     @include fontSize14();
@@ -65,5 +69,121 @@
     margin: 0;
     &__rounded {
         @include boxRaduisShadow();
+    }
+}
+
+.search-form {
+    transition: margin 2s;
+    border: none;
+    color: $black;
+    position: relative;
+    &_margin {
+        margin-left: 76px;
+    }
+    &__input {
+        border-radius: 12px;
+        height: 42px;
+        border: 1px solid transparent;
+        padding-left: 34px;
+        @include fontSize13();
+        &:focus,
+        &:active {
+            @include focusInput();
+        }
+        &_sidebar {
+            color: $dark-gray;
+            background-color: $main-bg;
+            border-radius: 12px;
+            height: 42px;
+            border: 1px solid transparent;
+            padding-left: 34px;
+            @include fontSize13();
+            width: 100%;
+            &:focus,
+            &:active {
+                @include focusInput();
+            }
+        }
+    }
+    &::placeholder {
+        color: $light-gray;
+    }
+    &__button {
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        padding: 4px;
+        position: absolute;
+        border: 1px solid transparent;
+        background-color: $white;
+        left: 4px;
+        top: 9px;
+        &:focus,
+        &:active {
+            @include focusInput();
+            border-radius: 5px;
+        }
+        @media (max-width: 575.9px) {
+            right: 0;
+            top: 9px;
+        }
+    }
+    &_sidebar {
+        display: none;
+        @media (max-width: 575.9px) {
+            display: block;
+            margin: 34px 21px 21px 26px;
+        }
+    }
+}
+
+.search-form-tablet {
+    border: none;
+    color: $black;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    transition: all 1.5s;
+    &_margin {
+        margin-right: 40px;
+    }
+    &__input {
+        display: none;
+        border-radius: 12px;
+        height: 42px;
+        padding-left: 34px;
+        width: 100%;
+        border: 1px solid $line;
+        @include fontSize13();
+        &:focus,
+        &:active {
+            @include focusInput();
+        }
+    }
+    &:hover {
+        width: 200px;
+        & input {
+            display: block;
+        }
+    }
+    &::placeholder {
+        color: $light-gray;
+    }
+    &__button {
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        padding: 4px;
+        position: absolute;
+        border: 1px solid transparent;
+        background-color: $white;
+        right: 4px;
+        top: 9px;
+        &:focus,
+        &:active {
+            @include focusInput();
+            border-radius: 5px;
+        }
+    }
+    @media (max-width: 575.9px) {
+        display: none;
     }
 }

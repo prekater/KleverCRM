@@ -4,253 +4,6 @@
     @import "./../../common/scss/sidebar";
     @import "./../../common/scss/font";
     @import "./../../common/scss/header";
-    .header {
-        z-index: 99;
-        height: 60px;
-        border-bottom: 1px solid $line;
-        width: 100%;
-        &_fixed {
-            position: fixed;
-        }
-        // @media (max-width: 991.9px) {
-        //     display: none;
-        // }
-    }
-    
-    .header-tablet {
-        &_padding {
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-        display: none;
-        @media (max-width: 991.9px) {
-            display: flex;
-            z-index: 99;
-            height: 60px;
-            border-bottom: 1px solid $line;
-            &_fixed {
-                width: 100%;
-                position: fixed;
-            }
-        }
-        &__hamburger {
-            margin-right: 29px;
-            cursor: pointer;
-        }
-        &__logo {
-            @media (max-width: 575.9px) {
-                display: none;
-            }
-        }
-    }
-    
-    .search-form {
-        transition: margin 2s;
-        border: none;
-        color: $black;
-        position: relative;
-        &_margin {
-            margin-left: 76px;
-        }
-        &__input {
-            border-radius: 12px;
-            height: 42px;
-            border: 1px solid transparent;
-            padding-left: 34px;
-            @include fontSize13();
-            &:focus,
-            &:active {
-                @include focusInput();
-            }
-            &_sidebar {
-                color: $dark-gray;
-                background-color: $main-bg;
-                border-radius: 12px;
-                height: 42px;
-                border: 1px solid transparent;
-                padding-left: 34px;
-                @include fontSize13();
-                width: 100%;
-                &:focus,
-                &:active {
-                    @include focusInput();
-                }
-            }
-        }
-        &::placeholder {
-            color: $light-gray;
-        }
-        &__button {
-            cursor: pointer;
-            padding: 4px;
-            position: absolute;
-            border: 1px solid transparent;
-            background-color: $white;
-            left: 4px;
-            top: 9px;
-            &:focus,
-            &:active {
-                @include focusInput();
-                border-radius: 5px;
-            }
-            @media (max-width: 575.9px) {
-                right: 0;
-                top: 9px;
-            }
-        }
-        &_sidebar {
-            display: none;
-            @media (max-width: 575.9px) {
-                display: block;
-                margin: 34px 21px 21px 26px;
-            }
-        }
-    }
-    
-    .search-form-tablet {
-        border: none;
-        color: $black;
-        position: relative;
-        width: 42px;
-        height: 42px;
-        transition: all 1.5s;
-        &_margin {
-            margin-right: 40px;
-        }
-        &__input {
-            display: none;
-            border-radius: 12px;
-            height: 42px;
-            padding-left: 34px;
-            width: 100%;
-            border: 1px solid $line;
-            @include fontSize13();
-            &:focus,
-            &:active {
-                @include focusInput();
-            }
-        }
-        &:hover {
-            width: 200px;
-            & input {
-                display: block;
-            }
-        }
-        &::placeholder {
-            color: $light-gray;
-        }
-        &__button {
-            cursor: pointer;
-            padding: 4px;
-            position: absolute;
-            border: 1px solid transparent;
-            background-color: $white;
-            right: 4px;
-            top: 9px;
-            &:focus,
-            &:active {
-                @include focusInput();
-                border-radius: 5px;
-            }
-        }
-        @media (max-width: 575.9px) {
-            display: none;
-        }
-    }
-    
-    .user {
-        @include fontSize13();
-        &_margin {
-            margin-right: 36px;
-            @media (max-width: 575.9px) {
-                margin-right: 0;
-            }
-        }
-        &__avatar {
-            margin-right: 14px;
-            @media (max-width: 575.9px) {
-                margin-right: 0;
-            }
-        }
-        &__name {
-            @include fontSize13();
-            @media (max-width: 575.9px) {
-                display: none;
-            }
-        }
-    }
-    
-    .ul {
-        list-style: none;
-        padding-left: 0;
-        &-sidebar {
-            &_margin-top {
-                margin-top: 27px;
-            }
-            &_margin-bottom {
-                margin-bottom: 36px;
-            }
-        }
-    }
-    
-    .li-sidebar {
-        -webkit-tap-highlight-color: transparent;
-        height: 40px;
-        &:hover,
-        &_active {
-            background: $main-gradient;
-        }
-        &_padding {
-            padding-left: 26px;
-            padding-right: 13px;
-        }
-        &_no-margin-bottom {
-            margin-bottom: 0;
-        }
-        &__link {
-            cursor: pointer;
-            text-decoration: none;
-            color: $black;
-            @include fontSize13();
-        }
-        &__img {
-            align-self: start;
-            display: block;
-            margin-right: 21px;
-            height: 18px;
-        }
-        &__requests-count {
-            width: 18px;
-            height: 18px;
-            border-radius: 5px;
-            background-color: $line;
-            color: $dark-gray;
-            @include fontSize12();
-            @include flexCenter(row);
-        }
-        &__expand {
-            @include flexCenter(row);
-        }
-        &__add {
-            width: 22px;
-            height: 22px;
-            background-color: $white;
-            @include flexCenter(row);
-            color: $black;
-            border-radius: 5px;
-        }
-        &_profit,
-        &_settings {
-            display: none;
-        }
-        &_img-width {
-            width: 18px;
-        }
-        &_img-height {
-            height: 40px;
-        }
-    }
-    
     .main-block {
         transition: padding 2s;
         &_padding {
@@ -369,6 +122,7 @@
             }
         }
         &__tab {
+            -webkit-tap-highlight-color: transparent;
             cursor: pointer;
             text-align: center;
             &_active {
@@ -449,13 +203,17 @@
     
     .button {
         @include fontSize14();
+        font-weight: 400;
         width: 180px;
         @media (max-width: 575.9px) {
             width: 130px;
+            &_small-padding {
+                padding: 1px 4px 1px 4px;
+            }
         }
         height: 52px;
         border-radius: 12px;
-        border: 1px solid transparent;
+        border: 1px solid $white;
         background: $main-gradient;
         outline: none;
         &:hover {
