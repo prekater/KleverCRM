@@ -11,140 +11,160 @@
 </head>
 
 <body class="body flex-row">
-    <div class="sidebar block sidebar_hidden" id="sidebar-expanded">
+    <div class="body__overlay"></div>
+    <div class="sidebar block flex-column flex-column-between" id="sidebar-expanded">
         <div class="header flex-row flex-row_between flex-row_center_vertical sidebar_padding ">
             <img src="./images/logo.svg" alt="Логотип" />
-            <img src="./images/arrow_to_left_gray.svg" alt="Свернуть меню" id="arrow-to-collapse" class="sidebar_to-expand" /> </div>
-        <div class="part">
-            <ul class="ul ul-sidebar ul_margin-top ul_margin-bottom">
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
-                    <a href="#" class="li-sidebar__link flex-row"><img src="./images/main.svg" class="li-sidebar__img li-sidebar_img-width" />Главная</a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
-                    <a href="#" class="li-sidebar__link flex-row flex-row_between flex-row_adaptive-width ">
+            <div class="sidebar_to-collapse flex-row flex-row_center_vertical flex-row_end">
+                <img src="./images/arrow_to_left_gray.svg" alt="Свернуть меню" class="arrow-to-collapse" />
+                <img src="./images/close.svg" alt="Свернуть меню" class="close-sidebar" />
+
+            </div>
+        </div>
+        <div class="sidebar_wrapper flex-column_adaptive-width">
+            <div class="part">
+                <ul class="ul ul-sidebar ul_margin-top ul_margin-bottom">
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
+                        <a href="#" class="li-sidebar__link flex-row"><img src="./images/main.svg" class="li-sidebar__img li-sidebar_img-width" />Главная</a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
+                        <a href="#" class="li-sidebar__link flex-row flex-row_between flex-row_adaptive-width ">
+                            <div class="flex-row">
+                                <img src="./images/requests-new-requests.svg" class="li-sidebar__img li-sidebar_img-width" />Запросы
+                            </div>
+                            <div class="li-sidebar__requests-count">7</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <ul class="ul ul-sidebar ul_margin-bottom ">
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
+                        <a href="#" class="li-sidebar__link flex-row ">
+                            <img src="./images/singers.svg" class="li-sidebar__img li-sidebar_img-width" />Исполнители
+                        </a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/agreements.svg" class="li-sidebar__img li-sidebar_img-width" />Договоры
+                        </a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
+                        <a href="#" class="li-sidebar__link flex-row flex-row_between flex-row_adaptive-width">
+                            <div class="flex-row flex-row_center_vertical">
+                                <img src="./images/releases.svg" class="li-sidebar__img li-sidebar_img-width" />Релизы
+                            </div>
+                            <a href="#" class="li-sidebar__add"><img src="./images/add.svg" /></a>
+                        </a>
+
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/tracks.svg" class="li-sidebar__img li-sidebar_img-width" />Треки
+                        </a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/sub-labels.svg" class="li-sidebar__img li-sidebar_img-width" />Подлейблы
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <ul class="ul ul-sidebar ul_margin-bottom">
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding " id="profit">
+                        <span href="#" class="li-sidebar__link flex-row flex-row_between flex-row_adaptive-width"></a>
                         <div class="flex-row">
-                            <img src="./images/requests.svg" class="li-sidebar__img li-sidebar_img-width" />Запросы
-                        </div>
-                        <div class="li-sidebar__requests-count">7</div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="part">
-            <ul class="ul ul-sidebar ul_margin-bottom ">
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
-                    <a href="#" class="li-sidebar__link flex-row ">
-                        <img src="./images/singers.svg" class="li-sidebar__img li-sidebar_img-width" />Исполнители
-                    </a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/agreements.svg" class="li-sidebar__img li-sidebar_img-width" />Договоры
-                    </a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
-                    <a href="#" class="li-sidebar__link flex-row flex-row_between flex-row_adaptive-width">
-                        <div class="flex-row flex-row_center_vertical">
-                            <img src="./images/releases.svg" class="li-sidebar__img li-sidebar_img-width" />Релизы
-                        </div>
-                        <a href="#" class="li-sidebar__add"><img src="./images/add.svg" /></a>
-                    </a>
-
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/tracks.svg" class="li-sidebar__img li-sidebar_img-width" />Треки
-                    </a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/sub-labels.svg" class="li-sidebar__img li-sidebar_img-width" />Подлейблы
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="part">
-            <ul class="ul ul-sidebar ul_margin-bottom">
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding " id="profit">
-                    <span href="#" class="li-sidebar__link flex-row flex-row_between flex-row_adaptive-width"></a>
-                    <div class="flex-row">
-                        <img src="./images/sales.svg" class="li-sidebar__img li-sidebar_img-width" />Прибыль
-                    </div>
-                    <div class="li-sidebar__expand"><img src="./images/arrow_down.svg" /></div>
-                </span>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/apps.svg" class="li-sidebar__img li-sidebar_img-width" />Приложения
-                    </a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/incomes.svg" class="li-sidebar__img li-sidebar_img-width" />Доходы
-                    </a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/sales.svg" class="li-sidebar__img li-sidebar_img-width" />Продажи
-                    </a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/payments.svg" class="li-sidebar__img li-sidebar_img-width" />Платежи
-                    </a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/countries.svg" class="li-sidebar__img li-sidebar_img-width" />Страны
-                    </a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/platformes.svg" class="li-sidebar__img li-sidebar_img-width" />Платформы
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="part">
-            <ul class="ul ul-sidebar ul_margin-bottom li-sidebar_no-margin-bottom">
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/upload-report.svg" class="li-sidebar__img li-sidebar_img-width" />Загрузить отчет
-                    </a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding " id="settings">
-                    <span href="#" class="li-sidebar__link flex-row flex-row_between flex-row_adaptive-width">
-                        <div class="flex-row">
-                            <img src="./images/settings.svg" class="li-sidebar__img li-sidebar_img-width" />Параметры
+                            <img src="./images/sales.svg" class="li-sidebar__img li-sidebar_img-width" />Прибыль
                         </div>
                         <div class="li-sidebar__expand"><img src="./images/arrow_down.svg" /></div>
                     </span>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_settings li-sidebar_height-hidden">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/import_config.svg" class="li-sidebar__img li-sidebar_img-width li-sidebar_img-height" />Конфигурации импорта
-                    </a>
-                </li>
-                <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_settings li-sidebar_height-hidden ">
-                    <a href="#" class="li-sidebar__link flex-row">
-                        <img src="./images/import_results.svg" class="li-sidebar__img li-sidebar_img-width" />Результаты импорта
-                    </a>
-                </li>
-            </ul>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/apps.svg" class="li-sidebar__img li-sidebar_img-width" />Приложения
+                        </a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/incomes.svg" class="li-sidebar__img li-sidebar_img-width" />Доходы
+                        </a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/sales.svg" class="li-sidebar__img li-sidebar_img-width" />Продажи
+                        </a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/payments.svg" class="li-sidebar__img li-sidebar_img-width" />Платежи
+                        </a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/countries.svg" class="li-sidebar__img li-sidebar_img-width" />Страны
+                        </a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_profit li-sidebar_height-hidden">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/platformes.svg" class="li-sidebar__img li-sidebar_img-width" />Платформы
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <ul class="ul ul-sidebar ul_margin-bottom li-sidebar_no-margin-bottom">
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/upload-report.svg" class="li-sidebar__img li-sidebar_img-width" />Загрузить отчет
+                        </a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding " id="settings">
+                        <span href="#" class="li-sidebar__link flex-row flex-row_between flex-row_adaptive-width">
+                            <div class="flex-row">
+                                <img src="./images/settings.svg" class="li-sidebar__img li-sidebar_img-width" />Параметры
+                            </div>
+                            <div class="li-sidebar__expand"><img src="./images/arrow_down.svg" /></div>
+                        </span>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_settings li-sidebar_height-hidden">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/import_config.svg" class="li-sidebar__img li-sidebar_img-width li-sidebar_img-height" />Конфигурации импорта
+                        </a>
+                    </li>
+                    <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding li-sidebar_settings li-sidebar_height-hidden ">
+                        <a href="#" class="li-sidebar__link flex-row">
+                            <img src="./images/import_results.svg" class="li-sidebar__img li-sidebar_img-width" />Результаты импорта
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="search-form search-form_sidebar ">
+
+                <input type="search" placeholder="Поиск" class="search-form__input_sidebar">
+                <button class="search-form__button"><img src="././images/search_gray_bg.svg"/></button>
+            </form>
         </div>
-        <div class="sidebar-footer sidebar_padding flex-column">
+        <div class="sidebar-footer sidebar-footer_desktop sidebar_padding flex-column">
             <span class="sidebar-footer__copyright">© 2020 KleverCrm - Ivan Kostyashov
             </span>
             <span class="sidebar-footer__developed">Разработано в UX Lama</span>
         </div>
+        <div class="sidebar-footer sidebar-footer_mobile footer_padding sidebar_padding flex-column">
+            <span class="sidebar-footer__copyright">© 2020 KleverCrm - Ivan Kostyashov
+            </span>
+            <span class="sidebar-footer__developed">Разработано в UX Lama</span>
+        </div>
+
     </div>
 
-    <div class="sidebar sidebar_collapsed block" id="sidebar-collapsed">
-        <div class="header flex-row flex-row_center_vertical sidebar_padding">
-            <img src="./images/arrow_to_right_gray.svg" alt="Развернуть меню" id="arrow-to-expand" class="sidebar_to-collapse" /> </div>
+    <div class="sidebar  sidebar_collapsed block" id="sidebar-collapsed">
+        <div class="header flex-row flex-row_center_vertical sidebar_padding sidebar_to-expand">
+            <img src="./images/arrow_to_right_gray.svg" alt="Развернуть меню" class="arrow-to-expand" /> </div>
         <div class="part">
             <ul class="ul ul-sidebar ul_margin-top ul_margin-bottom">
                 <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
@@ -153,7 +173,7 @@
                 <li class="li-sidebar flex-row flex-row_center_vertical li-sidebar_padding">
                     <a href="#" class="li-sidebar__link flex-row ">
 
-                        <img src="./images/requests.svg" class="li-sidebar__img li-sidebar_img-width" />
+                        <img src="./images/requests-new-requests.svg" class="li-sidebar__img li-sidebar_img-width" />
 
 
                     </a>
@@ -258,31 +278,53 @@
     </div>
 
     <div class="flex-column flex-column_adaptive-width">
+
         <div class="header block flex-row flex-row_between flex-row_center_vertical header_fixed">
-            <form class="search-form search-form_margin">
-                <button class="search-form__button"><img src="././images/search.svg"/></button>
-                <input type="search" placeholder="Поиск" class="search-form__input">
-            </form>
-            <div class="user flex-row flex-row_center_vertical user_margin">
-                <div class="user__avatar"><img src="././images/avatar.png" alt="Фотография пользователя" /></div>
-                <div class="user_name">Екатерина</div>
+            <div class="flex-row flex-row_between flex-row_center_vertical flex-row_full-width">
+                <form class="search-form search-form_margin">
+                    <button class="search-form__button"><img src="././images/search.svg"/></button>
+                    <input type="search" placeholder="Поиск" class="search-form__input">
+                </form>
+                <div class="user flex-row flex-row_center_vertical user_margin">
+                    <div class="user__avatar"><img src="././images/avatar.png" alt="Фотография пользователя" /></div>
+                    <div class="user_name">Екатерина</div>
+                </div>
             </div>
         </div>
+
+        <div class="header-tablet block flex-row flex-row_between flex-row_center_vertical header-tablet_fixed header-tablet_padding">
+            <div class="flex-row">
+                <img src="./images/hamburger.svg" alt="Развернуть меню" class="header-tablet__hamburger" id="hamburger">
+                <img src="./images/logo.svg" alt="Логотип" class="header-tablet__logo" />
+            </div>
+
+            <div class="flex-row flex-row_between flex-row_center_vertical ">
+                <form class="search-form-tablet search-form-tablet_margin">
+                    <button class="search-form-tablet__button"><img src="././images/search.svg"/></button>
+                    <input type="search" placeholder="Поиск" class="search-form-tablet__input">
+                </form>
+                <div class="user flex-row flex-row_center_vertical user_margin">
+                    <div class="user__avatar"><img src="././images/avatar.png" alt="Фотография пользователя" /></div>
+                    <div class="user__name">Екатерина</div>
+                </div>
+            </div>
+        </div>
+
         <div class="main-block main-block_padding">
 
             <div class="main-info main-info_padding flex-row flex-row_center_vertical flex-row_between">
                 <div class="avatar avatar_margin flex-row flex-row_center_vertical">
-                    <img src="././images/avatar_big.png" alt="Фотография пользователя" />
+                    <img src="././images/avatar_big.png" alt="Фотография пользователя" class="avatar__photo" />
                     <a href="#" class="avatar__add">
-                        <img src="././images/add_avatar.svg" alt="Добавить новую фотографию" />
+                        <img src="././images/add_avatar.svg" alt="Добавить новую фотографию" class="avatar__add-img">
                     </a>
                 </div>
                 <div class="flex-row flex-row_adaptive-width flex-row_between">
-                    <div class="user-name flex-column flex-column_center_vertical">
-                        <div class="user-name__profile">Личный профиль</div>
-                        <div class="user-name__full-name">Васильевская Екатерина Петровна</div>
+                    <div class="user-full-name flex-column flex-column_center_vertical">
+                        <div class="user-full-name__profile">Личный профиль</div>
+                        <div class="user-full-name__full-name">Васильевская Екатерина Петровна</div>
                     </div>
-                    <a href="" class="log-out flex-row flex-row_between flex-row_top_vertical"> <img src="././images/log-out.svg" alt="Выйти" class="log-out__img" /> Выйти</a>
+                    <a href="" class="log-out log-out_desktop flex-row flex-row_between flex-row_top_vertical"> <img src="././images/log-out.svg" alt="Выйти" class="log-out__img" /> Выйти</a>
                 </div>
             </div>
 
@@ -291,16 +333,16 @@
                 <div class="tabs__tab " id="tab-change-password">Смена пароля</div>
             </div>
 
-            <div class="flex-row flex-row_center_vertical flex-row_center">
+            <div class="flex-column flex-column_center_vertical flex-column_center">
                 <form action="" class="main-form main-form_profile-settings block block__rounded profile-settings main-form_margin main-form_padding flex-column" id="profile-settings">
                     <label for="login" class="main-form__label main-form__label_readonly">Логин</label>
                     <input type="text" id="login" readonly class="main-form__input main-form__input_margin" value="Екатерина">
                     <label for="full-name" class="main-form__label">ФИО</label>
                     <input type="text" id="full-name" class="main-form__input main-form__input_margin">
                     <label for="email" class="main-form__label">e-mail</label>
-                    <input type="text" id="email" class="main-form__input main-form__input_margin">
+                    <input type="text" id="email" class="main-form__input main-form__input_margin" value="ekaterina1988@yandex.ru">
                     <label for="phone" class="main-form__label">Телефон</label>
-                    <input type="text" id="phone" placeholder="+7 951 444 555 666" class="main-form__input main-form__input_margin">
+                    <input type="text" id="phone" placeholder="+7 951 444 555 666" class="main-form__input main-form__input_margin main-form__input_short">
                     <div class="flex-row flex-row_between">
                         <button type="submit" class="button button_save">Сохранить</button>
                         <button class="button button_cancel">Отменить</button>
@@ -324,6 +366,9 @@
                     </div>
 
                 </form>
+
+                <a href="" class="log-out log-out_tablet flex-row flex-row_between flex-row_top_vertical"> <img src="././images/log-out.svg" alt="Выйти" class="log-out__img" /> Выйти</a>
+
             </div>
 
         </div>

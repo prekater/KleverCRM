@@ -9,27 +9,31 @@ let $expandSettingsImg = $settings.find(".li-sidebar__expand").find("img");
 let $sidebar = $(".sidebar");
 let $sidebarCollapsed = $("#sidebar-collapsed");
 let $sidebarExpanded = $("#sidebar-expanded");
-let $arrowToExpand = $sidebarCollapsed.find($("#arrow-to-expand"));
-let $arrowToCollapse = $sidebarExpanded.find($("#arrow-to-collapse"));
+let $sidebarExpandedHeader = $("#sidebar-expanded").find($(".header"));
+let $arrowToExpand = $sidebarCollapsed.find($(".sidebar_to-expand"));
+let $arrowToCollapse = $sidebarExpanded.find($(".sidebar_to-collapse"));
 let $mainBlock = $(".main-block");
 let $searchForm = $('.search-form');
 let $tabProfileSettings = $('#tab-profile-settings');
 let $tabChangePassword = $('#tab-change-password');
 let $formProfileSettings = $("#profile-settings");
 let $formChangePassword = $("#change-password");
-
+let $hamburger = $("#hamburger");
+let $bodyOverlay = $(".body__overlay");
+let $body = $('body');
+console.log('превед!');
 $tabProfileSettings.on("click", function() {
     $(this).addClass("tabs__tab_active");
     $tabChangePassword.removeClass("tabs__tab_active");
     $formProfileSettings.css("display", "flex");
     $formChangePassword.css("display", "none");
 });
+
 $tabChangePassword.on("click", function() {
     $(this).addClass("tabs__tab_active");
     $tabProfileSettings.removeClass("tabs__tab_active");
     $formProfileSettings.css("display", "none");
     $formChangePassword.css("display", "flex");
-
 });
 
 
@@ -50,38 +54,18 @@ let activateProfitItem = function() {
     $profit.addClass('li-sidebar_active');
     $profitIcon.attr("src", "./images/sales_black.svg");
     $expandProfitImg.attr("src", "./images/arrow_up.svg");
-    inactivateSettingsItem();
 }
 let activateSettingsItem = function() {
     $sidebarSettings.css("display", "flex");
     $settings.addClass('li-sidebar_active');
     $settingsIcon.attr("src", "./images/settings_black.svg");
     $expandSettingsImg.attr("src", "./images/arrow_up.svg");
-    inactivateProfitItem();
 }
 
-$arrowToExpand.on("click", function() {
-    $sidebarCollapsed.toggleClass("sidebar_hidden");
-    $sidebarExpanded.toggleClass("sidebar_hidden");
-    $mainBlock.css("padding-left", "226px");
-    $searchForm.css("margin-left", "232px");
-
-});
-
-$arrowToCollapse.on("click", function() {
-    $sidebarCollapsed.toggleClass("sidebar_hidden");
-    $sidebarExpanded.toggleClass("sidebar_hidden");
-    $mainBlock.css("padding-left", "70px");
-    $searchForm.css("margin-left", "76px");
-    inactivateProfitItem();
-    inactivateSettingsItem();
-
-});
 
 $profit.on("click", function() {
     if ($(this).hasClass('li-sidebar_active')) {
         inactivateProfitItem();
-
     } else {
         activateProfitItem();
     }
@@ -92,5 +76,52 @@ $settings.on("click", function() {
         inactivateSettingsItem();
     } else {
         activateSettingsItem();
+    }
+});
+
+$(function() {
+    if ($(window).width() >= 992) {
+        $arrowToExpand.on("click", function() {
+            $sidebarExpanded.css("left", "0");
+            $sidebarCollapsed.css("left", "-70px");
+            $mainBlock.css("padding-left", "226px");
+            $searchForm.css("margin-left", "232px");
+        });
+        $arrowToCollapse.on("click", function() {
+            $sidebarExpanded.css("left", "-250px");
+            $sidebarCollapsed.css("left", "0");
+            $sidebarExpanded.toggleClass("sidebar_hidden");
+            $mainBlock.css("padding-left", "70px");
+            $searchForm.css("margin-left", "76px");
+            inactivateProfitItem();
+            inactivateSettingsItem();
+        });
+    }
+});
+$(function() {
+    if ($(window).width() < 992) {
+        $hamburger.on("click", function() {
+            $sidebarExpanded.css("left", "0");
+            $bodyOverlay.css('display', 'block');
+            $body.css('overflow', 'hidden');
+
+        });
+        $bodyOverlay.on("click", function(event) {
+            e = event || window.event;
+            if (e.target == this) {
+                $sidebarExpanded.css("left", "-600px");
+                $bodyOverlay.css('display', 'none');
+                $body.css('overflow', 'auto');
+                inactivateProfitItem();
+                inactivateSettingsItem();
+            }
+        });
+        $arrowToCollapse.on("click", function() {
+            $sidebarExpanded.css("left", "-600px");
+            $bodyOverlay.css('display', 'none');
+            $body.css('overflow', 'auto');
+            inactivateProfitItem();
+            inactivateSettingsItem();
+        });
     }
 });
