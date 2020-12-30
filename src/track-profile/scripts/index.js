@@ -1,4 +1,6 @@
 let $profit = $("#profit");
+let $liSidebar = $(".li-sidebar");
+let $liSidebarImage = $('.li-sidebar__img');
 let $profitIcon = $profit.find($('.li-sidebar__img'));
 let $sidebarProfit = $(".li-sidebar_profit");
 let $expandProfitImg = $profit.find(".li-sidebar__expand").find("img");
@@ -21,6 +23,7 @@ let $formChangePassword = $("#change-password");
 let $hamburger = $("#hamburger");
 let $bodyOverlay = $(".body__overlay");
 let $body = $('body');
+
 $tabProfileSettings.on("click", function() {
     $(this).addClass("tabs__tab_active");
     $tabChangePassword.removeClass("tabs__tab_active");
@@ -61,7 +64,15 @@ let activateSettingsItem = function() {
     $expandSettingsImg.attr("src", "./images/arrow_up.svg");
 }
 
+$liSidebar.hover(
+    function() {
+        $(this).find($liSidebarImage).addClass("li-sidebar__img_active");
+    },
 
+    function() {
+        $(this).find($liSidebarImage).removeClass("li-sidebar__img_active");
+    }
+);
 $profit.on("click", function() {
     if ($(this).hasClass('li-sidebar_active')) {
         inactivateProfitItem();
