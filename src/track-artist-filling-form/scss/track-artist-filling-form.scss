@@ -26,16 +26,16 @@ body {
 
 main .wrapper {
     width: 60%;
-    margin: 0 auto 70px auto;
+    margin: 0 auto 3.5vh auto;
     display: flex;
-    padding-top: 110px;
+    padding-top: 6.625vh;
 }
 
 @media (max-width: 991.9px) {
     main .wrapper {
         width: 95%;
-        margin: 0 auto 30px auto;
-        padding-top: 90px;
+        margin: 0 auto 3vh auto;
+        padding-top: 3vh;
     }
 }
 
@@ -106,7 +106,9 @@ main .text {
 
 main .text p {
     margin: 13px 0 0 0;
+    font-size: 0.875rem;
     line-height: 1.375rem;
+    font-weight: 400;
 }
 
 @media (max-width: 575.9px) {
@@ -123,7 +125,7 @@ main .text p {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 @media (max-width: 991.9px) {
@@ -131,7 +133,7 @@ main .text p {
 }
 
 .request {
-    margin: 40px auto 0;
+    margin: 5.25vh auto 0 auto;
     width: 90%;
     border-radius: 10px;
     background-color: #ffffff;
@@ -180,7 +182,7 @@ main .text p {
 
 .request#step1 {
     flex: 1 0 auto;
-    margin: 0 auto;
+    // margin: 0 auto;
 }
 
 @media (max-width: 991.9px) {
@@ -741,7 +743,7 @@ form#step2_form .small-fields .field:last-child .input-wrapper:after {
 }
 
 form#step3_form {
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: nowrap;
     width: 100%;
 }
@@ -1036,6 +1038,7 @@ form#step6_form .field label {
 }
 
 .question:hover::after {
+    z-index: 90;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1316,7 +1319,8 @@ form#step6_form .field label {
 .request-bottom .step {
     width: 200px;
     height: 55px;
-    padding: auto 22px;
+    padding-left: 17px;
+    padding-right: 17px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1402,8 +1406,9 @@ form#step6_form .field label {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: auto 22px;
-    justify-content: space-evenly;
+    padding-left: 17px;
+    padding-right: 17px;
+    justify-content: space-between;
     border: 1px solid #ffffff;
     background: -webkit-gradient(linear, right top, left top, from(#C0E8FF), to(#D1FFD5));
     background: linear-gradient(270deg, #C0E8FF 0%, #D1FFD5 100%);

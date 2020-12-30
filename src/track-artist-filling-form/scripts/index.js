@@ -456,6 +456,9 @@ let $bodyOverlay = $(".body__overlay");
 let $body = $('body');
 let $searchFormTablet = $(".search-form-tablet");
 let $searchFormTabletInput = $(".search-form-tablet__input");
+let $header = $(".header");
+let $searchFormHeader = $header.find(".search-form");
+let $searchFormHeaderInput = $header.find(".search-form__input");
 
 
 
@@ -476,24 +479,32 @@ $tabChangePassword.on("click", function() {
 
 let inactivateProfitItem = function() {
     $profit.removeClass('li-sidebar_active');
-    $sidebarProfit.css("display", "none");
+    // $sidebarProfit.css("display", "none");
+    $sidebarProfit.hide(300);
+
     $expandProfitImg.attr("src", "./images/arrow_down.svg");
     $profitIcon.attr("src", "./images/sales.svg");
 }
 let inactivateSettingsItem = function() {
     $settings.removeClass('li-sidebar_active');
-    $sidebarSettings.css("display", "none");
+    // $sidebarSettings.css("display", "none");
     $settingsIcon.attr("src", "./images/settings.svg");
+    $sidebarSettings.hide(300);
+
     $expandSettingsImg.attr("src", "./images/arrow_down.svg");
 }
 let activateProfitItem = function() {
+    $sidebarProfit.show(300);
     $sidebarProfit.css("display", "flex");
+
     $profit.addClass('li-sidebar_active');
     $profitIcon.attr("src", "./images/sales_black.svg");
     $expandProfitImg.attr("src", "./images/arrow_up.svg");
 }
 let activateSettingsItem = function() {
+    $sidebarSettings.show(300);
     $sidebarSettings.css("display", "flex");
+
     $settings.addClass('li-sidebar_active');
     $settingsIcon.attr("src", "./images/settings_black.svg");
     $expandSettingsImg.attr("src", "./images/arrow_up.svg");
@@ -519,6 +530,12 @@ $searchFormTablet.hover(
         $(this).css("width", "200px");
         $searchFormTabletInput.css("display", "block");
 
+    }
+);
+
+$searchFormHeader.mouseleave(
+    function() {
+        $searchFormHeaderInput.css("width", "100%");
     }
 );
 $profit.on("click", function() {

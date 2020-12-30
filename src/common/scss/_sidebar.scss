@@ -22,7 +22,7 @@
     width: 226px;
     height: 100%;
     box-sizing: border-box;
-    transition: all 2s;
+    transition: all 1s;
     @media (max-width: 575.9px) {
         left: -600px;
         width: 100%;
@@ -118,6 +118,9 @@
 .li-sidebar {
     -webkit-tap-highlight-color: transparent;
     height: 40px;
+    @media (max-width: 575.9px) {
+        height: 47px;
+    }
     &:hover,
     &_active {
         background: $main-gradient;

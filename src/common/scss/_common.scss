@@ -3,6 +3,10 @@ html {
     overflow-y: scroll;
 }
 
+.hidden {
+    display: none;
+}
+
 .body {
     font-family: "Inter", "PT Sans", "Arial", sans-serif;
     @include fontSize14();
@@ -46,6 +50,9 @@ html {
     &_full-width {
         width: 100%;
     }
+    &_full-height {
+        height: 100%;
+    }
 }
 
 .flex-column {
@@ -73,27 +80,18 @@ html {
 }
 
 .search-form {
-    transition: margin 2s;
+    transition: margin 1s;
     border: none;
     color: $black;
     position: relative;
     width: 100%;
-    &__button {
-        border: 1px solid transparent;
-        outline: none;
-        padding: 0;
-        &:focus,
-        &:active {
-            border: 1px solid transparent;
-            outline: none;
-        }
-    }
     &_margin {
-        margin-left: 76px;
+        margin-left: 106px;
         margin-right: 20px;
     }
     &__input {
-        transition: width 2s;
+        background-color: $white;
+        transition: width 1s;
         border-radius: 12px;
         height: 42px;
         border: 1px solid transparent;
@@ -106,12 +104,13 @@ html {
             width: 100%;
         }
         &_sidebar {
-            color: $dark-gray;
+            color: $black;
             background-color: $main-bg;
             border-radius: 12px;
             height: 42px;
             border: 1px solid transparent;
-            padding-left: 34px;
+            padding-left: 22px;
+            padding-right: 40px;
             @include fontSize13();
             width: 100%;
             &:focus,
@@ -124,29 +123,48 @@ html {
         color: $light-gray;
     }
     &__button {
+        width: 35px;
+        height: 35px;
         -webkit-tap-highlight-color: transparent;
         cursor: pointer;
         padding: 4px;
         position: absolute;
-        border: 1px solid transparent;
-        background-color: $white;
-        left: 4px;
-        top: 9px;
-        &:focus,
-        &:active {
-            @include focusInput();
-            border-radius: 5px;
-        }
+        // border: 1px solid transparent;
+        // background-color: $white;
+        left: 0px;
+        top: 3px;
         @media (max-width: 575.9px) {
             right: 0;
             top: 9px;
         }
+        border: 1px solid transparent;
+        background-color: transparent;
+        // padding: 0;
+        &:focus,
+        &:active {
+            border: 1px solid transparent;
+            outline: none;
+        }
+        &_sidebar {
+            @media (max-width: 575.9px) {
+                width: 40px;
+                height: 40px;
+                left: 80%;
+                top: 1px;
+            }
+        }
     }
     &_sidebar {
+        position: relative;
         display: none;
         @media (max-width: 575.9px) {
+            flex: 0 0;
+            width: 100%;
             display: block;
-            margin: 34px 21px 21px 26px;
+            margin-top: auto;
+            padding-left: 26px;
+            padding-right: 13px;
+            padding-bottom: 21px;
         }
     }
 }
@@ -157,7 +175,7 @@ html {
     position: relative;
     width: 42px;
     height: 42px;
-    transition: all 1.5s;
+    transition: all 1s;
     &_margin {
         margin-right: 40px;
     }
@@ -186,15 +204,18 @@ html {
     &__button {
         -webkit-tap-highlight-color: transparent;
         cursor: pointer;
+        width: 35px;
+        height: 35px;
         padding: 4px;
         position: absolute;
         border: 1px solid transparent;
-        background-color: $white;
+        background-color: transparent;
         right: 4px;
-        top: 9px;
+        top: 7px;
         &:focus,
         &:active {
             @include focusInput();
+            border: 1px solid transparent;
             border-radius: 5px;
         }
     }
