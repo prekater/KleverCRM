@@ -174,12 +174,12 @@ html {
             @include focusInput();
         }
     }
-    &:hover {
-        width: 200px;
-        & input {
-            display: block;
-        }
-    }
+    // &:hover {
+    //     width: 200px;
+    //     & input {
+    //         display: block;
+    //     }
+    // }
     &::placeholder {
         color: $light-gray;
     }

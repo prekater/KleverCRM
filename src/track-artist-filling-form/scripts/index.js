@@ -454,6 +454,11 @@ let $formChangePassword = $("#change-password");
 let $hamburger = $("#hamburger");
 let $bodyOverlay = $(".body__overlay");
 let $body = $('body');
+let $searchFormTablet = $(".search-form-tablet");
+let $searchFormTabletInput = $(".search-form-tablet__input");
+
+
+
 $tabProfileSettings.on("click", function() {
     $(this).addClass("tabs__tab_active");
     $tabChangePassword.removeClass("tabs__tab_active");
@@ -501,6 +506,19 @@ $liSidebar.hover(
 
     function() {
         $(this).find($liSidebarImage).removeClass("li-sidebar__img_active");
+    }
+);
+
+$searchFormTablet.hover(
+    function() {
+        $(this).css("width", "200px");
+        $searchFormTabletInput.css("display", "block");
+    },
+
+    function() {
+        $(this).css("width", "200px");
+        $searchFormTabletInput.css("display", "block");
+
     }
 );
 $profit.on("click", function() {
