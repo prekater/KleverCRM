@@ -171,4 +171,8 @@
     &_img-height {
         height: 40px;
     }
+    &__img:hover,
+    &__img_active {
+        filter: brightness(0);
+    }
 }
