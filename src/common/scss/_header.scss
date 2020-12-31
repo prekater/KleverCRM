@@ -1,0 +1,59 @@
+@import 'variables';
+.header {
+    z-index: 99;
+    height: 60px;
+    border-bottom: 1px solid $line;
+    width: 100%;
+    &_fixed {
+        position: fixed;
+    }
+}
+
+.header-tablet {
+    &_padding {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    display: none;
+    @media (max-width: 991.9px) {
+        display: flex;
+        z-index: 99;
+        height: 60px;
+        border-bottom: 1px solid $line;
+        &_fixed {
+            width: 100%;
+            position: fixed;
+        }
+    }
+    &__hamburger {
+        margin-right: 29px;
+        cursor: pointer;
+    }
+    &__logo {
+        @media (max-width: 575.9px) {
+            display: none;
+        }
+    }
+}
+
+.user {
+    @include fontSize13();
+    &_margin {
+        margin-right: 36px;
+        @media (max-width: 575.9px) {
+            margin-right: 0;
+        }
+    }
+    &__avatar {
+        margin-right: 14px;
+        @media (max-width: 575.9px) {
+            margin-right: 0;
+        }
+    }
+    &__name {
+        @include fontSize13();
+        @media (max-width: 575.9px) {
+            display: none;
+        }
+    }
+}

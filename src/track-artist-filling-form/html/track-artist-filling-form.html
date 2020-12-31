@@ -1,0 +1,438 @@
+<div class="main-block main-block_padding flex-column flex-column_between main-block_margin">
+    <div class="request-wrapper flex-column flex-column_center flex-column_center_vertical">
+        <main id='step1_text'>
+            <div class="wrapper">
+                <div class="cover"><img src="./images/cover110.svg" alt="Обложка"></div>
+                <div class="cover-mobile"><img src="./images/cover84.svg" alt="Обложка"></div>
+                <div class="text">
+                    <div class="h2">
+                        Уважаемый артист!
+                    </div>
+                    <p>Для загрузки Вашего трека на цифровые площадки (iTunes, VK, Boom, YouTube music, Apple Music, Spotify, Deezer, Google Play, Яндекс.Музыка) требуется заполнить форму ниже. ВАЖНО! Ф.И.О. заполняется полностью, без сокращений.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <div class="request" id='step1'>
+            <ul class="steps">
+                <li>1. Основная информ.</li>
+                <li>2. Дополнительная информ.</li>
+                <li>3. Текст песни</li>
+                <li>4. Развернутое описание</li>
+                <li>5. Социальные сети</li>
+                <li>6. Персональная информ.</li>
+            </ul>
+            <div class="progress-bar">
+                <div class="passed"></div>
+                <div class="left"></div>
+            </div>
+            <div class="steps-mobile">
+                <div class="pages-mobile">1 / 6</div>
+                <div class="next-step-tablet">Шаг 2 - Дополнительная информация <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" /></div>
+                <div class="next-step-mobile">2. Дополнительная инф. <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" /></div>
+            </div>
+            <div class="wrapper">
+                <div class="h3">Основная информация о треке</div>
+
+                <form action="get" id='step1_form'>
+
+                    <div class="field">
+                        <label for="nickname">Никнейм <span class="red-dot"><sup>&#8226;</sup></span><span class="question" tooltip="Ваш псевдоним">?</span></label>
+                        <input type="text" id="nickname" name="nickname-field" required>
+                        <div class="error-nickname">Пожалуйста, заполните это поле</div>
+                    </div>
+
+                    <div class="field">
+                        <label for="track">Название трека <span class="red-dot"><sup>&#8226;</sup></span></label>
+                        <input type="text" id="track" name="track-field" required>
+                        <div class="error-track">Пожалуйста, заполните это поле</div>
+                    </div>
+
+                    <div class="field">
+                        <label for="track_url">Ссылка на трек
+                  <span class="red-dot"><sup>&#8226;</sup></span>
+                  <span class="question" tooltip="Ссылка на файлообменник для загрузки трека в формате .wav">?</span>
+                </label>
+                        <input type="text" id="track_url" name="trackurl-field" required>
+                        <div class="error-track-url">Пожалуйста, заполните это поле</div>
+                    </div>
+
+                    <div class="field">
+                        <label for="cover_url">Ссылка на обложку<span class="question" tooltip="Ссылка на файлообменник для загрузки обложки трека в формате .png">?</span></label>
+                        <input type="text" id="cover_url" name="coverurl-field">
+                    </div>
+
+                    <div class="popup__overlay">
+                        <div class="popup">
+                            <a href="#close" title="Close" class="popup__close">×</a>
+                            <div class="popup__content"></div>
+                        </div>
+                    </div>
+
+                </form>
+                <!-- <div class="warning">Пожалуйста, заполните обязательные поля (отмечены красной точкой)</div> -->
+            </div>
+
+            <div class="request-bottom">
+                <div class="empty"></div>
+                <div class="pages">1 / 6</div>
+                <a href="#" class="next-step" title='Следующий шаг'><img src="./images/arrow_to_right.svg" alt='Следующий шаг' />
+                    <p>
+                        Следующий
+                    </p>
+                </a>
+            </div>
+            <div class="request-bottom-mobile">
+                <a href="#" class="next-step">
+                    <img src="./images/arrow_to_right.svg" alt='Следующий шаг' />
+                    <p> Следующий</p>
+                </a>
+            </div>
+        </div>
+        <div class="request" id="step2">
+            <ul class="steps">
+                <li>1. Основная информ.</li>
+                <li>2. Дополнительная информ.</li>
+                <li>3. Текст песни</li>
+                <li>4. Развернутое описание</li>
+                <li>5. Социальные сети</li>
+                <li>6. Персональная информ.</li>
+            </ul>
+            <div class="progress-bar">
+                <div class="passed"></div>
+                <div class="left"></div>
+            </div>
+            <div class="steps-mobile">
+                <div class="pages-mobile">2 / 6</div>
+                <div href="#" class="next-step-tablet">Шаг 3 - Текст песни <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" /></div>
+                <div href="#" class="next-step-mobile">3. Текст песни <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" /></div>
+            </div>
+            <div class="wrapper">
+                <div class="h3">Дополнительная информация</div>
+
+                <form action="get" id="step2_form">
+
+                    <div class="field">
+                        <label for="text_author">Автор слов</label>
+                        <input type="text" id="text_author" name="text-author-field" placeholder="ФИО">
+                        <div class="error-author"></div>
+                    </div>
+
+                    <div class="field">
+                        <label for="singer">Исполнитель</label>
+                        <input type="text" id="singer" name="singer-field" placeholder="ФИО">
+                        <div class="error-singer"></div>
+                    </div>
+
+                    <div class="field">
+                        <label for="arranger">Аранжировщик</label>
+                        <input type="text" id="arranger" name="arranger-field" placeholder="ФИО">
+                        <div class="error-arranger"></div>
+                    </div>
+
+                    <div class="field">
+                        <label for="composer">Композитор</label>
+                        <input type="text" id="composer" name="composer-field" placeholder="ФИО">
+                        <div class="error-composer"></div>
+                    </div>
+
+                    <div class="small-fields">
+                        <div class="field">
+                            <label for="genre">Жанр вашей песни</label>
+                            <input type="text" id="genre" name="genre-field">
+                            <div class="error-genre"></div>
+
+                        </div>
+                        <div class="field">
+                            <label for="date">Дата релиза</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="date" name="date-field" placeholder="дд.мм.гггг">
+                            </div>
+                            <div class="error-date"></div>
+
+                        </div>
+                    </div>
+                    <div class="field seconds">
+                        <label for="start">Секунда начала воспроизведения<span class="question"
+                                                                       tooltip="Секунда начала воспроизведения">?</span></label>
+                        <input type="number" id="start" name="start-field" placeholder="00">
+                    </div>
+                    <div class="popup__overlay">
+                        <div class="popup">
+                            <a href="#close" title="Close" class="popup__close">×</a>
+                            <div class="popup__content"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="request-bottom">
+                <a href="#step1" class="step prev"><img src="./images/arrow_to_left.svg" alt='Предыдущий шаг' />
+                    <p>
+                        Предыдущий
+                    </p>
+                </a>
+                <div class="pages">2 / 6</div>
+                <a href="#" class="step next"><img src="./images/arrow_to_right.svg" alt='Следующий шаг' />
+                    <p>
+                        Следующий
+                    </p>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="request" id="step3">
+            <ul class="steps ">
+                <li>1. Основная информ.</li>
+                <li>2. Дополнительная информ.</li>
+                <li>3. Текст песни</li>
+                <li>4. Развернутое описание</li>
+                <li>5. Социальные сети</li>
+                <li>6. Персональная информ.</li>
+            </ul>
+            <div class="progress-bar ">
+                <div class="passed "></div>
+                <div class="left "></div>
+            </div>
+            <div class="steps-mobile ">
+                <div class="pages-mobile ">3 / 6</div>
+                <div href="# " class="next-step-tablet ">Шаг 4 - Развернутое описание <img src="./images/arrow_to_right_green.svg " alt="Следующий шаг " /></div>
+                <div href="# " class="next-step-mobile ">4. Развернутое описание <img src="./images/arrow_to_right_green.svg " alt="Следующий шаг " /></div>
+            </div>
+            <div class="wrapper ">
+                <div class="h3 ">Текст песни</div>
+
+                <form action="get" id="step3_form">
+                    <textarea name="song-text-field " id="song_text " cols="110 " rows="12 "></textarea>
+
+                    <label for="song_text ">
+                    <p>
+                      Припев должен отделяться от куплета однострочным интервалом.
+                    </p>
+                    <p>
+                      Не включайте текст, который не слышен, такой как: заголовки разделов или имя вокалиста.
+                      Например: не включайте заголовки разделов, такие как Intro, Verse, Chorus, Hook, Outro и тп.
+                    </p>
+                    <p>
+                      Начните каждую строку с заглавной буквы.
+                    </p>
+                    <p>
+                      Не используйте точки или запятые в конце строки или раздела.
+                    </p>
+                  </label>
+
+
+                </form>
+            </div>
+            <div class="request-bottom ">
+                <a href="# " class="step prev "><img src="./images/arrow_to_left.svg " alt='Предыдущий шаг' />
+                    <p>
+                        Предыдущий
+                    </p>
+                </a>
+                <div class="pages ">3 / 6</div>
+                <a href="# " class="step next "><img src="./images/arrow_to_right.svg " alt='Следующий шаг' />
+                    <p>
+                        Следующий
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="request" id="step4">
+            <ul class="steps">
+                <li>1. Основная информ.</li>
+                <li>2. Дополнительная информ.</li>
+                <li>3. Текст песни</li>
+                <li>4. Развернутое описание</li>
+                <li>5. Социальные сети</li>
+                <li>6. Персональная информ.</li>
+            </ul>
+            <div class="progress-bar">
+                <div class="passed"></div>
+                <div class="left"></div>
+            </div>
+            <div class="steps-mobile">
+                <div class="pages-mobile">4 / 6</div>
+                <div href="#" class="next-step-tablet">Шаг 5 - Социальные сети <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" /></div>
+                <div href="#" class="next-step-mobile">5. Социальные сети <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" /></div>
+            </div>
+            <div class="wrapper">
+                <div class="h3">Развернутое описание <span class="desktop">Вашего трека и Вас</span></div>
+
+                <form action="get" id="step4_form">
+
+                    <label for="description">
+                <p>
+                  Мы запрашиваем у площадок промо-поддержку Вашего релиза. Просим внести развернутую информацию о Вашем треке и о Вас как об артисте, о ваших успехах и достижениях
+                </p>
+              </label>
+                    <textarea name="description-field" id="description" cols="130" rows="7"></textarea>
+
+
+                    <div class="example">
+                        <p><strong>Пример:</strong> Один из самых популярных российских блогеров TikTok 'egorkaship', имеющий в совокупности более двух миллионов подписчиков на своих социальных площадках и поддержку от других популярных блогеров, решил начать
+                            карьеру музыкального исполнителя и записал трек под названием 'Одним цветом'. Молодой исполнитель хорошо знает свою аудиторию, поэтому уверен, что высокая лояльность поклонников и их заинтересованность в первом треке исполнителя,
+                            помноженная на поддержку других популярных блогеров, поможет стать данной песне хитом.</p>
+                    </div>
+                </form>
+
+            </div>
+            <div class="request-bottom">
+                <a href="#" class="step prev"><img src="./images/arrow_to_left.svg" alt='Предыдущий шаг' />
+                    <p>Предыдущий</p>
+                </a>
+                <div class="pages">4 / 6</div>
+                <a href="#" class="step next"><img src="./images/arrow_to_right.svg" alt='Следующий шаг' />
+                    <p>Следующий</p>
+                </a>
+            </div>
+        </div>
+        <div class="request" id="step5">
+            <ul class="steps">
+                <li>1. Основная информ.</li>
+                <li>2. Дополнительная информ.</li>
+                <li>3. Текст песни</li>
+                <li>4. Развернутое описание</li>
+                <li>5. Социальные сети</li>
+                <li>6. Персональная информ.</li>
+            </ul>
+            <div class="progress-bar">
+                <div class="passed"></div>
+                <div class="left"></div>
+            </div>
+            <div class="steps-mobile">
+                <div class="pages-mobile">5 / 6</div>
+                <div href="#" class="next-step-tablet">Шаг 6 - Персональная информация<img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" /></div>
+                <div href="#" class="next-step-mobile">6. Персональная инф. <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" /></div>
+            </div>
+            <div class="wrapper">
+                <div class="h3">Социальные сети</div>
+
+                <form action="get" id="step5_form">
+
+                    <div class="field">
+                        <label for="insta_artist">Ссылка на Instagram артиста</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="insta_artist" name="insta-artist-field" placeholder="instagram.com/nickname/">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="insta_second">Ссылка на Instagram второго исполнителя (при наличии)</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="insta_second" name="insta-second-field" placeholder="instagram.com/nickname/">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="vk">Ссылка на паблик VK артиста</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="vk" name="vk-field" placeholder="vk.com/nickname">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="web">Ссылка на сайт артиста (при наличии)</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="web" name="web-field" placeholder="artist.ru">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="apple">Ссылка на карточку музыканта на площадке Apple (Apple ID)</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="apple" name="apple-field" placeholder="nickname@yandex.ru">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="spotify">Ссылка на карточку музыканта на площадке Spotify</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="spotify" name="spotify-field" placeholder="nickname@yandex.ru">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="request-bottom">
+                <a href="#" class="step prev"><img src="./images/arrow_to_left.svg" alt='Предыдущий шаг' />
+                    <p>
+                        Предыдущий
+                    </p>
+                </a>
+                <div class="pages">5 / 6</div>
+                <a href="#" class="step next"><img src="./images/arrow_to_right.svg" alt='Следующий шаг' />
+                    <p>
+                        Следующий
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="request" id="step6">
+            <ul class="steps">
+                <li>1. Основная информ.</li>
+                <li>2. Дополнительная информ.</li>
+                <li>3. Текст песни</li>
+                <li>4. Развернутое описание</li>
+                <li>5. Социальные сети</li>
+                <li>6. Персональная информ.</li>
+            </ul>
+            <div class="progress-bar">
+                <div class="passed"></div>
+                <div class="left"></div>
+            </div>
+            <div class="steps-mobile">
+                <div class="pages-mobile">6 / 6</div>
+                <div href="#" class="next-step-tablet">Шаг 6 - Персональная информация<img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" /></div>
+                <div href="#" class="next-step-mobile">6. Персональная инф. <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" /></div>
+            </div>
+
+
+            <form id="step6_form">
+
+                <div class="wrapper">
+                    <div class="h3">Персональная информация</div>
+                    <div class="field">
+                        <label for="email">Ваш e-mail</label>
+                        <input type="text" id="email" name="email-field">
+                        <div class="error-email"></div>
+                    </div>
+                    <div class="field">
+                        <label for="bank_info"> Ваши банковские реквизиты</label>
+                        <textarea name="bank-info-field" id="bank_info" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="request-bottom">
+                    <a href="#" class="step prev"><img src="./images/arrow_to_left.svg" alt='Предыдущий шаг' />
+                        <p>
+                            Предыдущий
+                        </p>
+                    </a>
+                    <div class="pages">6 / 6</div>
+
+                    <button type="submit" class="step send">Отправить заявку</button>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="flex-row flex-row_full-width flex-row_center_vertical flex-row_full-height flex-row_center">
+            <div class="request" id="finish">
+                <img src="./images/success.svg" alt="Заявка успешно создана" class="succes">
+                <div class="h3">Заявка успешно отправлена</div>
+                <p>Мы свяжемся с Вами после обработки запроса.</p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="copyright">© 2020 KleverCrm - Ivan Kostyashov</div>
+    </footer>
+</div>
+
+
+
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="../track-artist-filling-form/scripts/index.js"></script>
