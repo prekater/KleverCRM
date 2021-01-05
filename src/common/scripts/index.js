@@ -18,10 +18,6 @@ let $arrowToExpand = $sidebarCollapsed.find($(".sidebar_to-expand"));
 let $arrowToCollapse = $sidebarExpanded.find($(".sidebar_to-collapse"));
 let $mainBlock = $(".main-block");
 let $searchForm = $('.search-form');
-let $tabProfileSettings = $('#tab-profile-settings');
-let $tabChangePassword = $('#tab-change-password');
-let $formProfileSettings = $("#profile-settings");
-let $formChangePassword = $("#change-password");
 let $hamburger = $("#hamburger");
 let $bodyOverlay = $(".body__overlay");
 let $body = $('body');
@@ -30,23 +26,6 @@ let $searchFormTabletInput = $(".search-form-tablet__input");
 let $header = $(".header");
 let $searchFormHeader = $header.find(".search-form");
 let $searchFormHeaderInput = $header.find(".search-form__input");
-
-
-
-$tabProfileSettings.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabChangePassword.removeClass("tabs__tab_active");
-    $formProfileSettings.css("display", "flex");
-    $formChangePassword.css("display", "none");
-});
-
-$tabChangePassword.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabProfileSettings.removeClass("tabs__tab_active");
-    $formProfileSettings.css("display", "none");
-    $formChangePassword.css("display", "flex");
-});
-
 
 let inactivateProfitItem = function() {
     $profit.removeClass('li-sidebar_active');
