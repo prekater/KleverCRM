@@ -93,7 +93,7 @@ html {
 }
 
 .search-form {
-    transition: margin 1s;
+    transition: margin 0.5s;
     border: none;
     color: $black;
     position: relative;
@@ -104,7 +104,7 @@ html {
     }
     &_input {
         background-color: $white;
-        transition: width 1s;
+        transition: width 0.5s;
         border-radius: 12px;
         height: 42px;
         border: 1px solid transparent;
@@ -188,7 +188,7 @@ html {
     position: relative;
     width: 42px;
     height: 42px;
-    transition: all 1s;
+    transition: all 0.5s;
     &_margin {
         margin-right: 40px;
     }
