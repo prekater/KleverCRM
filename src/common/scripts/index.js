@@ -150,3 +150,7 @@ $(function() {
         });
     }
 });
+
+$("input").on("change", function() {
+    $(this).css("background-color", "#EEF4F6");
+});
