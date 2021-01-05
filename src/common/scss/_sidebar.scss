@@ -22,7 +22,7 @@
     width: 226px;
     height: 100%;
     box-sizing: border-box;
-    transition: all 2s;
+    transition: all 0.5s;
     @media (max-width: 575.9px) {
         left: -600px;
         width: 100%;
@@ -39,7 +39,7 @@
         @media (max-width: 575.9px) {
             height: 50px;
         }
-        @include fontSize11();
+        @include fontSize(11, 14, 600);
         border-top: 1px solid $line;
         &__copyright {
             margin-top: 10px;
@@ -86,7 +86,7 @@
     &_collapsed {
         width: 70px;
         left: 0;
-        transition: 0s;
+        transition: 0.5s;
         @media (max-width: 991.9px) {
             left: -70px;
             box-shadow: none;
@@ -118,6 +118,9 @@
 .li-sidebar {
     -webkit-tap-highlight-color: transparent;
     height: 40px;
+    @media (max-width: 575.9px) {
+        height: 47px;
+    }
     &:hover,
     &_active {
         background: $main-gradient;
@@ -133,7 +136,7 @@
         cursor: pointer;
         text-decoration: none;
         color: $black;
-        @include fontSize13();
+        @include fontSize(13, 16, 400);
     }
     &__img {
         align-self: start;
@@ -147,7 +150,7 @@
         border-radius: 5px;
         background-color: $line;
         color: $dark-gray;
-        @include fontSize12();
+        @include fontSize(12, 14.52, 500);
         @include flexCenter(row);
     }
     &__expand {

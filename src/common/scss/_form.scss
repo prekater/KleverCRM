@@ -1,0 +1,67 @@
+.form {
+    box-sizing: border-box;
+    @media (max-width: 991.9px) {
+        border-radius: 0;
+    }
+    &_margin {
+        margin-top: 2.7vh;
+        margin-bottom: 40px;
+        @media (max-width: 575.9px) {
+            margin-bottom: 22px;
+        }
+    }
+    &_padding {
+        padding: 35px;
+        @media (max-width: 575.9px) {
+            padding: 20px;
+        }
+    }
+}
+
+.field {
+    position: relative;
+    &__label {
+        color: $dark-gray;
+        @include fontSize(11, 14, 500);
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        &_readonly {
+            color: $light-gray;
+        }
+    }
+    &__input_190px {
+        width: 190px;
+    }
+    &__input_text {
+        @include input();
+        @include fontSize(14, 20, 400);
+        &:active,
+        &:focus {
+            border-color: $light-gray;
+            outline: none;
+        }
+        &:read-only {
+            background-color: $main-bg;
+            color: $input-disabled;
+        }
+        &::placeholder {
+            color: $light-gray;
+        }
+        &_invalid {
+            border-color: $red;
+            color: $red;
+        }
+        &_filled {
+            background-color: $line;
+        }
+    }
+    &__textarea {
+        box-sizing: border-box;
+        @include textarea;
+        @include fontSize(14, 20, 400);
+        &:active,
+        &:focus {
+            @include focusInput;
+        }
+    }
+}

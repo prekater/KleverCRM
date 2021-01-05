@@ -5,11 +5,10 @@ html
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         link(rel='stylesheet', href='./styles/styles.css')
         title='KleverCRM'
-    body.body.flex-row
+    body.body.flex-row.flex-row_full-height
         div.body__overlay
         include ../html/sidebar.html 
-        div.flex-column.flex-column_adaptive-width
+        div.flex-column.flex-column_adaptive-height
             include ../html/header.html
             block trackContent
-        
 
