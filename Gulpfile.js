@@ -56,7 +56,7 @@ gulp.task('scss', () => {
 
 gulp.task('scripts', () => {
 
-    return gulp.src(['./src/track-profile/scripts/index.js', './src/common/scripts/index.js'])
+    return gulp.src(['./src/track-releases/scripts/index.js', './src/common/scripts/index.js'])
         // .pipe(uglify())
         .pipe(concat('index.js'))
         // .pipe(rename((p) => {
@@ -66,7 +66,7 @@ gulp.task('scripts', () => {
         //         extname: p.extname
         //     };
         // }))
-        .pipe(gulp.dest('./build/track-profile/scripts'));
+        .pipe(gulp.dest('./build/track-releases/scripts'));
 });
 gulp.task('images', () => {
     return gulp.src('./src/track*/images/*')
