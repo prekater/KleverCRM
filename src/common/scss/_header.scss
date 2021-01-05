@@ -37,7 +37,7 @@
 }
 
 .user {
-    @include fontSize13();
+    @include fontSize(13, 16, 400);
     &_margin {
         margin-right: 36px;
         @media (max-width: 575.9px) {
@@ -51,7 +51,7 @@
         }
     }
     &__name {
-        @include fontSize13();
+        @include fontSize(13, 16, 400);
         @media (max-width: 575.9px) {
             display: none;
         }

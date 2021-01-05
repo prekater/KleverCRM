@@ -1,4 +1,5 @@
 $black: #1A1A1A;
+$light-green: #4CDBCA;
 $green: #21BAA8;
 $red: #E2432D;
 $main-gradient: linear-gradient(270deg, #C0E8FF 0%, #D1FFD5 100%);
@@ -61,13 +62,27 @@ $newRequestHighlightHover: 0px 7px 10px rgba(21, 186, 176, 0.3);
     font-weight: 600;
 }
 
+@mixin fontSize($font-size, $line-height, $font-weight) {
+    font-size: $font-size/16*1rem;
+    line-height: $line-height/16*1rem;
+    font-weight: $font-weight;
+}
+
 @mixin input {
-    background-color: #F3F8FA;
+    background-color: $input-bg;
     border-radius: 12px;
     height: 52px;
     border: 1px solid transparent;
-    box-sizing: content-box;
+    box-sizing: border-box;
     padding-left: 22px;
+}
+
+@mixin textarea {
+    background-color: $input-bg;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    padding: 10px 22px 10px 22px;
 }
 
 @mixin flexCenter ($direction) {

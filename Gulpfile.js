@@ -9,6 +9,9 @@ const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
 const path = require('path');
+const concat = require('gulp-concat');
+const debug = require('gulp-debug');
+const { cwd } = require('process');
 
 const getFolders = (dir) => {
     return fs.readdirSync(dir)
@@ -48,20 +51,23 @@ gulp.task('scss', () => {
                 extname: p.extname
             };
         }))
-        .pipe(gulp.dest('./build'));
+
+    .pipe(gulp.dest('./build'));
 });
 
 gulp.task('scripts', () => {
-    return gulp.src('./src/track*/scripts/index.js')
+
+    return gulp.src(['./src/track*/scripts/index.js', './src/common/scripts/index.js'])
         // .pipe(uglify())
-        .pipe(rename((p) => {
-            return {
-                dirname: p.dirname,
-                basename: 'index',
-                extname: p.extname
-            };
-        }))
-        .pipe(gulp.dest('./build'));
+        .pipe(concat('index.js'))
+        // .pipe(rename((p) => {
+        //     return {
+        //         dirname: p.dirname,
+        //         basename: 'index',
+        //         extname: p.extname
+        //     };
+        // }))
+        .pipe(gulp.dest('./build/track-artist-filling-form/scripts'));
 });
 gulp.task('images', () => {
     return gulp.src('./src/track*/images/*')
