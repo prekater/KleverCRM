@@ -9,7 +9,7 @@ let stepsList = document.querySelectorAll(".steps__step");
 let progressBarPassed = document.querySelector(".progress-bar__passed");
 let infoForArtist = document.querySelector(".info-for-artist");
 let artistForm = document.getElementById("artist_form");
-let succes = document.getElementById("success");
+let success = document.getElementById("success");
 let stepNamesTablet = ["Шаг 2 - Дополнительная информация", "Шаг 3 - Текст песни", "Шаг 4 - Развернутое описание", "Шаг 5 - Социальные сети", "Шаг 6 - Персональная информация"];
 let stepNamesMobile = ["2. Дополнительная инф.", "3. Текст песни", "4. Развернутое описание", "5. Социальные сети", "6. Персональная инф."];
 let nextStepNameTablet = document.querySelector(".next-step_tablet");
@@ -450,8 +450,4 @@ $(function() {
             $(body).css('overflow', 'auto')
         })
     }
-});
-
-$("input").on("change", function() {
-    $(this).css("background-color", "#EEF4F6");
 });

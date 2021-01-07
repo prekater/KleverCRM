@@ -120,6 +120,7 @@ gulp.task('browser', (cb) => {
             'build/*.html'
         ],
         open: false,
+        livereload: true,
         notify: false
     });
     cb();
@@ -133,6 +134,7 @@ gulp.task('watch', (cb) => {
     gulp.watch('src/**/*.png', gulp.series('common-images'));
     gulp.watch('src/**/fonts/*', gulp.series('fonts'));
     gulp.watch('src/**/scripts/*', gulp.series('scripts'));
+    gulp.watch('src/**/*.*').on('change', browserSync.reload);
     cb();
 });
 
