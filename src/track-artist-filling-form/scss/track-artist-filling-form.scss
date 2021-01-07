@@ -5,7 +5,6 @@
 @import "./../../common/scss/sidebar";
 .main-block {
     flex: 1 0 auto;
-    //    border: 2px dashed red;
     transition: padding 0.5s;
     width: 100%;
     &_padding {
@@ -78,7 +77,7 @@
         border-radius: 0;
     }
     &_margin {
-        margin-top: 2.75vh;
+        margin-top: 5.25vh;
         @media (max-width: 991.9px) {
             margin-top: 0;
         }
@@ -191,7 +190,6 @@
 }
 
 .form-fields {
-    //  border: 1px dotted purple;
     &_padding {
         padding: 4.4vh 9vw 4.4vh 9vw;
         @media (max-width: 991.9px) {
@@ -227,7 +225,6 @@
 }
 
 .groupped-fields-step1 {
-    //  border: 1px solid #000;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 3.75vh;
@@ -242,7 +239,6 @@
 }
 
 .groupped-fields-step2 {
-    // border: 1px solid #000;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 3.25vh;
@@ -253,10 +249,18 @@
     @media (max-width: 575.9px) {
         grid-row-gap: 23px;
     }
+    &_margin {
+        margin-bottom: 15.875vh;
+        @media (max-width: 991.9px) {
+            margin-bottom: 1.6vh;
+        }
+        @media (max-width: 575.9px) {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .grid-for-two {
-    //border: 1px solid #000;
     display: grid;
     grid-template-columns: 1fr 170px;
     grid-template-rows: 1fr;
@@ -302,7 +306,6 @@
 }
 
 .groupped-fields-step5 {
-    //border: 1px solid #000;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 3.75vh;
@@ -320,7 +323,6 @@
 }
 
 .groupped-fields-step6 {
-    //border: 1px solid #000;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 19.75vh;
@@ -378,7 +380,6 @@
 }
 
 .field {
-    //  border: 1px solid darkcyan;
     &__error-nickname,
     &__error-track,
     &__error-track-url,
@@ -554,8 +555,7 @@
                 transform: translateY(0);
             }
         }
-        //         p { animation: translating 4s linear infinite; }
-        transition: all 2s;
+        transition: all 0.5s;
         position: fixed;
         bottom: 0;
         width: 100%;

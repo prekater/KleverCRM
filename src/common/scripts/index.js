@@ -104,11 +104,10 @@ $searchFormTablet.hover(
     }
 );
 
-$searchFormHeader.mouseleave(
-    function() {
-        $searchFormHeaderInput.css("width", "100%");
-    }
-);
+$searchFormHeader.on("mouseleave", function() {
+    $searchFormHeaderInput.css("width", "100%");
+
+});
 $profit.on("click", function() {
     if ($(this).hasClass('li-sidebar_active')) {
         inactivateProfitItem();

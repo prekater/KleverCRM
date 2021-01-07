@@ -452,10 +452,6 @@ $(function() {
     }
 });
 
-// inputs.onblur = function() {
-//     this.style.backgroundColor = "$red";
-// }
-
 $("input").on("change", function() {
     $(this).css("background-color", "#EEF4F6");
 });

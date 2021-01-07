@@ -10,8 +10,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
 const path = require('path');
 const concat = require('gulp-concat');
-const debug = require('gulp-debug');
-const { cwd } = require('process');
 
 const getFolders = (dir) => {
     return fs.readdirSync(dir)
@@ -57,7 +55,7 @@ gulp.task('scss', () => {
 
 gulp.task('scripts', () => {
 
-    return gulp.src(['./src/track*/scripts/index.js', './src/common/scripts/index.js'])
+    return gulp.src(['./src/track-artist-filling-form/scripts/index.js', './src/common/scripts/index.js'])
         // .pipe(uglify())
         .pipe(concat('index.js'))
         // .pipe(rename((p) => {

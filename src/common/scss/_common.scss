@@ -48,6 +48,9 @@ html {
     &_end {
         justify-content: flex-end;
     }
+    &_start {
+        justify-content: flex-start;
+    }
     &_full-width {
         width: 100%;
     }
@@ -89,151 +92,6 @@ html {
     margin: 0;
     &_rounded {
         @include boxRaduisShadow();
-    }
-}
-
-.search-form {
-    transition: margin 1s;
-    border: none;
-    color: $black;
-    position: relative;
-    width: 100%;
-    &_margin {
-        margin-left: 106px;
-        margin-right: 20px;
-    }
-    &_input {
-        background-color: $white;
-        transition: width 1s;
-        border-radius: 12px;
-        height: 42px;
-        border: 1px solid transparent;
-        padding-left: 34px;
-        @include fontSize(13, 16, 400);
-        width: 100px;
-        &:focus,
-        &:active {
-            @include focusInput();
-            width: 100%;
-        }
-        &_sidebar {
-            color: $black;
-            background-color: $main-bg;
-            border-radius: 12px;
-            height: 42px;
-            border: 1px solid transparent;
-            padding-left: 22px;
-            padding-right: 40px;
-            @include fontSize(13, 16, 400);
-            width: 100%;
-            &:focus,
-            &:active {
-                @include focusInput();
-            }
-        }
-    }
-    &::placeholder {
-        color: $light-gray;
-    }
-    &__button {
-        width: 35px;
-        height: 35px;
-        -webkit-tap-highlight-color: transparent;
-        cursor: pointer;
-        padding: 4px;
-        position: absolute;
-        // border: 1px solid transparent;
-        // background-color: $white;
-        left: 0px;
-        top: 3px;
-        @media (max-width: 575.9px) {
-            right: 0;
-            top: 9px;
-        }
-        border: 1px solid transparent;
-        background-color: transparent;
-        // padding: 0;
-        &:focus,
-        &:active {
-            border: 1px solid transparent;
-            outline: none;
-        }
-        &_sidebar {
-            @media (max-width: 575.9px) {
-                width: 40px;
-                height: 40px;
-                left: 80%;
-                top: 1px;
-            }
-        }
-    }
-    &_sidebar {
-        position: relative;
-        display: none;
-        @media (max-width: 575.9px) {
-            flex: 0 0;
-            width: 100%;
-            display: block;
-            margin-top: auto;
-            padding-left: 26px;
-            padding-right: 13px;
-            padding-bottom: 21px;
-        }
-    }
-}
-
-.search-form-tablet {
-    border: none;
-    color: $black;
-    position: relative;
-    width: 42px;
-    height: 42px;
-    transition: all 1s;
-    &_margin {
-        margin-right: 40px;
-    }
-    &__input {
-        display: none;
-        border-radius: 12px;
-        height: 42px;
-        padding-left: 34px;
-        width: 100%;
-        border: 1px solid $line;
-        @include fontSize(13, 16, 400);
-        &:focus,
-        &:active {
-            @include focusInput();
-        }
-    }
-    // &:hover {
-    //     width: 200px;
-    //     & input {
-    //         display: block;
-    //     }
-    // }
-    &::placeholder {
-        color: $light-gray;
-    }
-    &__button {
-        -webkit-tap-highlight-color: transparent;
-        cursor: pointer;
-        width: 35px;
-        height: 35px;
-        padding: 4px;
-        position: absolute;
-        border: 1px solid transparent;
-        background-color: transparent;
-        right: 4px;
-        top: 7px;
-        &:focus,
-        &:active {
-            @include focusInput();
-            border: 1px solid transparent;
-            border-radius: 5px;
-        }
-    }
-    @media (max-width: 575.9px) {
-        display: none;
     }
 }
 
