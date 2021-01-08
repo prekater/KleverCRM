@@ -29,7 +29,6 @@ let $searchFormHeaderInput = $header.find(".search-form__input");
 
 let inactivateProfitItem = function() {
     $profit.removeClass('li-sidebar_active');
-    // $sidebarProfit.css("display", "none");
     $sidebarProfit.hide(300);
 
     $expandProfitImg.attr("src", "./images/arrow_down.svg");
@@ -37,10 +36,8 @@ let inactivateProfitItem = function() {
 }
 let inactivateSettingsItem = function() {
     $settings.removeClass('li-sidebar_active');
-    // $sidebarSettings.css("display", "none");
     $settingsIcon.attr("src", "./images/settings.svg");
     $sidebarSettings.hide(300);
-
     $expandSettingsImg.attr("src", "./images/arrow_down.svg");
 }
 let activateProfitItem = function() {
@@ -60,41 +57,45 @@ let activateSettingsItem = function() {
     $expandSettingsImg.attr("src", "./images/arrow_up.svg");
 }
 
-$liSidebar.hover(
-    function() {
-        $(this).find($liSidebarImage).addClass("li-sidebar__img_active");
-    },
-
-    function() {
-        $(this).find($liSidebarImage).removeClass("li-sidebar__img_active");
-    }
-);
-
-$searchFormTablet.hover(
-    function() {
-        $(this).css("width", "200px");
-        $searchFormTabletInput.css("display", "block");
-    },
-
-    function() {
-        $(this).css("width", "200px");
-        $searchFormTabletInput.css("display", "block");
-
-    }
-);
-
-$searchFormHeader.on("mouseleave", function() {
-    $searchFormHeaderInput.css("width", "100%");
-
+$liSidebar.on("mouseenter", function() {
+    $(this).find($liSidebarImage).addClass("li-sidebar__img_active");
 });
+
+$liSidebar.on("mouseleave", function() {
+    $(this).find($liSidebarImage).removeClass("li-sidebar__img_active");
+});
+
+$searchFormTablet.on("mouseenter", function() {
+    $(this).css("width", "200px");
+    $searchFormTabletInput.css("display", "block");
+});
+
+$searchFormTablet.on("mouseleave", function() {
+    $(this).css("width", "200px");
+    $searchFormTabletInput.css("display", "block");
+});
+
+$searchFormHeader.on("focusin", function() {
+    $searchFormHeaderInput.css("width", "100%");
+});
+
+$searchFormHeader.on("focusout", function() {
+    if (!(($searchFormHeaderInput.val() === null) || ($searchFormHeaderInput.val() === "") || ($searchFormHeaderInput.val() === undefined))) {
+        $searchFormHeaderInput.css("width", "100%");
+    } else {
+        $searchFormHeaderInput.css("width", "150px");
+        $searchFormHeaderInput.css("background-color", "white");
+    }
+});
+
 $profit.on("click", function() {
     if ($(this).hasClass('li-sidebar_active')) {
         inactivateProfitItem();
     } else {
         activateProfitItem();
     }
-
 });
+
 $settings.on("click", function() {
     if ($(this).hasClass('li-sidebar_active')) {
         inactivateSettingsItem();

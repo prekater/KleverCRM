@@ -76,11 +76,23 @@
         border: 1px solid transparent;
         padding-left: 54px;
         @include fontSize(13, 16, 400);
-        width: 100px;
+        width: 150px;
         &:focus,
         &:active {
             @include focusInput();
             width: 100%;
+        }
+        &::ms-clear,
+        &::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
         }
         &_sidebar {
             color: $black;
@@ -95,6 +107,18 @@
             &:focus,
             &:active {
                 @include focusInput();
+            }
+            &::ms-clear,
+            &::-ms-reveal {
+                display: none;
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration {
+                display: none;
             }
         }
     }
@@ -170,6 +194,18 @@
         &:focus,
         &:active {
             @include focusInput();
+        }
+        &::ms-clear,
+        &::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
         }
     }
     &::placeholder {

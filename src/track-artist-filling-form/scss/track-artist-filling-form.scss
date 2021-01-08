@@ -4,6 +4,7 @@
 @import "./../../common/scss/header";
 @import "./../../common/scss/sidebar";
 .main-block {
+    box-sizing: border-box;
     flex: 1 0 auto;
     transition: padding 0.5s;
     width: 100%;
@@ -16,8 +17,16 @@
     }
 }
 
+.form-block-wrapper {
+    width: 100%;
+    height: 81.25vh;
+    margin-top: 4vh;
+}
+
 .info-for-artist {
+    padding-top: 2.625vh;
     width: 58.6vw;
+    height: 25.125vh;
     @media (max-width: 991.9px) {
         width: 100%;
         padding-right: 20px;
@@ -26,18 +35,18 @@
     @media (max-width: 575.9px) {
         @include flexCenter(column);
     }
-    &_margin {
-        margin-top: 6.625vh;
-        margin-bottom: 3.5vh;
-        @media (max-width: 991.9px) {
-            margin-top: 3.25vh;
-            margin-bottom: 3.25vh;
-        }
-        @media (max-width: 575.9px) {
-            margin-top: 26px;
-            margin-bottom: 23px;
-        }
-    }
+    // &_margin {
+    //     margin-top: 6.625vh;
+    //     margin-bottom: 3.5vh;
+    //     @media (max-width: 991.9px) {
+    //         margin-top: 3.25vh;
+    //         margin-bottom: 3.25vh;
+    //     }
+    //     @media (max-width: 575.9px) {
+    //         margin-top: 26px;
+    //         margin-bottom: 23px;
+    //     }
+    // }
     &__cover {
         display: block;
         margin-right: 2.1vw;
@@ -71,20 +80,21 @@
 }
 
 .artist-form {
+    flex: 1 0;
     width: 89.1%;
     @media (max-width: 991.9px) {
         width: 100%;
         border-radius: 0;
     }
-    &_margin {
-        margin-top: 5.25vh;
-        @media (max-width: 991.9px) {
-            margin-top: 0;
-        }
-        @media (max-width: 575.9px) {
-            margin-top: 23px;
-        }
-    }
+    // &_margin {
+    //     margin-top: 5.25vh;
+    //     @media (max-width: 991.9px) {
+    //         margin-top: 0;
+    //     }
+    //     @media (max-width: 575.9px) {
+    //         margin-top: 23px;
+    //     }
+    // }
 }
 
 .steps {
@@ -249,15 +259,15 @@
     @media (max-width: 575.9px) {
         grid-row-gap: 23px;
     }
-    &_margin {
-        margin-bottom: 15.875vh;
-        @media (max-width: 991.9px) {
-            margin-bottom: 1.6vh;
-        }
-        @media (max-width: 575.9px) {
-            margin-bottom: 0;
-        }
-    }
+    // &_margin {
+    //     margin-bottom: 15.875vh;
+    //     @media (max-width: 991.9px) {
+    //         margin-bottom: 1.6vh;
+    //     }
+    //     @media (max-width: 575.9px) {
+    //         margin-bottom: 0;
+    //     }
+    // }
 }
 
 .grid-for-two {
@@ -285,7 +295,7 @@
         grid-template-columns: 1fr;
         grid-row-gap: 1.9vh;
         grid-template-rows: 1fr 44.5vh;
-        margin-bottom: 1.6vh;
+        // margin-bottom: 1.6vh;
     }
     @media (max-width: 575.9px) {
         grid-template-rows: 1fr 190px;
@@ -310,7 +320,7 @@
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 3.75vh;
     grid-column-gap: 1.875vw;
-    margin-bottom: 17vh;
+    // margin-bottom: 17vh;
     @media (max-width: 991.9px) {
         grid-template-columns: 1fr;
         grid-row-gap: 2.8vh;
@@ -318,7 +328,7 @@
     }
     @media (max-width: 575.9px) {
         grid-row-gap: 22px;
-        margin-bottom: 0;
+        // margin-bottom: 0;
     }
 }
 
@@ -327,17 +337,17 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 19.75vh;
     grid-row-gap: 3.25vh;
-    margin-bottom: 17vh;
+    // margin-bottom: 17vh;
     @media (max-width: 991.9px) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 14.9vh;
         grid-row-gap: 2.8vh;
-        margin-bottom: 30vh;
+        // margin-bottom: 30vh;
     }
     @media (max-width: 575.9px) {
         grid-template-rows: 1fr 150px;
         grid-row-gap: 26px;
-        margin-bottom: 0;
+        // margin-bottom: 0;
     }
 }
 
@@ -651,8 +661,6 @@
         @media (max-width: 575.9px) {
             @include fontSize(13, 16, 400);
         }
-        &:active,
-        &:focus {}
     }
     &__text {
         @include fontSize(14,
@@ -665,11 +673,6 @@
         }
     }
 }
-
-
-/*
-классы pages_checked и pages__succes (+hidden) для страниц с галочкой
-*/
 
 .pages {
     grid-column: 2 / 3;
