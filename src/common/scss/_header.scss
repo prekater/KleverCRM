@@ -37,7 +37,7 @@
 }
 
 .user {
-    @include fontSize13();
+    @include fontSize(13, 16, 400);
     &_margin {
         margin-right: 36px;
         @media (max-width: 575.9px) {
@@ -51,9 +51,185 @@
         }
     }
     &__name {
-        @include fontSize13();
+        @include fontSize(13, 16, 400);
         @media (max-width: 575.9px) {
             display: none;
         }
+    }
+}
+
+.search-form {
+    transition: margin 0.5s;
+    border: none;
+    color: $black;
+    position: relative;
+    width: 100%;
+    &_margin {
+        margin-left: 96px;
+        margin-right: 20px;
+    }
+    &__input {
+        background-color: $white;
+        transition: width 0.5s;
+        border-radius: 12px;
+        height: 42px;
+        border: 1px solid transparent;
+        padding-left: 54px;
+        @include fontSize(13, 16, 400);
+        width: 150px;
+        &:focus,
+        &:active {
+            @include focusInput();
+            width: 100%;
+        }
+        &::ms-clear,
+        &::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
+        }
+        &_sidebar {
+            color: $black;
+            background-color: $main-bg;
+            border-radius: 12px;
+            height: 42px;
+            border: 1px solid transparent;
+            padding-left: 22px;
+            padding-right: 40px;
+            @include fontSize(13, 16, 400);
+            width: 100%;
+            &:focus,
+            &:active {
+                @include focusInput();
+            }
+            &::ms-clear,
+            &::-ms-reveal {
+                display: none;
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration {
+                display: none;
+            }
+        }
+    }
+    &::placeholder {
+        color: $light-gray;
+    }
+    &__button {
+        width: 24px;
+        height: 24px;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        padding: 4px;
+        position: absolute;
+        left: 0px;
+        top: 9px;
+        @media (max-width: 575.9px) {
+            right: 0;
+            top: 9px;
+        }
+        border: 1px solid transparent;
+        background-color: transparent;
+        &:focus,
+        &:active {
+            border: 1px solid transparent;
+            outline: none;
+        }
+        &_sidebar {
+            @media (max-width: 575.9px) {
+                width: 40px;
+                height: 40px;
+                left: 80%;
+                top: 1px;
+            }
+        }
+        &_margin {
+            margin-left: 19px;
+            margin-right: 10px;
+        }
+    }
+    &_sidebar {
+        position: relative;
+        display: none;
+        @media (max-width: 575.9px) {
+            flex: 0 0;
+            width: 100%;
+            display: block;
+            margin-top: auto;
+            padding-left: 26px;
+            padding-right: 13px;
+            padding-bottom: 21px;
+        }
+    }
+}
+
+.search-form-tablet {
+    border: none;
+    color: $black;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    transition: all 0.5s;
+    &_margin {
+        margin-right: 40px;
+    }
+    &__input {
+        display: none;
+        border-radius: 12px;
+        height: 42px;
+        padding-left: 34px;
+        width: 100%;
+        border: 1px solid $line;
+        @include fontSize(13, 16, 400);
+        &:focus,
+        &:active {
+            @include focusInput();
+        }
+        &::ms-clear,
+        &::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
+        }
+    }
+    &::placeholder {
+        color: $light-gray;
+    }
+    &__button {
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        padding: 4px;
+        position: absolute;
+        border: 1px solid transparent;
+        background-color: transparent;
+        right: 4px;
+        top: 7px;
+        &:focus,
+        &:active {
+            @include focusInput();
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+    }
+    @media (max-width: 575.9px) {
+        display: none;
     }
 }
