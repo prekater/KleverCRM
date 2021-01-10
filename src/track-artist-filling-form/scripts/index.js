@@ -429,13 +429,15 @@ $(function() {
         p = $('.popup__overlay')
         popup = $(".popup")
         body = $('body')
-        $('.field__question').click(function() {
+        $('.field__question').on("click", function() {
             p.css('display', 'block')
             $(body).css('overflow', 'hidden')
             popup.css('animation', 'translating 0.3s linear 1')
             popupText = $(this).attr('tooltip')
             $('.popup__content').text(popupText)
-        })
+
+        });
+
         p.click(function(event) {
             e = event || window.event
             if (e.target === this) {
@@ -444,10 +446,10 @@ $(function() {
                 $(body).css('overflow', 'auto')
             }
         })
-        $('.popup__close').click(function() {
+        $('.popup__close').on("click", function() {
             p.css('display', 'none')
-
             $(body).css('overflow', 'auto')
-        })
+
+        });
     }
 });
