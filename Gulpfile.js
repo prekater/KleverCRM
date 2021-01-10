@@ -10,7 +10,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
 const path = require('path');
 const concat = require('gulp-concat');
-const debug = require('gulp-debug');
 
 const getFolders = (dir) => {
     return fs.readdirSync(dir)
@@ -121,6 +120,7 @@ gulp.task('browser', (cb) => {
             'build/*.html'
         ],
         open: false,
+        livereload: true,
         notify: false
     });
     cb();
@@ -134,6 +134,7 @@ gulp.task('watch', (cb) => {
     gulp.watch('src/**/*.png', gulp.series('common-images'));
     gulp.watch('src/**/fonts/*', gulp.series('fonts'));
     gulp.watch('src/**/scripts/*', gulp.series('scripts'));
+    gulp.watch('src/**/*.*').on('change', browserSync.reload);
     cb();
 });
 

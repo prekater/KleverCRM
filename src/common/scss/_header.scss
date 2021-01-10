@@ -65,7 +65,8 @@
     position: relative;
     width: 100%;
     &_margin {
-        margin-left: 106px;
+        margin-left: 96px;
+        /*старое значение margin-left: 106px;*/
         margin-right: 20px;
     }
     &__input {
@@ -74,13 +75,25 @@
         border-radius: 12px;
         height: 42px;
         border: 1px solid transparent;
-        padding-left: 34px;
+        padding-left: 54px;
         @include fontSize(13, 16, 400);
-        width: 100px;
+        width: 150px;
         &:focus,
         &:active {
             @include focusInput();
             width: 100%;
+        }
+        &::ms-clear,
+        &::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
         }
         &_sidebar {
             color: $black;
@@ -96,29 +109,38 @@
             &:active {
                 @include focusInput();
             }
+            &::ms-clear,
+            &::-ms-reveal {
+                display: none;
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration {
+                display: none;
+            }
         }
     }
     &::placeholder {
         color: $light-gray;
     }
     &__button {
-        width: 35px;
-        height: 35px;
+        width: 24px;
+        height: 24px;
         -webkit-tap-highlight-color: transparent;
         cursor: pointer;
         padding: 4px;
         position: absolute;
-        // border: 1px solid transparent;
-        // background-color: $white;
         left: 0px;
-        top: 3px;
+        top: 9px;
         @media (max-width: 575.9px) {
             right: 0;
             top: 9px;
         }
         border: 1px solid transparent;
         background-color: transparent;
-        // padding: 0;
         &:focus,
         &:active {
             border: 1px solid transparent;
@@ -131,6 +153,10 @@
                 left: 80%;
                 top: 1px;
             }
+        }
+        &_margin {
+            margin-left: 19px;
+            margin-right: 10px;
         }
     }
     &_sidebar {
@@ -170,13 +196,19 @@
         &:active {
             @include focusInput();
         }
+        &::ms-clear,
+        &::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
+        }
     }
-    // &:hover {
-    //     width: 200px;
-    //     & input {
-    //         display: block;
-    //     }
-    // }
     &::placeholder {
         color: $light-gray;
     }
