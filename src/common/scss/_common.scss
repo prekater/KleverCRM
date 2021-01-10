@@ -101,51 +101,6 @@ html {
     }
 }
 
-.field {
-    position: relative;
-    &__label {
-        color: $dark-gray;
-        @include fontSize(11, 14, 500);
-        text-transform: uppercase;
-        margin-bottom: 6px;
-        &_readonly {
-            color: $light-gray;
-        }
-    }
-    &__input_text {
-        @include input();
-        @include fontSize(14, 20, 400);
-        &:active,
-        &:focus {
-            border-color: $light-gray;
-            outline: none;
-        }
-        &:read-only {
-            background-color: $main-bg;
-            color: $input-disabled;
-        }
-        &::placeholder {
-            color: $light-gray;
-        }
-        &_invalid {
-            border-color: $red;
-            color: $red;
-        }
-        &_filled {
-            background-color: $line;
-        }
-    }
-    &__textarea {
-        box-sizing: border-box;
-        @include textarea;
-        @include fontSize(14, 20, 400);
-        &:active,
-        &:focus {
-            @include focusInput;
-        }
-    }
-}
-
 .btn {
     @include flexCenter(row);
     border-radius: 12px;
