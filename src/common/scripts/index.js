@@ -26,6 +26,9 @@ let $searchFormTabletInput = $(".search-form-tablet__input");
 let $header = $(".header");
 let $searchFormHeader = $header.find(".search-form");
 let $searchFormHeaderInput = $header.find(".search-form__input");
+let $preloader = $(".preloader");
+
+$preloader.delay(500).fadeOut('slow');
 
 let inactivateProfitItem = function() {
     $profit.removeClass('li-sidebar_active');
