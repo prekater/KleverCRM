@@ -55,7 +55,7 @@ gulp.task('scss', () => {
 
 gulp.task('scripts', () => {
 
-    return gulp.src(['./src/track-artist-filling-form/scripts/index.js', './src/common/scripts/index.js'])
+    return gulp.src(['./src/track-profile/scripts/index.js', './src/common/scripts/index.js'])
         // .pipe(uglify())
         .pipe(concat('index.js'))
         // .pipe(rename((p) => {
@@ -65,7 +65,7 @@ gulp.task('scripts', () => {
         //         extname: p.extname
         //     };
         // }))
-        .pipe(gulp.dest('./build/track-artist-filling-form/scripts'));
+        .pipe(gulp.dest('./build/track-profile/scripts'));
 });
 gulp.task('images', () => {
     return gulp.src('./src/track*/images/*')

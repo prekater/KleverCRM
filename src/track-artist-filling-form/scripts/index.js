@@ -129,9 +129,6 @@ let showPrev = function() {
     pageSuccessText.textContent = `${stepNumber} / 6`;
 }
 
-
-
-
 nickname.oninput = function() {
     redDots[0].style.color = 'white';
     this.classList.remove('field__input_text_invalid');
@@ -307,18 +304,12 @@ let checkDate = function(field) {
                 field.classList.add('field__input_text_invalid');
                 errorDate.style.display = 'block';
                 errorDate.innerHTML = 'Пожалуйста, введите дату в формате дд.мм.гггг';
-
-
                 return false;
             } else {
                 return true;
             }
         }
     }
-
-
-
-
 }
 let checkStep2 = function() {
     checkAuthor(textAuthor);
