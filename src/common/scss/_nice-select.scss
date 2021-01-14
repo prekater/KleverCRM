@@ -1,0 +1,111 @@
+// Style the dropdown
+.nice-select {
+    @include fontSize(14, 20, 400);
+    @include input();
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+    justify-content: flex-start;
+    align-items: center;
+    &:active,
+    &:focus {
+        @include focusInput();
+    }
+    // Arrow
+    &:after {
+        border-bottom: 2px solid $textLight;
+        border-right: 2px solid $textLight;
+        content: '';
+        display: block;
+        height: 8px;
+        margin-top: -4px;
+        pointer-events: none;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform-origin: 66% 66%;
+        transform: rotate(45deg);
+        transition: all 0.15s ease-in-out;
+        width: 8px;
+    }
+    &.open {
+        @include focusInput();
+        &:after {
+            transform: rotate(-135deg);
+        }
+        .list {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1) translateY(0);
+        }
+    }
+    &.disabled {
+        background-color: $line;
+        color: $input-disabled;
+        pointer-events: none;
+    }
+    // List and options
+    .list {
+        background-color: $input-bg;
+        border-radius: 12px;
+        box-shadow: $shadow;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 4px;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform-origin: 50% 0;
+        transform: scale(.75) translateY(- $input_height / 2);
+        transition: all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+        z-index: 9;
+        &:hover .option:not(:hover) {
+            background-color: transparent !important;
+        }
+    }
+    .option {
+        @include fontSize(14, 20, 400);
+        cursor: pointer;
+        font-weight: 400;
+        line-height: $input_height - 2;
+        list-style: none;
+        min-height: $input_height - 2;
+        outline: none;
+        padding-left: $dropdown_padding;
+        padding-right: $dropdown_padding + 11;
+        text-align: left;
+        transition: all 0.2s;
+        &:hover,
+        &.focus,
+        &.selected.focus {
+            background: $main-gradient;
+        }
+        &.disabled {
+            background-color: $line;
+            color: $input-disabled;
+            cursor: default;
+        }
+    }
+}
+
+// Use display instead of opacity for IE <= 10
+.no-csspointerevents .nice-select {
+    .list {
+        display: none;
+    }
+    &.open {
+        .list {
+            display: block;
+        }
+    }
+}

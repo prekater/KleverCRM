@@ -87,4 +87,104 @@
             @include focusInput;
         }
     }
+    &__red-dot {
+        color: $red;
+        font-weight: 900;
+        margin-left: 6px;
+    }
+    &__white-dot {
+        color: $white;
+        font-weight: 900;
+        margin-left: 0;
+    }
+    &__question {
+        position: relative;
+        @include flexCenter(row);
+        margin-left: 6px;
+        text-align: center;
+        border-radius: 50%;
+        color: #ffffff;
+        background-color: $light-green;
+        height: 14px;
+        width: 14px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            background-color: $green;
+        }
+        &:hover::after {
+            z-index: 90;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 0.8125rem;
+            line-height: 1rem;
+            font-weight: normal;
+            width: 290px;
+            height: 50px;
+            position: absolute;
+            top: -16px;
+            left: 25px;
+            content: attr(tooltip);
+            text-align: left;
+            text-transform: none;
+            color: #000;
+            background-color: white;
+            border-radius: 12px;
+            filter: drop-shadow(0px 4px 15px rgba(54, 88, 103, 0.1));
+            pointer-events: none;
+            padding-left: 20px;
+            box-shadow: 0 4px 15px rgba(54, 88, 103, 0.1);
+            @media (max-width: 575.9px) {
+                display: none;
+            }
+        }
+        &:hover::before {
+            position: absolute;
+            left: 15px;
+            top: 3px;
+            content: '';
+            border-top: 5px solid transparent;
+            border-right: 10px solid white;
+            border-bottom: 5px solid transparent;
+            z-index: 91;
+            @media (max-width: 575.9px) {
+                display: none;
+            }
+        }
+    }
+    &__error-email {
+        margin-top: 3px;
+        display: none;
+        position: absolute;
+        color: $red;
+        top: 75px;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: normal;
+        @media (max-width: 575.9px) {
+            top: 75px;
+            margin-top: 1px;
+            font-size: 0.7rem;
+            line-height: 0.8rem;
+        }
+    }
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &:after {
+        position: absolute;
+        content: " ";
+        width: 25px;
+        height: 25px;
+        right: 16px;
+        bottom: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
