@@ -1,8 +1,9 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical">
-    <form class="block block_rounded form form_margin form_padding main-form" action="" id="create_release">
+    <div class="to-releases flex-row flex-row_start flex-row_center-vertical">Список релизов <img src="./images/to_releases.svg" alt="К списку релизов" class="to-releases__img" /> </div>
+    <form class="block block_rounded form form_margin-releases form_padding-releases main-form" action="" id="create_release">
         <div class="flex-row flex-row_between flex-row_top-vertical form-header form-header_margin">
-            <div class="form__title">Добавить релиз</div>
-            <div class="form__to-releases">Список релизов <img src="./images/to_releases.svg" alt="К списку релизов" class="arrow-to-releases" /> </div>
+            <div class="form-header__title">Добавить релиз</div>
+            <div class="form-header__to-releases">Список релизов <img src="./images/to_releases.svg" alt="К списку релизов" class="arrow-to-releases" /> </div>
         </div>
         <div class="groupped-fields grid">
 
@@ -23,7 +24,7 @@
                     <span class="field__red-dot"><sup>&#8226;</sup></span>
                 </div>
                 <div class="input-wrapper input-wrapper_search">
-                    <input type="text" class="field__input_text" required="required" name="contract-field">
+                    <input type="text" class="field__input_text" required="required" name="contract-field" placeholder="№00000">
                 </div>
                 <div class="field__error field__error_contract"></div>
             </div>
@@ -75,7 +76,7 @@
                     <div class="field__error field__error_type"></div>
                 </div>
 
-                <div class="field flex-column">
+                <div class="field flex-column field_release-date">
                     <div class="flex-row flex-row_baseline">
                         <label for="release_date" class="field__label">Дата релиза</label>
                         <span class="field__red-dot"><sup>&#8226;</sup></span>
@@ -86,13 +87,13 @@
                     <div class="field__error field__error_release-date"></div>
                 </div>
 
-                <div class="field flex-column">
+                <div class="field flex-column  field_upc">
                     <div class="flex-row flex-row_baseline">
-                        <label for="ufc" class="field__label">UFC</label>
+                        <label for="upc" class="field__label">upc</label>
                         <span class="field__red-dot"><sup>&#8226;</sup></span>
                     </div>
-                    <input type="text" class="field__input_text" required="required" id="ufc" name="ufc-field">
-                    <div class="field__error field__error-ufc"></div>
+                    <input type="text" class="field__input_text" required="required" id="upc" name="upc-field">
+                    <div class="field__error field__error-upc"></div>
                 </div>
 
                 <div class="field flex-column field_cover">

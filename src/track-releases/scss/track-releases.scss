@@ -17,63 +17,179 @@
     }
 }
 
-.form__to-releases {
-    @include fontSize(14, 20, normal);
+.main-form {
+    width: 61.4vw;
+    @media (max-width: 1399.9px) {
+        width: 76.7vw;
+    }
+    @media (max-width: 991.9px) {
+        width: 100%;
+    }
+}
+
+.form_margin-releases {
+    margin-top: 4vh;
+    margin-bottom: 3.25vh;
+    @media (max-width: 991.9px) {
+        margin-top: 30px;
+        margin-bottom: 36px;
+    }
+    @media (max-width: 575.9px) {
+        margin-top: 0;
+        margin-bottom: 22px;
+    }
+}
+
+.form_padding-releases {
+    padding: 31px 36px 36px 36px;
+    @media (max-width: 991.9px) {
+        padding: 24px 18px 31px 20px;
+    }
+    @media (max-width: 575.9px) {
+        padding: 26px 20px 22px 20px;
+    }
+}
+
+.form-header {
+    &__title {
+        @include fontSize(20, 26, 600);
+        @media (max-width: 575.9px) {
+            @include fontSize(18, 24, 600);
+        }
+    }
+    &__to-releases {
+        @include fontSize(14, 20, normal);
+        display: flex;
+        @media (max-width: 575.9px) {
+            display: none;
+        }
+    }
+    &_margin {
+        margin-bottom: 3.875vh;
+        @media (max-width: 991.9px) {
+            margin-bottom: 26px;
+        }
+        @media (max-width: 575.9px) {
+            margin-bottom: 18px;
+        }
+    }
+}
+
+.to-releases {
+    display: none;
+    @media (max-width: 575.9px) {
+        padding-left: 20px;
+        @include fontSize(14, 20, normal);
+        height: 49px;
+        display: flex;
+        width: 100%;
+    }
+    &__img {
+        margin-left: 11px;
+    }
 }
 
 .arrow-to-releases {
     margin-left: 11px;
 }
 
-.main-form {
-    width: 61.4vw;
-}
-
-.form-header {
-    &_margin {
-        margin-bottom: 4.26vh;
-    }
-}
-
 .grid {
     box-sizing: border-box;
-    @include grid (1fr 1fr 190px, auto, 1.6vw, 3.7vh);
-    @media (max-width: 1399.9px) {
-        // width: 35.2vw;
-    }
+    @include grid (1fr 1fr 190px, auto, 1.6vw, 3vh);
     @media (max-width: 991.9px) {
-        // width: 64.3vw;
+        @include grid (1fr 207px, auto, 24px, 24px);
+        padding-right: 50px;
     }
     @media (max-width: 575.9px) {
-        // width: 100%;
-        //  grid-row-gap: 23px;
+        @include grid (1fr, auto, auto, 22px);
+        padding-right: 0;
     }
 }
 
 .field_sublabel {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+    @media (max-width: 991.9px) {
+        grid-row: auto;
+        grid-column: auto;
+    }
+    @media (max-width: 575.9px) {
+        grid-row: auto;
+        grid-column: auto;
+    }
 }
 
 .field_release-name {
     //  grid-row: 2 / 3;
     grid-column: 1 / 3;
+    @media (max-width: 991.9px) {
+        width: 545px;
+    }
+    @media (max-width: 575.9px) {
+        width: auto;
+        grid-row: auto;
+        grid-column: auto;
+    }
 }
 
 .field_subtitle {
     //  grid-row: 2 / 3;
     grid-column: 1 / 3;
+    @media (max-width: 991.9px) {
+        width: 545px;
+    }
+    @media (max-width: 575.9px) {
+        width: auto;
+        grid-row: auto;
+        grid-column: auto;
+    }
 }
 
 .small-grid {
     box-sizing: border-box;
     grid-column: 1 / 3;
-    @include grid(190px 190px 1fr, auto, 1.6vw, 3.7vh);
+    @include grid(190px 190px 1fr, auto, 1.6vw, 3vh);
+    @media (max-width: 991.9px) {
+        width: 545px;
+        @include grid(190px 190px 1fr, auto, 24px, 24px);
+    }
+    @media (max-width: 575.9px) {
+        width: auto;
+        @include grid(1fr, auto, 0, 22px);
+        grid-row: auto;
+        grid-column: auto;
+    }
+}
+
+.field_upc {
+    @media (max-width: 991.9px) {
+        grid-row: 2/ 3;
+        grid-column: 1 / 3;
+    }
+    @media (max-width: 575.9px) {
+        grid-row: auto;
+        grid-column: 1/2;
+    }
+}
+
+.field_release-date {
+    @media (max-width: 575.9px) {
+        width: auto;
+        grid-row: auto;
+        grid-column: 1/2;
+    }
 }
 
 .field_cover {
     //  grid-row: 2 / 3;
     grid-column: 1 / 3;
+    @media (max-width: 991.9px) {
+        grid-column: 1 / 4;
+    }
+    @media (max-width: 575.9px) {
+        grid-row: auto;
+        grid-column: 1/2;
+    }
 }
 
 .button {
@@ -108,15 +224,19 @@
 }
 
 .two-buttons {
+    margin-top: 1.25vh;
     grid-column: 1 / 3;
     @include grid(180px 180px, auto, 1.25vw, auto);
+    @media (max-width: 991.9px) {
+        @include grid(180px 180px, auto, 20px, auto);
+    }
+    @media (max-width: 575.9px) {
+        @include grid(130px 130px, auto, 20px, auto);
+    }
 }
 
 .input-wrapper {
     &_calendar {
-        @media (max-width: 575.9px) {
-            width: 170px;
-        }
         &:after {
             right: 7px;
             bottom: 13.5px;
