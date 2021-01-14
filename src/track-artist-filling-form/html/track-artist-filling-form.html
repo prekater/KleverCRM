@@ -1,299 +1,295 @@
 <div class="main-block main-block_padding flex-column flex-column_center">
-    <div class="info-for-artist flex-row info-for-artist_margin" id="info_for_artist">
-        <div class="info-for-artist__cover"><img src="./images/cover110.svg" alt="Обложка"></div>
-        <div class="info-for-artist__cover-mobile"><img src="./images/cover84.svg" alt="Обложка"></div>
-        <div class="info-for-artist-text">
-            <div class="info-for-artist-text__h2">
-                Уважаемый артист!
-            </div>
-            <div class="info-for-artist-text__p">Для загрузки Вашего трека на цифровые площадки (iTunes, VK, Boom, YouTube music, Apple Music, Spotify, Deezer, Google Play, Яндекс.Музыка) требуется заполнить форму ниже. ВАЖНО! Ф.И.О. заполняется полностью, без сокращений.
-            </div>
-        </div>
-    </div>
-    <form class="block block_rounded artist-form artist-form_margin artist-form_padding flex-column flex-column_between" id="artist_form">
-        <ul class="steps flex-row flex-row_center-vertical">
-            <li class="steps__step steps__step_active">1. Основная информ.</li>
-            <li class="steps__step">2. Дополнительная информ.</li>
-            <li class="steps__step">3. Текст песни</li>
-            <li class="steps__step">4. Развернутое описание</li>
-            <li class="steps__step">5. Социальные сети</li>
-            <li class="steps__step">6. Персональная информ.</li>
-        </ul>
-        <div class="progress-bar flex-row">
-            <div class="progress-bar__passed"></div>
-            <div class="progress-bar__left"></div>
-        </div>
-        <div class="steps-mobile steps-mobile_margin flex-row flex-row_center-vertical flex-row_between">
-            <div class="steps-mobile__pages">1 / 6</div>
-
-            <div class="next-step next-step_tablet flex-row">Шаг 2 - Дополнительная информация <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" class="next-step__arrow" /></div>
-
-            <div class="next-step next-step_mobile flex-row">2. Дополнительная инф. <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" class="next-step__arrow" /></div>
-        </div>
-
-        <div class="form-fields form-fields_padding" id="step1_form">
-            <div class="step-title step-title_margin">Основная информация о треке</div>
-
-            <div class="groupped-fields-step1">
-                <div class="field flex-column ">
-                    <div class="flex-row flex-row_baseline">
-                        <label for="nickname" class="field__label">Никнейм </label><span class="field__red-dot"><sup>&#8226;</sup></span><span class="field__question" tooltip="Ваш псевдоним">?</span>
-                    </div>
-                    <input type="text" id="nickname" name="nickname-field" required class="field__input_text">
-                    <div class="field__error-nickname">Пожалуйста, заполните это поле</div>
+    <div class="form-block-wrapper form-block-wrapper_margin flex-column flex-row_center-vertical flex-column_stretch">
+        <div class="info-for-artist flex-row flex-row_center flex-row_top-vertical" id="info_for_artist">
+            <div class="info-for-artist__cover"><img src="./images/cover110.svg" alt="Обложка"></div>
+            <div class="info-for-artist__cover-mobile"><img src="./images/cover84.svg" alt="Обложка"></div>
+            <div class="info-for-artist-tex">
+                <div class="info-for-artist-text__h2">
+                    Уважаемый артист!
                 </div>
-
-                <div class="field flex-column">
-                    <div class="flex-row flex-row_baseline">
-                        <label for="track" class="field__label">Название трека</label> <span class="field__red-dot"><sup>&#8226;</sup></span>
-                    </div>
-                    <input type="text" id="track" name="track-field" required class="field__input_text">
-                    <div class="field__error-track">Пожалуйста, заполните это поле</div>
-                </div>
-
-                <div class="field flex-column ">
-                    <div class="flex-row flex-row_baseline">
-                        <label for="track_url" class="field__label">Ссылка на трек</label>
-                        <span class="field__red-dot"><sup>&#8226;</sup></span>
-                        <span class="field__question" tooltip="Ссылка на файлообменник для загрузки трека в формате .wav">?</span>
-                    </div>
-
-                    <input type="text" id="track_url" name="track-url-field" required class="field__input_text">
-                    <div class="field__error-track-url">Пожалуйста, заполните это поле</div>
-                </div>
-
-                <div class="field flex-column">
-                    <div class="flex-row flex-row_baseline">
-                        <label for="cover_url" class="field__label">Ссылка на обложку</label>
-                        <span class="field__white-dot "><sup>&#8226;</sup></span>
-                        <span class="field__question" tooltip="Ссылка на файлообменник для загрузки обложки трека в формате .png">?</span>
-                    </div>
-                    <input type="text" id="cover_url" name="cover-url-field" class="field__input_text">
+                <div class="info-for-artist-text__p">Для загрузки Вашего трека на цифровые площадки (iTunes, VK, Boom, YouTube music, Apple Music, Spotify, Deezer, Google Play, Яндекс.Музыка) требуется заполнить форму ниже. ВАЖНО! Ф.И.О. заполняется полностью, без сокращений.
                 </div>
             </div>
-
-
-
-
         </div>
+        <form action="#" class="block block_rounded artist-form  flex-column flex-column_start" id="artist_form">
+            <ul class="steps flex-row flex-row_center-vertical">
+                <li class="steps__step steps__step_active">1. Основная информ.</li>
+                <li class="steps__step">2. Дополнительная информ.</li>
+                <li class="steps__step">3. Текст песни</li>
+                <li class="steps__step">4. Развернутое описание</li>
+                <li class="steps__step">5. Социальные сети</li>
+                <li class="steps__step">6. Персональная информ.</li>
+            </ul>
+            <div class="progress-bar flex-row">
+                <div class="progress-bar__passed"></div>
+                <div class="progress-bar__left"></div>
+            </div>
+            <div class="steps-mobile steps-mobile_margin flex-row flex-row_center-vertical flex-row_between">
+                <div class="steps-mobile__pages">1 / 6</div>
 
-        <div class="form-fields form-fields_padding" id="step2_form">
-            <div class="step-title step-title_margin">Дополнительная информация</div>
+                <div class="next-step next-step_tablet flex-row">Шаг 2 - Дополнительная информация <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" class="next-step__arrow" /></div>
 
-            <div class="groupped-fields-step2">
-                <div class="field flex-column">
-                    <div class="flex-row flex-row_baseline">
-                        <label for="text_author" class="field__label">Автор слов </label>
-                    </div>
-                    <input type="text" id="text_author" name="text_author-field" class="field__input_text" placeholder="ФИО">
-                    <div class="field__error-author"></div>
-                </div>
+                <div class="next-step next-step_mobile flex-row">2. Дополнительная инф. <img src="./images/arrow_to_right_green.svg" alt="Следующий шаг" class="next-step__arrow" /></div>
+            </div>
 
-                <div class="field flex-column">
-                    <div class="flex-row flex-row_baseline">
-                        <label for="singer" class="field__label">Исполнитель</label>
-                    </div>
-                    <input type="text" id="singer" name="singer-field" class="field__input_text" placeholder="ФИО">
-                    <div class="field__error-singer"></div>
-                </div>
+            <div class="form-fields form-fields_padding flex-column_adaptive-height" id="step1_form">
+                <div class="step-title step-title_margin">Основная информация о треке</div>
 
-                <div class="field flex-column">
-                    <div class="flex-row flex-row_baseline ">
-                        <label for="arranger" class="field__label">Аранжировщик</label>
-                    </div>
-                    <input type="text" id="arranger" name="arranger-field" class="field__input_text" placeholder="ФИО">
-                    <div class="field__error-arranger"></div>
-                </div>
-
-                <div class="field flex-column">
-                    <div class="flex-row flex-row_baseline">
-                        <label for="composer" class="field__label">Композитор</label>
-                    </div>
-                    <input type="text" id="composer" name="composer-field" class="field__input_text" placeholder="ФИО">
-                    <div class="field__error-composer"></div>
-                </div>
-
-                <div class="grid-for-two">
-                    <div class="field flex-column">
+                <div class="groupped-fields-step1">
+                    <div class="field flex-column ">
                         <div class="flex-row flex-row_baseline">
-                            <label for="genre" class="field__label">Жанр вашей песни</label>
+                            <label for="nickname" class="field__label">Никнейм </label><span class="field__red-dot"><sup>&#8226;</sup></span><span class="field__question" tooltip="Ваш псевдоним">?</span>
                         </div>
-                        <input type="text" id="genre" name="genre-field" class="field__input_text">
-                        <div class="field__error-genre"></div>
+                        <input type="text" id="nickname" name="nickname-field" required class="field__input_text">
+                        <div class="field__error-nickname">Пожалуйста, заполните это поле</div>
                     </div>
 
                     <div class="field flex-column">
                         <div class="flex-row flex-row_baseline">
-                            <label for="date" class="field__label">Дата релиза</label>
+                            <label for="track" class="field__label">Название трека</label> <span class="field__red-dot"><sup>&#8226;</sup></span>
                         </div>
-                        <div class="input-wrapper input-wrapper_calendar ">
-                            <input type="text" id="date" name="date-field" class="field__input_text ">
+                        <input type="text" id="track" name="track-field" required class="field__input_text">
+                        <div class="field__error-track">Пожалуйста, заполните это поле</div>
+                    </div>
+
+                    <div class="field flex-column ">
+                        <div class="flex-row flex-row_baseline">
+                            <label for="track_url" class="field__label">Ссылка на трек</label>
+                            <span class="field__red-dot"><sup>&#8226;</sup></span>
+                            <span class="field__question" tooltip="Ссылка на файлообменник для загрузки трека в формате .wav">?</span>
                         </div>
-                        <div class="field__error-date"></div>
+
+                        <input type="text" id="track_url" name="track-url-field" required class="field__input_text">
+                        <div class="field__error-track-url">Пожалуйста, заполните это поле</div>
+                    </div>
+
+                    <div class="field flex-column">
+                        <div class="flex-row flex-row_baseline">
+                            <label for="cover_url" class="field__label">Ссылка на обложку</label>
+                            <span class="field__white-dot "><sup>&#8226;</sup></span>
+                            <span class="field__question" tooltip="Ссылка на файлообменник для загрузки обложки трека в формате .png">?</span>
+                        </div>
+                        <input type="text" id="cover_url" name="cover-url-field" class="field__input_text">
                     </div>
                 </div>
 
-                <div class="field flex-column">
-                    <div class="flex-row flex-row_baseline">
-                        <label for="start" class="field__label">Секунда начала воспроизведения</label>
 
-                        <span class="field__question field__question_step2" tooltip="Секунда начала воспроизведения">?</span>
-                    </div>
-                    <input type="number" id="start" name="start-field" class="field__input_text field__input_170px" placeholder="00">
-                </div>
+
 
             </div>
 
+            <div class="form-fields form-fields_padding flex-column_adaptive-height" id="step2_form">
+                <div class="step-title step-title_margin">Дополнительная информация</div>
 
-
-        </div>
-
-        <div class="form-fields form-fields_padding" id="step3_form">
-            <div class="step-title step-title_margin">Текст песни</div>
-
-            <div class="groupped-fields-step3">
-                <textarea name="song-text-field" id="song_text" class="field__textarea"></textarea>
-
-                <label for="song_text" class="field__label field__label_song-text">
-                    <div class="label-gray-text">
-                        Припев должен отделяться от куплета однострочным интервалом.
+                <div class="groupped-fields-step2">
+                    <div class="field flex-column">
+                        <div class="flex-row flex-row_baseline">
+                            <label for="text_author" class="field__label">Автор слов </label>
+                        </div>
+                        <input type="text" id="text_author" name="text_author-field" class="field__input_text" placeholder="ФИО">
+                        <div class="field__error-author"></div>
                     </div>
-                    <div class="label-gray-text">
-                        Не включайте текст, который не слышен, такой как: заголовки разделов или имя вокалиста.
-                        Например: не включайте заголовки разделов, такие как Intro, Verse, Chorus, Hook, Outro и тп.
+
+                    <div class="field flex-column">
+                        <div class="flex-row flex-row_baseline">
+                            <label for="singer" class="field__label">Исполнитель</label>
+                        </div>
+                        <input type="text" id="singer" name="singer-field" class="field__input_text" placeholder="ФИО">
+                        <div class="field__error-singer"></div>
                     </div>
-                    <div class="label-gray-text">
-                        Начните каждую строку с заглавной буквы.
+
+                    <div class="field flex-column">
+                        <div class="flex-row flex-row_baseline ">
+                            <label for="arranger" class="field__label">Аранжировщик</label>
+                        </div>
+                        <input type="text" id="arranger" name="arranger-field" class="field__input_text" placeholder="ФИО">
+                        <div class="field__error-arranger"></div>
                     </div>
-                    <div class="label-gray-text">
-                        Не используйте точки или запятые в конце строки или раздела.
+
+                    <div class="field flex-column">
+                        <div class="flex-row flex-row_baseline">
+                            <label for="composer" class="field__label">Композитор</label>
+                        </div>
+                        <input type="text" id="composer" name="composer-field" class="field__input_text" placeholder="ФИО">
+                        <div class="field__error-composer"></div>
                     </div>
-                </label>
-            </div>
-        </div>
 
-        <div class="form-fields form-fields_padding-step4" id="step4_form">
-            <div class="step-title step-title_margin">Развернутое описание <span class="step-title_desktop">Вашего трека
-                    и Вас</span></div>
-
-            <div class="groupped-fields-step4">
-
-
-                <label for="description" class="field__label">
-                            <div class="label-black-text">
-                                Мы запрашиваем у площадок промо-поддержку Вашего релиза. Просим внести развернутую
-                                информацию о Вашем треке и о Вас как об артисте, о ваших успехах и достижениях
+                    <div class="grid-for-two">
+                        <div class="field flex-column">
+                            <div class="flex-row flex-row_baseline">
+                                <label for="genre" class="field__label">Жанр вашей песни</label>
                             </div>
+                            <input type="text" id="genre" name="genre-field" class="field__input_text">
+                            <div class="field__error-genre"></div>
+                        </div>
 
-                        </label>
-                <textarea name="description-field" id="description" class="field__textarea"></textarea>
-
-                <div class="form-fields__example">
-                    <strong>Пример:</strong> Один из самых популярных российских блогеров TikTok 'egorkaship', имеющий в совокупности более двух миллионов подписчиков на своих социальных площадках и поддержку от других популярных блогеров, решил начать
-                    карьеру музыкального исполнителя и записал трек под названием 'Одним цветом'. Молодой исполнитель хорошо знает свою аудиторию, поэтому уверен, что высокая лояльность поклонников и их заинтересованность в первом треке исполнителя, помноженная
-                    на поддержку других популярных блогеров, поможет стать данной песне хитом.
-                </div>
-
-            </div>
-        </div>
-
-        <div class="form-fields form-fields_padding" id="step5_form">
-            <div class="step-title step-title_margin">Социальные сети</div>
-
-            <div class="groupped-fields-step5">
-
-                <div class="field flex-column">
-                    <label for="insta_artist" class="field__label">Ссылка на Instagram артиста</label>
-                    <div class="input-wrapper input-wrapper_instagram">
-                        <input type="text" id="insta_artist" name="insta-artist-field" placeholder="instagram.com/nickname/" class="field__input_text">
+                        <div class="field flex-column">
+                            <div class="flex-row flex-row_baseline">
+                                <label for="date" class="field__label">Дата релиза</label>
+                            </div>
+                            <div class="input-wrapper input-wrapper_calendar ">
+                                <input type="text" id="date" name="date-field" class="field__input_text ">
+                            </div>
+                            <div class="field__error-date"></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="field flex-column">
-                    <label for="insta_second" class="field__label">Ссылка на Instagram второго исполнителя (при наличии)</label>
-                    <div class="input-wrapper input-wrapper_instagram">
-                        <input type="text" id="insta_second" name="insta-second-field" placeholder="instagram.com/nickname/" class="field__input_text">
+                    <div class="field flex-column">
+                        <div class="flex-row flex-row_baseline">
+                            <label for="start" class="field__label">Секунда начала воспроизведения</label>
+
+                            <span class="field__question field__question_step2" tooltip="Секунда начала воспроизведения">?</span>
+                        </div>
+                        <input type="number" id="start" name="start-field" class="field__input_text field__input_170px" placeholder="00">
                     </div>
-                </div>
 
-                <div class="field flex-column">
-                    <label for="vk" class="field__label">Ссылка на паблик VK артиста</label>
-                    <div class="input-wrapper  input-wrapper_vk">
-                        <input type="text" id="vk" name="vk-field" placeholder="vk.com/nickname" class="field__input_text">
-                    </div>
-                </div>
-
-                <div class="field flex-column">
-                    <label for="web" class="field__label">Ссылка на сайт артиста (при наличии)</label>
-                    <div class="input-wrapper  input-wrapper_web">
-                        <input type="text" id="web" name="web-field" placeholder="artist.ru" class="field__input_text">
-                    </div>
-                </div>
-
-                <div class="field flex-column">
-                    <label for="apple" class="field__label">Ссылка на карточку музыканта на площадке Apple (Apple ID)</label>
-                    <div class="input-wrapper  input-wrapper_apple">
-                        <input type="text" id="apple" name="apple-field" placeholder="nickname@yandex.ru" class="field__input_text">
-                    </div>
-                </div>
-
-                <div class="field flex-column">
-                    <label for="spotify" class="field__label">Ссылка на карточку музыканта на площадке Spotify</label>
-                    <div class="input-wrapper  input-wrapper_spotify">
-                        <input type="text" id="spotify" name="spotify-field" placeholder="nickname@yandex.ru" class="field__input_text">
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        </div>
-
-        <div class="form-fields form-fields_padding" id="step6_form">
-            <div class="step-title step-title_margin">Персональная информация</div>
-
-            <div class="groupped-fields-step6">
-
-
-                <div class="field flex-column">
-                    <label for="email" class="field__label field__label_email">Ваш e-mail</label>
-                    <input type="text" id="email" name="email-field" class="field__input_text">
-                    <div class="field__error-email"></div>
-                </div>
-                <div class="field flex-column field_bank-info">
-                    <label for="bank_info" class="field__label field__label_bank-info"> Ваши банковские реквизиты</label>
-                    <textarea name="bank-info-field" id="bank_info" class="field__textarea flex-column_adaptive-height"></textarea>
                 </div>
 
 
 
             </div>
-        </div>
 
-        <div class="form-bottom form-bottom_margin">
-            <div class="btn step-bottom step-bottom_padding step-bottom_prev flex-row "><img src="./images/arrow_to_left.svg" alt='Предыдущий шаг' class="step-bottom__arrow" />
-                <div class="step-bottom__text">
-                    Предыдущий
+            <div class="form-fields form-fields_padding-step3 flex-column_adaptive-height" id="step3_form">
+                <div class="step-title step-title_margin">Текст песни</div>
+
+                <div class="groupped-fields-step3">
+                    <textarea name="song-text-field" id="song_text" class="field__textarea"></textarea>
+
+                    <label for="song_text" class="field__label field__label_song-text">
+                        <div class="label-gray-text">
+                            Припев должен отделяться от куплета однострочным интервалом.
+                        </div>
+                        <div class="label-gray-text">
+                            Не включайте текст, который не слышен, такой как: заголовки разделов или имя вокалиста.
+                            Например: не включайте заголовки разделов, такие как Intro, Verse, Chorus, Hook, Outro и тп.
+                        </div>
+                        <div class="label-gray-text">
+                            Начните каждую строку с заглавной буквы.
+                        </div>
+                        <div class="label-gray-text">
+                            Не используйте точки или запятые в конце строки или раздела.
+                        </div>
+                    </label>
                 </div>
             </div>
-            <div class="pages"><img src="./images/pages_checked.svg" class="pages__success" />1 / 6</div>
-            <div class="btn step-bottom step-bottom_next step-bottom_padding flex-row flex-row_center-vertical"><img src="./images/arrow_to_right.svg " alt='Следующий шаг' class="step-bottom__arrow " />
-                <div class="step-bottom__text ">
-                    Следующий
+
+            <div class="form-fields form-fields_padding-step4 flex-column_adaptive-height" id="step4_form">
+                <div class="step-title step-title_margin">Развернутое описание <span class="step-title_desktop">Вашего трека
+                        и Вас</span></div>
+
+                <div class="groupped-fields-step4">
+
+
+                    <label for="description" class="field__label">
+                                <div class="label-black-text">
+                                    Мы запрашиваем у площадок промо-поддержку Вашего релиза. Просим внести развернутую
+                                    информацию о Вашем треке и о Вас как об артисте, о ваших успехах и достижениях
+                                </div>
+    
+                            </label>
+                    <textarea name="description-field" id="description" class="field__textarea"></textarea>
+
+                    <div class="form-fields__example">
+                        <strong>Пример:</strong> Один из самых популярных российских блогеров TikTok 'egorkaship', имеющий в совокупности более двух миллионов подписчиков на своих социальных площадках и поддержку от других популярных блогеров, решил начать
+                        карьеру музыкального исполнителя и записал трек под названием 'Одним цветом'. Молодой исполнитель хорошо знает свою аудиторию, поэтому уверен, что высокая лояльность поклонников и их заинтересованность в первом треке исполнителя,
+                        помноженная на поддержку других популярных блогеров, поможет стать данной песне хитом.
+                    </div>
+
                 </div>
             </div>
-            <button type="submit" class="btn step-bottom step-bottom_submit" id="btn_submit">
-                Отправить заявку
-            </button>
+
+            <div class="form-fields form-fields_padding flex-column_adaptive-height" id="step5_form">
+                <div class="step-title step-title_margin">Социальные сети</div>
+
+                <div class="groupped-fields-step5">
+
+                    <div class="field flex-column">
+                        <label for="insta_artist" class="field__label">Ссылка на Instagram артиста</label>
+                        <div class="input-wrapper input-wrapper_instagram">
+                            <input type="text" id="insta_artist" name="insta-artist-field" placeholder="instagram.com/nickname/" class="field__input_text">
+                        </div>
+                    </div>
+
+                    <div class="field flex-column">
+                        <label for="insta_second" class="field__label">Ссылка на Instagram второго исполнителя (при наличии)</label>
+                        <div class="input-wrapper input-wrapper_instagram">
+                            <input type="text" id="insta_second" name="insta-second-field" placeholder="instagram.com/nickname/" class="field__input_text">
+                        </div>
+                    </div>
+
+                    <div class="field flex-column">
+                        <label for="vk" class="field__label">Ссылка на паблик VK артиста</label>
+                        <div class="input-wrapper  input-wrapper_vk">
+                            <input type="text" id="vk" name="vk-field" placeholder="vk.com/nickname" class="field__input_text">
+                        </div>
+                    </div>
+
+                    <div class="field flex-column">
+                        <label for="web" class="field__label">Ссылка на сайт артиста (при наличии)</label>
+                        <div class="input-wrapper  input-wrapper_web">
+                            <input type="text" id="web" name="web-field" placeholder="artist.ru" class="field__input_text">
+                        </div>
+                    </div>
+
+                    <div class="field flex-column">
+                        <label for="apple" class="field__label">Ссылка на карточку музыканта на площадке Apple (Apple ID)</label>
+                        <div class="input-wrapper  input-wrapper_apple">
+                            <input type="text" id="apple" name="apple-field" placeholder="nickname@yandex.ru" class="field__input_text">
+                        </div>
+                    </div>
+
+                    <div class="field flex-column">
+                        <label for="spotify" class="field__label">Ссылка на карточку музыканта на площадке Spotify</label>
+                        <div class="input-wrapper  input-wrapper_spotify">
+                            <input type="text" id="spotify" name="spotify-field" placeholder="nickname@yandex.ru" class="field__input_text">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-fields form-fields_padding flex-column_adaptive-height" id="step6_form">
+                <div class="step-title step-title_margin">Персональная информация</div>
+
+                <div class="groupped-fields-step6">
+
+                    <div class="field flex-column">
+                        <label for="email" class="field__label field__label_email">Ваш e-mail</label>
+                        <input type="text" id="email" name="email-field" class="field__input_text">
+                        <div class="field__error-email"></div>
+                    </div>
+                    <div class="field flex-column field_bank-info">
+                        <label for="bank_info" class="field__label field__label_bank-info"> Ваши банковские реквизиты</label>
+                        <textarea name="bank-info-field" id="bank_info" class="field__textarea flex-column_adaptive-height"></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-bottom form-bottom_margin">
+                <div class="btn step-bottom step-bottom_padding step-bottom_prev flex-row "><img src="./images/arrow_to_left.svg" alt='Предыдущий шаг' class="step-bottom__arrow" />
+                    <div class="step-bottom__text">
+                        Предыдущий
+                    </div>
+                </div>
+                <div class="pages"><img src="./images/pages_checked.svg" class="pages__success" /><span class="pages__text">1 / 6</span></div>
+                <div class="btn step-bottom step-bottom_next step-bottom_padding flex-row flex-row_center-vertical"><img src="./images/arrow_to_right.svg " alt='Следующий шаг' class="step-bottom__arrow " />
+                    <div class="step-bottom__text ">
+                        Следующий
+                    </div>
+                </div>
+                <button type="submit" class="btn step-bottom step-bottom_submit" id="btn_submit">
+                    Отправить заявку
+                </button>
 
 
-        </div>
-    </form>
+            </div>
+        </form>
+    </div>
 
 
     <div class="flex-row flex-row_full-width flex-row_center-vertical flex-row_full-height flex-row_center" id="success">
-        <div class="block block_rounded success flex-column flex-column_center flex-column_center-vertical" id="finish">
+        <div class="block block_rounded success flex-column flex-column_center flex-column_center-vertical">
             <img src="./images/success.svg" alt="Заявка успешно создана" class="success__img">
             <div class="step-title step-title_margin">Заявка успешно отправлена</div>
             <div class="success__text">Мы свяжемся с Вами после обработки запроса.</div>

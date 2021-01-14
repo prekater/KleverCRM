@@ -9,7 +9,8 @@ let stepsList = document.querySelectorAll(".steps__step");
 let progressBarPassed = document.querySelector(".progress-bar__passed");
 let infoForArtist = document.querySelector(".info-for-artist");
 let artistForm = document.getElementById("artist_form");
-let succes = document.getElementById("success");
+let formBlockWrapper = document.querySelector(".form-block-wrapper");
+let success = document.getElementById("success");
 let stepNamesTablet = ["Шаг 2 - Дополнительная информация", "Шаг 3 - Текст песни", "Шаг 4 - Развернутое описание", "Шаг 5 - Социальные сети", "Шаг 6 - Персональная информация"];
 let stepNamesMobile = ["2. Дополнительная инф.", "3. Текст песни", "4. Развернутое описание", "5. Социальные сети", "6. Персональная инф."];
 let nextStepNameTablet = document.querySelector(".next-step_tablet");
@@ -20,6 +21,7 @@ let submitButton = document.getElementById("btn_submit");
 let redDots = document.querySelectorAll('.field__red-dot');
 let pages = document.querySelector('.pages');
 let pageSuccessImg = document.querySelector(".pages__success");
+let pageSuccessText = document.querySelector(".pages__text");
 let inputs = document.querySelectorAll('input');
 let errorNickname = document.querySelector('.field__error-nickname');
 let errorTrack = document.querySelector('.field__error-track');
@@ -37,9 +39,8 @@ let allFilled = function() {
 }
 
 let notAllFilled = function() {
-    if ((nickname.value == "") || (track.value == "") || (trackUrl.value == "")) {
+    if ((nickname.value === "") || (track.value === "") || (trackUrl.value === "")) {
         stepsList[0].style.color = '$black';
-
         pages.classList.remove('pages_checked');
         pageSuccessImg.style.display = "none";
     }
@@ -60,8 +61,8 @@ let showNext = function() {
         case 2:
             infoForArtist.style.display = "none";
             toPrevStep.style.display = "flex";
+            pageSuccessImg.style.display = "none";
             break;
-
         case 6:
             toNextStep.style.display = "none";
             submitButton.style.display = "block";
@@ -71,7 +72,7 @@ let showNext = function() {
     document.getElementById(formId).style.display = "block";
     for (let i = 0; i < stepNumber; i++) {
         stepsList[i].classList.add("steps__step_passed");
-        if (i == (stepNumber - 1)) {
+        if (i === (stepNumber - 1)) {
             stepsList[i].classList.remove("steps__step_passed");
         }
     }
@@ -84,7 +85,7 @@ let showNext = function() {
     nextStepNameTablet.textContent = stepNamesTablet[index];
     nextStepNameMobile.textContent = stepNamesMobile[index];
     stepsMobilePages.textContent = `${stepNumber} / 6`;
-    bottomPages.textContent = `${stepNumber} / 6`;
+    pageSuccessText.textContent = `${stepNumber} / 6`;
 
 
 }
@@ -100,7 +101,6 @@ let showPrev = function() {
             infoForArtist.style.display = "flex";
             toPrevStep.style.display = "none";
             allFilled();
-
             break;
         case 2:
             infoForArtist.style.display = "none";
@@ -113,7 +113,7 @@ let showPrev = function() {
     }
     for (let i = (stepNumber - 1); i >= 0; i--) {
         stepsList[i].classList.add("steps__step_passed");
-        if (i == (stepNumber - 1)) {
+        if (i === (stepNumber - 1)) {
             stepsList[i].classList.remove("steps__step_passed");
         }
     }
@@ -126,11 +126,8 @@ let showPrev = function() {
     nextStepNameTablet.textContent = stepNamesTablet[index];
     nextStepNameMobile.textContent = stepNamesMobile[index];
     stepsMobilePages.textContent = `${stepNumber} / 6`;
-    bottomPages.textContent = `${stepNumber} / 6`;
+    pageSuccessText.textContent = `${stepNumber} / 6`;
 }
-
-
-
 
 nickname.oninput = function() {
     redDots[0].style.color = 'white';
@@ -139,7 +136,7 @@ nickname.oninput = function() {
     allFilled();
 };
 nickname.onblur = function() {
-    if (this.value == "") {
+    if (this.value === "") {
         redDots[0].style.color = 'red';
         notAllFilled();
     }
@@ -152,7 +149,7 @@ track.oninput = function() {
 
 };
 track.onblur = function() {
-    if (this.value == "") {
+    if (this.value === "") {
         redDots[1].style.color = 'red';
         notAllFilled();
     }
@@ -164,7 +161,7 @@ trackUrl.oninput = function() {
     allFilled();
 };
 trackUrl.onblur = function() {
-    if (this.value == "") {
+    if (this.value === "") {
         redDots[2].style.color = 'red';
         notAllFilled();
     }
@@ -174,15 +171,15 @@ let checkStep1 = function() {
     if (pages.classList.contains('pages_checked')) {
         stepNumber++;
         showNext();
-    } else if ((nickname.value == null) || (nickname.value == "") || (nickname == undefined)) {
+    } else if ((nickname.value === null) || (nickname.value === "") || (nickname === undefined)) {
         nickname.classList.add('field__input_text_invalid');
         errorNickname.style.display = 'block';
     }
-    if ((track.value == null) || (track.value == "") || (track == undefined)) {
+    if ((track.value === null) || (track.value === "") || (track === undefined)) {
         track.classList.add('field__input_text_invalid');
         errorTrack.style.display = 'block';
     }
-    if ((trackUrl.value == null) || (trackUrl.value == "") || (trackUrl == undefined)) {
+    if ((trackUrl.value === null) || (trackUrl.value === "") || (trackUrl === undefined)) {
         trackUrl.classList.add('field__input_text_invalid');
         errorTrackUrl.style.display = 'block';
     }
@@ -209,7 +206,7 @@ let date = document.getElementById('date');
 let errorDate = document.querySelector('.field__error-date');
 
 let checkAuthor = function(field) {
-    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+    if ((field.value === null) || (field.value === "") || (field.value === undefined)) {
         return true;
     } else {
         for (let char of field.value) {
@@ -225,7 +222,7 @@ let checkAuthor = function(field) {
     }
 }
 let checkSinger = function(field) {
-    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+    if ((field.value === null) || (field.value === "") || (field.value === undefined)) {
         return true;
     } else {
         for (let char of field.value) {
@@ -244,7 +241,7 @@ let checkSinger = function(field) {
 
 
 let checkArranger = function(field) {
-    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+    if ((field.value === null) || (field.value === "") || (field.value === undefined)) {
         return true;
     } else {
         for (let char of field.value) {
@@ -262,7 +259,7 @@ let checkArranger = function(field) {
 }
 
 let checkComposer = function(field) {
-    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+    if ((field.value === null) || (field.value === "") || (field.value === undefined)) {
         return true;
     } else {
         for (let char of field.value) {
@@ -280,7 +277,7 @@ let checkComposer = function(field) {
 }
 let checkGenre = function(field) {
 
-    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+    if ((field.value === null) || (field.value === "") || (field.value === undefined)) {
         return true;
     } else {
         for (let char of field.value) {
@@ -299,7 +296,7 @@ let checkGenre = function(field) {
 }
 let checkDate = function(field) {
     let regexp = /\d\d.\d\d.\d\d\d\d/;
-    if ((field.value == null) || (field.value == "") || (field.value == undefined)) {
+    if ((field.value === null) || (field.value === "") || (field.value === undefined)) {
         return true;
     } else {
         for (let char of field.value) {
@@ -307,18 +304,12 @@ let checkDate = function(field) {
                 field.classList.add('field__input_text_invalid');
                 errorDate.style.display = 'block';
                 errorDate.innerHTML = 'Пожалуйста, введите дату в формате дд.мм.гггг';
-
-
                 return false;
             } else {
                 return true;
             }
         }
     }
-
-
-
-
 }
 let checkStep2 = function() {
     checkAuthor(textAuthor);
@@ -370,9 +361,9 @@ date.oninput = function() {
 }
 
 toNextStep.onclick = function() {
-    if (stepNumber == 1) {
+    if (stepNumber === 1) {
         checkStep1();
-    } else if (stepNumber == 2) {
+    } else if (stepNumber === 2) {
         checkStep2();
     } else {
         stepNumber++;
@@ -391,7 +382,7 @@ let errorEmail = document.querySelector('.field__error-email');
 let formStep6 = document.getElementById('step6_form');
 
 let checkEmail = function() {
-    if ((email.value == null) || (email.value == "") || (email.value == undefined)) {
+    if ((email.value === null) || (email.value === "") || (email.value === undefined)) {
         return true;
     } else if (!(email.value.includes('@') && email.value.includes('.'))) {
         email.classList.add('field__input_text_invalid');
@@ -410,7 +401,7 @@ artistForm.onsubmit = function(evt) {
     checkEmail();
     if (checkEmail()) {
         //artistForm.submit();
-        artistForm.style.display = 'none';
+        formBlockWrapper.style.display = 'none';
         success.style.display = 'flex';
     }
 }
@@ -429,33 +420,27 @@ $(function() {
         p = $('.popup__overlay')
         popup = $(".popup")
         body = $('body')
-        $('.field__question').click(function() {
+        $('.field__question').on("click", function() {
             p.css('display', 'block')
             $(body).css('overflow', 'hidden')
             popup.css('animation', 'translating 0.3s linear 1')
             popupText = $(this).attr('tooltip')
             $('.popup__content').text(popupText)
-        })
+
+        });
+
         p.click(function(event) {
             e = event || window.event
-            if (e.target == this) {
+            if (e.target === this) {
                 $(p).css('display', 'none')
 
                 $(body).css('overflow', 'auto')
             }
         })
-        $('.popup__close').click(function() {
+        $('.popup__close').on("click", function() {
             p.css('display', 'none')
-
             $(body).css('overflow', 'auto')
-        })
+
+        });
     }
-});
-
-// inputs.onblur = function() {
-//     this.style.backgroundColor = "$red";
-// }
-
-$("input").on("change", function() {
-    $(this).css("background-color", "#EEF4F6");
 });
