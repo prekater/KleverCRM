@@ -101,6 +101,15 @@
     }
 }
 
+.part {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    @media (max-width: 575.9px) {
+        margin-bottom: 6px;
+        margin-top: 6px;
+    }
+}
+
 .ul {
     list-style: none;
     padding-left: 0;

@@ -18,9 +18,7 @@ $shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
 $newRequestHighlight: 0px 1px 6px rgba(33, 186, 168, 0.3);
 $newRequestHighlightHover: 0px 7px 10px rgba(21, 186, 176, 0.3);
 @mixin cardElevation {
-    background: $white;
     box-shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
-    border-radius: 30px;
 }
 
 @mixin cardElevationHover {
@@ -28,9 +26,7 @@ $newRequestHighlightHover: 0px 7px 10px rgba(21, 186, 176, 0.3);
 }
 
 @mixin cardErrorHighlight {
-    background: $white;
     box-shadow: 0px 1px 5px rgba(226, 67, 45, 0.2);
-    border-radius: 30px;
 }
 
 @mixin cardErrorHighlightHover {
