@@ -85,6 +85,9 @@ html {
     &_wrap {
         flex-wrap: wrap;
     }
+    &_top-vertical {
+        justify-content: flex-start;
+    }
 }
 
 .block {
