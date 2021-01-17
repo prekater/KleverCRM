@@ -155,5 +155,9 @@ $(function() {
 });
 
 $("input").on("change", function() {
-    $(this).css("background-color", "#EEF4F6");
+    if (($(this).attr("type") === "text") && (!(($(this).val() === null) || ($(this).val() === "") || ($(this).val() === undefined)))) {
+        $(this).css("background-color", "#EEF4F6");
+    } else {
+        $(this).css("background-color", "white");
+    }
 });

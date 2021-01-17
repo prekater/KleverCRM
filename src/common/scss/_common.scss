@@ -112,3 +112,34 @@ html {
         background: $dark-gradient;
     }
 }
+
+.tabs {
+    color: $dark-gray;
+    @include fontSize14();
+    flex-wrap: nowrap;
+    // &_margin {
+    //     margin-left: 36px;
+    //     @media (max-width: 991.9px) {
+    //         margin-left: 20px;
+    //     }
+    // }
+    &__tab {
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        text-align: center;
+        &_active {
+            color: $black;
+            font-weight: 600;
+            border-bottom: 2px solid skyblue;
+            border-image: $main-gradient;
+            border-image-slice: 1;
+            padding-bottom: 5px;
+        }
+        // &_margin {
+        //     margin-right: 44px;
+        //     @media (max-width: 575.9px) {
+        //         margin-right: 22px;
+        //     }
+        // }
+    }
+}
