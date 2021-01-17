@@ -664,12 +664,25 @@
     }
 }
 
+.wrapper-for-border-top {
+    padding-top: 9px;
+    border-top: 1px solid $line;
+    grid-column: 1/3;
+    @include grid(1fr 150px,
+    auto,
+    20px,
+    18px);
+}
+
 .two-buttons-mobile {
     grid-column: 1/3;
     @include grid (auto auto,
     36px,
     10px,
     0);
+    &__img {
+        margin-right: 8px;
+    }
 }
 
 .btn_padding {
@@ -868,6 +881,7 @@
 
 #adding_release,
 #added_success,
-#all_releases {
+//#all_releases, 
+#release {
     display: none;
 }
