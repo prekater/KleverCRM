@@ -104,13 +104,13 @@
                             <span class="field__white-dot "><sup>&#8226;</sup></span>
                             <span class="field__question" tooltip="Ссылка на обложку">?</span>
                         </div>
-                        <input type="text" class="field__input_text" required="required" id="cover" name="cover-field">
+                        <input type="text" class="field__input_text" id="cover" name="cover-field">
                         <div class="field__error field__error_cover"></div>
                     </div>
 
                     <div class="two-buttons">
-                        <button type="submit" class="button button_save">Создать</button>
-                        <button class="button button_cancel">Отменить</button>
+                        <button type="submit" class="button ">Создать</button>
+                        <button class="button ">Отменить</button>
                     </div>
 
                 </div>
@@ -170,7 +170,7 @@
             <div class="table-row-wrapper block block_rounded">
                 <div class="table-row">
                     <div class="table-row__cell table-row__cell_cover"><img src="./images/cover1.png" alt="Обложка" /></div>
-                    <div class="table-row__cell table-row__cell_2rows table-row__cell_green table-row__cell_bold">Don’t Say Goodbye, remember me</div>
+                    <div class="table-row__cell table-row__cell_2rows table-row__cell_green table-row__cell_bold" id="release1">Don’t Say Goodbye, remember me</div>
                     <div class="table-row__cell table-row__cell_2rows table-row__cell_green">Болконский Александр Юрьевич</div>
                     <div class="table-row__cell table-row__cell_1row table-row__cell_green">№258794</div>
                     <div class="table-row__cell table-row__cell_1row">Альбом</div>
@@ -318,26 +318,29 @@
 
     <div class="release release_padding flex-column flex-column_top-vertical" id="release">
         <div class="release-header">
-            <div class="to-all-releases to-all-releases_margin flex-row flex-row_start">
+            <div class="to-all-releases to-all-releases_margin flex-row flex-row_start" id="to_all_releases">
                 <img src="./images/arrow_to_left.svg" alt="Вернуться к релизам" class="to-all-releases__img" /> Все релизы
             </div>
 
             <div class="cover-and-name cover-and-name_margin">
-                <img src="./images/cover110.png" alt="Обложка" class="cover-and-name__cover">
+                <div class="cover-change">
+                    <img src="./images/cover110.png" alt="Обложка" class="cover-and-name__cover">
+                    <div class="cover-change__hover"></div>
+                </div>
                 <div class="release-name flex-column">
                     <span class="release-name__release">Релиз</span>
                     <span class="release-name__name">Золото / Kartashow</span>
                 </div>
                 <div class="release-buttons ">
-                    <div class="release-button">
+                    <div class="release-button " tooltip="Редактировать">
                         <img src="./images/edit.svg" alt="Редактировать релиз" class="release-button__img">
                         <span class="release-button__text">Редактировать</span>
                     </div>
-                    <div class="release-button">
+                    <div class="release-button" tooltip="Удалить">
                         <img src="./images/delete.svg" alt="Удалить релиз" class="release-button__img">
                         <span class="release-button__text">Удалить</span>
                     </div>
-                    <div class="release-button">
+                    <div class="release-button" tooltip="Деактивировать">
                         <img src="./images/deactivate.svg" alt="Деактивировать  релиз" class="release-button__img">
                         <span class="release-button__text">Деактивировать</span>
                     </div>
@@ -359,7 +362,7 @@
             </div>
         </div>
 
-        <div class="release-info block block_rounded release-info_padding" id="release-info">
+        <div class="release-info block block_rounded release-info_padding release-info_margin" id="release-info">
             <div class="release-main-info release-main-info_padding">
                 <div class="info__title">Общая информация</div>
                 <div class="info__photo"> <img src="./images/singer_photo.svg" alt="Фото исполнителя" /> </div>
@@ -523,6 +526,74 @@
             <div class="popup__content "></div>
         </div>
     </div>
+
+    <div class="popup-change-cover">
+        <div class="popup-cover flex-column">
+            <div class="popup-cover__header flex-row flex-row_between flex-row_center-vertical">
+                Редактирование обложки
+                <a href=" #close " title="Close " class="popup-cover__close ">×</a>
+            </div>
+            <div class="popup-cover__place-here flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+                <img src="./images/pic_cover.svg" alt="" />
+                <span class="popup-cover__text">Перетащите файл формата JPG или PNG в это поле</span>
+            </div>
+            <div class="popup-cover__has-cover  flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+                <img src="./images/cover110.png" alt="" class="popup-cover__cover" />
+                <span class="popup-cover__cover-close">×</span>
+            </div>
+
+            <div class="flex-row flex-column_between popup-cover__two-buttons">
+                <div class=" button popup-cover-button flex-row  flex-row_center-vertical">
+                    <img src=" ./images/upload.svg " alt="Загрузить обложку " class="popup-cover-button__img ">
+                    <div class="popup-cover-button__text ">
+                        Загрузить
+                    </div>
+                </div>
+                <div class="button button_cancel popup-cover-button popup-cover-button_195width flex-row  flex-row_center-vertical ">
+                    <div class="popup-cover-button__img ">
+                        <img src="./images/download.svg " alt="Скачать обложку ">
+                    </div>
+                    <div class="popup-cover-button__text ">
+                        Отменить
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="popup-release">
+        <div class="popup-release-menu flex-column">
+            <div class="popup-release-menu__header flex-row flex-row_between flex-row_center-vertical">
+                Редактирование релиза
+                <a href=" #close " title="Close " class="popup-release__close ">×</a>
+            </div>
+            <div class="popup-release-buttons flex-column">
+                <div class="popup-release-button ">
+                    <img src="./images/edit.svg" alt="Редактировать релиз" class="popup-release-button__img">
+                    <span class="popup-release-button__text">Редактировать</span>
+                </div>
+                <div class="popup-release-button">
+                    <img src="./images/delete.svg" alt="Удалить релиз" class="popup-release-button__img">
+                    <span class="popup-release-button__text">Удалить</span>
+                </div>
+                <div class="popup-release-button">
+                    <img src="./images/deactivate.svg" alt="Деактивировать  релиз" class="popup-release-button__img">
+                    <span class="popup-release-button__text">Деактивировать</span>
+                </div>
+                <div class="popup-release-button ">
+                    <img src="./images/note.svg" alt="Добавить трек" class="popup-release-button__img" />
+                    <div class="popup-release-button__text ">Добавить трек</div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
 </div>
 <script src="http://code.jquery.com/jquery-1.8.3.js "></script>
 <script src="../track-releases/scripts/index.js "></script>
