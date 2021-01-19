@@ -730,7 +730,7 @@
         margin-right: 9px;
     }
     &_margin {
-        margin-bottom: 3vh;
+        margin-bottom: 2.4vh;
     }
 }
 
@@ -755,7 +755,7 @@
         }
     }
     &_margin {
-        margin-bottom: 3vh;
+        margin-bottom: 2.4vh;
         @media (max-width: 991.9px) {
             margin-bottom: 34px;
         }
@@ -774,13 +774,14 @@
         auto,
         15px,
         0);
-        &:after {
+    }
+    &__ellipses {
+        display: none;
+        @media (max-width: 575.9px) {
+            display: block;
             width: 22px;
             height: 22px;
             position: absolute;
-            content: " ";
-            background-image: url("./../images/ellipses.svg");
-            background-repeat: no-repeat;
             top: -11px;
             right: 0;
         }
@@ -813,6 +814,7 @@
     auto,
     1.25vw,
     auto);
+    align-self: flex-start;
     @media (max-width: 991.9px) {
         @include grid(auto auto auto, auto, 44px, auto);
         padding-right: 90px;
@@ -846,6 +848,9 @@
     box-sizing: border-box;
     width: 100%;
     //  border: 2px solid darkorange;
+    &_margin {
+        margin-bottom: 2.3vh;
+    }
 }
 
 .tabs_grid {
@@ -879,9 +884,282 @@
     }
 }
 
+.release-info {
+    @include fontSize(14,
+    20,
+    400);
+    &_padding {
+        padding: 4.7vh 4.25vw 5.2vh 3.75vw;
+        @media (max-width: 575.9px) {
+            padding: 0;
+        }
+    }
+    @media (max-width: 991.9px) {
+        border-radius: 0;
+    }
+}
+
+.release-main-info {
+    @include grid (52px 1fr 1fr 1fr,
+    auto,
+    2.125vw,
+    4vh);
+    border-bottom: 1px solid $line;
+    &_padding {
+        padding-bottom: 2.8vh;
+        @media (max-width: 575.9px) {
+            padding: 18px 20px 34px 20px;
+        }
+    }
+    @media (max-width: 991.9px) {
+        @include grid ( 1fr 1fr,
+        auto,
+        0,
+        15px);
+    }
+    @media (max-width: 575.9px) {
+        @include grid ( 1fr,
+        auto,
+        0,
+        15px);
+    }
+}
+
+.info__title {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    font-weight: 700;
+    @media (max-width: 991.9px) {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    @media (max-width: 575.9px) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+}
+
+.photo-and-singer {
+    display: none;
+    @media (max-width: 991.9px) {
+        @include grid (52px 235px, auto auto, 30px, 0);
+        height: 52px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        align-items: center;
+        border-bottom: 1px solid $line;
+        padding-bottom: 25px;
+    }
+    @media (max-width: 575.9px) {
+        @include grid (52px 1fr,
+        auto auto,
+        30px,
+        0);
+        grid-column: 1/2;
+        grid-row: 2/3;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 25px;
+    }
+    &__photo {
+        justify-self: center;
+        grid-column: 1/2;
+        grid-row: 1/3;
+        @include flexCenter(row);
+    }
+}
+
+.info-cell {
+    @media (max-width: 991.9px) {
+        @include grid (1fr 1fr, auto, 0, 0);
+    }
+    &_contract {
+        @media (max-width: 991.9px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            width: 100%;
+            height: 52px;
+            border-bottom: 1px solid $line;
+            padding-bottom: 20px;
+        }
+        @media (max-width: 575.9px) {
+            @include grid (1fr 1fr,
+            auto,
+            0,
+            0);
+            // flex-direction: row;
+            // justify-content: flex-start;
+            // align-items: center;
+            grid-column: 1/2;
+            grid-row: 3/4;
+            border-bottom: none;
+            padding-bottom: 0;
+            height: auto;
+        }
+    }
+    &__title {
+        color: $textsecondary;
+        &_profit {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            @media (max-width: 575.9px) {
+                justify-content: flex-start;
+            }
+        }
+    }
+    &__text {
+        &_green {
+            color: $green;
+        }
+        &_bold {
+            font-weight: 700;
+        }
+        &_right {
+            justify-self: end;
+        }
+        &_padding {
+            padding-left: 35px;
+        }
+        &_profit {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}
+
+.info__photo {
+    padding-top: 5px;
+    grid-row: 2/5;
+    grid-column: 1/2;
+    @media (max-width: 991.9px) {
+        display: none;
+    }
+}
+
+.info-singer {
+    @media (max-width: 991.9px) {
+        display: none;
+    }
+}
+
+.release-profit-info {
+    @include grid (1fr,
+    auto,
+    0,
+    1.5vh);
+    &_margin {
+        margin-top: 4vh;
+    }
+    @media (max-width: 575.9px) {
+        @include grid (1fr,
+        auto,
+        0,
+        0);
+    }
+}
+
+.release-profit-info-grid {
+    @include grid (1fr 1fr,
+    auto,
+    auto,
+    0);
+    @media (max-width: 575.9px) {
+        display: none;
+    }
+}
+
+.release-profit-info-grid-mobile {
+    display: none;
+    @media (max-width: 575.9px) {
+        @include grid (1fr, auto, 0, 0);
+    }
+    &_padding {
+        @media (max-width: 575.9px) {
+            padding-right: 40px;
+        }
+    }
+}
+
+.profit-info-title {
+    font-weight: 700;
+    @media (max-width: 575.9px) {
+        padding-left: 20px;
+        margin-bottom: 25px;
+    }
+}
+
+.profit-info-cell {
+    height: 34px;
+    @include grid (15.325vw auto,
+    auto,
+    0,
+    0);
+    @media (max-width: 991.9px) {
+        @include grid (185px auto, auto, 0, 0);
+    }
+    &_margin {
+        margin-bottom: 15px;
+    }
+    &_margin-left {
+        @media (max-width: 575.9px) {
+            margin-left: 7px;
+        }
+    }
+    @media (max-width: 575.9px) {
+        padding: 7px 16px 8px 13px;
+        height: auto;
+        @include grid (140px 1fr,
+        auto,
+        0,
+        0);
+        align-items: end;
+    }
+    &_marked {
+        @media (max-width: 575.9px) {
+            background-color: $main-bg;
+            border-radius: 12px;
+        }
+    }
+}
+
+.marked-title {
+    height: 100%;
+    background-color: $main-bg;
+    border-radius: 12px 0 0 12px;
+    position: relative;
+    @include flexCenter(row);
+    padding-left: 20px;
+    z-index: 1;
+    &::after {
+        content: " ";
+        background-color: $main-bg;
+        width: 40px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 99%;
+        z-index: 0;
+    }
+}
+
+.marked-text {
+    padding-right: 20px;
+    @include flexCenter(row);
+    height: 100%;
+    background-color: $main-bg;
+    border-radius: 0 12px 12px 0;
+    z-index: 1;
+}
+
 #adding_release,
 #added_success,
-//#all_releases, 
-#release {
+#all_releases {
+    //#release {
     display: none;
 }
