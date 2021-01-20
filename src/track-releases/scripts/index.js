@@ -44,15 +44,6 @@ $(function() {
         $(body).css('overflow', 'hidden')
         popup.css('animation', 'translating 0.3s linear 1')
         console.log($('cover-and-name__cover').has("img"))
-            // if ($('cover-and-name__cover').has("img")) {
-            //     $('popup-cover__has-cover').css('display', 'block')
-            //     $('popup-cover__place-here').css('display', 'none')
-            //     console.log("Has cover");
-            // } else {
-            //     $('popup-cover__has-cover').css('display', 'none')
-            //     $('popup-cover__place-here').css('display', 'block')
-            //     console.log("no cover");
-            // }
     });
 
     p.click(function(event) {
@@ -160,27 +151,6 @@ toAllReleases.onclick = function() {
     allReleases.style.display = "block";
 }
 
-//сортировка таблица Все релизы по названию релиза
-// let allReleasesTable = document.querySelector(".all-releases-table");
-// let tableRows = document.querySelectorAll(".table-row");
-// let sortName = document.getElementById("sort_name");
-// let tableRowWrapper = document.querySelector(".table-row-wrapper");
-
-// let arr = [].slice.call(tableRows);
-// arr.sort(function(a, b) {
-//     let nameA = a.querySelector(".cell-for-sort");
-//     let nameB = b.querySelector(".cell-for-sort");
-//     if (nameA > nameB) return 1;
-//     if (nameA == nameB) return 0;
-//     if (nameA < nameB) return -1;
-// });
-// console.log(arr);
-
-// for (let i = 0; i < tableRows.length; i++) {
-//     let newRow = tableRowWrapper.cloneNode(false);
-//     allReleasesTable.appendChild(newRow);
-//     allReleasesTable.lastChild.appendChild(arr[i]);
-// }
 
 //переключение между табами в информации о релизе
 let $tabReleaseInfo = $('#tab-release-info');

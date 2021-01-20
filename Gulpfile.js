@@ -55,7 +55,7 @@ gulp.task('scss', () => {
 
 gulp.task('scripts', () => {
 
-    return gulp.src(['./src/track-releases/scripts/index.js', './src/common/scripts/index.js', './src/common/scripts/jquery.nice-select.js', './src/common/scripts/clamp.js'])
+    return gulp.src(['./src/track-releases/scripts/index.js', './src/common/scripts/index.js', './src/common/scripts/jquery.nice-select.js'])
         // .pipe(uglify())
         .pipe(concat('index.js'))
         // .pipe(rename((p) => {
