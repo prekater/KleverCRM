@@ -150,7 +150,6 @@ let release = document.getElementById("release");
 releaseInfo.onclick = function() {
     allReleases.style.display = "none";
     release.style.display = "block";
-
 }
 
 //переход ко всем релизам из информации о релизе 
@@ -158,5 +157,63 @@ let toAllReleases = document.getElementById("to_all_releases");
 toAllReleases.onclick = function() {
     release.style.display = "none";
     allReleases.style.display = "block";
-
 }
+
+//сортировка таблица Все релизы по названию релиза
+// let allReleasesTable = document.querySelector(".all-releases-table");
+// let tableRows = document.querySelectorAll(".table-row");
+// let sortName = document.getElementById("sort_name");
+// let tableRowWrapper = document.querySelector(".table-row-wrapper");
+
+// let arr = [].slice.call(tableRows);
+// arr.sort(function(a, b) {
+//     let nameA = a.querySelector(".cell-for-sort");
+//     let nameB = b.querySelector(".cell-for-sort");
+//     if (nameA > nameB) return 1;
+//     if (nameA == nameB) return 0;
+//     if (nameA < nameB) return -1;
+// });
+// console.log(arr);
+
+// for (let i = 0; i < tableRows.length; i++) {
+//     let newRow = tableRowWrapper.cloneNode(false);
+//     allReleasesTable.appendChild(newRow);
+//     allReleasesTable.lastChild.appendChild(arr[i]);
+// }
+
+//переключение между табами в информации о релизе
+let $tabReleaseInfo = $('#tab-release-info');
+let $tabReleaseTracks = $('#tab-release-tracks');
+let $tabReleaseStat = $('#tab-release-stat');
+let $releaseInfo = $("#release-info");
+let $releaseTracks = $("#release-tracks");
+let $releaseStat = $("#release-stat");
+
+
+
+$tabReleaseInfo.on("click", function() {
+    $(this).addClass("tabs__tab_active");
+    $tabReleaseTracks.removeClass("tabs__tab_active");
+    $tabReleaseStat.removeClass("tabs__tab_active");
+    $releaseInfo.css("display", "block");
+    $releaseTracks.css("display", "none");
+    $releaseStat.css("display", "none");
+});
+
+$tabReleaseTracks.on("click", function() {
+    $(this).addClass("tabs__tab_active");
+    $tabReleaseInfo.removeClass("tabs__tab_active");
+    $tabReleaseStat.removeClass("tabs__tab_active");
+    $releaseTracks.css("display", "block");
+    $releaseInfo.css("display", "none");
+    $releaseStat.css("display", "none");
+});
+
+$tabReleaseStat.on("click", function() {
+    $(this).addClass("tabs__tab_active");
+    $tabReleaseInfo.removeClass("tabs__tab_active");
+    $tabReleaseTracks.removeClass("tabs__tab_active");
+    $releaseStat.css("display", "block");
+    $releaseInfo.css("display", "none");
+    $releaseTracks.css("display", "none");
+});
