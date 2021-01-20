@@ -55,7 +55,7 @@ gulp.task('scss', () => {
 
 gulp.task('scripts', () => {
 
-    return gulp.src(['./src/track-releases/scripts/index.js', './src/common/scripts/index.js', './src/common/scripts/jquery.nice-select.js'])
+    return gulp.src(['./src/track-release/scripts/index.js', './src/common/scripts/index.js', './src/common/scripts/jquery.nice-select.js'])
         // .pipe(uglify())
         .pipe(concat('index.js'))
         // .pipe(rename((p) => {
@@ -65,7 +65,7 @@ gulp.task('scripts', () => {
         //         extname: p.extname
         //     };
         // }))
-        .pipe(gulp.dest('./build/track-releases/scripts'));
+        .pipe(gulp.dest('./build/track-release/scripts'));
 });
 gulp.task('images', () => {
     return gulp.src('./src/track*/images/*')
