@@ -43,15 +43,16 @@ $(function() {
         p.css('display', 'flex')
         $(body).css('overflow', 'hidden')
         popup.css('animation', 'translating 0.3s linear 1')
-        console.log($('cover-and-name__cover').attr("src"))
-            // if ($('cover-and-name__cover').attr("src") != "./images/no-cover.svg") {
-            //     $('popup-cover__has-cover').css('display', 'flex')
+        console.log($('cover-and-name__cover').has("img"))
+            // if ($('cover-and-name__cover').has("img")) {
+            //     $('popup-cover__has-cover').css('display', 'block')
             //     $('popup-cover__place-here').css('display', 'none')
-
-        // } else {
-        //     $('popup-cover__has-cover').css('display', 'none')
-        //     $('popup-cover__place-here').css('display', 'flex')
-        // }
+            //     console.log("Has cover");
+            // } else {
+            //     $('popup-cover__has-cover').css('display', 'none')
+            //     $('popup-cover__place-here').css('display', 'block')
+            //     console.log("no cover");
+            // }
     });
 
     p.click(function(event) {
