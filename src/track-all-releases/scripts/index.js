@@ -1,10 +1,3 @@
-// плагин для  выпадающего меню 
-$(document).on("ready", function() {
-    $('select').niceSelect();
-});
-
-
-
 //меню релиза в мобильном
 $(function() {
     if ($(window).width() <= 575.9) {
