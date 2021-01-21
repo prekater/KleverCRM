@@ -64,10 +64,10 @@ $searchTable.on("focusout", function() {
     if ((($searchTableInput.val() === null) || ($searchTableInput.val() === "") || ($searchTableInput.val() === undefined))) {
         $searchTableInput.css("width", "34px");
         $searchTableClear.css("display", "none");
-        $searchTableBtnMob.css("right", "0");
         $title.css("display", "block");
         $searchTable.css("grid-column", "2/3");
-        $searchTableInput.focus();
+        $searchTableBtnMob.css("right", "0");
+
     }
 
 });
@@ -75,6 +75,8 @@ $searchTable.on("focusout", function() {
 
 $searchTableClear.on("click", function() {
     $searchTableInput.val('');
+    $searchTableInput.trigger("focus");
+
 });
 
 
@@ -97,6 +99,7 @@ $tabErrors.on("click", function() {
     $releasesErrors.css("display", "block");
     $allReleases.css("display", "none");
 });
+
 
 //"Все релизы" кнопки в каждой строке Редактировать Удалить
 let releaseEdit = document.getElementById("edit-release");
