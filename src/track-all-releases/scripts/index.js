@@ -1,10 +1,3 @@
-// плагин для  выпадающего меню 
-$(document).on("ready", function() {
-    $('select').niceSelect();
-});
-
-
-
 //меню релиза в мобильном
 $(function() {
     if ($(window).width() <= 575.9) {
@@ -31,45 +24,88 @@ $(function() {
     }
 });
 
+//поле поиска в таблице десктоп
+let $searchTable = $("#search-table");
+let $searchTableInput = $(".search-table__input");
 
-
-
-
-//здесь надо переклбчение между табами в Все релизы релизы Ошибки
-
-//переключение между табами в информации о релизе
-let $tabReleaseInfo = $('#tab-release-info');
-let $tabReleaseTracks = $('#tab-release-tracks');
-let $tabReleaseStat = $('#tab-release-stat');
-let $releaseInfo = $("#release-info");
-let $releaseTracks = $("#release-tracks");
-let $releaseStat = $("#release-stat");
-
-
-
-$tabReleaseInfo.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabReleaseTracks.removeClass("tabs__tab_active");
-    $tabReleaseStat.removeClass("tabs__tab_active");
-    $releaseInfo.css("display", "block");
-    $releaseTracks.css("display", "none");
-    $releaseStat.css("display", "none");
+$searchTable.on("focusin", function() {
+    $searchTableInput.css("width", "100%");
 });
 
-$tabReleaseTracks.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabReleaseInfo.removeClass("tabs__tab_active");
-    $tabReleaseStat.removeClass("tabs__tab_active");
-    $releaseTracks.css("display", "block");
-    $releaseInfo.css("display", "none");
-    $releaseStat.css("display", "none");
+$searchTable.on("focusout", function() {
+    if (!(($searchTableInput.val() === null) || ($searchTableInput.val() === "") || ($searchTableInput.val() === undefined))) {
+        $searchTableInput.css("width", "100%");
+    } else {
+        if ($(window).width() <= 991.9) {
+            $searchTableInput.css("width", "88px");
+        } else {
+            $searchTableInput.css("width", "244px");
+        };
+        $searchTableInput.css("background-color", "white");
+    }
 });
 
-$tabReleaseStat.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabReleaseInfo.removeClass("tabs__tab_active");
-    $tabReleaseTracks.removeClass("tabs__tab_active");
-    $releaseStat.css("display", "block");
-    $releaseInfo.css("display", "none");
-    $releaseTracks.css("display", "none");
+//поле поиска в таблице мобильная версия
+let $searchTableBtnMob = $(".search-table__button-mobile");
+let $searchTableClear = $(".search-table__clear");
+let $title = $(".all-releases-header__title");
+
+$searchTableBtnMob.on("click", function() {
+    $searchTableInput.css("width", "100%");
+    $searchTableClear.css("display", "flex");
+    $(this).css("left", "0");
+    $title.css("display", "none");
+    $searchTable.css("grid-column", "1/3");
 });
+
+$searchTable.on("focusout", function() {
+    console.log("lost focus");
+
+    if ((($searchTableInput.val() === null) || ($searchTableInput.val() === "") || ($searchTableInput.val() === undefined))) {
+        $searchTableInput.css("width", "34px");
+        $searchTableClear.css("display", "none");
+        $searchTableBtnMob.css("right", "0");
+        $title.css("display", "block");
+        $searchTable.css("grid-column", "2/3");
+        $searchTableInput.focus();
+    }
+
+});
+
+
+$searchTableClear.on("click", function() {
+    $searchTableInput.val('');
+});
+
+
+//переключение между табами в "Все релизы"
+let $tabAllReleases = $('#tab-all-releases');
+let $tabErrors = $('#tab-errors');
+let $allReleases = $("#all-releases-block");
+let $releasesErrors = $("#releases_errors");
+
+$tabAllReleases.on("click", function() {
+    $(this).addClass("tabs__tab_active");
+    $tabErrors.removeClass("tabs__tab_active");
+    $allReleases.css("display", "block");
+    $releasesErrors.css("display", "none");
+});
+
+$tabErrors.on("click", function() {
+    $(this).addClass("tabs__tab_active");
+    $tabAllReleases.removeClass("tabs__tab_active");
+    $releasesErrors.css("display", "block");
+    $allReleases.css("display", "none");
+});
+
+//"Все релизы" кнопки в каждой строке Редактировать Удалить
+let releaseEdit = document.getElementById("edit-release");
+let releaseDelete = document.getElementById("delete-release");
+
+releaseEdit.onclick = function() {
+    console.log("Edit release");
+};
+
+releaseDelete.onclick = function() {
+    console.log("Delete release");
+};
