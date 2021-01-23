@@ -130,12 +130,105 @@ function removeUpload() {
         $('.image-upload-wrap').show();
 
     }
-
-
 }
 $('.image-upload-wrap').on('dragover', function() {
     $('.image-upload-wrap').addClass('image-dropping');
 });
 $('.image-upload-wrap').on('dragleave', function() {
     $('.image-upload-wrap').removeClass('image-dropping');
+});
+
+//подтверждение удаления релиза 
+$(function() {
+
+    p = $('.popup-delete')
+    popup = $(".popup-delete-confirm")
+    body = $('body')
+    $('#release-delete_btn').on("click", function() {
+        p.css('display', 'flex')
+        $(body).css('overflow', 'hidden')
+        popup.css('animation', 'translating 0.3s linear 1')
+    });
+    $('#release-delete_btn-mobile').on("click", function() {
+        p.css('display', 'flex')
+        $(body).css('overflow', 'hidden')
+        popup.css('animation', 'translating 0.3s linear 1')
+    });
+    p.click(function(event) {
+        e = event || window.event
+        if (e.target === this) {
+            $(p).css('display', 'none')
+            $(body).css('overflow', 'auto')
+        }
+    })
+
+    $('.popup-delete__close').on("click", function() {
+        p.css('display', 'none')
+        $(body).css('overflow', 'auto')
+    });
+
+    $('.popup-delete__button_cancel').on("click", function() {
+        p.css('display', 'none')
+        $(body).css('overflow', 'auto')
+    });
+
+    $('.popup-delete__button_confirm').on("click", function() {
+        console.log("Наташ, мы всё удалили");
+        p.css('display', 'none')
+        $(body).css('overflow', 'auto')
+
+    });
+
+});
+
+
+//меню релиза в мобильном
+$(function() {
+    if ($(window).width() <= 575.9) {
+        p = $('.popup-release')
+        popup = $(".popup-release-menu")
+        body = $('body')
+        $('.cover-and-name__ellipses').on("click", function() {
+            p.css('display', 'block')
+            $(body).css('overflow', 'hidden')
+            popup.css('animation', 'translating 0.3s linear 1')
+        });
+
+        p.click(function(event) {
+            e = event || window.event
+            if (e.target === this) {
+                $(p).css('display', 'none')
+                $(body).css('overflow', 'auto')
+            }
+        })
+        $('.popup-release__close').on("click", function() {
+            p.css('display', 'none')
+            $(body).css('overflow', 'auto')
+        });
+        $('#release-delete_btn-mobile').on("click", function() {
+            $(".popup-release").hide()
+                //$(body).css('overflow', 'hidden')
+            $(".popup-delete").css('display', 'flex')
+            $(".popup-delete-confirm").css('animation', 'translating 0.3s linear 1')
+
+        });
+        $('.popup-delete__close').on("click", function() {
+            $(".popup-delete").css('display', 'none')
+            $(body).css('overflow', 'auto')
+        });
+
+        $('.popup-delete__button_cancel').on("click", function() {
+            $(".popup-delete").css('display', 'none')
+            $(body).css('overflow', 'auto')
+        });
+
+        $('.popup-delete__button_confirm').on("click", function() {
+            console.log("Наташ, мы всё удалили");
+            $(".popup-delete").css('display', 'none')
+            $(body).css('overflow', 'auto')
+
+        });
+
+
+    }
 });

@@ -22,7 +22,7 @@
                         <img src="./images/edit.svg" alt="Редактировать релиз" class="release-button__img">
                         <span class="release-button__text">Редактировать</span>
                     </div>
-                    <div class="release-button" tooltip="Удалить">
+                    <div class="release-button" id="release-delete_btn" tooltip="Удалить">
                         <img src="./images/delete.svg" alt="Удалить релиз" class="release-button__img">
                         <span class="release-button__text">Удалить</span>
                     </div>
@@ -420,6 +420,46 @@
 
     </div>
 
+    <div class="popup-delete">
+        <div class="popup-delete-confirm block block_rounded">
+            <a href=" #close " title="Close " class="popup-delete__close ">×</a>
+            <div class="popup-delete__text">Вы действительно хотите удалить трек?</div>
+
+            <button class="popup-delete__button popup-delete__button_cancel" type="button">Отмена</button>
+            <button class="popup-delete__button popup-delete__button_confirm" type="button ">Удалить</button>
+
+        </div>
+    </div>
+
+    <div class="popup-release ">
+        <div class="popup-release-menu flex-column ">
+            <div class="popup-release-menu__header flex-row flex-row_between flex-row_center-vertical ">
+                Редактирование релиза
+                <a href=" #close " title="Close " class="popup-release__close ">×</a>
+            </div>
+            <div class="popup-release-buttons flex-column ">
+                <div class="popup-release-button ">
+                    <img src="./images/edit.svg " alt="Редактировать релиз " class="popup-release-button__img ">
+                    <span class="popup-release-button__text ">Редактировать</span>
+                </div>
+                <div class="popup-release-button" id="release-delete_btn-mobile">
+                    <img src="./images/delete.svg " alt="Удалить релиз " class="popup-release-button__img ">
+                    <span class="popup-release-button__text ">Удалить</span>
+                </div>
+                <div class="popup-release-button ">
+                    <img src="./images/deactivate.svg " alt="Деактивировать релиз " class="popup-release-button__img ">
+                    <span class="popup-release-button__text ">Деактивировать</span>
+                </div>
+                <div class="popup-release-button ">
+                    <img src="./images/note.svg " alt="Добавить трек " class="popup-release-button__img " />
+                    <div class="popup-release-button__text ">Добавить трек</div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
 </div>
 <script src="http://code.jquery.com/jquery-1.8.3.js "></script>
 <script src="../track-release/scripts/index.js "></script>
