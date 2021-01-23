@@ -18,10 +18,11 @@ $tabReleaseInfo.on("click", function() {
 });
 
 $tabReleaseTracks.on("click", function() {
+    console.log("dfsdf");
     $(this).addClass("tabs__tab_active");
     $tabReleaseInfo.removeClass("tabs__tab_active");
     $tabReleaseStat.removeClass("tabs__tab_active");
-    $releaseTracks.css("display", "block");
+    $releaseTracks.css("display", "flex");
     $releaseInfo.css("display", "none");
     $releaseStat.css("display", "none");
 });
