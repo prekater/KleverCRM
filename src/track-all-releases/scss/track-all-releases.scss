@@ -131,6 +131,8 @@
         }
     }
     &_padding {
+        padding-left: 36px;
+        padding-right: 36px;
         @media (max-width: 575.9px) {
             padding: 13px 20px 15px 20px;
         }
