@@ -1,11 +1,19 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="all-releases all-releases_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center" id="all_releases">
-        <div class="all-releases-header all-releases-header_margin all-releases-header_padding">
-            <div class="all-releases-header__title">Релизы</div>
-            <div class="tabs tabs_margin flex-row">
-                <div class="tabs__tab tabs__tab_active tabs__tab_margin" id="tab-all-releases">Все релизы</div>
-                <div class="tabs__tab " id="tab-errors">Ошибки</div>
+    <div class="requests requests_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center" id="all_releases">
+        <div class="requests-header requests-header_margin requests-header_padding">
+            <div class="requests-header__title">Запросы</div>
+            <div class="tabs">
+                <div class="tabs-small-grid">
+                    <div class="tabs__tab tabs__tab_active " id="tab_unhandled">Не обработанные </div>
+                    <div class="tabs__number tabs__number_unhandled">7</div>
+                </div>
+                <div class="tabs__tab " id="tab_handled">Обработанные</div>
+                <div class="tabs-small-grid">
+                    <div class="tabs__tab " id="tab_errors">Ошибки </div>
+                    <div class="tabs__number tabs__number_errors">2</div>
+                </div>
+
             </div>
 
 
@@ -18,71 +26,41 @@
             </form>
         </div>
 
-        <div class="all-releases-block" id="all-releases-block">
-            <div class="all-releases-table table">
+        <div class="unhandled-requests" id="unhandled_requests">
+            <div class="requests-table table">
                 <div class="table-header">
                     <div class="table-header__cell"></div>
-                    <div class="table-header__cell table-header__cell_black">Название <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
+                    <div class="table-header__cell table-header__cell_black">Никнейм <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
+                    <div class="table-header__cell">Название трека</div>
                     <div class="table-header__cell">Исполнитель</div>
-                    <div class="table-header__cell">Договор</div>
-                    <div class="table-header__cell">Тип</div>
                     <div class="table-header__cell">Дата релиза</div>
-                    <div class="table-header__cell">Сумма доходов</div>
-                    <div class="table-header__cell">Доля лейбла</div>
-                    <div class="table-header__cell">Доля артиста</div>
-                    <div class="table-header__cell">К выплате</div>
+                    <div class="table-header__cell">Создано</div>
+                    <div class="table-header__cell">Статус</div>
                     <div class="table-header__cell"></div>
                 </div>
 
-                <div class="table-row-wrapper block block_rounded">
-                    <a href="./../track-release/index.html" class="table-row">
+                <div class="table-row-wrapper table-row-wrapper_request block block_rounded">
+                    <div class="table-row">
                         <div class="table-row__cell table-row__cell_cover">
                             <img src="./images/cover1.png" alt="">
                         </div>
-                        <div class="table-row__cell  table-row__cell_green table-row__cell_bold">
-                            <div class=" cell-text cell-text_2rows ">
-                                Don’t Say Goodbye, remember me
-                            </div>
+                        <div class="table-row__cell table-row__cell_bold">
+                            Alex Rudi Pell
                         </div>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text cell-text_2rows ">
-                                Болконский Александр Юрьевич
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text">
-                                №258794
-                            </div>
+                        <div class="table-row__cell  ">
+                            Don’t Say Goodbye
                         </div>
                         <div class="table-row__cell ">
-                            <div class="cell-text">
-                                Альбом
-                            </div>
+                            Болконский Александр Юрьевич
+                        </div>
+                        <div class="table-row__cell table-row__cell_gray">
+                            22 ноя 2020
                         </div>
                         <div class="table-row__cell table-row__cell_gray ">
-                            <div class="cell-text">
-                                22 ноя 2020
-                            </div>
+                            22 ноя 2020, 17:23
                         </div>
                         <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 236 397 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 954 678 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 654 075 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_bold ">
-                            <div class="cell-text">
-                                1 890 095 ₽
-                            </div>
+                            Не обработан
                         </div>
                         <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
                             <div id="edit-release" class="releases-table-button">
@@ -92,212 +70,92 @@
                                 <img src="./images/delete_bg.svg " alt="Удалить релиз " id="delete-release" class="releases-table-button" />
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
-                <div class="table-row-wrapper block block_rounded">
-                    <a href="./../track-release/index.html" class="table-row">
-                        <div class="table-row__cell table-row__cell_cover">
-                            <img src="./images/cover1.png" alt="">
-                        </div>
-                        <div class="table-row__cell  table-row__cell_green table-row__cell_bold">
-                            <div class=" cell-text cell-text_2rows ">
-                                Don’t Say Goodbye, remember me
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text cell-text_2rows ">
-                                Болконский Александр Юрьевич
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text">
-                                №258794
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                Альбом
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_gray ">
-                            <div class="cell-text">
-                                22 ноя 2020
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 236 397 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 954 678 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 654 075 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_bold ">
-                            <div class="cell-text">
-                                1 890 095 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
-                            <div id="edit-release" class="releases-table-button">
-                                <img src="./images/edit_bg.svg " alt="Редактировать релиз " />
-                            </div>
-                            <div id="edit-release" class="releases-table-button">
-                                <img src="./images/delete_bg.svg " alt="Удалить релиз " id="delete-release" class="releases-table-button" />
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <a href="./../track-release/index.html" class="table-row">
-                        <div class="table-row__cell table-row__cell_cover">
-                            <img src="./images/cover1.png" alt="">
-                        </div>
-                        <div class="table-row__cell  table-row__cell_green table-row__cell_bold">
-                            <div class=" cell-text cell-text_2rows ">
-                                Don’t Say Goodbye, remember me
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text cell-text_2rows ">
-                                Болконский Александр Юрьевич
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text">
-                                №258794
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                Альбом
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_gray ">
-                            <div class="cell-text">
-                                22 ноя 2020
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 236 397 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 954 678 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 654 075 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_bold ">
-                            <div class="cell-text">
-                                1 890 095 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
-                            <div id="edit-release" class="releases-table-button">
-                                <img src="./images/edit_bg.svg " alt="Редактировать релиз " />
-                            </div>
-                            <div id="edit-release" class="releases-table-button">
-                                <img src="./images/delete_bg.svg " alt="Удалить релиз " id="delete-release" class="releases-table-button" />
-                            </div>
-                        </div>
-                    </a>
-                </div>
 
             </div>
 
-            <div class="all-releases-table-mobile all-releases-table-mobile_margin ">
-                <div class="all-releases-card-mobile block ">
-                    <div class="all-releases-card-mobile-header ">
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_bold all-releases-card-mobile__cell_green "><img src="./images/cover1.png " alt="Обложка " /></div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green all-releases-card-mobile__cell_bold ">Don’t Say goodbye, remember me</div>
+            <div class="requests-table-mobile requests-table-mobile_margin ">
+                <div class="requests-card-mobile block ">
+                    <div class="requests-card-mobile-header ">
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_bold requests-card-mobile__cell_green "><img src="./images/cover1.png " alt="Обложка " /></div>
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green requests-card-mobile__cell_bold ">Don’t Say goodbye, remember me</div>
                     </div>
                     <div class="wrapper-for-border-top ">
-                        <div class="all-releases-card-mobile__cell ">Исполнитель:</div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">Болконский Александр Юрьевич</div>
+                        <div class="requests-card-mobile__cell ">Исполнитель:</div>
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">Болконский Александр Юрьевич</div>
                     </div>
-                    <div class="all-releases-card-mobile__cell ">Договор:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">№258794</div>
-                    <div class="all-releases-card-mobile__cell ">Тип:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">Альбом</div>
-                    <div class="all-releases-card-mobile__cell ">Дата релиза:</div>
-                    <div class="all-releases-card-mobile__cell ">22 ноя 2020</div>
-                    <div class="all-releases-card-mobile__cell ">Сумма доходов:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля лейбла:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 954 678 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля артиста:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 291 536 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">К выплате:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black all-releases-card-mobile__cell_bold ">1 291 536 ₽</div>
+                    <div class="requests-card-mobile__cell ">Договор:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">№258794</div>
+                    <div class="requests-card-mobile__cell ">Тип:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">Альбом</div>
+                    <div class="requests-card-mobile__cell ">Дата релиза:</div>
+                    <div class="requests-card-mobile__cell ">22 ноя 2020</div>
+                    <div class="requests-card-mobile__cell ">Сумма доходов:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 236 397 ₽</div>
+                    <div class="requests-card-mobile__cell ">Доля лейбла:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 954 678 ₽</div>
+                    <div class="requests-card-mobile__cell ">Доля артиста:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 291 536 ₽</div>
+                    <div class="requests-card-mobile__cell ">К выплате:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black requests-card-mobile__cell_bold ">1 291 536 ₽</div>
                     <div class="two-buttons-mobile ">
                         <div class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</div>
                         <div class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</div>
                     </div>
                 </div>
-                <div class="all-releases-card-mobile block ">
-                    <div class="all-releases-card-mobile-header ">
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_bold all-releases-card-mobile__cell_green "><img src="./images/cover1.png " alt="Обложка " /></div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green all-releases-card-mobile__cell_bold ">Don’t Say goodbye, remember me</div>
+                <div class="requests-card-mobile block ">
+                    <div class="requests-card-mobile-header ">
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_bold requests-card-mobile__cell_green "><img src="./images/cover1.png " alt="Обложка " /></div>
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green requests-card-mobile__cell_bold ">Don’t Say goodbye, remember me</div>
                     </div>
                     <div class="wrapper-for-border-top ">
-                        <div class="all-releases-card-mobile__cell ">Исполнитель:</div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">Болконский Александр Юрьевич</div>
+                        <div class="requests-card-mobile__cell ">Исполнитель:</div>
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">Болконский Александр Юрьевич</div>
                     </div>
-                    <div class="all-releases-card-mobile__cell ">Договор:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">№258794</div>
-                    <div class="all-releases-card-mobile__cell ">Тип:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">Альбом</div>
-                    <div class="all-releases-card-mobile__cell ">Дата релиза:</div>
-                    <div class="all-releases-card-mobile__cell ">22 ноя 2020</div>
-                    <div class="all-releases-card-mobile__cell ">Сумма доходов:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля лейбла:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 954 678 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля артиста:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 291 536 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">К выплате:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black all-releases-card-mobile__cell_bold ">1 291 536 ₽</div>
+                    <div class="requests-card-mobile__cell ">Договор:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">№258794</div>
+                    <div class="requests-card-mobile__cell ">Тип:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">Альбом</div>
+                    <div class="requests-card-mobile__cell ">Дата релиза:</div>
+                    <div class="requests-card-mobile__cell ">22 ноя 2020</div>
+                    <div class="requests-card-mobile__cell ">Сумма доходов:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 236 397 ₽</div>
+                    <div class="requests-card-mobile__cell ">Доля лейбла:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 954 678 ₽</div>
+                    <div class="requests-card-mobile__cell ">Доля артиста:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 291 536 ₽</div>
+                    <div class="requests-card-mobile__cell ">К выплате:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black requests-card-mobile__cell_bold ">1 291 536 ₽</div>
                     <div class="two-buttons-mobile ">
                         <div class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</div>
                         <div class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</div>
                     </div>
                 </div>
-                <div class="all-releases-card-mobile block ">
-                    <div class="all-releases-card-mobile-header ">
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_bold all-releases-card-mobile__cell_green "><img src="./images/cover1.png " alt="Обложка " /></div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green all-releases-card-mobile__cell_bold ">Don’t Say goodbye, remember me</div>
+                <div class="requests-card-mobile block ">
+                    <div class="requests-card-mobile-header ">
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_bold requests-card-mobile__cell_green "><img src="./images/cover1.png " alt="Обложка " /></div>
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green requests-card-mobile__cell_bold ">Don’t Say goodbye, remember me</div>
                     </div>
                     <div class="wrapper-for-border-top ">
-                        <div class="all-releases-card-mobile__cell ">Исполнитель:</div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">Болконский Александр Юрьевич</div>
+                        <div class="requests-card-mobile__cell ">Исполнитель:</div>
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">Болконский Александр Юрьевич</div>
                     </div>
-                    <div class="all-releases-card-mobile__cell ">Договор:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">№258794</div>
-                    <div class="all-releases-card-mobile__cell ">Тип:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">Альбом</div>
-                    <div class="all-releases-card-mobile__cell ">Дата релиза:</div>
-                    <div class="all-releases-card-mobile__cell ">22 ноя 2020</div>
-                    <div class="all-releases-card-mobile__cell ">Сумма доходов:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля лейбла:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 954 678 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля артиста:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 291 536 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">К выплате:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black all-releases-card-mobile__cell_bold ">1 291 536 ₽</div>
+                    <div class="requests-card-mobile__cell ">Договор:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">№258794</div>
+                    <div class="requests-card-mobile__cell ">Тип:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">Альбом</div>
+                    <div class="requests-card-mobile__cell ">Дата релиза:</div>
+                    <div class="requests-card-mobile__cell ">22 ноя 2020</div>
+                    <div class="requests-card-mobile__cell ">Сумма доходов:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 236 397 ₽</div>
+                    <div class="requests-card-mobile__cell ">Доля лейбла:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 954 678 ₽</div>
+                    <div class="requests-card-mobile__cell ">Доля артиста:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 291 536 ₽</div>
+                    <div class="requests-card-mobile__cell ">К выплате:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black requests-card-mobile__cell_bold ">1 291 536 ₽</div>
                     <div class="two-buttons-mobile ">
                         <div class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</div>
                         <div class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</div>
@@ -324,42 +182,17 @@
             </div>
         </div>
 
-        <div class="errors " id="releases_errors ">
+        <div class="handled-requests" id="handled_requests">
+            Обработанные запросы
+        </div>
+
+        <div class="requests-errors " id="requests_errors">
             Ошибки
         </div>
 
     </div>
 
-    <div class="popup-release ">
-        <div class="popup-release-menu flex-column ">
-            <div class="popup-release-menu__header flex-row flex-row_between flex-row_center-vertical ">
-                Редактирование релиза
-                <a href=" #close " title="Close " class="popup-release__close ">×</a>
-            </div>
-            <div class="popup-release-buttons flex-column ">
-                <div class="popup-release-button ">
-                    <img src="./images/edit.svg " alt="Редактировать релиз " class="popup-release-button__img ">
-                    <span class="popup-release-button__text ">Редактировать</span>
-                </div>
-                <div class="popup-release-button ">
-                    <img src="./images/delete.svg " alt="Удалить релиз " class="popup-release-button__img ">
-                    <span class="popup-release-button__text ">Удалить</span>
-                </div>
-                <div class="popup-release-button ">
-                    <img src="./images/deactivate.svg " alt="Деактивировать релиз " class="popup-release-button__img ">
-                    <span class="popup-release-button__text ">Деактивировать</span>
-                </div>
-                <div class="popup-release-button ">
-                    <img src="./images/note.svg " alt="Добавить трек " class="popup-release-button__img " />
-                    <div class="popup-release-button__text ">Добавить трек</div>
-                </div>
-            </div>
 
-
-
-        </div>
-
-    </div>
 </div>
 <script src="http://code.jquery.com/jquery-1.8.3.js "></script>
-<script src="../track-all-releases/scripts/index.js "></script>
+<script src="../track-requests/scripts/index.js "></script>

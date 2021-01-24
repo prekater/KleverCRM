@@ -1,29 +1,3 @@
-//меню релиза в мобильном
-$(function() {
-    if ($(window).width() <= 575.9) {
-        p = $('.popup-release')
-        popup = $(".popup-release-menu")
-        body = $('body')
-        $('.cover-and-name__ellipses').on("click", function() {
-            p.css('display', 'block')
-            $(body).css('overflow', 'hidden')
-            popup.css('animation', 'translating 0.3s linear 1')
-        });
-
-        p.click(function(event) {
-            e = event || window.event
-            if (e.target === this) {
-                $(p).css('display', 'none')
-                $(body).css('overflow', 'auto')
-            }
-        })
-        $('.popup-release__close').on("click", function() {
-            p.css('display', 'none')
-            $(body).css('overflow', 'auto')
-        });
-    }
-});
-
 //поле поиска в таблице
 let $searchTable = $("#search-table");
 let $searchTableInput = $(".search-table__input");
@@ -72,25 +46,40 @@ $searchTable.on("focusout", function() {
 
 
 //переключение между табами в "Все релизы"
-let $tabAllReleases = $('#tab-all-releases');
-let $tabErrors = $('#tab-errors');
-let $allReleases = $("#all-releases-block");
-let $releasesErrors = $("#releases_errors");
+let $tabUnhandled = $('#tab_unhandled');
+let $tabHandled = $('#tab_handled');
+let $tabErrors = $('#tab_errors');
+let $unhandledRequests = $("#unhandled_requests");
+let $handledRequests = $("#handled_requests");
+let $requestsErrors = $("#requests_errors");
 
-$tabAllReleases.on("click", function() {
+
+$tabUnhandled.on("click", function() {
     $(this).addClass("tabs__tab_active");
+    $tabHandled.removeClass("tabs__tab_active");
     $tabErrors.removeClass("tabs__tab_active");
-    $allReleases.css("display", "block");
-    $releasesErrors.css("display", "none");
+    $unhandledRequests.css("display", "flex");
+    $handledRequests.css("display", "none");
+    $requestsErrors.css("display", "none");
+});
+
+$tabHandled.on("click", function() {
+    $(this).addClass("tabs__tab_active");
+    $tabUnhandled.removeClass("tabs__tab_active");
+    $tabErrors.removeClass("tabs__tab_active");
+    $handledRequests.css("display", "flex");
+    $unhandledRequests.css("display", "none");
+    $requestsErrors.css("display", "none");
 });
 
 $tabErrors.on("click", function() {
     $(this).addClass("tabs__tab_active");
-    $tabAllReleases.removeClass("tabs__tab_active");
-    $releasesErrors.css("display", "block");
-    $allReleases.css("display", "none");
+    $tabUnhandled.removeClass("tabs__tab_active");
+    $tabHandled.removeClass("tabs__tab_active");
+    $requestsErrors.css("display", "flex");
+    $unhandledRequests.css("display", "none");
+    $handledRequests.css("display", "none");
 });
-
 
 //"Все релизы" кнопки в каждой строке Редактировать Удалить
 let releaseEdit = document.getElementById("edit-release");

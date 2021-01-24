@@ -65,7 +65,7 @@ gulp.task('scripts', () => {
         //         extname: p.extname
         //     };
         // }))
-        .pipe(gulp.dest('./build/track-all-releases/scripts'));
+        .pipe(gulp.dest('./build/track-requests/scripts'));
 });
 gulp.task('images', () => {
     return gulp.src('./src/track*/images/*')
