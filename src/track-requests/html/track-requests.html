@@ -25,7 +25,12 @@
 
             </form>
         </div>
-
+        <div class="no-unhandled-requests " id="no_unhandled_requests">
+            <div class="no-requests-block">
+                <img src="./images/requests_gray.svg" alt="" class="no-requests-block__image">
+                <div class="no-requests-block__text">Нет новых запросов</div>
+            </div>
+        </div>
         <div class="unhandled-requests" id="unhandled_requests">
             <div class="requests-table table">
                 <div class="table-header">
@@ -42,24 +47,122 @@
                 <div class="table-row-wrapper table-row-wrapper_request block block_rounded">
                     <div class="table-row">
                         <div class="table-row__cell table-row__cell_cover">
-                            <img src="./images/cover1.png" alt="">
+                            <!-- <img src="./images/cover1.png" alt=""> -->
+                            <div class="cover-hint block block_rounded">
+                                <div class="cover-hint__download-cover">
+                                    <img src="./images/pic.svg" alt="">
+                                    <div>Скачать обложку</div>
+                                </div>
+                                <div class="cover-hint__download-phonogram">
+                                    <img src="./images/floppy.svg" alt="">
+                                    <div>Скачать фонограмму</div>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="table-row__cell table-row__cell_bold">
+                        <div class="table-row__cell table-row__cell_bold flex-row flex-row_center-vertical">
                             Alex Rudi Pell
                         </div>
-                        <div class="table-row__cell  ">
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
                             Don’t Say Goodbye
                         </div>
-                        <div class="table-row__cell ">
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
                             Болконский Александр Юрьевич
                         </div>
-                        <div class="table-row__cell table-row__cell_gray">
+                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">
                             22 ноя 2020
                         </div>
-                        <div class="table-row__cell table-row__cell_gray ">
+                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">
                             22 ноя 2020, 17:23
                         </div>
-                        <div class="table-row__cell ">
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Не обработан
+                        </div>
+                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
+                            <div id="edit-release" class="releases-table-button">
+                                <img src="./images/edit_bg.svg " alt="Редактировать релиз " />
+                            </div>
+                            <div id="edit-release" class="releases-table-button">
+                                <img src="./images/delete_bg.svg " alt="Удалить релиз " id="delete-release" class="releases-table-button" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-row-wrapper table-row-wrapper_request block block_rounded">
+                    <div class="table-row">
+                        <div class="table-row__cell table-row__cell_cover">
+                            <img src="./images/cover1.png" alt="">
+                            <div class="cover-hint block block_rounded">
+                                <div class="cover-hint__download-cover">
+                                    <img src="./images/pic.svg" alt="">
+                                    <div>Скачать обложку</div>
+                                </div>
+                                <div class="cover-hint__download-phonogram">
+                                    <img src="./images/floppy.svg" alt="">
+                                    <div>Скачать фонограмму</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row__cell table-row__cell_bold flex-row flex-row_center-vertical">
+                            Alex Rudi Pell
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Don’t Say Goodbye
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Болконский Александр Юрьевич
+                        </div>
+                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">
+                            22 ноя 2020
+                        </div>
+                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">
+                            22 ноя 2020, 17:23
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Не обработан
+                        </div>
+                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
+                            <div id="edit-release" class="releases-table-button">
+                                <img src="./images/edit_bg.svg " alt="Редактировать релиз " />
+                            </div>
+                            <div id="edit-release" class="releases-table-button">
+                                <img src="./images/delete_bg.svg " alt="Удалить релиз " id="delete-release" class="releases-table-button" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-row-wrapper table-row-wrapper_request block block_rounded">
+                    <div class="table-row">
+                        <div class="table-row__cell table-row__cell_cover">
+                            <img src="./images/cover2.png" alt="">
+                            <div class="cover-hint block block_rounded">
+                                <div class="cover-hint__download-cover">
+                                    <img src="./images/pic.svg" alt="">
+                                    <div>Скачать обложку</div>
+                                </div>
+                                <div class="cover-hint__download-phonogram">
+                                    <img src="./images/floppy.svg" alt="">
+                                    <div>Скачать фонограмму</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="table-row__cell table-row__cell_bold flex-row flex-row_center-vertical">
+                            Alex Rudi Pell
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Don’t Say Goodbye
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Болконский Александр Юрьевич
+                        </div>
+                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">
+                            22 ноя 2020
+                        </div>
+                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">
+                            22 ноя 2020, 17:23
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
                             Не обработан
                         </div>
                         <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
@@ -73,89 +176,125 @@
                     </div>
                 </div>
 
+            </div>
+
+            <div class="requests-table-mobile requests-table-mobile_margin ">
+                <div class="requests-card-mobile block ">
+                    <div class="requests-card-mobile-header ">
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_bold cover-mobile"><img src="./images/cover1.png " alt="Обложка " /></div>
+                        <div class="requests-card-mobile__cell  requests-card-mobile__cell_bold requests-card-mobile__cell_big">Alex Rudi Pell</div>
+                    </div>
+                    <div class="wrapper-for-border-top ">
+                        <div class="requests-card-mobile__cell ">Название трека:</div>
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_big">Don’t Say Goodbye</div>
+
+                    </div>
+                    <div class="requests-card-mobile__cell ">Исполнитель:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green">Болконский Александр Юрьевич</div>
+                    <div class="requests-card-mobile__cell ">Дата релиза:</div>
+                    <div class="requests-card-mobile__cell ">22 ноя 2020</div>
+                    <div class="requests-card-mobile__cell ">Создано:</div>
+                    <div class="requests-card-mobile__cell  requests-card-mobile__cell_big">22 ноя 2020, 17:23</div>
+                    <div class="requests-card-mobile__cell ">Статус:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">Не обработан</div>
+
+                    <div class="two-buttons-mobile ">
+                        <div class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</div>
+                        <div class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="pagination flex-row">
+                <a href="# " class="pagination__link pagination__link_arrow-left "><img src="./images/page-left.svg " alt="Назад "></a>
+                <a href="# " class="pagination__link ">1</a>
+                <a href="# " class="pagination__link pagination__link_active ">2</a>
+                <a href="# " class="pagination__link ">3</a>
+                <a href="# " class="pagination__link ">4</a>
+                <a href="# " class="pagination__link ">5</a>
+                <a href="# " class="pagination__link ">6</a>
+                <a href="# " class="pagination__link ">7</a>
+                <a href="# " class="pagination__link ">8</a>
+                <a href="# " class="pagination__link ">9</a>
+                <a href="# " class="pagination__link ">10</a>
+                <a href="# " class="pagination__link ">11</a>
+                <a href="# " class="pagination__link ">12</a>
+                <a href="# " class="pagination__link ">13</a>
+                <a href="# " class="pagination__link pagination__link_arrow-right "><img src="./images/page-right.svg " alt="Вперёд "></a>
+            </div> -->
+
+
+        </div>
+
+        <div class="handled-requests" id="handled_requests">
+            <div class="requests-table table">
+                <div class="table-header">
+                    <div class="table-header__cell"></div>
+                    <div class="table-header__cell table-header__cell_black">Никнейм <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
+                    <div class="table-header__cell">Название трека</div>
+                    <div class="table-header__cell">Исполнитель</div>
+                    <div class="table-header__cell">Дата релиза</div>
+                    <div class="table-header__cell">Создано</div>
+                    <div class="table-header__cell">Статус</div>
+                    <div class="table-header__cell"></div>
+                </div>
+
+                <div class="table-row-wrapper block block_rounded">
+                    <div class="table-row">
+                        <div class="table-row__cell table-row__cell_cover">
+                            <img src="./images/cover1.png" alt="">
+                        </div>
+                        <div class="table-row__cell table-row__cell_bold flex-row flex-row_center-vertical">
+                            Alex Rudi Pell
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Don’t Say Goodbye
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Болконский Александр Юрьевич
+                        </div>
+                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">
+                            22 ноя 2020
+                        </div>
+                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">
+                            22 ноя 2020, 17:23
+                        </div>
+                        <div class="table-row__cell table-row__cell_green flex-row flex-row_center-vertical">
+                            Oбработан
+                        </div>
+                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
+                            <div id="edit-release" class="releases-table-button">
+                                <img src="./images/edit_bg.svg " alt="Редактировать релиз " />
+                            </div>
+                            <div id="edit-release" class="releases-table-button">
+                                <img src="./images/delete_bg.svg " alt="Удалить релиз " id="delete-release" class="releases-table-button" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
             <div class="requests-table-mobile requests-table-mobile_margin ">
                 <div class="requests-card-mobile block ">
                     <div class="requests-card-mobile-header ">
-                        <div class="requests-card-mobile__cell requests-card-mobile__cell_bold requests-card-mobile__cell_green "><img src="./images/cover1.png " alt="Обложка " /></div>
-                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green requests-card-mobile__cell_bold ">Don’t Say goodbye, remember me</div>
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_bold cover-mobile"><img src="./images/cover1.png " alt="Обложка " /></div>
+                        <div class="requests-card-mobile__cell  requests-card-mobile__cell_bold requests-card-mobile__cell_big">Alex Rudi Pell</div>
                     </div>
                     <div class="wrapper-for-border-top ">
-                        <div class="requests-card-mobile__cell ">Исполнитель:</div>
-                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">Болконский Александр Юрьевич</div>
+                        <div class="requests-card-mobile__cell ">Название трека:</div>
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_big">Don’t Say Goodbye</div>
+
                     </div>
-                    <div class="requests-card-mobile__cell ">Договор:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">№258794</div>
-                    <div class="requests-card-mobile__cell ">Тип:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">Альбом</div>
+                    <div class="requests-card-mobile__cell ">Исполнитель:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green">Болконский Александр Юрьевич</div>
                     <div class="requests-card-mobile__cell ">Дата релиза:</div>
                     <div class="requests-card-mobile__cell ">22 ноя 2020</div>
-                    <div class="requests-card-mobile__cell ">Сумма доходов:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 236 397 ₽</div>
-                    <div class="requests-card-mobile__cell ">Доля лейбла:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 954 678 ₽</div>
-                    <div class="requests-card-mobile__cell ">Доля артиста:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 291 536 ₽</div>
-                    <div class="requests-card-mobile__cell ">К выплате:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black requests-card-mobile__cell_bold ">1 291 536 ₽</div>
-                    <div class="two-buttons-mobile ">
-                        <div class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</div>
-                        <div class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</div>
-                    </div>
-                </div>
-                <div class="requests-card-mobile block ">
-                    <div class="requests-card-mobile-header ">
-                        <div class="requests-card-mobile__cell requests-card-mobile__cell_bold requests-card-mobile__cell_green "><img src="./images/cover1.png " alt="Обложка " /></div>
-                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green requests-card-mobile__cell_bold ">Don’t Say goodbye, remember me</div>
-                    </div>
-                    <div class="wrapper-for-border-top ">
-                        <div class="requests-card-mobile__cell ">Исполнитель:</div>
-                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">Болконский Александр Юрьевич</div>
-                    </div>
-                    <div class="requests-card-mobile__cell ">Договор:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">№258794</div>
-                    <div class="requests-card-mobile__cell ">Тип:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">Альбом</div>
-                    <div class="requests-card-mobile__cell ">Дата релиза:</div>
-                    <div class="requests-card-mobile__cell ">22 ноя 2020</div>
-                    <div class="requests-card-mobile__cell ">Сумма доходов:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 236 397 ₽</div>
-                    <div class="requests-card-mobile__cell ">Доля лейбла:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 954 678 ₽</div>
-                    <div class="requests-card-mobile__cell ">Доля артиста:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 291 536 ₽</div>
-                    <div class="requests-card-mobile__cell ">К выплате:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black requests-card-mobile__cell_bold ">1 291 536 ₽</div>
-                    <div class="two-buttons-mobile ">
-                        <div class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</div>
-                        <div class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</div>
-                    </div>
-                </div>
-                <div class="requests-card-mobile block ">
-                    <div class="requests-card-mobile-header ">
-                        <div class="requests-card-mobile__cell requests-card-mobile__cell_bold requests-card-mobile__cell_green "><img src="./images/cover1.png " alt="Обложка " /></div>
-                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green requests-card-mobile__cell_bold ">Don’t Say goodbye, remember me</div>
-                    </div>
-                    <div class="wrapper-for-border-top ">
-                        <div class="requests-card-mobile__cell ">Исполнитель:</div>
-                        <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">Болконский Александр Юрьевич</div>
-                    </div>
-                    <div class="requests-card-mobile__cell ">Договор:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green ">№258794</div>
-                    <div class="requests-card-mobile__cell ">Тип:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">Альбом</div>
-                    <div class="requests-card-mobile__cell ">Дата релиза:</div>
-                    <div class="requests-card-mobile__cell ">22 ноя 2020</div>
-                    <div class="requests-card-mobile__cell ">Сумма доходов:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 236 397 ₽</div>
-                    <div class="requests-card-mobile__cell ">Доля лейбла:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 954 678 ₽</div>
-                    <div class="requests-card-mobile__cell ">Доля артиста:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black ">1 291 536 ₽</div>
-                    <div class="requests-card-mobile__cell ">К выплате:</div>
-                    <div class="requests-card-mobile__cell requests-card-mobile__cell_black requests-card-mobile__cell_bold ">1 291 536 ₽</div>
+                    <div class="requests-card-mobile__cell ">Создано:</div>
+                    <div class="requests-card-mobile__cell  requests-card-mobile__cell_big">22 ноя 2020, 17:23</div>
+                    <div class="requests-card-mobile__cell ">Статус:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green">Обработан</div>
+
                     <div class="two-buttons-mobile ">
                         <div class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</div>
                         <div class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</div>
@@ -182,17 +321,127 @@
             </div>
         </div>
 
-        <div class="handled-requests" id="handled_requests">
-            Обработанные запросы
+        <div class="requests-errors " id="requests_errors">
+            <div class="requests-table table">
+                <div class="table-header">
+                    <div class="table-header__cell"></div>
+                    <div class="table-header__cell table-header__cell_black">Никнейм <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
+                    <div class="table-header__cell">Название трека</div>
+                    <div class="table-header__cell">Исполнитель</div>
+                    <div class="table-header__cell">Дата релиза</div>
+                    <div class="table-header__cell">Создано</div>
+                    <div class="table-header__cell">Статус</div>
+                    <div class="table-header__cell"></div>
+                </div>
+
+
+                <div class="table-row-wrapper table-row-wrapper_error block block_rounded">
+                    <div class="table-row">
+                        <div class="table-row__cell table-row__cell_cover">
+                            <img src="./images/cover1.png" alt="">
+                        </div>
+                        <div class="table-row__cell table-row__cell_bold flex-row flex-row_center-vertical">
+                            Alex Rudi Pell
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Don’t Say Goodbye
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Болконский Александр Юрьевич
+                        </div>
+                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">
+                            22 ноя 2020
+                        </div>
+                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">
+                            22 ноя 2020, 17:23
+                        </div>
+                        <div class="table-row__cell flex-row flex-row_center-vertical">
+                            Не обработан
+                        </div>
+                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
+                            <div id="edit-release" class="releases-table-button">
+                                <img src="./images/edit_bg.svg " alt="Редактировать релиз " />
+                            </div>
+                            <div id="edit-release" class="releases-table-button">
+                                <img src="./images/delete_bg.svg " alt="Удалить релиз " id="delete-release" class="releases-table-button" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-error">Исполнитель не найден в базе</div>
+
+
+
+            </div>
+
+            <div class="requests-table-mobile requests-table-mobile_margin ">
+                <div class="requests-card-mobile block ">
+                    <div class="requests-card-mobile-header ">
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_bold cover-mobile"><img src="./images/cover1.png " alt="Обложка " /></div>
+                        <div class="requests-card-mobile__cell  requests-card-mobile__cell_bold requests-card-mobile__cell_big">Alex Rudi Pell</div>
+                    </div>
+                    <div class="wrapper-for-border-top ">
+                        <div class="requests-card-mobile__cell ">Название трека:</div>
+                        <div class="requests-card-mobile__cell requests-card-mobile__cell_big">Don’t Say Goodbye</div>
+
+                    </div>
+                    <div class="requests-card-mobile__cell ">Исполнитель:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green">Болконский Александр Юрьевич</div>
+                    <div class="requests-card-mobile__cell ">Дата релиза:</div>
+                    <div class="requests-card-mobile__cell ">22 ноя 2020</div>
+                    <div class="requests-card-mobile__cell ">Создано:</div>
+                    <div class="requests-card-mobile__cell  requests-card-mobile__cell_big">22 ноя 2020, 17:23</div>
+                    <div class="requests-card-mobile__cell ">Статус:</div>
+                    <div class="requests-card-mobile__cell requests-card-mobile__cell_green">Обработан</div>
+
+                    <div class="two-buttons-mobile ">
+                        <div class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</div>
+                        <div class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination flex-row">
+                <a href="# " class="pagination__link pagination__link_arrow-left "><img src="./images/page-left.svg " alt="Назад "></a>
+                <a href="# " class="pagination__link ">1</a>
+                <a href="# " class="pagination__link pagination__link_active ">2</a>
+                <a href="# " class="pagination__link ">3</a>
+                <a href="# " class="pagination__link ">4</a>
+                <a href="# " class="pagination__link ">5</a>
+                <a href="# " class="pagination__link ">6</a>
+                <a href="# " class="pagination__link ">7</a>
+                <a href="# " class="pagination__link ">8</a>
+                <a href="# " class="pagination__link ">9</a>
+                <a href="# " class="pagination__link ">10</a>
+                <a href="# " class="pagination__link ">11</a>
+                <a href="# " class="pagination__link ">12</a>
+                <a href="# " class="pagination__link ">13</a>
+                <a href="# " class="pagination__link pagination__link_arrow-right "><img src="./images/page-right.svg " alt="Вперёд "></a>
+            </div>
+
         </div>
 
-        <div class="requests-errors " id="requests_errors">
-            Ошибки
+        <div class="popup-cover">
+            <div class="popup-cover-menu flex-column ">
+                <div class="popup-cover-menu__header flex-row flex-row_between flex-row_center-vertical ">
+                    Скачать
+                    <a href=" #close " title="Close " class="popup-cover__close ">×</a>
+                </div>
+                <div class="popup-cover-menu__body">
+                    <div class="cover-hint__download-cover">
+                        <img src="./images/pic.svg" alt="">
+                        <div>Скачать обложку</div>
+                    </div>
+                    <div class="cover-hint__download-phonogram">
+                        <img src="./images/floppy.svg" alt="">
+                        <div>Скачать фонограмму</div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
 
     </div>
-
-
-</div>
-<script src="http://code.jquery.com/jquery-1.8.3.js "></script>
-<script src="../track-requests/scripts/index.js "></script>
+    <script src="http://code.jquery.com/jquery-1.8.3.js "></script>
+    <script src="../track-requests/scripts/index.js "></script>

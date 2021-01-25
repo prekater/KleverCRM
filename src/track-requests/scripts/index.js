@@ -92,3 +92,52 @@ releaseEdit.onclick = function() {
 releaseDelete.onclick = function() {
     console.log("Delete release");
 };
+
+//скачать обложку/фонограмму
+let $cover = $(".table-row__cell_cover");
+let $downloadCover = $(".cover-hint__download-cover");
+let $downloadPhonogram = $(".cover-hint__download-phonogram");
+
+$cover.on("mouseenter", function() {
+    if ($(window).width() > 576) {
+        $(this).children(".cover-hint").css("display", "grid");
+    }
+})
+$cover.on("mouseleave", function() {
+    if ($(window).width() > 576) {
+        $(this).children(".cover-hint").css("display", "none");
+    }
+})
+$downloadCover.on("click", function() {
+    console.log("Скачать обложку");
+})
+
+$downloadPhonogram.on("click", function() {
+    console.log("Скачать фонограмму");
+})
+
+//меню обложки в мобильном
+$(function() {
+    if ($(window).width() <= 575.9) {
+        p = $('.popup-cover')
+        popup = $(".popup-cover-menu")
+        body = $('body')
+        $(".cover-mobile").on("click", function() {
+            p.css('display', 'block')
+            $(body).css('overflow', 'hidden')
+            popup.css('animation', 'translating 0.3s linear 1')
+        });
+
+        p.click(function(event) {
+            e = event || window.event
+            if (e.target === this) {
+                $(p).css('display', 'none')
+                $(body).css('overflow', 'auto')
+            }
+        })
+        $('.popup-cover__close').on("click", function() {
+            p.css('display', 'none')
+            $(body).css('overflow', 'auto')
+        });
+    }
+});
