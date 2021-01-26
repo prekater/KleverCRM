@@ -141,3 +141,45 @@ $(function() {
         });
     }
 });
+
+//пагинация в мобильном
+$(function() {
+    if ($(window).width() <= 575.9) {
+        p = $('.popup-pagination')
+        popup = $(".popup-pagination-block")
+        body = $('body')
+        $(".pagination-mobile__select").on("click", function() {
+            p.css('display', 'block')
+            body.css('overflow', 'hidden')
+            popup.css('animation', 'translating 0.3s linear 1')
+            pageNumber = $("#mobile_page_number").text()
+            $(".mobile-page-link").removeClass("mobile-page-link_active")
+            $(".mobile-page-link").eq(pageNumber - 1).addClass("mobile-page-link_active")
+            needScroll = (pageNumber - 1) - 3;
+            linkWidth = $(".mobile-page-link").width();
+            if (needScroll > 0) {
+                $(".popup-pagination-block__body").scrollLeft(needScroll * linkWidth);
+
+            }
+        });
+
+        p.click(function(event) {
+            e = event || window.event
+            if (e.target === this) {
+                $(p).css('display', 'none')
+                $(body).css('overflow', 'auto')
+            }
+        })
+        $('.popup-pagination__close').on("click", function() {
+            p.css('display', 'none')
+            $(body).css('overflow', 'auto')
+        });
+        $(".mobile-page-item").on("click", function() {
+            page = $(this).text()
+            $("#mobile_page_number").text(page)
+            p.css('display', 'none')
+            $(body).css('overflow', 'auto')
+
+        })
+    }
+});
