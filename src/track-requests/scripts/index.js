@@ -15,7 +15,10 @@ $searchTableBtnMob.on("click", function() {
     $searchTableClear.css("display", "flex");
     $(this).css("left", "0");
     $title.css("display", "none");
-    $searchTable.css("grid-column", "1/3");
+    $searchTable.css({
+        "grid-column": "1/3",
+        "grid-row": "1/2"
+    });
 });
 
 //крестик очистки поля поиска
@@ -32,7 +35,10 @@ $searchTable.on("focusout", function() {
             $searchTableInput.css("width", "34px");
             $searchTableClear.css("display", "none");
             $title.css("display", "block");
-            $searchTable.css("grid-column", "2/3");
+            $searchTable.css({
+                "grid-column": "2/3",
+                "grid-row": "1/2"
+            });
             $searchTableBtnMob.css("left", "");
         } else if ($(window).width() <= 991.9) {
             $searchTableInput.css("width", "88px");
@@ -42,56 +48,6 @@ $searchTable.on("focusout", function() {
         $searchTableInput.css("background-color", "white");
     }
 });
-
-
-
-//переключение между табами в "Все релизы"
-let $tabUnhandled = $('#tab_unhandled');
-let $tabHandled = $('#tab_handled');
-let $tabErrors = $('#tab_errors');
-let $unhandledRequests = $("#unhandled_requests");
-let $handledRequests = $("#handled_requests");
-let $requestsErrors = $("#requests_errors");
-
-
-$tabUnhandled.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabHandled.removeClass("tabs__tab_active");
-    $tabErrors.removeClass("tabs__tab_active");
-    $unhandledRequests.css("display", "flex");
-    $handledRequests.css("display", "none");
-    $requestsErrors.css("display", "none");
-});
-
-$tabHandled.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabUnhandled.removeClass("tabs__tab_active");
-    $tabErrors.removeClass("tabs__tab_active");
-    $handledRequests.css("display", "flex");
-    $unhandledRequests.css("display", "none");
-    $requestsErrors.css("display", "none");
-});
-
-$tabErrors.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabUnhandled.removeClass("tabs__tab_active");
-    $tabHandled.removeClass("tabs__tab_active");
-    $requestsErrors.css("display", "flex");
-    $unhandledRequests.css("display", "none");
-    $handledRequests.css("display", "none");
-});
-
-//"Все релизы" кнопки в каждой строке Редактировать Удалить
-let releaseEdit = document.getElementById("edit-release");
-let releaseDelete = document.getElementById("delete-release");
-
-releaseEdit.onclick = function() {
-    console.log("Edit release");
-};
-
-releaseDelete.onclick = function() {
-    console.log("Delete release");
-};
 
 //скачать обложку/фонограмму
 let $cover = $(".table-row__cell_cover");
@@ -119,25 +75,24 @@ $downloadPhonogram.on("click", function() {
 //меню обложки в мобильном
 $(function() {
     if ($(window).width() <= 575.9) {
-        p = $('.popup-cover')
-        popup = $(".popup-cover-menu")
-        body = $('body')
+        popupOverlay = $('.popup-cover')
+        popupMenu = $(".popup-cover-menu")
         $(".cover-mobile").on("click", function() {
-            p.css('display', 'block')
-            $(body).css('overflow', 'hidden')
-            popup.css('animation', 'translating 0.3s linear 1')
+            popupOverlay.css('display', 'block')
+            $('body').css('overflow', 'hidden')
+            popupMenu.css('animation', 'translating 0.3s linear 1')
         });
 
-        p.click(function(event) {
+        popupOverlay.click(function(event) {
             e = event || window.event
             if (e.target === this) {
                 $(p).css('display', 'none')
-                $(body).css('overflow', 'auto')
+                $('body').css('overflow', 'auto')
             }
         })
         $('.popup-cover__close').on("click", function() {
-            p.css('display', 'none')
-            $(body).css('overflow', 'auto')
+            popupOverlay.css('display', 'none')
+            $('body').css('overflow', 'auto')
         });
     }
 });

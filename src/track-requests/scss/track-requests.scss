@@ -34,11 +34,15 @@
     flex: 0 0 auto;
     width: 100%;
     //  border: 1px solid #000;
+    overflow: auto;
+    position: relative;
     @include grid (auto 1fr 1fr, auto, 3.4vw, auto);
     align-items: baseline;
     &__title {
         // border: 1px solid red;
         @include fontSize(20, 26, 600);
+        grid-column: 1/2;
+        grid-row: 1/2;
     }
     &_margin {
         margin-bottom: 4vh;
@@ -46,6 +50,10 @@
         margin-left: 2.25vw;
         @media (max-width: 991.9px) {
             margin-bottom: 15px;
+        }
+        @media (max-width: 575.9px) {
+            margin-right: 0;
+            margin-left: 0;
         }
     }
     &_padding {
@@ -61,12 +69,20 @@
     }
     @media (max-width: 575.9px) {
         @include grid (1fr 1fr, 1fr auto, auto, 15px);
+        width: 100vw;
     }
 }
 
 .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     &__tab {
+        color: $textsecondary;
         white-space: nowrap;
+        text-decoration: none;
+        &_active {
+            color: $black;
+        }
     }
     @include grid (min-content min-content min-content, 26px, 42px, 0);
     @media (max-width: 991.9px) {
@@ -75,6 +91,10 @@
     }
     &-small-grid {
         @include grid(min-content 18px, 26px, 13px, 0);
+        text-decoration: none;
+        &_active {
+            color: $black;
+        }
     }
     &_margin {
         margin-left: 36px;
@@ -101,6 +121,12 @@
             background: $red;
             color: $white;
         }
+    }
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    @media (max-width: 575.9px) {
+        width: 100vw;
     }
 }
 
@@ -163,7 +189,7 @@
             &:focus,
             &:active {
                 @include focusInput();
-                width: 100%;
+                width: 100vw;
                 z-index: 100;
             }
         }
@@ -528,7 +554,7 @@
 .requests-table-mobile {
     display: none;
     @media (max-width: 575.9px) {
-        width: 100%;
+        width: 100vw;
         @include grid(1fr,
         auto,
         auto,
@@ -543,7 +569,7 @@
     display: none;
     @media (max-width: 575.9px) {
         @include fontSize(13, 18, 500);
-        width: 100%;
+        width: 100vw;
         @include grid(1fr 150px,
         auto,
         20px,
@@ -739,14 +765,11 @@
             border-radius: 12px 12px 0 0;
         }
         &__body {
-            // max-width: 100%;
             overflow-x: auto;
-            //white-space: nowrap;
             -webkit-overflow-scrolling: touch;
             height: 100px;
             display: flex;
             align-items: center;
-            // .mobile-page-item { }
             .mobile-page-link {
                 width: 45px;
                 height: 45px;
@@ -756,8 +779,6 @@
                 @include fontSize(18,
                 24,
                 600);
-                // margin-left: 14px;
-                //  margin-right: 14px;
                 &_active {
                     @include fontSize(24,
                     30,
