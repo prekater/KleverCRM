@@ -1,27 +1,3 @@
-//меню релиза в мобильном
-$(function() {
-    if ($(window).width() <= 575.9) {
-        $('.cover-and-name__ellipses').on("click", function() {
-            $('.popup-release').css('display', 'block')
-            $('body').css('overflow', 'hidden')
-            $(".popup-release-menu").css('animation', 'translating 0.3s linear 1')
-        });
-
-
-        $('.popup-release').on("click", function(event) {
-            e = event || window.event
-            if (e.target === this) {
-                $('.popup-release').css('display', 'none')
-                $('body').css('overflow', 'auto')
-            }
-        })
-        $('.popup-release__close').on("click", function() {
-            $('.popup-release').css('display', 'none')
-            $('body').css('overflow', 'auto')
-        });
-    }
-});
-
 //поле поиска в таблице
 let $searchTable = $("#search-table");
 let $searchTableInput = $(".search-table__input");
