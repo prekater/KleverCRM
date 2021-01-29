@@ -18,7 +18,6 @@ $tabReleaseInfo.on("click", function() {
 });
 
 $tabReleaseTracks.on("click", function() {
-    console.log("dfsdf");
     $(this).addClass("tabs__tab_active");
     $tabReleaseInfo.removeClass("tabs__tab_active");
     $tabReleaseStat.removeClass("tabs__tab_active");
@@ -39,26 +38,24 @@ $tabReleaseStat.on("click", function() {
 //редактирование обложки 
 $(function() {
 
-    p = $('.popup-change-cover')
-    popup = $(".popup-cover")
-    body = $('body')
+    popupOverlay = $('.popup-change-cover')
+    popupChangeCover = $(".popup-cover")
     $('.cover-change').on("click", function() {
-        p.css('display', 'flex')
-        $(body).css('overflow', 'hidden')
-        popup.css('animation', 'translating 0.3s linear 1')
-            //console.log($('cover-and-name__cover').has("img"))
+        popupOverlay.css('display', 'flex')
+        $('body').css('overflow', 'hidden')
+        popupChangeCover.css('animation', 'translating 0.3s linear 1')
     });
 
-    p.click(function(event) {
+    popupOverlay.click(function(event) {
         e = event || window.event
         if (e.target === this) {
-            $(p).css('display', 'none')
-            $(body).css('overflow', 'auto')
+            $(popupOverlay).css('display', 'none')
+            $('body').css('overflow', 'auto')
         }
     })
     $('.popup-cover__close').on("click", function() {
-        p.css('display', 'none')
-        $(body).css('overflow', 'auto')
+        popupOverlay.css('display', 'none')
+        $('body').css('overflow', 'auto')
     });
 
 });
@@ -142,41 +139,40 @@ $('.image-upload-wrap').on('dragleave', function() {
 //подтверждение удаления релиза 
 $(function() {
 
-    p = $('.popup-delete')
-    popup = $(".popup-delete-confirm")
-    body = $('body')
+    popupDeleteOverlay = $('.popup-delete')
+    popupConfirm = $(".popup-delete-confirm")
     $('#release-delete_btn').on("click", function() {
-        p.css('display', 'flex')
-        $(body).css('overflow', 'hidden')
-        popup.css('animation', 'translating 0.3s linear 1')
+        popupDeleteOverlay.css('display', 'flex')
+        $('body').css('overflow', 'hidden')
+        popupConfirm.css('animation', 'translating 0.3s linear 1')
     });
     $('#release-delete_btn-mobile').on("click", function() {
-        p.css('display', 'flex')
-        $(body).css('overflow', 'hidden')
-        popup.css('animation', 'translating 0.3s linear 1')
+        popupDeleteOverlay.css('display', 'flex')
+        $('body').css('overflow', 'hidden')
+        popupConfirm.css('animation', 'translating 0.3s linear 1')
     });
-    p.click(function(event) {
+    popupDeleteOverlay.click(function(event) {
         e = event || window.event
         if (e.target === this) {
-            $(p).css('display', 'none')
-            $(body).css('overflow', 'auto')
+            popupDeleteOverlay.css('display', 'none')
+            $('body').css('overflow', 'auto')
         }
     })
 
     $('.popup-delete__close').on("click", function() {
-        p.css('display', 'none')
-        $(body).css('overflow', 'auto')
+        popupDeleteOverlay.css('display', 'none')
+        $('body').css('overflow', 'auto')
     });
 
     $('.popup-delete__button_cancel').on("click", function() {
-        p.css('display', 'none')
-        $(body).css('overflow', 'auto')
+        popupDeleteOverlay.css('display', 'none')
+        $('body').css('overflow', 'auto')
     });
 
     $('.popup-delete__button_confirm').on("click", function() {
         console.log("Наташ, мы всё удалили");
-        p.css('display', 'none')
-        $(body).css('overflow', 'auto')
+        popupDeleteOverlay.css('display', 'none')
+        $('body').css('overflow', 'auto')
 
     });
 
@@ -186,13 +182,61 @@ $(function() {
 //меню релиза в мобильном
 $(function() {
     if ($(window).width() <= 575.9) {
-        p = $('.popup-release')
-        popup = $(".popup-release-menu")
-        body = $('body')
         $('.cover-and-name__ellipses').on("click", function() {
+            $('.popup-release').css('display', 'block')
+            $('body').css('overflow', 'hidden')
+            $(".popup-release-menu").css('animation', 'translating 0.3s linear 1')
+        });
+
+        $('.popup-release').on("click", function(event) {
+            e = event || window.event
+            if (e.target === this) {
+                $('.popup-release').css('display', 'none')
+                $('body').css('overflow', 'auto')
+            }
+
+        })
+
+        $('.popup-release__close').on("click", function() {
+            $('.popup-release').css('display', 'none')
+            $('body').css('overflow', 'auto')
+        });
+
+
+        $('#release-delete_btn-mobile').on("click", function() {
+            console.log("dfsdf")
+            $(".popup-release").hide()
+            $(".popup-delete").css('display', 'flex')
+            $(".popup-delete-confirm").css('animation', 'translating 0.3s linear 1')
+
+        });
+        $('.popup-delete__close').on("click", function() {
+            $(".popup-delete").css('display', 'none')
+            $('body').css('overflow', 'auto')
+        });
+    }
+});
+
+
+//пагинация в мобильном
+$(function() {
+    if ($(window).width() <= 575.9) {
+        p = $('.popup-pagination')
+        popup = $(".popup-pagination-block")
+        body = $('body')
+        $(".pagination-mobile__select").on("click", function() {
             p.css('display', 'block')
-            $(body).css('overflow', 'hidden')
+            body.css('overflow', 'hidden')
             popup.css('animation', 'translating 0.3s linear 1')
+            pageNumber = $("#mobile_page_number").text()
+            $(".mobile-page-link").removeClass("mobile-page-link_active")
+            $(".mobile-page-link").eq(pageNumber - 1).addClass("mobile-page-link_active")
+            needScroll = (pageNumber - 1) - 3;
+            linkWidth = $(".mobile-page-link").width();
+            if (needScroll > 0) {
+                $(".popup-pagination-block__body").scrollLeft(needScroll * linkWidth);
+
+            }
         });
 
         p.click(function(event) {
@@ -202,34 +246,16 @@ $(function() {
                 $(body).css('overflow', 'auto')
             }
         })
-        $('.popup-release__close').on("click", function() {
+        $('.popup-pagination__close').on("click", function() {
             p.css('display', 'none')
             $(body).css('overflow', 'auto')
         });
-        $('#release-delete_btn-mobile').on("click", function() {
-            $(".popup-release").hide()
-                //$(body).css('overflow', 'hidden')
-            $(".popup-delete").css('display', 'flex')
-            $(".popup-delete-confirm").css('animation', 'translating 0.3s linear 1')
-
-        });
-        $('.popup-delete__close').on("click", function() {
-            $(".popup-delete").css('display', 'none')
-            $(body).css('overflow', 'auto')
-        });
-
-        $('.popup-delete__button_cancel').on("click", function() {
-            $(".popup-delete").css('display', 'none')
-            $(body).css('overflow', 'auto')
-        });
-
-        $('.popup-delete__button_confirm').on("click", function() {
-            console.log("Наташ, мы всё удалили");
-            $(".popup-delete").css('display', 'none')
+        $(".mobile-page-item").on("click", function() {
+            page = $(this).text()
+            $("#mobile_page_number").text(page)
+            p.css('display', 'none')
             $(body).css('overflow', 'auto')
 
-        });
-
-
+        })
     }
 });

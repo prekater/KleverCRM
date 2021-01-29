@@ -39,6 +39,9 @@ html {
     &_top-vertical {
         align-items: flex-start;
     }
+    &_bottom-vertical {
+        align-items: flex-end;
+    }
     &_between {
         justify-content: space-between;
     }
