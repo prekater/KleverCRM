@@ -24,7 +24,7 @@ html {
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgba(118, 137, 137, 0.5);
+        background: rgba(0, 0, 0, .7);
     }
 }
 
@@ -79,17 +79,14 @@ html {
     &_between {
         justify-content: space-between;
     }
-    &_start {
-        justify-content: flex-start;
-    }
     &_full-height {
         height: 100%;
     }
     &_wrap {
         flex-wrap: wrap;
     }
-    &_stretch {
-        justify-content: stretch;
+    &_top-vertical {
+        justify-content: flex-start;
     }
 }
 
@@ -102,6 +99,7 @@ html {
 }
 
 .btn {
+    -webkit-tap-highlight-color: transparent;
     @include flexCenter(row);
     border-radius: 12px;
     text-decoration: none;
@@ -115,5 +113,24 @@ html {
     &:active {
         @include focusInput();
         background: $dark-gradient;
+    }
+}
+
+.tabs {
+    color: $dark-gray;
+    @include fontSize14();
+    flex-wrap: nowrap;
+    &__tab {
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        text-align: center;
+        &_active {
+            color: $black;
+            font-weight: 600;
+            border-bottom: 2px solid skyblue;
+            border-image: $main-gradient;
+            border-image-slice: 1;
+            padding-bottom: 5px;
+        }
     }
 }
