@@ -1,29 +1,3 @@
-//меню релиза в мобильном
-$(function() {
-    if ($(window).width() <= 575.9) {
-        p = $('.popup-release')
-        popup = $(".popup-release-menu")
-        body = $('body')
-        $('.cover-and-name__ellipses').on("click", function() {
-            p.css('display', 'block')
-            $(body).css('overflow', 'hidden')
-            popup.css('animation', 'translating 0.3s linear 1')
-        });
-
-        p.click(function(event) {
-            e = event || window.event
-            if (e.target === this) {
-                $(p).css('display', 'none')
-                $(body).css('overflow', 'auto')
-            }
-        })
-        $('.popup-release__close').on("click", function() {
-            p.css('display', 'none')
-            $(body).css('overflow', 'auto')
-        });
-    }
-});
-
 //поле поиска в таблице
 let $searchTable = $("#search-table");
 let $searchTableInput = $(".search-table__input");
@@ -69,37 +43,44 @@ $searchTable.on("focusout", function() {
     }
 });
 
+//пагинация в мобильном
+$(function() {
+    if ($(window).width() <= 575.9) {
+        p = $('.popup-pagination')
+        popup = $(".popup-pagination-block")
+        body = $('body')
+        $(".pagination-mobile__select").on("click", function() {
+            p.css('display', 'block')
+            body.css('overflow', 'hidden')
+            popup.css('animation', 'translating 0.3s linear 1')
+            pageNumber = $("#mobile_page_number").text()
+            $(".mobile-page-link").removeClass("mobile-page-link_active")
+            $(".mobile-page-link").eq(pageNumber - 1).addClass("mobile-page-link_active")
+            needScroll = (pageNumber - 1) - 3;
+            linkWidth = $(".mobile-page-link").width();
+            if (needScroll > 0) {
+                $(".popup-pagination-block__body").scrollLeft(needScroll * linkWidth);
 
+            }
+        });
 
-//переключение между табами в "Все релизы"
-let $tabAllReleases = $('#tab-all-releases');
-let $tabErrors = $('#tab-errors');
-let $allReleases = $("#all-releases-block");
-let $releasesErrors = $("#releases_errors");
+        p.click(function(event) {
+            e = event || window.event
+            if (e.target === this) {
+                $(p).css('display', 'none')
+                $(body).css('overflow', 'auto')
+            }
+        })
+        $('.popup-pagination__close').on("click", function() {
+            p.css('display', 'none')
+            $(body).css('overflow', 'auto')
+        });
+        $(".mobile-page-item").on("click", function() {
+            page = $(this).text()
+            $("#mobile_page_number").text(page)
+            p.css('display', 'none')
+            $(body).css('overflow', 'auto')
 
-$tabAllReleases.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabErrors.removeClass("tabs__tab_active");
-    $allReleases.css("display", "block");
-    $releasesErrors.css("display", "none");
+        })
+    }
 });
-
-$tabErrors.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabAllReleases.removeClass("tabs__tab_active");
-    $releasesErrors.css("display", "block");
-    $allReleases.css("display", "none");
-});
-
-
-//"Все релизы" кнопки в каждой строке Редактировать Удалить
-let releaseEdit = document.getElementById("edit-release");
-let releaseDelete = document.getElementById("delete-release");
-
-releaseEdit.onclick = function() {
-    console.log("Edit release");
-};
-
-releaseDelete.onclick = function() {
-    console.log("Delete release");
-};
