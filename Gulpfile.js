@@ -66,7 +66,7 @@ gulp.task('moduleNiceSelect', async () => {
 
 gulp.task('scripts', async () => {
   const folders = getFolders('./build');
-
+  
   return folders.map((folder) => {
       gulp
         .src(['./src/common/scripts/index.js', './src/track*/scripts/*.js'])
