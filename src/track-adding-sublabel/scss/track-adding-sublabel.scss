@@ -1,0 +1,25 @@
+@import "./../../common/scss/common";
+@import "./../../common/scss/normalize";
+@import "./../../common/scss/variables";
+@import "./../../common/scss/sidebar";
+@import "./../../common/scss/font";
+@import "./../../common/scss/header";
+@import "./../../common/scss/form";
+@import "./../../common/scss/nice-select";
+@import "./../../common/scss/preloader";
+.main-block {
+    transition: padding 0.5s;
+    &_padding {
+        padding-top: 60px;
+        padding-left: 70px;
+        @media (max-width: 991.9px) {
+            padding-left: 0;
+        }
+    }
+}
+
+.form-adding-sublabel {
+    &_margin {
+        margin-top: 32px;
+    }
+}
