@@ -25,13 +25,11 @@ gulp.task('pug', () => {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(rename((p) => {
-            return {
-                dirname: p.basename,
-                basename: 'index',
-                extname: p.extname
-            };
-        }))
+        .pipe(rename((p) => ({
+            dirname: p.basename,
+            basename: 'index',
+            extname: p.extname
+        })))
         .pipe(gulp.dest('./build'));
 });
 
@@ -42,40 +40,54 @@ gulp.task('scss', () => {
         .pipe(autoprefixer({
             cascade: false
         }))
-        .pipe(rename((p) => {
-            return {
-                dirname: `${p.basename}/styles`,
-                basename: 'styles',
-                extname: p.extname
-            };
-        }))
+        .pipe(rename((p) => ({
+            dirname: `${p.basename}/styles`,
+            basename: 'styles',
+            extname: p.extname
+        })))
 
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('scripts', () => {
-
-    return gulp.src(['./src/track-all-releases-errors/scripts/index.js', './src/common/scripts/index.js'])
-        // .pipe(uglify())
-        .pipe(concat('index.js'))
-        // .pipe(rename((p) => {
-        //     return {
-        //         dirname: p.dirname,
-        //         basename: 'index',
-        //         extname: p.extname
-        //     };
-        // }))
-        .pipe(gulp.dest('./build/track-all-releases-errors/scripts'));
-});
-gulp.task('images', () => {
-    return gulp.src('./src/track*/images/*')
-        .pipe(rename((p) => {
-            return {
-                dirname: p.dirname,
+gulp.task('moduleNiceSelect', async() => {
+    const folders = getFolders('./build');
+    return folders.map((folder) => {
+        gulp
+            .src('./src/common/scripts/jquery.nice-select.js')
+            // .pipe(uglify())
+            .pipe(rename((p) => ({
+                dirname: `./${folder}/scripts`,
                 basename: p.basename,
                 extname: p.extname
-            };
-        }))
+            })))
+            .pipe(gulp.dest('./build'));
+    })
+})
+
+gulp.task('scripts', async() => {
+    const folders = getFolders('./build');
+
+    return folders.map((folder) => {
+        gulp
+            .src(['./src/common/scripts/index.js', './src/track*/scripts/*.js'])
+            // .pipe(uglify())
+            .pipe(concat('index.js'))
+            .pipe(rename((p) => ({
+                dirname: `./${folder}/scripts`,
+                basename: p.basename,
+                extname: p.extname
+            })))
+            .pipe(gulp.dest('./build'));
+    })
+});
+
+gulp.task('images', () => {
+    return gulp.src('./src/track*/images/*')
+        .pipe(rename((p) => ({
+            dirname: p.dirname,
+            basename: p.basename,
+            extname: p.extname
+        })))
         .pipe(gulp.dest('./build'));
 });
 
@@ -84,13 +96,11 @@ gulp.task('fonts', async() => {
 
     return folders.map((folder) => {
         gulp.src('./src/common/fonts/*')
-            .pipe(rename((p) => {
-                return {
-                    dirname: `./${folder}/fonts`,
-                    basename: p.basename,
-                    extname: p.extname
-                };
-            }))
+            .pipe(rename((p) => ({
+                dirname: `./${folder}/fonts`,
+                basename: p.basename,
+                extname: p.extname
+            })))
             .pipe(gulp.dest('./build'));
     })
 });
@@ -108,7 +118,6 @@ gulp.task('common-images', async() => {
             .pipe(gulp.dest(`./build`));
     })
 });
-
 
 gulp.task('browser', (cb) => {
     browserSync.init({
@@ -138,4 +147,4 @@ gulp.task('watch', (cb) => {
     cb();
 });
 
-gulp.task('default', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'scripts', 'watch', 'browser'));
+gulp.task('default', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'watch', 'browser'));

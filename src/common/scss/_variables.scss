@@ -1,7 +1,7 @@
 $black: #1A1A1A;
 $light-green: #4CDBCA;
 $green: #21BAA8;
-$red: #E2432D;
+$red: #F75B46;
 $main-gradient: linear-gradient(270deg, #C0E8FF 0%, #D1FFD5 100%);
 $light-gradient: linear-gradient(270deg, #CAECFF 0%, #E7FFE9 100%);
 $dark-gradient: linear-gradient(270deg, #ABE0FF 0%, #ADFCB4 100%);
@@ -15,8 +15,6 @@ $input-bg: #F3F8FA;
 $input-disabled: #CED6D6;
 $line: #EBEFF2;
 $shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
-$newRequestHighlight: 0px 1px 6px rgba(33, 186, 168, 0.3);
-$newRequestHighlightHover: 0px 7px 10px rgba(21, 186, 176, 0.3);
 @mixin cardElevation {
     box-shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
 }
@@ -31,6 +29,14 @@ $newRequestHighlightHover: 0px 7px 10px rgba(21, 186, 176, 0.3);
 
 @mixin cardErrorHighlightHover {
     box-shadow: 0px 2px 10px rgba(226, 67, 45, 0.3);
+}
+
+@mixin requestHighlight {
+    box-shadow: 0px 1px 6px rgba(33, 186, 168, 0.3);
+}
+
+@mixin requestHighlightHover {
+    box-shadow: 0px 7px 10px rgba(21, 186, 176, 0.3);
 }
 
 @mixin boxRaduisShadow {
