@@ -15,7 +15,10 @@ $searchTableBtnMob.on("click", function() {
     $searchTableClear.css("display", "flex");
     $(this).css("left", "0");
     $title.css("display", "none");
-    $searchTable.css("grid-column", "1/3");
+    $searchTable.css({
+        "grid-column": "1/3",
+        "grid-row": "1/2"
+    });
 });
 
 //крестик очистки поля поиска
@@ -32,7 +35,10 @@ $searchTable.on("focusout", function() {
             $searchTableInput.css("width", "34px");
             $searchTableClear.css("display", "none");
             $title.css("display", "block");
-            $searchTable.css("grid-column", "2/3");
+            $searchTable.css({
+                "grid-column": "2/3",
+                "grid-row": "1/2"
+            });
             $searchTableBtnMob.css("left", "");
         } else if ($(window).width() <= 991.9) {
             $searchTableInput.css("width", "88px");
@@ -40,6 +46,54 @@ $searchTable.on("focusout", function() {
             $searchTableInput.css("width", "244px");
         }
         $searchTableInput.css("background-color", "white");
+    }
+});
+
+//скачать обложку/фонограмму
+let $cover = $(".table-row__cell_cover");
+let $downloadCover = $(".cover-hint__download-cover");
+let $downloadPhonogram = $(".cover-hint__download-phonogram");
+
+$cover.on("mouseenter", function() {
+    if ($(window).width() > 576) {
+        $(this).children(".cover-hint").css("display", "grid");
+    }
+})
+$cover.on("mouseleave", function() {
+    if ($(window).width() > 576) {
+        $(this).children(".cover-hint").css("display", "none");
+    }
+})
+$downloadCover.on("click", function() {
+    console.log("Скачать обложку");
+})
+
+$downloadPhonogram.on("click", function() {
+    console.log("Скачать фонограмму");
+})
+
+//меню обложки в мобильном
+$(function() {
+    if ($(window).width() <= 575.9) {
+        popupOverlay = $('.popup-cover')
+        popupMenu = $(".popup-cover-menu")
+        $(".cover-mobile").on("click", function() {
+            popupOverlay.css('display', 'block')
+            $('body').css('overflow', 'hidden')
+            popupMenu.css('animation', 'translating 0.3s linear 1')
+        });
+
+        popupOverlay.click(function(event) {
+            e = event || window.event
+            if (e.target === this) {
+                $(p).css('display', 'none')
+                $('body').css('overflow', 'auto')
+            }
+        })
+        $('.popup-cover__close').on("click", function() {
+            popupOverlay.css('display', 'none')
+            $('body').css('overflow', 'auto')
+        });
     }
 });
 
