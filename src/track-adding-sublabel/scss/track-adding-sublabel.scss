@@ -18,8 +18,48 @@
     }
 }
 
-.form-adding-sublabel {
-    &_margin {
-        margin-top: 32px;
+.adding-sublabel {
+    width: 40.2vw;
+    @include grid(190px 1fr, auto auto auto auto, 0, 20px);
+    &>* {
+        border: 1px solid pink;
+    }
+    &__2column {
+        grid-column: 1/3;
+    }
+}
+
+.two_buttons {
+    @include grid(180px 180px, auto, 20px, 0);
+}
+
+.button {
+    @include fontSize14();
+    font-weight: 400;
+    width: 180px;
+    @media (max-width: 575.9px) {
+        width: 130px;
+        &_small-padding {
+            padding: 1px 4px 1px 4px;
+        }
+    }
+    height: 52px;
+    border-radius: 12px;
+    border: 1px solid $white;
+    background: $main-gradient;
+    outline: none;
+    &:hover {
+        background: $light-gradient;
+    }
+    &:focus {
+        @include focusInput();
+    }
+    &_pressed,
+    &:active {
+        @include focusInput();
+        background: $dark-gradient;
+    }
+    &_cancel {
+        background: $line;
     }
 }
