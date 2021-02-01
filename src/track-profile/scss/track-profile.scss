@@ -146,18 +146,11 @@
     
     .main-form {
         box-sizing: border-box;
-        //  width: 28.125vw;
         display: none;
         grid-template-columns: 1fr;
         grid-row-gap: 3.2vh;
         &_profile-settings {
             display: grid;
-        }
-        @media (max-width: 1399.9px) {
-            // width: 35.2vw;
-        }
-        @media (max-width: 991.9px) {
-            // width: 64.3vw;
         }
         @media (max-width: 575.9px) {
             width: 100%;
