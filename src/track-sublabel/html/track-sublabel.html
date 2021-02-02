@@ -1,467 +1,50 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="release release_padding flex-column flex-column_top-vertical" id="release">
-        <div class="release-header">
-            <a class="to-all-releases to-all-releases_margin to-all-releases_padding flex-row flex-row_start" href="./../track-all-releases/index.html">
-                <img src="./images/arrow_to_left.svg" alt="Вернуться к релизам" class="to-all-releases__img" /> Все релизы
+    <div class="sublabel sublabel_padding flex-column flex-column_top-vertical" id="sublabel">
+        <div class="sublabel-header">
+            <a class="to-sublabels to-sublabels_margin to-sublabels_padding flex-row flex-row_start" href="./../track-sublabels/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к релизам" class="to-sublabels__img" /> Все подлейблы
             </a>
 
             <div class="cover-and-name cover-and-name_margin cover-and-name_padding">
-                <div class="cover-change">
-                    <div class="cover-and-name__cover">
-                        <!-- <img src="./images/cover110.png" alt=""> -->
-                    </div>
-                    <div class="cover-change__hover"></div>
+                <div class="sublabel-name flex-column">
+                    <span class="sublabel-name__sublabel">Подлейбл</span>
+                    <span class="sublabel-name__name">Don’t say goodbye</span>
                 </div>
-                <div class="release-name flex-column">
-                    <span class="release-name__release">Релиз</span>
-                    <span class="release-name__name">Золото / Kartashow</span>
-                </div>
-                <div class="release-buttons">
-                    <a class="release-button" tooltip="Редактировать">
-                        <img src="./images/edit.svg" alt="Редактировать релиз" class="release-button__img">
-                        <span class="release-button__text">Редактировать</span>
+                <div class="sublabel-buttons">
+                    <a class="sublabel-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать релиз" class="sublabel-button__img">
+                        <span class="sublabel-button__text">Редактировать</span>
                     </a>
-                    <a class="release-button" id="release-delete_btn" tooltip="Удалить">
-                        <img src="./images/delete.svg" alt="Удалить релиз" class="release-button__img">
-                        <span class="release-button__text">Удалить</span>
+                    <a class="sublabel-button" id="sublabel-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить релиз" class="sublabel-button__img">
+                        <span class="sublabel-button__text">Удалить</span>
                     </a>
-                    <a class="release-button" tooltip="Деактивировать">
-                        <img src="./images/deactivate.svg" alt="Деактивировать  релиз" class="release-button__img">
-                        <span class="release-button__text">Деактивировать</span>
+                    <a class="sublabel-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать  релиз" class="sublabel-button__img">
+                        <span class="sublabel-button__text">Деактивировать</span>
                     </a>
                 </div>
                 <img src="./images/ellipses.svg" alt="Меню релиза" class="cover-and-name__ellipses">
             </div>
 
 
-            <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_between">
-                <div class="tabs tabs_grid">
-                    <div class="tabs__tab tabs__tab_active" id="tab-release-info">Сведения</div>
-                    <div class="tabs__tab" id="tab-release-tracks">Треки</div>
-                    <div class="tabs__tab" id="tab-release-stat">Статистика</div>
-                </div>
-                <a class="btn add-track flex-row flex-row_center-vertical flex-row_center" href="">
-                    <img src="./images/note.svg" alt="Добавить трек" class="add-track__img" />
-                    <span class="add-track__text">Добавить трек</span>
-                </a>
-            </div>
         </div>
 
-        <div class="release-info block block_rounded release-info_padding release-info_margin" id="release-info">
-            <div class="release-main-info release-main-info_padding">
-                <div class="info__title">Общая информация</div>
-                <div class="info__photo">
-                    <!-- <img src="./images/cover1.png" alt="Фото исполнителя" /> -->
-                </div>
-                <div class="info-cell info-singer">
-                    <div class="info-cell__title">Исполнитель:</div>
-                    <div class="info-cell__text info-cell__text_green info-cell__text_bold">Болконский Александр Юрьевич</div>
-                </div>
-
-                <div class="photo-and-singer">
-                    <img src="./images/singer_photo.svg" alt="Фото исполнителя" class="photo-and-singer__photo" />
-                    <div class="info-cell__title  photo-and-singer__singer">Исполнитель:</div>
-                    <div class="info-cell__text info-cell__text_green info-cell__text_bold photo-and-singer__name">Болконский Александр Юрьевич</div>
-                </div>
-
-
-                <div class="info-cell info-cell_contract">
-                    <div class="info-cell__title">Договор:</div>
-                    <div class="info-cell__text info-cell__text_green info-cell__text_bold">№25913</div>
-                </div>
-                <div class="info-cell">
-                    <div class="info-cell__title">Подлейбл:</div>
-                    <div class="info-cell__text info-cell__text_bold">Disone 2</div>
-                </div>
-                <div class="info-cell">
-                    <div class="info-cell__title">Подзаголовок:</div>
-                    <div class="info-cell__text info-cell__text_bold">Disone 2 </div>
-                </div>
-                <div class="info-cell">
-                    <div class="info-cell__title">Тип:</div>
-                    <div class="info-cell__text info-cell__text_bold">Альбом</div>
-                </div>
-                <div class="info-cell">
-                    <div class="info-cell__title">Дата релиза:</div>
-                    <div class="info-cell__text info-cell__text_bold">09 ноя 2020</div>
-                </div>
-                <div class="info-cell">
-                    <div class="info-cell__title">UPC:</div>
-                    <div class="info-cell__text">It is smth</div>
-                </div>
-                <div class="info-cell">
-                    <div class="info-cell__title">Создано:</div>
-                    <div class="info-cell__text">19 июл 2020</div>
-                </div>
-                <div class="info-cell">
-                    <div class="info-cell__title">Изменено:</div>
-                    <div class="info-cell__text">20 авг 2020</div>
-                </div>
+        <div class="sublabel-info sublabel-info_padding block block_rounded">
+            <div class="sublabel-big-cell flex-column">
+                <div class="sublabel-info__title">Процент</div>
+                <div class="sublabel-info__value">70%</div>
             </div>
-
-            <div class="release-profit-info release-profit-info_margin">
-                <div class="profit-info-title">Информация о прибыли</div>
-                <div class="release-profit-info-grid">
-                    <div class="profit-info-cell">
-                        <div class="info-cell__title info-cell__title_profit">Аванс:</div>
-                        <div class="info-cell__text info-cell__text_padding info-cell__text_profit">10 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell">
-                        <div class="info-cell__title info-cell__title_profit">Инвестиции:</div>
-                        <div class="info-cell__text info-cell__text_padding info-cell__text_bold info-cell__text_profit">10 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell">
-                        <div class="info-cell__title info-cell__title_profit">Долг артиста по авансу:</div>
-                        <div class="info-cell__text info-cell__text_padding info-cell__text_profit">400 ₽</div>
-                    </div>
-                    <div class="profit-info-cell">
-                        <div class="info-cell__title info-cell__title_profit">
-                            <div class="marked-title">
-                                Выплачено артисту:
-                            </div>
-                        </div>
-                        <div class="info-cell__text  info-cell__text_padding info-cell__text_profit">
-                            <div class="marked-text">
-                                10 000 ₽
-                            </div>
-                        </div>
-                    </div>
-                    <div class="profit-info-cell profit-info-cell_margin">
-                        <div class="info-cell__title info-cell__title_profit">
-                            <div class="marked-title">Денег к выплате:</div>
-                        </div>
-                        <div class="info-cell__text info-cell__text_bold info-cell__text_padding info-cell__text_profit">
-                            <div class="marked-text">6 000 ₽</div>
-                        </div>
-                    </div>
-                    <div class="profit-info-cell profit-info-cell_empty"></div>
-
-                    <div class="profit-info-cell">
-                        <div class="info-cell__title info-cell__title_profit">
-                            <div class="marked-title">
-                                Сумма доходов:
-                            </div>
-                        </div>
-                        <div class="info-cell__text info-cell__text_padding info-cell__text_profit">
-                            <div class="marked-text">
-                                19 000 ₽
-                            </div>
-                        </div>
-                    </div>
-                    <div class="profit-info-cell">
-                        <div class="info-cell__title info-cell__title_profit">Сумма доходов (без УСН):</div>
-                        <div class="info-cell__text info-cell__text_padding info-cell__text_profit">10 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell">
-                        <div class="info-cell__title info-cell__title_profit">Доля лейбла:</div>
-                        <div class="info-cell__text info-cell__text_padding info-cell__text_profit">10 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell">
-                        <div class="info-cell__title info-cell__title_profit">Доля артиста:</div>
-                        <div class="info-cell__text info-cell__text_padding info-cell__text_profit info-cell__text_bold">10 000 ₽</div>
-                    </div>
-                </div>
-
-                <div class="release-profit-info-grid-mobile release-profit-info-grid-mobile_padding">
-                    <div class="profit-info-cell profit-info-cell_margin-left">
-                        <div class="info-cell__title">Аванс:</div>
-                        <div class="info-cell__textt info-cell__text_padding">10 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell profit-info-cell_margin-left">
-                        <div class="info-cell__title">Долг артиста по авансу:</div>
-                        <div class="info-cell__text info-cell__text_padding">400 ₽</div>
-                    </div>
-                    <div class="profit-info-cell profit-info-cell_margin-left">
-                        <div class="info-cell__title">Денег к выплате:</div>
-                        <div class="info-cell__text info-cell__text_bold info-cell__text_padding">6 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell profit-info-cell_margin-left profit-info-cell_marked profit-info-cell_margin">
-                        <div class="info-cell__title">Сумма доходов: </div>
-                        <div class="info-cell__text info-cell__text_padding">19 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell profit-info-cell_margin-left">
-                        <div class="info-cell__title">Доля лейбла:</div>
-                        <div class="info-cell__text info-cell__text_padding">10 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell profit-info-cell_margin-left">
-                        <div class="info-cell__titlet">Инвестиции:</div>
-                        <div class="info-cell__text info-cell__text_bold info-cell__text_padding">10 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell profit-info-cell_margin-left profit-info-cell_marked  profit-info-cell_margin">
-                        <div class="info-cell__title">Выплачено артисту:</div>
-                        <div class="info-cell__text  info-cell__text_padding">10 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell profit-info-cell_margin-left">
-                        <div class="info-cell__title">Сумма доходов (без УСН):</div>
-                        <div class="info-cell__text  info-cell__text_padding">10 000 ₽</div>
-                    </div>
-                    <div class="profit-info-cell profit-info-cell_margin-left">
-                        <div class="info-cell__title">Доля артиста:</div>
-                        <div class="info-cell__text info-cell__text_bold info-cell__text_padding">10 000 ₽</div>
-                    </div>
-                </div>
-
-
-
+            <div class="sublabel-big-cell flex-column">
+                <div class="sublabel-info__title">Создано:</div>
+                <div class="sublabel-info__value">Admin, KleverService, 08 мая 2020</div>
             </div>
-
-
-        </div>
-
-        <div class="release-tracks" id="release-tracks">
-            <div class="release-tracks-table">
-                <div class="tracks-table-header">
-                    <div class="tracks-table-header__cell"></div>
-                    <div class="tracks-table-header__cell" id="sort_name">Название</div>
-                    <div class="tracks-table-header__cell">Исполнитель</div>
-                    <div class="tracks-table-header__cell">Сумма доходов (без УСН)</div>
-                    <div class="tracks-table-header__cell">Сумма доходов</div>
-                    <div class="tracks-table-header__cell">Прибыль лейбла сейчас</div>
-                    <div class="tracks-table-header__cell">Сумма долей лейбла</div>
-                    <div class="tracks-table-header__cell">Сумма долей артиста</div>
-                    <div class="tracks-table-header__cell"></div>
-                </div>
-
-                <div class="tracks-table-row-wrapper block block_rounded">
-                    <div class="tracks-table-row">
-                        <div class="tracks-table-row__cell tracks-table-row__cell_cover">
-                            <!-- <img src="./images/cover2.png" alt="Обложка" /> -->
-                        </div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_2rows tracks-table-row__cell_bold cell-for-sort">Don’t Say Goodbye, remember me</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_2rows tracks-table-row__cell_green">Болконский Александр Юрьевич</div>
-                        <div class="tracks-table-row__cell table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row tracks-table-row__cell_bold">1 890 095 ₽ </div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_no-padding flex-column flex-column_between">
-                            <a href="" class="releases-table-button">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-
-                            </a>
-                            <a href="" class="releases-table-button">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tracks-table-row-wrapper block block_rounded">
-                    <div class="tracks-table-row">
-                        <div class="tracks-table-row__cell tracks-table-row__cell_cover"><img src="./images/cover2.png" alt="Обложка" /></div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_2rows tracks-table-row__cell_bold cell-for-sort">Forget me</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_2rows tracks-table-row__cell_green">Пупкин Василий</div>
-                        <div class="tracks-table-row__cell table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row tracks-table-row__cell_bold">1 890 095 ₽ </div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_no-padding flex-column flex-column_between">
-                            <a href="" class="releases-table-button">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-                            </a>
-                            <a href="" class="releases-table-button">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tracks-table-row-wrapper block block_rounded">
-                    <div class="tracks-table-row">
-                        <div class="tracks-table-row__cell tracks-table-row__cell_cover"><img src="./images/cover1.png" alt="Обложка" /></div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_2rows tracks-table-row__cell_bold cell-for-sort">Новый год</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_2rows tracks-table-row__cell_green">Стекловата</div>
-                        <div class="tracks-table-row__cell table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row">1 890 095 ₽</div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_1row tracks-table-row__cell_bold">1 890 095 ₽ </div>
-                        <div class="tracks-table-row__cell tracks-table-row__cell_no-padding flex-column flex-column_between">
-                            <a href="" class="releases-table-button">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-                            </a>
-                            <a href="" class="releases-table-button">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="release-tracks-table-mobile">
-                <div class="all-releases-card-mobile block">
-                    <div class="all-releases-card-mobile-header">
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_bold all-releases-card-mobile__cell_green">
-                            <div class="all-releases-card-mobile-header__cover">
-                                <!-- <img src="./images/cover1.png" alt="Обложка" /> -->
-                            </div>
-                        </div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green all-releases-card-mobile__cell_bold">Don’t Say goodbye, remember me</div>
-                    </div>
-                    <div class="wrapper-for-border-top">
-                        <div class="all-releases-card-mobile__cell">Исполнитель:</div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green">Болконский Александр Юрьевич</div>
-                    </div>
-                    <div class="all-releases-card-mobile__cell">Сумма доходов (без УСН):</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Сумма доходов:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Прибыль лейбла сейчас:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 954 678 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Сумма долей лейбла:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 291 536 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Сумма долей артиста:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black all-releases-card-mobile__cell_bold">1 291 536 ₽</div>
-                    <div class="two-buttons-mobile">
-                        <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать релиз" class="two-buttons-mobile__img" /> Редактировать</a>
-                        <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить релиз" class="two-buttons-mobile__img" /> Удалить</a>
-                    </div>
-                </div>
-
-                <div class="all-releases-card-mobile block">
-                    <div class="all-releases-card-mobile-header">
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_bold all-releases-card-mobile__cell_green">
-                            <div class="all-releases-card-mobile-header__cover">
-                                <img src="./images/cover2.png" alt="Обложка" />
-                            </div>
-                        </div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green all-releases-card-mobile__cell_bold">Don’t Say goodbye, remember me</div>
-                    </div>
-                    <div class="wrapper-for-border-top">
-                        <div class="all-releases-card-mobile__cell">Исполнитель:</div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green">Болконский Александр Юрьевич</div>
-                    </div>
-                    <div class="all-releases-card-mobile__cell">Сумма доходов (без УСН):</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Сумма доходов:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Прибыль лейбла сейчас:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 954 678 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Сумма долей лейбла:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 291 536 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Сумма долей артиста:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black all-releases-card-mobile__cell_bold">1 291 536 ₽</div>
-                    <div class="two-buttons-mobile">
-                        <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать релиз" class="two-buttons-mobile__img" /> Редактировать</a>
-                        <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить релиз" class="two-buttons-mobile__img" /> Удалить</a>
-                    </div>
-                </div>
-
-                <div class="all-releases-card-mobile block">
-                    <div class="all-releases-card-mobile-header">
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_bold all-releases-card-mobile__cell_green">
-                            <div class="all-releases-card-mobile-header__cover">
-                                <img src="./images/cover1.png" alt="Обложка" />
-                            </div>
-                        </div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green all-releases-card-mobile__cell_bold">Don’t Say goodbye, remember me</div>
-                    </div>
-                    <div class="wrapper-for-border-top">
-                        <div class="all-releases-card-mobile__cell">Исполнитель:</div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green">Болконский Александр Юрьевич</div>
-                    </div>
-                    <div class="all-releases-card-mobile__cell">Сумма доходов (без УСН):</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Сумма доходов:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Прибыль лейбла сейчас:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 954 678 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Сумма долей лейбла:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black">1 291 536 ₽</div>
-                    <div class="all-releases-card-mobile__cell">Сумма долей артиста:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black all-releases-card-mobile__cell_bold">1 291 536 ₽</div>
-                    <div class="two-buttons-mobile">
-                        <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать релиз" class="two-buttons-mobile__img" /> Редактировать</a>
-                        <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить релиз" class="two-buttons-mobile__img" /> Удалить</a>
-                    </div>
-                </div>
-                <div class="pagination-mobile flex-row flex-row_between flex-row_center-vertical">
-                    <a href="/Requests?page=1&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__prev PagedList-skipToPrevious" rel="prev"><img src="./images/page-left.svg" alt="Назад"></a>
-                    <div class="pagination-mobile__select flex-row flex-row_between flex-row_center-vertical"><span id="mobile_page_number">1</span><img src="./images/arrow_down.svg" alt=""> </div>
-                    <a href="/Requests?page=15&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__next PagedList-skipToNext"><img src="./images/page-right.svg" alt="Вперед"></a>
-                </div>
-            </div>
-            <div class="pagination-container flex-row flex-row_start flex-row_bottom-vertical">
-                <ul class="pagination flex-row">
-                    <li class="page-item PagedList-skipToPrevious">
-                        <a href="/Requests?page=1&amp;desc=False&amp;hasErrors=False" class="page-link" rel="prev"><img src="./images/page-left.svg" alt="Назад"></a>
-                    </li>
-                    <li class="page-item"><a href="/Requests?page=1&amp;desc=False&amp;hasErrors=False" class="page-link">1</a></li>
-                    <li class="page-item page-item_active">
-                        <span class="page-link page-link_active">2</span></li>
-                    <li class="page-item"><a href="/Requests?page=3&amp;desc=False&amp;hasErrors=False" class="page-link">3</a></li>
-                    <li class="page-item"><a href="/Requests?page=4&amp;desc=False&amp;hasErrors=False" class="page-link">4</a></li>
-                    <li class="page-item"><a href="/Requests?page=5&amp;desc=False&amp;hasErrors=False" class="page-link">5</a></li>
-                    <li class="page-item"><a href="/Requests?page=6&amp;desc=False&amp;hasErrors=False" class="page-link">6</a></li>
-                    <li class="page-item"><a href="/Requests?page=7&amp;desc=False&amp;hasErrors=False" class="page-link">7</a></li>
-                    <li class="page-item"><a href="/Requests?page=8&amp;desc=False&amp;hasErrors=False" class="page-link">8</a></li>
-                    <li class="page-item"><a href="/Requests?page=9&amp;desc=False&amp;hasErrors=False" class="page-link">9</a></li>
-                    <li class="page-item"><a href="/Requests?page=10&amp;desc=False&amp;hasErrors=False" class="page-link">10</a></li>
-                    <li class="page-item page-item_disabled PeageList-ellipses">...</li>
-                    <li class="page-item PagedList-skipToNext">
-                        <a href="/Requests?page=3&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page-right.svg" alt="Вперёд"></a>
-                    </li>
-                    <li class="page-item PagedList-skipToLast">
-                        <a href="/Requests?page=15&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page_last.svg" alt="Вперёд"></a>
-                    </li>
-                </ul>
+            <div class="sublabel-big-cell flex-column">
+                <div class="sublabel-info__title">Изменено:</div>
+                <div class="sublabel-info__value">Admin, KleverService, 18 мая 2020</div>
             </div>
         </div>
-
-        <div class="release-stat" id="release-stat">
-            Статистика по релизу
-        </div>
-    </div>
-
-
-    <div class="popup-change-cover">
-        <form class="popup-cover">
-            <div class="popup-cover__header flex-row flex-row_between flex-row_center-vertical">
-                Редактирование обложки
-                <a href=" #close" title="Close" class="popup-cover__close">×</a>
-            </div>
-
-            <div class="image-upload-wrap popup-cover__place-here flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
-                <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                <div class="drag-text flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
-                    <img src="./images/pic_cover.svg" alt="" class="">
-                    <span class="popup-cover__text">Перетащите файл формата JPG или PNG в это поле</span>
-                </div>
-            </div>
-
-            <div class="file-upload-content">
-                <img class="file-upload-image" src="#" alt="your image" />
-                <div class="image-title-wrap">
-                    <button type="button" onclick="removeUpload()" class="popup-cover__cover-close"><span class="flex-row flex-row_center flex-row_center-vertical">×</span></button>
-                </div>
-            </div>
-
-            <div class="popup-cover__two-buttons">
-                <button type="submit" class="button popup-cover-button upload-button" onclick="$( '.file-upload-input').trigger( 'click' )">
-                        <div class="flex-row flex-row_between flex-row_center-vertical">
-                            <img src=" ./images/upload.svg" alt="Загрузить обложку" class="popup-cover-button__img">
-                            <div class="popup-cover-button__text upload-button__text">
-                                Загрузить обложку
-                            </div>
-                        </div>
-                    </button>
-                <button class="button button_cancel popup-cover-button download-button" type="button">
-                        <div class="flex-row flex-row_between flex-row_center-vertical">
-                            <div class="popup-cover-button__img">
-                                <img src="./images/download.svg" alt="Скачать обложку">
-                            </div>
-                            <div class="popup-cover-button__text">
-                                Скачать обложку
-                            </div>
-                        </div>
-                    </button>
-            </div>
-
-        </form>
 
     </div>
 
@@ -476,28 +59,28 @@
         </div>
     </div>
 
-    <div class="popup-release">
-        <div class="popup-release-menu flex-column">
-            <div class="popup-release-menu__header flex-row flex-row_between flex-row_center-vertical">
+    <div class="popup-sublabel">
+        <div class="popup-sublabel-menu flex-column">
+            <div class="popup-sublabel-menu__header flex-row flex-row_between flex-row_center-vertical">
                 Редактирование релиза
-                <a href=" #close" title="Close" class="popup-release__close">×</a>
+                <a href=" #close" title="Close" class="popup-sublabel__close">×</a>
             </div>
-            <div class="popup-release-buttons flex-column">
-                <a class="popup-release-button">
-                    <img src="./images/edit.svg" alt="Редактировать релиз" class="popup-release-button__img">
-                    <span class="popup-release-button__text">Редактировать</span>
+            <div class="popup-sublabel-buttons flex-column">
+                <a class="popup-sublabel-button">
+                    <img src="./images/edit.svg" alt="Редактировать релиз" class="popup-sublabel-button__img">
+                    <span class="popup-sublabel-button__text">Редактировать</span>
                 </a>
-                <a class="popup-release-button" id="release-delete_btn-mobile">
-                    <img src="./images/delete.svg" alt="Удалить релиз" class="popup-release-button__img">
-                    <span class="popup-release-button__text">Удалить</span>
+                <a class="popup-sublabel-button" id="sublabel-delete_btn-mobile">
+                    <img src="./images/delete.svg" alt="Удалить релиз" class="popup-sublabel-button__img">
+                    <span class="popup-sublabel-button__text">Удалить</span>
                 </a>
-                <a class="popup-release-button">
-                    <img src="./images/deactivate.svg" alt="Деактивировать релиз" class="popup-release-button__img">
-                    <span class="popup-release-button__text">Деактивировать</span>
+                <a class="popup-sublabel-button">
+                    <img src="./images/deactivate.svg" alt="Деактивировать релиз" class="popup-sublabel-button__img">
+                    <span class="popup-sublabel-button__text">Деактивировать</span>
                 </a>
-                <a class="popup-release-button">
-                    <img src="./images/note.svg" alt="Добавить трек" class="popup-release-button__img" />
-                    <div class="popup-release-button__text">Добавить трек</div>
+                <a class="popup-sublabel-button">
+                    <img src="./images/note.svg" alt="Добавить трек" class="popup-sublabel-button__img" />
+                    <div class="popup-sublabel-button__text">Добавить трек</div>
                 </a>
             </div>
 
@@ -506,32 +89,6 @@
         </div>
     </div>
 
-    <div class="popup-pagination">
-        <div class="popup-pagination-block flex-column">
-            <div class="popup-pagination-block__header flex-row flex-row_between flex-row_center-vertical">
-                Выбрать страницу
-                <a href=" #close" title="Close" class="popup-pagination__close">×</a>
-            </div>
-            <ul class="popup-pagination-block__body">
-                <li class="mobile-page-item"><a class="mobile-page-link">1</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">2</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">3</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">4</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">5</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">6</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">7</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">8</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">9</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">10</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">11</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">12</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">13</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">14</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">15</a></li>
-                <li class="mobile-page-item"><a class="mobile-page-link">16</a></li>
-            </ul>
-        </div>
-    </div>
 </div>
 <script async src="http://code.jquery.com/jquery-1.8.3.js"></script>
 <script async src="../track-sublabel/scripts/index.js"></script>
