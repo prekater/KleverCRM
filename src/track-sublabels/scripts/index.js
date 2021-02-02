@@ -3,7 +3,7 @@ let $searchTable = $("#search-table");
 let $searchTableInput = $(".search-table__input");
 let $searchTableBtnMob = $(".search-table__button-mobile");
 let $searchTableClear = $(".search-table__clear");
-let $title = $(".all-releases-header__title");
+let $title = $(".sublabels-header__title");
 
 
 $searchTable.on("focusin", function() {
@@ -49,53 +49,6 @@ $searchTable.on("focusout", function() {
     }
 });
 
-//скачать обложку/фонограмму
-let $cover = $(".table-row__cell_cover");
-let $downloadCover = $(".cover-hint__download-cover");
-let $downloadPhonogram = $(".cover-hint__download-phonogram");
-
-$cover.on("mouseenter", function() {
-    if ($(window).width() > 576) {
-        $(this).children(".cover-hint").css("display", "grid");
-    }
-})
-$cover.on("mouseleave", function() {
-    if ($(window).width() > 576) {
-        $(this).children(".cover-hint").css("display", "none");
-    }
-})
-$downloadCover.on("click", function() {
-    console.log("Скачать обложку");
-})
-
-$downloadPhonogram.on("click", function() {
-    console.log("Скачать фонограмму");
-})
-
-//меню обложки в мобильном
-$(function() {
-    if ($(window).width() <= 575.9) {
-        popupOverlay = $('.popup-cover')
-        popupMenu = $(".popup-cover-menu")
-        $(".cover-mobile").on("click", function() {
-            popupOverlay.css('display', 'block')
-            $('body').css('overflow', 'hidden')
-            popupMenu.css('animation', 'translating 0.3s linear 1')
-        });
-
-        popupOverlay.click(function(event) {
-            e = event || window.event
-            if (e.target === this) {
-                $(p).css('display', 'none')
-                $('body').css('overflow', 'auto')
-            }
-        })
-        $('.popup-cover__close').on("click", function() {
-            popupOverlay.css('display', 'none')
-            $('body').css('overflow', 'auto')
-        });
-    }
-});
 
 //пагинация в мобильном
 $(function() {
