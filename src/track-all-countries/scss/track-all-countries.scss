@@ -340,7 +340,7 @@
 .table-header {
     @include fontSize(13, 18, 500);
     color: $textsecondary;
-    @include grid ( 1fr 9.4vw 28px, auto, 0, 0);
+    @include grid ( 1fr 10vw 28px, auto, 0, 0);
     align-items: flex-end;
     padding-right: 11px;
     padding-left: 11px;
@@ -376,7 +376,7 @@
     border-radius: 12px;
     color: $black;
     @include fontSize(14, 20, 400);
-    @include grid (1fr 9.4vw 28px, auto, 0, 0);
+    @include grid (1fr 10vw 28px, auto, 0, 0);
     align-items: center;
     @media (max-width: 991.9px) {
         @include grid ( 1fr 150px 28px, auto, 0, 0);
