@@ -66,10 +66,10 @@ gulp.task('moduleNiceSelect', async () => {
 
 gulp.task('scripts', async () => {
   const folders = getFolders('./build');
-  
+
   return folders.map((folder) => {
       gulp
-        .src(['./src/common/scripts/index.js', './src/track*/scripts/*.js'])
+        .src(['./src/common/scripts/index.js', `./src/${folder}/scripts/index.js`])
         // .pipe(uglify())
         .pipe(concat('index.js'))
         .pipe(rename((p) => ({
