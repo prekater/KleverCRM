@@ -1,3 +1,4 @@
+//переключение табов
 let $tabProfileSettings = $('#tab-profile-settings');
 let $tabChangePassword = $('#tab-change-password');
 let $formProfileSettings = $("#profile-settings");
