@@ -466,8 +466,10 @@
         @include cardElevation();
     }
     &__cell {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
         color: $textsecondary;
-        align-self: center;
         &_green {
             color: $green;
         }
