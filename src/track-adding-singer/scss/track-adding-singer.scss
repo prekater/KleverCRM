@@ -126,13 +126,15 @@
 }
 
 .field_is-group {
+    /*"родной" инпут не скрывается полностью, чтобы остатсья доступным для фокуса*/
     .field__input_checkbox {
-        display: none;
+        opacity: 0;
     }
     .input-wrapper {
         height: 52px;
     }
     .field__input_checkbox~label::before {
+        transition: all 0.2s;
         content: "";
         display: inline-block;
         width: 18px;
@@ -143,10 +145,15 @@
         border-radius: 4px;
     }
     .field__input_checkbox:checked+label::before {
+        transition: all 0.2s;
         background-color: #21BAA8;
         background-image: url("./../images/white_check_mark.svg");
         background-repeat: no-repeat;
         background-position: center;
+    }
+    .field__input_checkbox:focus+label::before {
+        border: 1px solid $light-gray;
+        outline: none;
     }
 }
 
@@ -293,14 +300,11 @@
 
 .success {
     width: 35.125vw;
-    // height: 43.125vh;
     @media (max-width: 1399.9px) {
         width: 43.9vw;
-        //       height: 43.125vh;
     }
     @media (max-width: 991.9px) {
         width: 80.3vw;
-        //      height: 35.3vh;
     }
     @media (max-width: 575.9px) {
         width: 100%;
