@@ -468,7 +468,7 @@
     }
     &-buttons {
         @include grid(1fr,
-        44px 44px 44px 54px,
+        44px 44px 44px,
         0,
         0);
         justify-items: start;
@@ -490,9 +490,6 @@
             height: 18px;
             width: 18px;
             margin-left: 20px;
-        }
-        &:last-child {
-            background: $main-gradient;
         }
     }
 }
