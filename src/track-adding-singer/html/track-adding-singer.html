@@ -1,33 +1,33 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
-    <div class="adding-release" id="adding_release">
-        <div class="to-releases flex-row flex-row_start flex-row_center-vertical">Список релизов <img src="./images/to_releases.svg" alt="К списку релизов" class="to-releases__img" /> </div>
-        <form class="block block_rounded form form_margin-releases form_padding-releases main-form" action="" id="create_release">
+
+    <div class="adding-singer" id="adding_singer">
+        <!-- <div class="to-singers flex-row flex-row_start flex-row_center-vertical">
+            Список исполнителей <img src="./images/to_releases.svg" alt="К списку исполнителей" class="to-singers__img" /> 
+        </div> -->
+        <form class="block block_rounded form form_margin-singers form_padding-singers main-form" action="" id="create_singer">
             <div class="flex-row flex-row_between flex-row_top-vertical form-header form-header_margin">
                 <div class="form-header__title">Добавить исполнителя</div>
-                <a class="form-header__to-releases" href="./../track-all-singers/index.html">Список исполнителей <img src="./images/to_releases.svg" alt="К списку релизов" class="arrow-to-releases" /> </a>
+                <a class="form-header__to-singers" href="./../track-all-singers/index.html">Список исполнителей <img src="./images/to_releases.svg" alt="К списку исполнителей" class="arrow-to-singers" /> </a>
             </div>
             <div class="groupped-fields grid">
 
                 <div class="field flex-column">
                     <div class="flex-row flex-row_baseline">
-                        <label for="singer" class="field__label">Исполнитель</label>
-                        <span class="field__red-dot"><sup>&#8226;</sup></span>
+                        <label for="nickname" class="field__label">Никнейм</label>
                     </div>
                     <div class="input-wrapper input-wrapper_search">
-                        <input type="text" class="field__input_text" required="required" id="singer" placeholder="ФИО" name="singer-field">
+                        <input type="text" class="field__input_text" id="nickname" name="nickname-field">
                     </div>
-                    <div class="field__error field__error_singer"></div>
                 </div>
 
                 <div class="field flex-column">
                     <div class="flex-row flex-row_baseline">
-                        <label for="contract" class="field__label">Договор</label>
+                        <label for="full_name" class="field__label">ФИО</label>
                         <span class="field__red-dot"><sup>&#8226;</sup></span>
                     </div>
                     <div class="input-wrapper input-wrapper_search">
-                        <input type="text" class="field__input_text" required="required" name="contract-field" placeholder="№00000">
+                        <input type="text" class="field__input_text" name="full_name-field" id="full_name">
                     </div>
-                    <div class="field__error field__error_contract"></div>
                 </div>
 
                 <div class="field flex-column field_sublabel">
@@ -41,13 +41,13 @@
                     <div class="field__error field__error-sublabel"></div>
                 </div>
 
-                <div class="field flex-column field_release-name">
+                <div class="field flex-column field_singer-name">
                     <div class="flex-row flex-row_baseline">
-                        <label for="release_name" class="field__label">Название релиза</label>
+                        <label for="singer_name" class="field__label">Название релиза</label>
                         <span class="field__red-dot"><sup>&#8226;</sup></span>
                     </div>
-                    <input type="text" class="field__input_text" required="required" id="release_name" name="rlease-name-field">
-                    <div class="field__error field__error_release-name"></div>
+                    <input type="text" class="field__input_text" required="required" id="singer_name" name="rlease-name-field">
+                    <div class="field__error field__error_singer-name"></div>
                 </div>
 
                 <div class="field flex-column field_subtitle">
@@ -59,61 +59,43 @@
                     <div class="field__error field__error_subtitle"></div>
                 </div>
 
-                <div class="small-grid">
-                    <div class="field flex-column">
-                        <div class="flex-row flex-row_baseline">
-                            <label for="type" class="field__label">Тип</label>
-                            <span class="field__red-dot"><sup>&#8226;</sup></span>
-                        </div>
-
-                        <select required="required" id="type" name="type-field" class="">
-                                <option value="album">Альбом</option>
-                                <option value="ep" >EP</option>
-                                <option value="single">Сингл</option>
-                                <option value="ringtone">Рингтон</option>
-        
-                            </select>
-
-                        <div class="field__error field__error_type"></div>
+                <div class="field flex-column field_singer-date">
+                    <div class="flex-row flex-row_baseline">
+                        <label for="singer_date" class="field__label">Дата релиза</label>
+                        <span class="field__red-dot"><sup>&#8226;</sup></span>
                     </div>
-
-                    <div class="field flex-column field_release-date">
-                        <div class="flex-row flex-row_baseline">
-                            <label for="release_date" class="field__label">Дата релиза</label>
-                            <span class="field__red-dot"><sup>&#8226;</sup></span>
-                        </div>
-                        <div class="input-wrapper input-wrapper_calendar">
-                            <input type="text" class="field__input_text" required="required" id="release_date" name="release-date-field">
-                        </div>
-                        <div class="field__error field__error_release-date"></div>
+                    <div class="input-wrapper input-wrapper_calendar">
+                        <input type="text" class="field__input_text" required="required" id="singer_date" name="singer-date-field">
                     </div>
-
-                    <div class="field flex-column  field_upc">
-                        <div class="flex-row flex-row_baseline">
-                            <label for="upc" class="field__label">upc</label>
-                            <span class="field__red-dot"><sup>&#8226;</sup></span>
-                        </div>
-                        <input type="text" class="field__input_text" required="required" id="upc" name="upc-field">
-                        <div class="field__error field__error-upc"></div>
-                    </div>
-
-                    <div class="field flex-column field_cover">
-                        <div class="flex-row flex-row_baseline">
-
-                            <label for="cover" class="field__label">Ссылка на обложку</label>
-                            <span class="field__white-dot "><sup>&#8226;</sup></span>
-                            <span class="field__question" tooltip="Ссылка на обложку">?</span>
-                        </div>
-                        <input type="text" class="field__input_text" id="cover" name="cover-field">
-                        <div class="field__error field__error_cover"></div>
-                    </div>
-
-                    <div class="two-buttons">
-                        <button type="submit" class="button ">Создать</button>
-                        <button class="button" type="reset">Отменить</button>
-                    </div>
-
+                    <div class="field__error field__error_singer-date"></div>
                 </div>
+
+                <div class="field flex-column  field_upc">
+                    <div class="flex-row flex-row_baseline">
+                        <label for="upc" class="field__label">upc</label>
+                        <span class="field__red-dot"><sup>&#8226;</sup></span>
+                    </div>
+                    <input type="text" class="field__input_text" required="required" id="upc" name="upc-field">
+                    <div class="field__error field__error-upc"></div>
+                </div>
+
+                <div class="field flex-column field_cover">
+                    <div class="flex-row flex-row_baseline">
+
+                        <label for="cover" class="field__label">Ссылка на обложку</label>
+                        <span class="field__white-dot "><sup>&#8226;</sup></span>
+                        <span class="field__question" tooltip="Ссылка на обложку">?</span>
+                    </div>
+                    <input type="text" class="field__input_text" id="cover" name="cover-field">
+                    <div class="field__error field__error_cover"></div>
+                </div>
+
+                <div class="two-buttons">
+                    <button type="submit" class="button ">Создать</button>
+                    <button class="button" type="reset">Отменить</button>
+                </div>
+
+
 
 
             </div>
@@ -123,8 +105,8 @@
 
     <div class="flex-column flex-column_center flex-column_top-vertical flex-column_adaptive-height added-success" id="added_success">
         <div class="block block_rounded success success_margin success_padding flex-column flex-column_center flex-column_center-vertical" id="success">
-            <img src="./images/success.svg" alt="релиз успешно создан" class="success__img" />
-            <span class="success__text">Релиз успешно создан!</span>
+            <img src="./images/success.svg" alt="Исполнитель успешно создан" class="success__img" />
+            <span class="success__text">Исполнитель успешно создан!</span>
             <div class="success-buttons">
                 <a href="#" class="success__btn btn">
                     <img src="./images/agreements_black.svg" class="success-buttons__img" />
@@ -145,8 +127,6 @@
             <div class="popup__content "></div>
         </div>
     </div>
-
-
 
 </div>
 <script async src="http://code.jquery.com/jquery-1.8.3.js "></script>
