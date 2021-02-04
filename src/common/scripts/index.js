@@ -154,8 +154,19 @@ $(function() {
     }
 });
 
+
+//затемнение фона заполненного input type=text
+// $("input").on("change", function() {
+//     if (($(this).attr("type") === "text") && (!(($(this).val() === null) || ($(this).val() === "") || ($(this).val() === undefined)))) {
+//         $(this).css("background-color", "#EEF4F6");
+//     } else {
+//         $(this).css("background-color", "white");
+//     }
+// });
+
+//затемнение фона заполненного input любого type, м.б. это что-то испортит, надо смотреть дальше
 $("input").on("change", function() {
-    if (($(this).attr("type") === "text") && (!(($(this).val() === null) || ($(this).val() === "") || ($(this).val() === undefined)))) {
+    if ((!(($(this).val() === null) || ($(this).val() === "") || ($(this).val() === undefined)))) {
         $(this).css("background-color", "#EEF4F6");
     } else {
         $(this).css("background-color", "white");
