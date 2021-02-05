@@ -1,0 +1,90 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+
+    <div class="country country_padding flex-column flex-column_top-vertical" id="country">
+        <div class="country-header">
+            <a class="to-all-countries to-all-countries_margin to-all-countries_padding flex-row flex-row_start" href="./../track-all-countries/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к релизам" class="to-all-countries__img" /> Все страны
+            </a>
+
+            <div class="cover-and-name cover-and-name_margin cover-and-name_padding">
+                <div class="country-name flex-column">
+                    <span class="country-name__country">Страна</span>
+                    <span class="country-name__name"><img src="./images/flag_rus.svg" alt="Российский флаг" class="country__flag"> Russian Federation</span>
+                </div>
+                <div class="country-buttons">
+                    <a class="country-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать страну" class="country-button__img">
+                        <span class="country-button__text">Редактировать</span>
+                    </a>
+                    <a class="country-button" id="country-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить страну" class="country-button__img">
+                        <span class="country-button__text">Удалить</span>
+                    </a>
+                    <a class="country-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать страну" class="country-button__img">
+                        <span class="country-button__text">Деактивировать</span>
+                    </a>
+                </div>
+                <img src="./images/ellipses.svg" alt="Меню страны" class="cover-and-name__ellipses">
+            </div>
+
+
+        </div>
+
+        <div class="country-info country-info_padding block block_rounded">
+            <div class="country-big-cell flex-column country-big-cell_in-report">
+                <div class="country-info__title">Участвует в отчете:</div>
+                <div class="country-info__value">Да</div>
+            </div>
+            <div class="country-big-cell flex-column country-big-cell_created">
+                <div class="country-info__title">Создано:</div>
+                <div class="country-info__value">Admin, KleverService, 08 мая 2020</div>
+            </div>
+            <div class="country-big-cell flex-column country-big-cell_changed">
+                <div class="country-info__title">Изменено:</div>
+                <div class="country-info__value">Admin, KleverService, 18 мая 2020</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="popup-delete">
+        <div class="popup-delete-confirm block block_rounded">
+            <a href=" #close" title="Close" class="popup-delete__close">×</a>
+            <div class="popup-delete__text">Вы действительно хотите удалить страну?</div>
+
+            <button class="popup-delete__button popup-delete__button_cancel" type="button">Отмена</button>
+            <button class="popup-delete__button popup-delete__button_confirm" type="button">Удалить</button>
+
+        </div>
+    </div>
+
+    <div class="popup-country">
+        <div class="popup-country-menu flex-column">
+            <div class="popup-country-menu__header flex-row flex-row_between flex-row_center-vertical">
+                Редактирование релиза
+                <a href=" #close" title="Close" class="popup-country__close">×</a>
+            </div>
+            <div class="popup-country-buttons flex-column">
+                <a class="popup-country-button">
+                    <img src="./images/edit.svg" alt="Редактировать релиз" class="popup-country-button__img">
+                    <span class="popup-country-button__text">Редактировать</span>
+                </a>
+                <a class="popup-country-button" id="country-delete_btn-mobile">
+                    <img src="./images/delete.svg" alt="Удалить релиз" class="popup-country-button__img">
+                    <span class="popup-country-button__text">Удалить</span>
+                </a>
+                <a class="popup-country-button">
+                    <img src="./images/deactivate.svg" alt="Деактивировать релиз" class="popup-country-button__img">
+                    <span class="popup-country-button__text">Деактивировать</span>
+                </a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+<script async src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script async src="../track-country/scripts/index.js"></script>

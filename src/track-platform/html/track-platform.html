@@ -1,0 +1,90 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+
+    <div class="platform platform_padding flex-column flex-column_top-vertical" id="platform">
+        <div class="platform-header">
+            <a class="to-all-platforms to-all-platforms_margin to-all-platforms_padding flex-row flex-row_start" href="./../track-all-platforms/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к платформам" class="to-all-platforms__img" /> Все плафтормы
+            </a>
+
+            <div class="cover-and-name cover-and-name_margin cover-and-name_padding">
+                <div class="platform-name flex-column">
+                    <span class="platform-name__platform">Платформа</span>
+                    <span class="platform-name__name"><img src="./images/tiktok.svg" alt="TikTok" class="platform__icon"> TikTok</span>
+                </div>
+                <div class="platform-buttons">
+                    <a class="platform-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать страну" class="platform-button__img">
+                        <span class="platform-button__text">Редактировать</span>
+                    </a>
+                    <a class="platform-button" id="platform-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить страну" class="platform-button__img">
+                        <span class="platform-button__text">Удалить</span>
+                    </a>
+                    <a class="platform-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать страну" class="platform-button__img">
+                        <span class="platform-button__text">Деактивировать</span>
+                    </a>
+                </div>
+                <img src="./images/ellipses.svg" alt="Меню страны" class="cover-and-name__ellipses">
+            </div>
+
+
+        </div>
+
+        <div class="platform-info platform-info_padding block block_rounded">
+            <div class="platform-big-cell flex-column platform-big-cell_in-report">
+                <div class="platform-info__title">Участвует в отчете:</div>
+                <div class="platform-info__value">Да</div>
+            </div>
+            <div class="platform-big-cell flex-column platform-big-cell_created">
+                <div class="platform-info__title">Создано:</div>
+                <div class="platform-info__value">Admin, KleverService, 08 мая 2020</div>
+            </div>
+            <div class="platform-big-cell flex-column platform-big-cell_changed">
+                <div class="platform-info__title">Изменено:</div>
+                <div class="platform-info__value">Admin, KleverService, 18 мая 2020</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="popup-delete">
+        <div class="popup-delete-confirm block block_rounded">
+            <a href=" #close" title="Close" class="popup-delete__close">×</a>
+            <div class="popup-delete__text">Вы действительно хотите удалить платформу?</div>
+
+            <button class="popup-delete__button popup-delete__button_cancel" type="button">Отмена</button>
+            <button class="popup-delete__button popup-delete__button_confirm" type="button">Удалить</button>
+
+        </div>
+    </div>
+
+    <div class="popup-platform">
+        <div class="popup-platform-menu flex-column">
+            <div class="popup-platform-menu__header flex-row flex-row_between flex-row_center-vertical">
+                Редактирование платформы
+                <a href=" #close" title="Close" class="popup-platform__close">×</a>
+            </div>
+            <div class="popup-platform-buttons flex-column">
+                <a class="popup-platform-button">
+                    <img src="./images/edit.svg" alt="Редактировать платформу" class="popup-platform-button__img">
+                    <span class="popup-platform-button__text">Редактировать</span>
+                </a>
+                <a class="popup-platform-button" id="platform-delete_btn-mobile">
+                    <img src="./images/delete.svg" alt="Удалить платформу" class="popup-platform-button__img">
+                    <span class="popup-platform-button__text">Удалить</span>
+                </a>
+                <a class="popup-platform-button">
+                    <img src="./images/deactivate.svg" alt="Деактивировать платформу" class="popup-platform-button__img">
+                    <span class="popup-platform-button__text">Деактивировать</span>
+                </a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+<script async src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script async src="../track-platform/scripts/index.js"></script>

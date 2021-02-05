@@ -1,0 +1,90 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+
+    <div class="sublabel sublabel_padding flex-column flex-column_top-vertical" id="sublabel">
+        <div class="sublabel-header">
+            <a class="to-sublabels to-sublabels_margin to-sublabels_padding flex-row flex-row_start" href="./../track-sublabels/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к релизам" class="to-sublabels__img" /> Все подлейблы
+            </a>
+
+            <div class="cover-and-name cover-and-name_margin cover-and-name_padding">
+                <div class="sublabel-name flex-column">
+                    <span class="sublabel-name__sublabel">Подлейбл</span>
+                    <span class="sublabel-name__name">Don’t say goodbye</span>
+                </div>
+                <div class="sublabel-buttons">
+                    <a class="sublabel-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать подлейбл" class="sublabel-button__img">
+                        <span class="sublabel-button__text">Редактировать</span>
+                    </a>
+                    <a class="sublabel-button" id="sublabel-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить подлейбл" class="sublabel-button__img">
+                        <span class="sublabel-button__text">Удалить</span>
+                    </a>
+                    <a class="sublabel-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать подлейбл" class="sublabel-button__img">
+                        <span class="sublabel-button__text">Деактивировать</span>
+                    </a>
+                </div>
+                <img src="./images/ellipses.svg" alt="Меню подлейбла" class="cover-and-name__ellipses">
+            </div>
+
+
+        </div>
+
+        <div class="sublabel-info sublabel-info_padding block block_rounded">
+            <div class="sublabel-big-cell flex-column">
+                <div class="sublabel-info__title">Процент</div>
+                <div class="sublabel-info__value">70%</div>
+            </div>
+            <div class="sublabel-big-cell flex-column">
+                <div class="sublabel-info__title">Создано:</div>
+                <div class="sublabel-info__value">Admin, KleverService, 08 мая 2020</div>
+            </div>
+            <div class="sublabel-big-cell flex-column">
+                <div class="sublabel-info__title">Изменено:</div>
+                <div class="sublabel-info__value">Admin, KleverService, 18 мая 2020</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="popup-delete">
+        <div class="popup-delete-confirm block block_rounded">
+            <a href=" #close" title="Close" class="popup-delete__close">×</a>
+            <div class="popup-delete__text">Вы действительно хотите удалить подлейбл?</div>
+
+            <button class="popup-delete__button popup-delete__button_cancel" type="button">Отмена</button>
+            <button class="popup-delete__button popup-delete__button_confirm" type="button">Удалить</button>
+
+        </div>
+    </div>
+
+    <div class="popup-sublabel">
+        <div class="popup-sublabel-menu flex-column">
+            <div class="popup-sublabel-menu__header flex-row flex-row_between flex-row_center-vertical">
+                Редактирование подлейбла
+                <a href=" #close" title="Close" class="popup-sublabel__close">×</a>
+            </div>
+            <div class="popup-sublabel-buttons flex-column">
+                <a class="popup-sublabel-button">
+                    <img src="./images/edit.svg" alt="Редактировать подлейбл" class="popup-sublabel-button__img">
+                    <span class="popup-sublabel-button__text">Редактировать</span>
+                </a>
+                <a class="popup-sublabel-button" id="sublabel-delete_btn-mobile">
+                    <img src="./images/delete.svg" alt="Удалить подлейбл" class="popup-sublabel-button__img">
+                    <span class="popup-sublabel-button__text">Удалить</span>
+                </a>
+                <a class="popup-sublabel-button">
+                    <img src="./images/deactivate.svg" alt="Деактивировать подлейбл" class="popup-sublabel-button__img">
+                    <span class="popup-sublabel-button__text">Деактивировать</span>
+                </a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+<script async src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script async src="../track-sublabel/scripts/index.js"></script>
