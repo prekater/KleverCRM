@@ -1,0 +1,131 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+
+    <div class="adding-singer" id="adding_singer">
+        <div class="to-singers flex-row flex-row_start flex-row_center-vertical">
+            Список исполнителей <img src="./images/to_releases.svg" alt="К списку исполнителей" class="to-singers__img" />
+        </div>
+        <form class="block block_rounded form form_margin-singers form_padding-singers main-form" action="" id="create_singer">
+            <div class="flex-row flex-row_between flex-row_top-vertical form-header form-header_margin">
+                <div class="form-header__title">Добавить исполнителя</div>
+                <a class="form-header__to-singers" href="./../track-all-singers/index.html">Список исполнителей <img src="./images/to_releases.svg" alt="К списку исполнителей" class="arrow-to-singers" /> </a>
+            </div>
+            <div class="groupped-fields grid">
+
+                <div class="field flex-column">
+                    <label for="nickname" class="field__label">Никнейм</label>
+                    <div class="input-wrapper">
+                        <input type="text" class="field__input_text" id="nickname" name="nickname-field">
+                    </div>
+                </div>
+
+                <div class="field flex-column">
+                    <label for="full_name" class="field__label">ФИО</label>
+                    <div class="input-wrapper">
+                        <input type="text" class="field__input_text" name="full_name-field" id="full_name">
+                    </div>
+                </div>
+
+                <div class="field flex-column">
+                    <label for="email" class="field__label">E-mail</label>
+                    <div class="input-wrapper">
+                        <input type="email" class="field__input_text" id="email" name="email-field">
+                    </div>
+                </div>
+
+                <div class="field flex-column field_limit">
+                    <label for="limit" class="field__label">Лимит выплаты</label>
+                    <input type="number" step="0.01" class="field__input_text" id="limit" name="limit-field" placeholder="0.00">
+                </div>
+
+                <div class="field flex-column">
+                    <div class="flex-row flex-row_baseline">
+                        <label for="avatar_url" class="field__label">Ссылка на аватар</label>
+                        <span class="field__question" tooltip="Ссылка на аватар">?</span>
+                    </div>
+                    <input type="text" class="field__input_text" id="avatar_url" name="avatar_url-field">
+                </div>
+
+                <div class="field flex-column field_is-group">
+                    <div for="is_group" class="field__label">Является группой</div>
+                    <div class="input-wrapper ">
+                        <input type="checkbox" class="field__input_checkbox" id="is_group" name="is_group-field" checked>
+                        <label for="is_group"></label>
+                    </div>
+                </div>
+
+                <div class="field flex-column">
+                    <label for="insta_artist" class="field__label">Ссылка на Instagram артиста</label>
+                    <div class="input-wrapper input-wrapper_instagram">
+                        <input type="text" id="insta_artist" name="insta-artist-field" placeholder="instagram.com/nickname/" class="field__input_text">
+                    </div>
+                </div>
+
+                <div class="field flex-column">
+                    <label for="vk" class="field__label">Ссылка на паблик VK артиста</label>
+                    <div class="input-wrapper  input-wrapper_vk">
+                        <input type="text" id="vk" name="vk-field" placeholder="vk.com/nickname" class="field__input_text">
+                    </div>
+                </div>
+
+                <div class="field flex-column">
+                    <label for="apple" class="field__label">Ссылка на карточку музыканта на площадке Apple (Apple ID)</label>
+                    <div class="input-wrapper  input-wrapper_apple">
+                        <input type="text" id="apple" name="apple-field" placeholder="nickname@yandex.ru" class="field__input_text">
+                    </div>
+                </div>
+
+                <div class="field flex-column">
+                    <label for="web" class="field__label">Ссылка на сайт артиста (при наличии)</label>
+                    <div class="input-wrapper  input-wrapper_web">
+                        <input type="text" id="web" name="web-field" placeholder="artist.ru" class="field__input_text">
+                    </div>
+                </div>
+
+                <div class="field flex-column">
+                    <label for="spotify" class="field__label">Ссылка на карточку музыканта на площадке Spotify</label>
+                    <div class="input-wrapper  input-wrapper_spotify">
+                        <input type="text" id="spotify" name="spotify-field" placeholder="nickname@yandex.ru" class="field__input_text">
+                    </div>
+                </div>
+
+                <div class="two-buttons">
+                    <button type="submit" class="button ">Создать</button>
+                    <button class="button button_cancel" type="reset">Отменить</button>
+                </div>
+
+
+
+
+            </div>
+        </form>
+
+    </div>
+
+    <div class="flex-column flex-column_center flex-column_top-vertical flex-column_adaptive-height added-success" id="added_success">
+        <div class="block block_rounded success success_margin success_padding flex-column flex-column_center flex-column_center-vertical" id="success">
+            <img src="./images/success.svg" alt="Исполнитель успешно создан" class="success__img" />
+            <span class="success__text">Исполнитель успешно создан!</span>
+            <div class="success-buttons">
+                <a href="#" class="success__btn btn">
+                    <img src="./images/agreements_black.svg" class="success-buttons__img" />
+                    <span class="success-buttons__text">Создать договор</span>
+                </a>
+                <a href="#" class="success__btn btn">
+                    <img src="./images/singers_black.svg" class="success-buttons__img success-buttons__img_changing-rmargin" />
+                    <span class="success-buttons__text">Создать исполнителя</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup__overlay ">
+        <div class="popup flex-column ">
+            <a href="#close " title="Close " class="popup__close ">×</a>
+            <div class="popup__content "></div>
+        </div>
+    </div>
+
+</div>
+<script async src="http://code.jquery.com/jquery-1.8.3.js "></script>
+<script async src="../track-adding-singer/scripts/index.js "></script>
