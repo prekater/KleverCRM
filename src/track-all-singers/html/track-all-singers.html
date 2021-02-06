@@ -1,11 +1,11 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="all-releases all-releases_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center" id="all_releases">
-        <div class="all-releases-header all-releases-header_margin all-releases-header_padding">
-            <div class="all-releases-header__title">Релизы</div>
+    <div class="all-singers all-singers_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center" id="all_singers">
+        <div class="all-singers-header all-singers-header_margin all-singers-header_padding">
+            <div class="all-singers-header__title">Исполнители</div>
             <div class="tabs tabs_margin flex-row">
-                <a class="tabs__tab tabs__tab_active tabs__tab_margin">Все релизы</a>
-                <a class="tabs__tab" href="./../track-all-releases-errors/index.html">Ошибки</a>
+                <a class="tabs__tab tabs__tab_active tabs__tab_margin">Все исполнители</a>
+                <a class="tabs__tab" href="./../track-all-singers-errors/index.html">Ошибки</a>
             </div>
 
 
@@ -18,18 +18,15 @@
             </form>
         </div>
 
-        <div class="all-releases-block" id="all-releases-block">
-            <div class="all-releases-table table">
+        <div class="all-singers-block" id="all-singers-block">
+            <div class="all-singers-table table">
                 <div class="table-header">
                     <div class="table-header__cell"></div>
-                    <div class="table-header__cell table-header__cell_black">Название <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
-                    <div class="table-header__cell">Исполнитель</div>
-                    <div class="table-header__cell">Договор</div>
-                    <div class="table-header__cell">Тип</div>
-                    <div class="table-header__cell">Дата релиза</div>
+                    <div class="table-header__cell table-header__cell_black">Никнейм <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
+                    <div class="table-header__cell">ФИО</div>
                     <div class="table-header__cell">Сумма доходов</div>
-                    <div class="table-header__cell">Доля лейбла</div>
-                    <div class="table-header__cell">Доля артиста</div>
+
+                    <div class="table-header__cell">Сумма долей лейбла</div>
                     <div class="table-header__cell">К выплате</div>
                     <div class="table-header__cell"></div>
                 </div>
@@ -39,57 +36,27 @@
                         <div class="table-row__cell table-row__cell_cover">
                             <img src="./images/cover1.png" alt="">
                         </div>
-                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-release/index.html">
-                            <div class=" cell-text cell-text_2rows ">
-                                Don’t Say Goodbye, remember me
-                            </div>
+                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-singer/index.html">
+                           Alex Rudi Pell
                         </a>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text cell-text_2rows ">
-                                Болконский Александр Юрьевич
-                            </div>
+                        <div class="table-row__cell">
+                            Болконский Александр Юрьевич
                         </div>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text">
-                                №258794
-                            </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
                         </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                Альбом
-                            </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
                         </div>
-                        <div class="table-row__cell table-row__cell_gray ">
-                            <div class="cell-text">
-                                22 ноя 2020
-                            </div>
+                        <div class="table-row__cell table-row__cell_bold">
+                            1 890 095 ₽
                         </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 236 397 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 954 678 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 654 075 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_bold ">
-                            <div class="cell-text">
-                                1 890 095 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
-                            <a class="releases-table-button" href="#">
+                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="singers-table-button" href="#">
                                 <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
                             </a>
-                            <a class="releases-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="delete-release" class="releases-table-button" />
+                            <a class="singers-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="delete-singer" class="singers-table-button" />
                             </a>
                         </div>
                     </div>
@@ -99,220 +66,234 @@
                         <div class="table-row__cell table-row__cell_cover">
                             <!-- <img src="./images/cover1.png" alt=""> -->
                         </div>
-                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-release/index.html">
-                            <div class="cell-text cell-text_2rows ">
-                                Любовная любовь, морковная морковь, Любовная любовь, морковная морковь, Любовная любовь, морковная морковь
-                            </div>
+                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-singer/index.html">
+                           Alex Rudi Pell
                         </a>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text cell-text_2rows ">
-                                Страдальцев Юрий Валентинович
+                        <div class="table-row__cell">
+                            <div class="cell-text cell-text_2rows">
+                                Болконский Александр Юрьевич
                             </div>
                         </div>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text">
-                                №258794
-                            </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
                         </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                Альбом
-                            </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
                         </div>
-                        <div class="table-row__cell table-row__cell_gray ">
-                            <div class="cell-text">
-                                22 ноя 2020
-                            </div>
+                        <div class="table-row__cell table-row__cell_bold">
+                            1 890 095 ₽
                         </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 236 397 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 954 678 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 654 075 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_bold ">
-                            <div class="cell-text">
-                                1 890 095 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
-                            <a class="releases-table-button" href="#">
+                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="singers-table-button" href="#">
                                 <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
                             </a>
-                            <a class="releases-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="delete-release" class="releases-table-button" />
+                            <a class="singers-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="delete-singer" class="singers-table-button" />
                             </a>
                         </div>
                     </div>
                 </div>
-
                 <div class="table-row-wrapper block block_rounded">
                     <div class="table-row">
                         <div class="table-row__cell table-row__cell_cover">
                             <img src="./images/cover2.png" alt="">
                         </div>
-                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-release/index.html">
-                            <div class=" cell-text cell-text_2rows ">
-                                Здравствуйте, я ваша тётя
-                            </div>
+                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-singer/index.html">
+                           Alex Rudi Pell
                         </a>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text cell-text_2rows ">
-                                Пухова Зинаида Михайловна
+                        <div class="table-row__cell">
+                            <div class="cell-text cell-text_2rows">
+                                Болконский Александр Юрьевич
                             </div>
                         </div>
-                        <div class="table-row__cell table-row__cell_green ">
-                            <div class="cell-text">
-                                №258794
-                            </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
                         </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                Альбом
-                            </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
                         </div>
-                        <div class="table-row__cell table-row__cell_gray ">
-                            <div class="cell-text">
-                                22 апр 2020
-                            </div>
+                        <div class="table-row__cell table-row__cell_bold">
+                            1 890 095 ₽
                         </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 236 397 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 954 678 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell ">
-                            <div class="cell-text">
-                                1 654 075 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_bold ">
-                            <div class="cell-text">
-                                1 890 095 ₽
-                            </div>
-                        </div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between ">
-                            <a class="releases-table-button" href="#">
+                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="singers-table-button" href="#">
                                 <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
                             </a>
-                            <a class="releases-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="delete-release" class="releases-table-button" />
+                            <a class="singers-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="delete-singer" class="singers-table-button" />
                             </a>
                         </div>
                     </div>
                 </div>
+                <div class="table-row-wrapper block block_rounded">
+                    <div class="table-row">
+                        <div class="table-row__cell table-row__cell_cover">
+                            <img src="./images/cover1.png" alt="">
+                        </div>
+                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-singer/index.html">
+                           Alex Rudi Pell
+                        </a>
+                        <div class="table-row__cell">
+                            <div class="cell-text cell-text_2rows">
+                                Болконский Александр Юрьевич
+                            </div>
+                        </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
+                        </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
+                        </div>
+                        <div class="table-row__cell table-row__cell_bold">
+                            1 890 095 ₽
+                        </div>
+                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="singers-table-button" href="#">
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+                            </a>
+                            <a class="singers-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="delete-singer" class="singers-table-button" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-row-wrapper block block_rounded">
+                    <div class="table-row">
+                        <div class="table-row__cell table-row__cell_cover">
+                            <!-- <img src="./images/cover1.png" alt=""> -->
+                        </div>
+                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-singer/index.html">
+                           Alex Rudi Pell
+                        </a>
+                        <div class="table-row__cell">
+                            <div class="cell-text cell-text_2rows">
+                                Болконский Александр Юрьевич
+                            </div>
+                        </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
+                        </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
+                        </div>
+                        <div class="table-row__cell table-row__cell_bold">
+                            1 890 095 ₽
+                        </div>
+                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="singers-table-button" href="#">
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+                            </a>
+                            <a class="singers-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="delete-singer" class="singers-table-button" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-row-wrapper block block_rounded">
+                    <div class="table-row">
+                        <div class="table-row__cell table-row__cell_cover">
+                            <img src="./images/cover2.png" alt="">
+                        </div>
+                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-singer/index.html">
+                           Alex Rudi Pell
+                        </a>
+                        <div class="table-row__cell">
+                            <div class="cell-text cell-text_2rows">
+                                Болконский Александр Юрьевич
+                            </div>
+                        </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
+                        </div>
+                        <div class="table-row__cell">
+                            1 890 095 ₽
+                        </div>
+                        <div class="table-row__cell table-row__cell_bold">
+                            1 890 095 ₽
+                        </div>
+                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="singers-table-button" href="#">
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+                            </a>
+                            <a class="singers-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="delete-singer" class="singers-table-button" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
 
 
 
             </div>
 
-            <div class="all-releases-table-mobile all-releases-table-mobile_margin ">
-                <div class="all-releases-card-mobile block ">
-                    <div class="all-releases-card-mobile-header">
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile-header__cover">
+            <div class="all-singers-table-mobile all-singers-table-mobile_margin">
+                <div class="all-singers-card-mobile block">
+                    <a class="all-singers-card-mobile-header" href="./../track-singers/index.html">
+                        <div class="all-singers-card-mobile__cell all-singers-card-mobile-header__cover">
                             <img src="./images/cover1.png" alt="Обложка" />
                         </div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green all-releases-card-mobile__cell_bold ">Don’t Say goodbye, remember me</div>
+                        <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_green all-singers-card-mobile__cell_bold">Don’t Say goodbye, remember me</div>
+                    </a>
+                    <div class="wrapper-for-border-top">
+                        <div class="all-singers-card-mobile__cell">ФИО:</div>
+                        <div class="all-singers-card-mobile__cell">Болконский Александр Юрьевич</div>
                     </div>
-                    <div class="wrapper-for-border-top ">
-                        <div class="all-releases-card-mobile__cell ">Исполнитель:</div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">Болконский Александр Юрьевич</div>
-                    </div>
-                    <div class="all-releases-card-mobile__cell ">Договор:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">№258794</div>
-                    <div class="all-releases-card-mobile__cell ">Тип:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">Альбом</div>
-                    <div class="all-releases-card-mobile__cell ">Дата релиза:</div>
-                    <div class="all-releases-card-mobile__cell ">22 ноя 2020</div>
-                    <div class="all-releases-card-mobile__cell ">Сумма доходов:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля лейбла:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 954 678 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля артиста:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 291 536 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">К выплате:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black all-releases-card-mobile__cell_bold ">1 291 536 ₽</div>
-                    <div class="two-buttons-mobile ">
-                        <a class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</a>
-                        <a class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</a>
+                    <div class="all-singers-card-mobile__cell">Сумма доходов:</div>
+                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black">1 236 397 ₽</div>
+                    <div class="all-singers-card-mobile__cell">Сумма долей лейбла:</div>
+                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black">1 291 536 ₽</div>
+                    <div class="all-singers-card-mobile__cell">К выплате:</div>
+                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black all-singers-card-mobile__cell_bold">1 291 536 ₽</div>
+                    <div class="two-buttons-mobile">
+                        <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать артиста" class="two-buttons-mobile__img" /> Редактировать</a>
+                        <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить артиста" class="two-buttons-mobile__img" /> Удалить</a>
                     </div>
                 </div>
-                <div class="all-releases-card-mobile block ">
-                    <div class="all-releases-card-mobile-header">
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile-header__cover">
+                <div class="all-singers-card-mobile block">
+                    <a class="all-singers-card-mobile-header" href="./../track-singers/index.html">
+                        <div class="all-singers-card-mobile__cell all-singers-card-mobile-header__cover">
+                            <img src="./images/cover3.png" alt="Обложка" />
+                        </div>
+                        <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_green all-singers-card-mobile__cell_bold">День рождения</div>
+                    </a>
+                    <div class="wrapper-for-border-top">
+                        <div class="all-singers-card-mobile__cell">ФИО:</div>
+                        <div class="all-singers-card-mobile__cell">Шапокляков Геннадий Чебурашкович</div>
+                    </div>
+                    <div class="all-singers-card-mobile__cell">Сумма доходов:</div>
+                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black">1 236 397 ₽</div>
+                    <div class="all-singers-card-mobile__cell">Сумма долей лейбла:</div>
+                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black">1 291 536 ₽</div>
+                    <div class="all-singers-card-mobile__cell">К выплате:</div>
+                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black all-singers-card-mobile__cell_bold">1 291 536 ₽</div>
+                    <div class="two-buttons-mobile">
+                        <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать артиста" class="two-buttons-mobile__img" /> Редактировать</a>
+                        <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить артиста" class="two-buttons-mobile__img" /> Удалить</a>
+                    </div>
+                </div>
+                <div class="all-singers-card-mobile block">
+                    <a class="all-singers-card-mobile-header" href="./../track-singers/index.html">
+                        <div class="all-singers-card-mobile__cell all-singers-card-mobile-header__cover">
                             <!-- <img src="./images/cover1.png" alt="Обложка" /> -->
                         </div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green all-releases-card-mobile__cell_bold ">Голубой вагон</div>
+                        <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_green all-singers-card-mobile__cell_bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, error!</div>
+                    </a>
+                    <div class="wrapper-for-border-top">
+                        <div class="all-singers-card-mobile__cell">ФИО:</div>
+                        <div class="all-singers-card-mobile__cell">Плюшкин Василий Семёнович</div>
                     </div>
-                    <div class="wrapper-for-border-top ">
-                        <div class="all-releases-card-mobile__cell ">Исполнитель:</div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">Чеурашка и Гена</div>
-                    </div>
-                    <div class="all-releases-card-mobile__cell ">Договор:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">№258794</div>
-                    <div class="all-releases-card-mobile__cell ">Тип:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">Альбом</div>
-                    <div class="all-releases-card-mobile__cell ">Дата релиза:</div>
-                    <div class="all-releases-card-mobile__cell ">22 ноя 2020</div>
-                    <div class="all-releases-card-mobile__cell ">Сумма доходов:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля лейбла:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 954 678 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля артиста:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 291 536 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">К выплате:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black all-releases-card-mobile__cell_bold ">1 291 536 ₽</div>
-                    <div class="two-buttons-mobile ">
-                        <a class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</a>
-                        <a class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</a>
+                    <div class="all-singers-card-mobile__cell">Сумма доходов:</div>
+                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black">1 236 397 ₽</div>
+                    <div class="all-singers-card-mobile__cell">Сумма долей лейбла:</div>
+                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black">1 291 536 ₽</div>
+                    <div class="all-singers-card-mobile__cell">К выплате:</div>
+                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black all-singers-card-mobile__cell_bold">1 291 536 ₽</div>
+                    <div class="two-buttons-mobile">
+                        <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать артиста" class="two-buttons-mobile__img" /> Редактировать</a>
+                        <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить артиста" class="two-buttons-mobile__img" /> Удалить</a>
                     </div>
                 </div>
-                <div class="all-releases-card-mobile block ">
-                    <div class="all-releases-card-mobile-header">
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile-header__cover">
-                            <img src="./images/cover2.png" alt="Обложка" />
-                        </div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green all-releases-card-mobile__cell_bold ">У лукоморья дуб зелёный; Златая цепь на дубе том: И днём и ночью кот учёный Всё ходит по цепи кругом;</div>
-                    </div>
-                    <div class="wrapper-for-border-top ">
-                        <div class="all-releases-card-mobile__cell ">Исполнитель:</div>
-                        <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">Пушкин Александр Сергеевич </div>
-                    </div>
-                    <div class="all-releases-card-mobile__cell ">Договор:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_green ">№258794</div>
-                    <div class="all-releases-card-mobile__cell ">Тип:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">Альбом</div>
-                    <div class="all-releases-card-mobile__cell ">Дата релиза:</div>
-                    <div class="all-releases-card-mobile__cell ">22 ноя 2020</div>
-                    <div class="all-releases-card-mobile__cell ">Сумма доходов:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 236 397 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля лейбла:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 954 678 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">Доля артиста:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black ">1 291 536 ₽</div>
-                    <div class="all-releases-card-mobile__cell ">К выплате:</div>
-                    <div class="all-releases-card-mobile__cell all-releases-card-mobile__cell_black all-releases-card-mobile__cell_bold ">1 291 536 ₽</div>
-                    <div class="two-buttons-mobile ">
-                        <a class="btn btn_padding flex-row flex-column_between "> <img src=" ./images/edit.svg " alt="Редактировать релиз " class="two-buttons-mobile__img " /> Редактировать</a>
-                        <a class="btn btn_padding flex-row flex-column_between "> <img src="./images/delete.svg " alt="Удалить релиз " class="two-buttons-mobile__img " /> Удалить</a>
-                    </div>
-                </div>
-
-
 
                 <div class="pagination-mobile flex-row flex-row_between flex-row_center-vertical">
                     <a href="/Requests?page=1&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__prev PagedList-skipToPrevious" rel="prev"><img src="./images/page-left.svg" alt="Назад"></a>
@@ -324,40 +305,36 @@
             <div class="pagination-container">
                 <ul class="pagination flex-row">
                     <li class="page-item PagedList-skipToPrevious">
-                        <a href="/Requests?page=1&amp;desc=False&amp;hasErrors=False" class="page-link" rel="prev"><img src="./images/page-left.svg " alt="Назад "></a>
+                        <a href="/Requests?page=1&amp;desc=False&amp;hasErrors=False" class="page-link" rel="prev"><img src="./images/page-left.svg" alt="Назад"></a>
                     </li>
                     <li class="page-item"><a href="/Requests?page=1&amp;desc=False&amp;hasErrors=False" class="page-link">1</a></li>
                     <li class="page-item page-item_active">
                         <span class="page-link page-link_active">2</span></li>
-                    <li class="page-item "><a href="/Requests?page=3&amp;desc=False&amp;hasErrors=False " class="page-link ">3</a></li>
-                    <li class="page-item "><a href="/Requests?page=4&amp;desc=False&amp;hasErrors=False " class="page-link ">4</a></li>
-                    <li class="page-item "><a href="/Requests?page=5&amp;desc=False&amp;hasErrors=False " class="page-link ">5</a></li>
-                    <li class="page-item "><a href="/Requests?page=6&amp;desc=False&amp;hasErrors=False " class="page-link ">6</a></li>
-                    <li class="page-item "><a href="/Requests?page=7&amp;desc=False&amp;hasErrors=False " class="page-link ">7</a></li>
-                    <li class="page-item "><a href="/Requests?page=8&amp;desc=False&amp;hasErrors=False " class="page-link ">8</a></li>
-                    <li class="page-item "><a href="/Requests?page=9&amp;desc=False&amp;hasErrors=False " class="page-link ">9</a></li>
-                    <li class="page-item "><a href="/Requests?page=10&amp;desc=False&amp;hasErrors=False " class="page-link ">10</a></li>
-                    <li class="page-item page-item_disabled PeageList-ellipses ">...</li>
-                    <li class="page-item PagedList-skipToNext ">
-                        <a href="/Requests?page=3&amp;desc=False&amp;hasErrors=False " class="page-link "><img src="./images/page-right.svg " alt="Вперёд "></a>
+                    <li class="page-item"><a href="/Requests?page=3&amp;desc=False&amp;hasErrors=False" class="page-link">3</a></li>
+                    <li class="page-item"><a href="/Requests?page=4&amp;desc=False&amp;hasErrors=False" class="page-link">4</a></li>
+                    <li class="page-item"><a href="/Requests?page=5&amp;desc=False&amp;hasErrors=False" class="page-link">5</a></li>
+                    <li class="page-item"><a href="/Requests?page=6&amp;desc=False&amp;hasErrors=False" class="page-link">6</a></li>
+                    <li class="page-item"><a href="/Requests?page=7&amp;desc=False&amp;hasErrors=False" class="page-link">7</a></li>
+                    <li class="page-item"><a href="/Requests?page=8&amp;desc=False&amp;hasErrors=False" class="page-link">8</a></li>
+                    <li class="page-item"><a href="/Requests?page=9&amp;desc=False&amp;hasErrors=False" class="page-link">9</a></li>
+                    <li class="page-item"><a href="/Requests?page=10&amp;desc=False&amp;hasErrors=False" class="page-link">10</a></li>
+                    <li class="page-item page-item_disabled PeageList-ellipses">...</li>
+                    <li class="page-item PagedList-skipToNext">
+                        <a href="/Requests?page=3&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page-right.svg" alt="Вперёд"></a>
                     </li>
-                    <li class="page-item PagedList-skipToLast ">
-                        <a href="/Requests?page=15&amp;desc=False&amp;hasErrors=False " class="page-link "><img src="./images/page_last.svg " alt="Вперёд "></a>
+                    <li class="page-item PagedList-skipToLast">
+                        <a href="/Requests?page=15&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page_last.svg" alt="Вперёд"></a>
                     </li>
                 </ul>
-            </div>
-
-            <div class="errors " id="releases_errors ">
-                Ошибки
             </div>
 
         </div>
 
         <div class="popup-pagination">
-            <div class="popup-pagination-block flex-column ">
-                <div class="popup-pagination-block__header flex-row flex-row_between flex-row_center-vertical ">
+            <div class="popup-pagination-block flex-column">
+                <div class="popup-pagination-block__header flex-row flex-row_between flex-row_center-vertical">
                     Выбрать страницу
-                    <a href=" #close " title="Close " class="popup-pagination__close ">×</a>
+                    <a href=" #close" title="Close" class="popup-pagination__close">×</a>
                 </div>
                 <ul class="popup-pagination-block__body">
                     <li class="mobile-page-item"><a class="mobile-page-link">1</a></li>
@@ -386,5 +363,5 @@
             </div>
         </div>
     </div>
-    <script async src="http://code.jquery.com/jquery-1.8.3.js "></script>
-    <script async src="../track-all-releases/scripts/index.js "></script>
+    <script async src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script async src="../track-all-singers/scripts/index.js"></script>

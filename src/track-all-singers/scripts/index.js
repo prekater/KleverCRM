@@ -3,7 +3,7 @@ let $searchTable = $("#search-table");
 let $searchTableInput = $(".search-table__input");
 let $searchTableBtnMob = $(".search-table__button-mobile");
 let $searchTableClear = $(".search-table__clear");
-let $title = $(".all-releases-header__title");
+let $title = $(".all-singers-header__title");
 
 
 $searchTable.on("focusin", function() {
