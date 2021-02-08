@@ -18,8 +18,9 @@
     }
 }
 
-.all-countries {
+.all-contracts {
     position: relative;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,15 +33,9 @@
             padding: 0;
         }
     }
-    &__flag {
-        margin-right: 16px;
-        @media (max-width: 575.9px) {
-            margin-right: 8px;
-        }
-    }
 }
 
-.all-countries-header {
+.all-contracts-header {
     flex: 0 0 auto;
     width: 100%;
     position: relative;
@@ -238,18 +233,23 @@
     }
 }
 
-.all-countries-table {
-    align-self: center;
+.all-contracts-table {
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    align-self: center;
     @include grid(1fr, auto, 0, 10px);
     padding-bottom: 30px;
-    width: 32.5vw;
+    width: 100%;
     align-self: center;
-    @media (max-width: 1399.9px) {
-        width: 520px;
+    @media (max-width: 991.9px) {
+        width: 100vw;
     }
     @media (max-width: 575.9px) {
         display: none;
+    }
+    &_padding {
+        padding-left: 2.8vw;
+        padding-right: 2.8vw;
     }
 }
 
@@ -340,13 +340,13 @@
 .table-header {
     @include fontSize(13, 18, 500);
     color: $textsecondary;
-    @include grid ( 1fr 10vw 28px, auto, 0, 0);
+    @include grid ( 2.9fr 1fr 1.8fr 1.1fr 28px, auto, 0, 0);
     align-items: flex-end;
     padding-right: 11px;
     padding-left: 11px;
     width: 100%;
     @media (max-width: 991.9px) {
-        @include grid ( 1fr 150px 28px, auto, 0, 0);
+        @include grid ( 55.7vw 19.1vw 35vw 21.9vw 28px, auto, 0, 0);
     }
     &__cell {
         padding-left: 1vw;
@@ -376,10 +376,10 @@
     border-radius: 12px;
     color: $black;
     @include fontSize(14, 20, 400);
-    @include grid (1fr 10vw 28px, auto, 0, 0);
+    @include grid (2.9fr 1fr 1.8fr 1.1fr 28px, auto, 0, 0);
     align-items: center;
     @media (max-width: 991.9px) {
-        @include grid ( 1fr 150px 28px, auto, 0, 0);
+        @include grid ( 55.7vw 19.1vw 35vw 21.9vw 28px, auto, 0, 0);
     }
     &__cell {
         position: relative;
@@ -423,11 +423,11 @@
     }
 }
 
-.all-countries-table-button {
+.all-contracts-table-button {
     text-decoration: none;
 }
 
-.all-countries-table-mobile {
+.all-contracts-table-mobile {
     display: none;
     @media (max-width: 575.9px) {
         height: 100%;
@@ -450,7 +450,7 @@
     align-content: flex-start;
 }
 
-.all-countries-card-mobile {
+.all-contracts-card-mobile {
     display: none;
     @media (max-width: 575.9px) {
         min-height: 97px;
@@ -458,8 +458,8 @@
         18,
         500);
         width: 100vw;
-        @include grid(70px 1fr 28px,
-        auto auto,
+        @include grid(70px 1fr,
+        auto,
         20px,
         9px);
         padding: 16px;
@@ -468,7 +468,7 @@
     &__cell {
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: flex-end;
         color: $textsecondary;
         &_green {
             color: $green;
@@ -478,6 +478,9 @@
         }
         &_bold {
             font-weight: 700;
+        }
+        &_gray {
+            color: $textsecondary;
         }
         &_big {
             font-size: 0.875rem;

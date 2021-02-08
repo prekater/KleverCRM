@@ -91,11 +91,3 @@ $(function() {
         })
     }
 });
-
-//окрашивание "Нет" в серый
-$('.in-report').each(function() {
-    let reportCell = $(this).text()
-    if (reportCell == 'Нет') {
-        $(this).css('color', '#768989')
-    }
-})
