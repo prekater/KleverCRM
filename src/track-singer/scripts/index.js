@@ -6,23 +6,12 @@ let $singerInfo = $("#singer-info");
 let $singerTracks = $("#singer-tracks");
 let $singerReleases = $("#singer-releases");
 
-
-
 $tabSingerInfo.on("click", function() {
     $(this).addClass("tabs__tab_active");
     $tabSingerTracks.removeClass("tabs__tab_active");
     $tabSingerReleases.removeClass("tabs__tab_active");
     $singerInfo.css("display", "block");
     $singerTracks.css("display", "none");
-    $singerReleases.css("display", "none");
-});
-
-$tabSingerTracks.on("click", function() {
-    $(this).addClass("tabs__tab_active");
-    $tabSingerInfo.removeClass("tabs__tab_active");
-    $tabSingerReleases.removeClass("tabs__tab_active");
-    $singerTracks.css("display", "flex");
-    $singerInfo.css("display", "none");
     $singerReleases.css("display", "none");
 });
 
@@ -33,6 +22,15 @@ $tabSingerReleases.on("click", function() {
     $singerReleases.css("display", "flex");
     $singerInfo.css("display", "none");
     $singerTracks.css("display", "none");
+});
+
+$tabSingerTracks.on("click", function() {
+    $(this).addClass("tabs__tab_active");
+    $tabSingerInfo.removeClass("tabs__tab_active");
+    $tabSingerReleases.removeClass("tabs__tab_active");
+    $singerTracks.css("display", "flex");
+    $singerInfo.css("display", "none");
+    $singerReleases.css("display", "none");
 });
 
 //редактирование обложки 
