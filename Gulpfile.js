@@ -26,9 +26,9 @@ gulp.task('pug', () => {
             basepath: '@file'
         }))
         .pipe(rename((p) => ({
-          dirname: p.basename,
-          basename: 'index',
-          extname: p.extname
+            dirname: p.basename,
+            basename: 'index',
+            extname: p.extname
         })))
         .pipe(gulp.dest('./build'));
 });
@@ -41,53 +41,52 @@ gulp.task('scss', () => {
             cascade: false
         }))
         .pipe(rename((p) => ({
-          dirname: `${p.basename}/styles`,
-          basename: 'styles',
-          extname: p.extname
+            dirname: `${p.basename}/styles`,
+            basename: 'styles',
+            extname: p.extname
         })))
 
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('moduleNiceSelect', async () => {
-  const folders = getFolders('./build');
-  return folders.map((folder) => {
-      gulp
-        .src('./src/common/scripts/jquery.nice-select.js')
-        // .pipe(uglify())
-        .pipe(rename((p) => ({
-          dirname: `./${folder}/scripts`,
-          basename: p.basename,
-          extname: p.extname
-        })))
-        .pipe(gulp.dest('./build'));
+gulp.task('moduleNiceSelect', async() => {
+    const folders = getFolders('./build');
+    return folders.map((folder) => {
+        gulp
+            .src('./src/common/scripts/jquery.nice-select.js')
+            // .pipe(uglify())
+            .pipe(rename((p) => ({
+                dirname: `./${folder}/scripts`,
+                basename: p.basename,
+                extname: p.extname
+            })))
+            .pipe(gulp.dest('./build'));
     })
 })
 
-gulp.task('scripts', async () => {
-  const folders = getFolders('./build');
+gulp.task('scripts', async() => {
+    const folders = getFolders('./build');
 
-  return folders.map((folder) => {
-      gulp
-        .src(['./src/common/scripts/index.js', `./src/${folder}/scripts/index.js`])
-        // .pipe(uglify())
-        .pipe(concat('index.js'))
-        .pipe(rename((p) => ({
-          dirname: `./${folder}/scripts`,
-          basename: p.basename,
-          extname: p.extname
-        })))
-        .pipe(gulp.dest('./build'));
-    }
-  )
+    return folders.map((folder) => {
+        gulp
+            .src(['./src/common/scripts/index.js', `./src/${folder}/scripts/index.js`])
+            // .pipe(uglify())
+            .pipe(concat('index.js'))
+            .pipe(rename((p) => ({
+                dirname: `./${folder}/scripts`,
+                basename: p.basename,
+                extname: p.extname
+            })))
+            .pipe(gulp.dest('./build'));
+    })
 });
 
 gulp.task('images', () => {
     return gulp.src('./src/track*/images/*')
         .pipe(rename((p) => ({
-          dirname: p.dirname,
-          basename: p.basename,
-          extname: p.extname
+            dirname: p.dirname,
+            basename: p.basename,
+            extname: p.extname
         })))
         .pipe(gulp.dest('./build'));
 });
@@ -98,9 +97,9 @@ gulp.task('fonts', async() => {
     return folders.map((folder) => {
         gulp.src('./src/common/fonts/*')
             .pipe(rename((p) => ({
-              dirname: `./${folder}/fonts`,
-              basename: p.basename,
-              extname: p.extname
+                dirname: `./${folder}/fonts`,
+                basename: p.basename,
+                extname: p.extname
             })))
             .pipe(gulp.dest('./build'));
     })
