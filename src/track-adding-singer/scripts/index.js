@@ -33,10 +33,10 @@ $(function() {
 //переход с кнопки Отправить на экран Успешно создан
 let createSinger = document.getElementById("create_singer");
 let addingSinger = document.getElementById("adding_singer");
-let addedSucccess = document.getElementById("added_success");
+let addedSuccessSinger = document.getElementById("added_success_singer");
 
 createSinger.onsubmit = function(evt) {
     evt.preventDefault();
     addingSinger.style.display = "none";
-    addedSucccess.style.display = "block";
+    addedSuccessSinger.style.display = "block";
 }
