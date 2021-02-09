@@ -1,4 +1,4 @@
-//меню релиза в мобильном
+//меню платформы в мобильном
 $(function() {
     if ($(window).width() <= 575.9) {
         $('.cover-and-name__ellipses').on("click", function() {
@@ -13,7 +13,6 @@ $(function() {
                 $('.popup-platform').css('display', 'none')
                 $('body').css('overflow', 'auto')
             }
-
         })
 
         $('.popup-platform__close').on("click", function() {
@@ -21,13 +20,12 @@ $(function() {
             $('body').css('overflow', 'auto')
         });
 
-
         $('#platform-delete_btn-mobile').on("click", function() {
             $(".popup-platform").hide()
             $(".popup-delete").css('display', 'flex')
             $(".popup-delete-confirm").css('animation', 'translating 0.3s linear 1')
-
         });
+
         $('.popup-delete__close').on("click", function() {
             $(".popup-delete").css('display', 'none')
             $('body').css('overflow', 'auto')
@@ -35,9 +33,8 @@ $(function() {
     }
 });
 
-//подтверждение удаления релиза 
+//подтверждение удаления платформы
 $(function() {
-
     popupDeleteOverlay = $('.popup-delete')
     popupConfirm = $(".popup-delete-confirm")
     $('#platform-delete_btn').on("click", function() {

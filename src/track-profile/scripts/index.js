@@ -4,8 +4,6 @@ let $tabChangePassword = $('#tab-change-password');
 let $formProfileSettings = $("#profile-settings");
 let $formChangePassword = $("#change-password");
 
-
-
 $tabProfileSettings.on("click", function() {
     $(this).addClass("tabs__tab_active");
     $tabChangePassword.removeClass("tabs__tab_active");

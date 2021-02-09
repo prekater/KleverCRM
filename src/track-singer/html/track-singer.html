@@ -625,42 +625,42 @@
 </div>
 
 <div class="popup-change-cover">
-    <form class="popup-cover">
-        <div class="popup-cover__header flex-row flex-row_between flex-row_center-vertical">
+    <form class="popup-change">
+        <div class="popup-change__header flex-row flex-row_between flex-row_center-vertical">
             Редактирование обложки
-            <a href=" #close" title="Close" class="popup-cover__close">×</a>
+            <a href=" #close" title="Close" class="popup-change__close">×</a>
         </div>
 
-        <div class="image-upload-wrap popup-cover__place-here flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+        <div class="image-upload-wrap popup-change__place-here flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
             <div class="drag-text flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
                 <img src="./images/pic_cover.svg" alt="" class="">
-                <span class="popup-cover__text">Перетащите файл формата JPG или PNG в это поле</span>
+                <span class="popup-change__text">Перетащите файл формата JPG или PNG в это поле</span>
             </div>
         </div>
 
         <div class="file-upload-content">
             <img class="file-upload-image" src="#" alt="your image" />
             <div class="image-title-wrap">
-                <button type="button" onclick="removeUpload()" class="popup-cover__cover-close"><span class="flex-row flex-row_center flex-row_center-vertical">×</span></button>
+                <button type="button" onclick="removeUpload()" class="popup-change__cover-close"><span class="flex-row flex-row_center flex-row_center-vertical">×</span></button>
             </div>
         </div>
 
-        <div class="popup-cover__two-buttons">
-            <button type="submit" class="button popup-cover-button upload-button" onclick="$( '.file-upload-input').trigger( 'click' )">
+        <div class="popup-change__two-buttons">
+            <button type="submit" class="button popup-change-button upload-button" onclick="$( '.file-upload-input').trigger( 'click' )">
                         <div class="flex-row flex-row_between flex-row_center-vertical">
-                            <img src=" ./images/upload.svg" alt="Загрузить обложку" class="popup-cover-button__img">
-                            <div class="popup-cover-button__text upload-button__text">
+                            <img src=" ./images/upload.svg" alt="Загрузить обложку" class="popup-change-button__img">
+                            <div class="popup-change-button__text upload-button__text">
                                 Загрузить обложку
                             </div>
                         </div>
                     </button>
-            <button class="button button_cancel popup-cover-button download-button" type="button">
+            <button class="button button_cancel popup-change-button download-button" type="button">
                         <div class="flex-row flex-row_between flex-row_center-vertical">
-                            <div class="popup-cover-button__img">
+                            <div class="popup-change-button__img">
                                 <img src="./images/download.svg" alt="Скачать обложку">
                             </div>
-                            <div class="popup-cover-button__text">
+                            <div class="popup-change-button__text">
                                 Скачать обложку
                             </div>
                         </div>
