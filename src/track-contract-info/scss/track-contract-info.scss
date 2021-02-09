@@ -234,7 +234,7 @@
     &_padding {
         padding: 5.5vh 6vw 5.5vh 4.7vw;
         @media (max-width: 991.9px) {
-            padding: 34px 21px 31px 12px;
+            padding: 34px 70px 31px 12px;
         }
         @media (max-width: 575.9px) {
             padding: 0 0 31px 0;
@@ -253,26 +253,33 @@
     }
     @media (max-width: 991.9px) {
         border-radius: 0;
+        @include grid (1fr 1fr, auto auto 220px auto, 65px, 14px);
     }
 }
 
 .grid-cell {
-    border: 1px dashed #000;
+    // border: 1px dashed #000;
     &_requisites {
         grid-column: 2/span 2;
+        @media (max-width: 991.9px) {
+            grid-column: 1/span 2;
+        }
     }
     justify-content: flex-start;
 }
 
 .info-cell {
-    border: 1px solid lightgreen;
+    //border: 1px solid lightgreen;
     display: inline-block;
     box-sizing: border-box;
     @media (max-width: 991.9px) {
-        @include grid (1fr 1fr, auto, 0, 0);
+        //@include grid (1fr 1fr, auto, 0, 0);
     }
     &_requisites {
         height: 100%;
+        @media (max-width: 991.9px) {
+            margin-right: 55px;
+        }
     }
     &_gray {
         border-radius: 12px;
@@ -284,6 +291,9 @@
     &__text {
         &_grid {
             @include grid (1fr, auto, 0, 25px);
+            @media (max-width: 991.9px) {
+                row-gap: 20px;
+            }
         }
         // &_bold {
         //     font-weight: 700;
