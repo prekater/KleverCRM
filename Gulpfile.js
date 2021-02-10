@@ -58,12 +58,16 @@ gulp.task('all-css', async () => {
         .pipe(autoprefixer({
             cascade: false
         }))
+        .pipe(concat('styles.css'))
         // .pipe(cleanCSS({compatibility: 'ie9', advanced: false}))
-        .pipe(rename((p) => ({
-          dirname: '/styles',
-          basename: 'styles',
-          extname: p.extname
-        })))
+        .pipe(rename((p) => {
+          console.log(p);
+          return ({
+            dirname: '/styles',
+            basename: p.basename,
+            extname: p.extname
+          })
+        }))
 
     .pipe(gulp.dest('./build'));
 });
@@ -193,4 +197,4 @@ gulp.task('watch', (cb) => {
 });
 
 gulp.task('start', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'watch', 'browser'));
-gulp.task('build', gulp.series('scss', 'pug', 'images', 'all-images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'all-css', 'all-scripts'));
+gulp.task('build', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'all-css', 'all-images', 'all-scripts', 'watch', 'browser'));
