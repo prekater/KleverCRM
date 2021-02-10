@@ -10,6 +10,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
 const path = require('path');
 const concat = require('gulp-concat');
+const cleanCSS = require('clean-css')
 
 const getFolders = (dir) => {
     return fs.readdirSync(dir)
@@ -40,6 +41,7 @@ gulp.task('scss', () => {
         .pipe(autoprefixer({
             cascade: false
         }))
+        // .pipe(cleanCSS({compatibility: 'ie9', advanced: false}))
         .pipe(rename((p) => ({
           dirname: `${p.basename}/styles`,
           basename: 'styles',
@@ -49,13 +51,14 @@ gulp.task('scss', () => {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('common-css', async () => {
+gulp.task('all-css', async () => {
     return gulp.src('./src/track*/scss/*.scss')
         .pipe(scss().on('error', scss.logError))
         .pipe(gcmq())
         .pipe(autoprefixer({
             cascade: false
         }))
+        // .pipe(cleanCSS({compatibility: 'ie9', advanced: false}))
         .pipe(rename((p) => ({
           dirname: '/styles',
           basename: 'styles',
@@ -65,7 +68,7 @@ gulp.task('common-css', async () => {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('common-scripts', async () => {
+gulp.task('all-scripts', async () => {
     return gulp.src(['./src/track*/scripts/*.js', './src/common/scripts/jquery.nice-select.js', './src/common/scripts/index.js'])
         // .pipe(uglify())
         .pipe(concat('index.js'))
@@ -189,4 +192,5 @@ gulp.task('watch', (cb) => {
     cb();
 });
 
-gulp.task('default', gulp.series('scss', 'pug', 'images', 'all-images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'common-css', 'common-scripts', 'watch', 'browser'));
+gulp.task('start', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'watch', 'browser'));
+gulp.task('build', gulp.series('scss', 'pug', 'images', 'all-images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'all-css', 'all-scripts'));
