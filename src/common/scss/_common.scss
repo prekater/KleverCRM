@@ -1,5 +1,4 @@
 @import 'variables';
-@import 'mixins';
 html {
     overflow-y: scroll;
     height: 100%;
@@ -794,4 +793,56 @@ html {
 .remove-image:active {
     border: 0;
     transition: all .2s ease;
+}
+
+.form-header {
+    &__title {
+        @include fontSize(20, 26, 600);
+        @media (max-width: 575.9px) {
+            @include fontSize(18, 24, 600);
+        }
+    }
+    &__to-all-items {
+        color: $black;
+        text-decoration: none;
+        @include fontSize(14, 20, normal);
+        display: flex;
+        cursor: pointer;
+        @media (max-width: 575.9px) {
+            display: none;
+        }
+    }
+    &_margin {
+        margin-bottom: 3.875vh;
+        @media (max-width: 991.9px) {
+            margin-bottom: 26px;
+        }
+        @media (max-width: 575.9px) {
+            margin-bottom: 18px;
+        }
+    }
+}
+
+.to-all-items {
+    display: none;
+    @media (max-width: 575.9px) {
+        padding-left: 20px;
+        @include fontSize(14, 20, normal);
+        height: 49px;
+        display: flex;
+        width: 100%;
+    }
+    &__img {
+        margin-left: 11px;
+    }
+}
+
+.arrow-to-all-items {
+    margin-left: 11px;
+}
+
+.sort-arrow {
+    display: inline-block;
+    margin-left: 4px;
+    margin-bottom: 2px;
 }
