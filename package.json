@@ -4,8 +4,8 @@
     "description": "Templates klever CRM",
     "main": "index.js",
     "scripts": {
-        "start": "gulp start",
-        "build": "gulp build"
+        "start": "(rm -r build) && (NODE_ENV='development' gulp start)",
+        "build": "(rm -r build) && (gulp build)"
     },
     "keywords": [
         "markup",
@@ -21,6 +21,7 @@
         "clean-css": "^5.0.1",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^7.0.1",
+        "gulp-clean-css": "^4.3.0",
         "gulp-concat": "^2.6.1",
         "gulp-debug": "^4.0.0",
         "gulp-file-include": "^2.2.2",
