@@ -10,6 +10,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
 const path = require('path');
 const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
 
 const getFolders = (dir) => {
     return fs.readdirSync(dir)
@@ -53,15 +54,17 @@ gulp.task('scss', () => {
 gulp.task('all-css', async () => {
     return gulp.src('./src/track*/scss/*.scss')
         .pipe(scss().on('error', scss.logError))
-        // .pipe(concat('styles.css'))
+        .pipe(concat('styles.css'))
         .pipe(gcmq())
+        // .pipe(cleanCSS())
         .pipe(autoprefixer({
             cascade: false
         }))
         .pipe(rename((p) => {
           return ({
             dirname: '/styles',
-            basename: p.basename.replace('track-', ''),
+            // basename: p.basename.replace('track-', ''),
+            basename: 'index',
             extname: p.extname
           })
         }))
