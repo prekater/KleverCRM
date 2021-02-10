@@ -129,6 +129,8 @@ html {
         -webkit-tap-highlight-color: transparent;
         cursor: pointer;
         text-align: center;
+        text-decoration: none;
+        color: $textsecondary;
         &_active {
             color: $black;
             font-weight: 600;
