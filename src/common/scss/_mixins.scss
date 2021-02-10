@@ -1,0 +1,126 @@
+@import 'variables';
+@mixin cardElevation {
+    box-shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
+}
+
+@mixin cardElevationHover {
+    box-shadow: 0px 15px 15px rgba(54, 88, 103, 0.2);
+}
+
+@mixin cardErrorHighlight {
+    box-shadow: 0px 1px 5px rgba(226, 67, 45, 0.2);
+}
+
+@mixin cardErrorHighlightHover {
+    box-shadow: 0px 2px 10px rgba(226, 67, 45, 0.3);
+}
+
+@mixin requestHighlight {
+    box-shadow: 0px 1px 6px rgba(33, 186, 168, 0.3);
+}
+
+@mixin requestHighlightHover {
+    box-shadow: 0px 7px 10px rgba(21, 186, 176, 0.3);
+}
+
+@mixin boxRaduisShadow {
+    box-shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
+    border-radius: 12px;
+}
+
+@mixin fontSize24 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-weight: 600;
+}
+
+@mixin fontSize12 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: normal;
+}
+
+@mixin fontSize20 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+}
+
+@mixin fontSize11 {
+    font-size: 0.6875rem;
+    line-height: 0.875rem;
+    font-weight: normal;
+}
+
+@mixin fontSize14 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+@mixin fontSize13 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+    font-weight: normal;
+}
+
+@mixin fontSize18 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+@mixin fontSize($font-size, $line-height, $font-weight) {
+    font-size: $font-size/16*1rem;
+    line-height: $line-height/16*1rem;
+    font-weight: $font-weight;
+}
+
+@mixin input {
+    background-color: $input-bg;
+    border-radius: 12px;
+    height: 52px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    padding-left: 22px;
+}
+
+@mixin textarea {
+    background-color: $input-bg;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    padding: 10px 22px 10px 22px;
+}
+
+@mixin flexCenter ($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex ($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin focusInput {
+    border: 1px solid $light-gray;
+    outline: none;
+    border-radius: 12px;
+}
+
+@mixin focusButton {
+    border: 1px solid $green;
+    outline: none;
+    border-radius: 12px;
+}
+
+@mixin grid($cols, $rows, $col-gap, $row-gap) {
+    display: grid;
+    grid-template-columns: $cols;
+    grid-template-rows: $rows;
+    grid-column-gap: $col-gap;
+    grid-row-gap: $row-gap;
+}
