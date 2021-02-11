@@ -1,5 +1,6 @@
 .pagination-container {
     width: 100%;
+    box-sizing: border-box;
     @media (max-width: 575.9px) {
         display: none;
     }
@@ -10,62 +11,21 @@
     flex: 0 0 auto;
     margin-left: 36px;
     list-style: none;
-    &__link {
-        color: $black;
-        @include flexCenter(row);
-        width: 26px;
-        height: 26px;
-        background-color: #D4F5F8;
-        border-radius: 12px;
-        @include fontSize(13, 16, 400);
-        text-decoration: none;
-        transition: background-color .3s;
-        margin-right: 12px;
-        margin-top: 30px;
-        &:nth-child(14) {
-            margin-right: 0;
-        }
-        &_active {
-            background-color: $black;
-            color: white;
-        }
-        &:hover {
-            background-color: #D1FFD5;
-        }
-        &_arrow-right {
-            margin-left: 20px;
-        }
-        &_arrow-left {
-            margin-right: 20px;
-        }
-        &:first-child,
-        &:last-child {
-            background: none;
-        }
-    }
 }
 
 .page-item {
     @include flexCenter(row);
-    width: 26px;
-    height: 26px;
-    background-color: #D4F5F8;
-    border-radius: 12px;
-    @include fontSize(13, 16, 400);
+    border: 1px solid $lightBluePagination;
     transition: background-color .3s;
-    margin-right: 12px;
-    margin-top: 30px;
     &:first-child,
-    &:last-child {
-        background: none;
-        width: auto;
-    }
+    &:last-child,
+    &:nth-child(2),
     &:nth-last-child(2) {
         background: none;
         width: auto;
     }
     &_active {
-        background-color: $black;
+        background-color: $bluePagination;
     }
     &_disabled {
         background: none;
@@ -76,8 +36,10 @@
 }
 
 .page-link {
-    color: $black;
+    color: $bluePagination;
+    @include fontSize(16, 20, 400);
     text-decoration: none;
+    padding: 8px 12px 8px 12px;
     &_active {
         color: $white;
     }
