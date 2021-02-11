@@ -10,7 +10,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
 const path = require('path');
 const concat = require('gulp-concat');
-const cleanCSS = require('clean-css')
 
 const getFolders = (dir) => {
     return fs.readdirSync(dir)
@@ -54,16 +53,18 @@ gulp.task('scss', () => {
 gulp.task('all-css', async () => {
     return gulp.src('./src/track*/scss/*.scss')
         .pipe(scss().on('error', scss.logError))
+        // .pipe(concat('styles.css'))
         .pipe(gcmq())
         .pipe(autoprefixer({
             cascade: false
         }))
-        // .pipe(cleanCSS({compatibility: 'ie9', advanced: false}))
-        .pipe(rename((p) => ({
-          dirname: '/styles',
-          basename: 'styles',
-          extname: p.extname
-        })))
+        .pipe(rename((p) => {
+          return ({
+            dirname: '/styles',
+            basename: p.basename.replace('track-', ''),
+            extname: p.extname
+          })
+        }))
 
     .pipe(gulp.dest('./build'));
 });
@@ -71,12 +72,15 @@ gulp.task('all-css', async () => {
 gulp.task('all-scripts', async () => {
     return gulp.src(['./src/track*/scripts/*.js', './src/common/scripts/jquery.nice-select.js', './src/common/scripts/index.js'])
         // .pipe(uglify())
-        .pipe(concat('index.js'))
-        .pipe(rename((p) => ({
-          dirname: '/scripts',
-          basename: 'index',
-          extname: p.extname
-        })))
+        // .pipe(concat('index.js'))
+        .pipe(rename((p) => {
+          // console.log('p', p);
+          return ({
+            dirname: '/scripts',
+            basename: p.dirname === '.' ? p.basename : p.dirname.replace('track-', '').replace('/', '-'),
+            extname: p.extname
+          })
+        }))
 
     .pipe(gulp.dest('./build'));
 });
@@ -150,6 +154,17 @@ gulp.task('fonts', async() => {
     })
 });
 
+gulp.task('all-fonts', async() => {
+
+    return gulp.src('./src/common/fonts/*')
+            .pipe(rename((p) => ({
+              dirname: '/fonts',
+              basename: p.basename,
+              extname: p.extname
+            })))
+            .pipe(gulp.dest('./build'));
+});
+
 gulp.task('common-images', async() => {
     const folders = getFolders('./build');
 
@@ -193,4 +208,4 @@ gulp.task('watch', (cb) => {
 });
 
 gulp.task('start', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'watch', 'browser'));
-gulp.task('build', gulp.series('scss', 'pug', 'images', 'all-images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'all-css', 'all-scripts'));
+gulp.task('build', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'all-css', 'all-images', 'all-scripts', 'all-fonts'));

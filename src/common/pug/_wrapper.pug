@@ -3,15 +3,19 @@ html
     head
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        link(rel='stylesheet', href='./styles/styles.css')
+        if process.env.NODE_ENV === 'development'
+            link(rel='stylesheet', href='./styles/styles.css')
+        else
+            link(rel='stylesheet', href='../styles/styles.css')
         link(rel='icon', href='./images/favicon.svg'  type='image/svg+xml')
+        //script(src='../scripts/app.js')
         title='KleverCRM'
     body.body.flex-row.flex-row_full-height
-        div.preloader  
+        div.preloader
             div.preloader-wrapper
                 div.preloader-wrapper__image
         div.body__overlay
-        include ../html/sidebar.html 
+        include ../html/sidebar.html
         div.flex-column.flex-column_adaptive-height
             include ../html/header.html
             block trackContent
