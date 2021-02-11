@@ -19,7 +19,7 @@ $tabSingerReleases.on("click", function() {
     $(this).addClass("tabs__tab_active");
     $tabSingerInfo.removeClass("tabs__tab_active");
     $tabSingerTracks.removeClass("tabs__tab_active");
-    $singerReleases.css("display", "flex");
+    $singerReleases.css("display", "grid");
     $singerInfo.css("display", "none");
     $singerTracks.css("display", "none");
 });
@@ -28,7 +28,7 @@ $tabSingerTracks.on("click", function() {
     $(this).addClass("tabs__tab_active");
     $tabSingerInfo.removeClass("tabs__tab_active");
     $tabSingerReleases.removeClass("tabs__tab_active");
-    $singerTracks.css("display", "flex");
+    $singerTracks.css("display", "grid");
     $singerInfo.css("display", "none");
     $singerReleases.css("display", "none");
 });
