@@ -1,7 +1,5 @@
-// //переключение между шагами формы
+//переключение между шагами формы
 //проверка заполненности  и праивльности полей первого экрана
-
-
 let stepNumber = 1;
 let toNextStep = document.querySelector(".step-bottom_next");
 let toPrevStep = document.querySelector(".step-bottom_prev");
@@ -49,7 +47,6 @@ let notAllFilled = function() {
 
 let showNext = function() {
     pages.classList.remove('pages_checked');
-
     window.scrollTo(0, 0);
     let formId = `step${stepNumber}_form`;
     let prevFormId = `step${stepNumber - 1}_form`;
@@ -89,6 +86,7 @@ let showNext = function() {
 
 
 }
+
 let showPrev = function() {
     window.scrollTo(0, 0);
     let formId = `step${stepNumber+1}_form`;
@@ -135,12 +133,14 @@ nickname.oninput = function() {
     errorNickname.style.display = "none";
     allFilled();
 };
+
 nickname.onblur = function() {
     if (this.value === "") {
         redDots[0].style.color = 'red';
         notAllFilled();
     }
 };
+
 track.oninput = function() {
     this.classList.remove('field__input_text_invalid');
     errorTrack.style.display = "none";
@@ -148,18 +148,21 @@ track.oninput = function() {
     allFilled();
 
 };
+
 track.onblur = function() {
     if (this.value === "") {
         redDots[1].style.color = 'red';
         notAllFilled();
     }
 };
+
 trackUrl.oninput = function() {
     this.classList.remove('field__input_text_invalid');
     errorTrackUrl.style.display = "none";
     redDots[2].style.color = 'white';
     allFilled();
 };
+
 trackUrl.onblur = function() {
     if (this.value === "") {
         redDots[2].style.color = 'red';
@@ -185,8 +188,7 @@ let checkStep1 = function() {
     }
 }
 
-// //правильности заполнения шага 2
-
+//правильности заполнения шага 2
 let textAuthor = document.getElementById('text_author');
 let errorAuthor = document.querySelector('.field__error-author');
 
@@ -221,6 +223,7 @@ let checkAuthor = function(field) {
         }
     }
 }
+
 let checkSinger = function(field) {
     if ((field.value === null) || (field.value === "") || (field.value === undefined)) {
         return true;
@@ -237,8 +240,6 @@ let checkSinger = function(field) {
         }
     }
 }
-
-
 
 let checkArranger = function(field) {
     if ((field.value === null) || (field.value === "") || (field.value === undefined)) {
@@ -275,6 +276,7 @@ let checkComposer = function(field) {
     }
 
 }
+
 let checkGenre = function(field) {
 
     if ((field.value === null) || (field.value === "") || (field.value === undefined)) {
@@ -371,11 +373,11 @@ toNextStep.onclick = function() {
     }
 }
 toPrevStep.onclick = function() {
-        stepNumber--;
-        showPrev();
-    }
-    // //проверка правильности имейла шаг 6
+    stepNumber--;
+    showPrev();
+}
 
+//проверка правильности имейла шаг 6
 let pageStep6 = document.getElementById('step6');
 let email = document.getElementById('email');
 let errorEmail = document.querySelector('.field__error-email');
@@ -395,7 +397,6 @@ let checkEmail = function() {
     }
 }
 
-
 artistForm.onsubmit = function(evt) {
     evt.preventDefault();
     checkEmail();
@@ -405,42 +406,10 @@ artistForm.onsubmit = function(evt) {
         success.style.display = 'flex';
     }
 }
+
 email.oninput = function() {
     if (this.classList.contains('field__input_text_invalid')) {
         this.classList.remove('field__input_text_invalid');
         errorEmail.style.display = 'none';
     }
 }
-
-
-// подсказки popup в мобилке
-
-$(function() {
-    if ($(window).width() <= 575.9) {
-        p = $('.popup__overlay')
-        popup = $(".popup")
-        body = $('body')
-        $('.field__question').on("click", function() {
-            p.css('display', 'block')
-            $(body).css('overflow', 'hidden')
-            popup.css('animation', 'translating 0.3s linear 1')
-            popupText = $(this).attr('tooltip')
-            $('.popup__content').text(popupText)
-
-        });
-
-        p.click(function(event) {
-            e = event || window.event
-            if (e.target === this) {
-                $(p).css('display', 'none')
-
-                $(body).css('overflow', 'auto')
-            }
-        })
-        $('.popup__close').on("click", function() {
-            p.css('display', 'none')
-            $(body).css('overflow', 'auto')
-
-        });
-    }
-});
