@@ -109,3 +109,10 @@ $(function() {
     });
 
 });
+
+//сортировка по названию
+let trackName = document.getElementById("track-name");
+
+trackName.onclick(function() {
+    console.log("клик по названию");
+})
