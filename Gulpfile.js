@@ -72,12 +72,12 @@ gulp.task('all-css', async () => {
 gulp.task('all-scripts', async () => {
     return gulp.src(['./src/track*/scripts/*.js', './src/common/scripts/index.js'])
         // .pipe(uglify())
-        .pipe(concat('index.js'))
+        // .pipe(concat('index.js'))
         .pipe(rename((p) => {
           // console.log('p', p);
           return ({
             dirname: '/scripts',
-            basename: p.dirname === '.' ? p.basename : p.dirname.replace('track-', '').replace('/', '-'),
+            basename: p.dirname === '.' ? p.basename : p.dirname.replace('track-', '').replace('/', '-').replace('-scripts', ''),
             extname: p.extname
           })
         }))
