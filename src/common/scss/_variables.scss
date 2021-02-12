@@ -15,6 +15,8 @@ $input-bg: #F3F8FA;
 $input-disabled: #CED6D6;
 $line: #EBEFF2;
 $shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
+$lightBluePagination: rgb(222, 226, 230);
+$bluePagination: rgb(0, 123, 255);
 @mixin cardElevation {
     box-shadow: 0px 4px 15px rgba(54, 88, 103, 0.1);
 }
