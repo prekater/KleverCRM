@@ -34,7 +34,7 @@ gulp.task('pug', () => {
 });
 
 gulp.task('scss', () => {
-    return gulp.src('./src/track*/scss/*.scss')
+    return gulp.src('./src/track*/scss/track*.scss')
         .pipe(scss().on('error', scss.logError))
         .pipe(gcmq())
         .pipe(autoprefixer({
@@ -51,7 +51,7 @@ gulp.task('scss', () => {
 });
 
 gulp.task('all-css', async () => {
-    return gulp.src('./src/track*/scss/*.scss')
+    return gulp.src(['./src/track*/scss/current.scss', './src/common/scss/index.scss'])
         .pipe(scss().on('error', scss.logError))
         // .pipe(concat('styles.css'))
         .pipe(gcmq())
@@ -61,7 +61,7 @@ gulp.task('all-css', async () => {
         .pipe(rename((p) => {
           return ({
             dirname: '/styles',
-            basename: p.basename.replace('track-', ''),
+            basename: p.dirname === '.' ? 'styles' : p.dirname.replace('track-', '').replace('/scss', ''),
             extname: p.extname
           })
         }))
@@ -70,9 +70,9 @@ gulp.task('all-css', async () => {
 });
 
 gulp.task('all-scripts', async () => {
-    return gulp.src(['./src/track*/scripts/*.js', './src/common/scripts/jquery.nice-select.js', './src/common/scripts/index.js'])
+    return gulp.src(['./src/track*/scripts/*.js', './src/common/scripts/index.js'])
         // .pipe(uglify())
-        // .pipe(concat('index.js'))
+        .pipe(concat('index.js'))
         .pipe(rename((p) => {
           // console.log('p', p);
           return ({
@@ -208,4 +208,4 @@ gulp.task('watch', (cb) => {
 });
 
 gulp.task('start', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'watch', 'browser'));
-gulp.task('build', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'all-css', 'all-images', 'all-scripts', 'all-fonts'));
+gulp.task('build', gulp.series('pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'all-css', 'all-images', 'all-scripts', 'all-fonts'));
