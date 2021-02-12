@@ -70,9 +70,9 @@ gulp.task('all-css', async () => {
 });
 
 gulp.task('all-scripts', async () => {
-    return gulp.src(['./src/track*/scripts/*.js', './src/common/scripts/jquery.nice-select.js', './src/common/scripts/index.js'])
+    return gulp.src(['./src/track*/scripts/*.js', './src/common/scripts/index.js'])
         // .pipe(uglify())
-        // .pipe(concat('index.js'))
+        .pipe(concat('index.js'))
         .pipe(rename((p) => {
           // console.log('p', p);
           return ({
