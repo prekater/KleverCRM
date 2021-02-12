@@ -107,12 +107,12 @@
 .table-header {
     @include fontSize(13, 18, 500);
     color: $textsecondary;
-    @include grid ( 57px 1.3fr 2.4fr 1fr 1fr 1.1fr 28px, auto, 0, 0);
+    @include grid ( 57px 2fr 1fr 1fr 1fr 1fr 1.1fr 28px, auto, 0, 0);
     align-items: flex-end;
     margin-right: 11px;
     margin-left: 11px;
     @media (max-width: 991.9px) {
-        @include grid ( 57px 24.1vw 44vw 18.3vw 18.4vw 20.1vw 28px, auto, 0, 0);
+        @include grid ( 57px 30vw 18vw 18vw 18vw 18vw 18vw 28px, auto, 0, 0);
     }
     &__cell {
         padding-left: 1vw;
@@ -135,10 +135,10 @@
     border-radius: 12px;
     color: $black;
     @include fontSize(14, 20, 400);
-    @include grid ( 57px 1.3fr 2.4fr 1fr 1fr 1.1fr 28px, auto, 0, 0);
+    @include grid ( 57px 2fr 1fr 1fr 1fr 1fr 1.1fr 28px, auto, 0, 0);
     align-items: center;
     @media (max-width: 991.9px) {
-        @include grid ( 57px 24.1vw 44vw 18.3vw 18.4vw 20.1vw 28px, auto, 0, 0);
+        @include grid ( 57px 30vw 18vw 18vw 18vw 18vw 18vw 28px, auto, 0, 0);
     }
     &__cell {
         text-decoration: none;
@@ -181,7 +181,7 @@
         }
         &:first-child::after,
         &:last-child::after,
-        &:nth-child(6)::after {
+        &:nth-child(7)::after {
             border-right: 1px solid transparent;
         }
         &:nth-child(2) {
