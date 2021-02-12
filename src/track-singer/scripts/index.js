@@ -111,8 +111,29 @@ $(function() {
 });
 
 //сортировка по названию
+let tracksBlock = document.getElementById("singer-tracks");
 let trackName = document.getElementById("track-name");
+let tracksTable = document.querySelector(".singer-tracks-table");
+let rows = tracksBlock.querySelectorAll(".tracks-table-row");
+// console.log(rows);
+// console.log(rows[1]);
 
-trackName.onclick(function() {
+
+
+
+
+trackName.onclick = function() {
     console.log("клик по названию");
-})
+    Array.from(rows).sort(function(a, b) {
+        console.log(a.childNodes[2]);
+
+        // var nameA = a.childNodes[1],
+        //     nameB = b[1];
+        // if (nameA < nameB) //сортируем строки по возрастанию
+        //     return -1
+        // if (nameA > nameB)
+        //     return 1
+        // return 0 // Никакой сортировки
+    })
+
+};
