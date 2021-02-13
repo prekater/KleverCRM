@@ -114,26 +114,123 @@ $(function() {
 let tracksBlock = document.getElementById("singer-tracks");
 let trackName = document.getElementById("track-name");
 let tracksTable = document.querySelector(".singer-tracks-table");
-let rows = tracksBlock.querySelectorAll(".tracks-table-row");
-// console.log(rows);
-// console.log(rows[1]);
+let rows = tracksBlock.querySelectorAll(".tracks-table-row-wrapper");
+let rowBlock = tracksBlock.querySelector(".tracks-table-row-wrapper");
+let ascName = true;
 
 
 
 
-
-trackName.onclick = function() {
-    console.log("клик по названию");
-    Array.from(rows).sort(function(a, b) {
-        console.log(a.childNodes[2]);
-
-        // var nameA = a.childNodes[1],
-        //     nameB = b[1];
-        // if (nameA < nameB) //сортируем строки по возрастанию
-        //     return -1
-        // if (nameA > nameB)
-        //     return 1
-        // return 0 // Никакой сортировки
-    })
-
+let sortString = function(cellIndex) {
+    let target = event.target;
+    ascName = !ascName;
+    let sortArrow = target.querySelector(".arrow");
+    if (ascName) {
+        sortArrow.classList.remove("arrow_up");
+        sortArrow.classList.add("arrow_down");
+        let newArray = Array.from(rows);
+        newArray.sort(function(a, b) {
+            let nameA = a.querySelectorAll(".cell-text")[cellIndex].textContent,
+                nameB = b.querySelectorAll(".cell-text")[cellIndex].textContent;
+            if (nameA < nameB) //сортируем строки по возрастанию
+                return -1
+            if (nameA > nameB)
+                return 1
+            return 0 // Никакой сортировки
+        })
+        for (let i of newArray) {
+            tracksTable.appendChild(i);
+        }
+    } else {
+        sortArrow.classList.remove("arrow_down");
+        sortArrow.classList.add("arrow_up");
+        let newArray = Array.from(rows);
+        newArray.sort(function(a, b) {
+            let nameA = a.querySelectorAll(".cell-text")[cellIndex].textContent,
+                nameB = b.querySelectorAll(".cell-text")[cellIndex].textContent;
+            if (nameA > nameB) //сортируем строки по убывванию
+                return -1
+            if (nameA < nameB)
+                return 1
+            return 0 // Никакой сортировки
+        })
+        for (let i of newArray) {
+            tracksTable.appendChild(i);
+        }
+    }
 };
+
+let sortNumber = function(cellIndex) {
+    let target = event.target;
+    ascName = !ascName;
+    let sortArrow = target.querySelector(".arrow");
+
+    if (ascName) {
+        sortArrow.classList.remove("arrow_up");
+        sortArrow.classList.add("arrow_down");
+        let newArray = Array.from(rows);
+        newArray.sort(function(a, b) {
+            let A = a.querySelectorAll(".cell-text")[cellIndex].textContent,
+                B = b.querySelectorAll(".cell-text")[cellIndex].textContent;
+            return A - B
+
+        })
+        for (let i of newArray) {
+            tracksTable.appendChild(i);
+        }
+    } else {
+        sortArrow.classList.remove("arrow_down");
+        sortArrow.classList.add("arrow_up");
+        let newArray = Array.from(rows);
+        newArray.sort(function(a, b) {
+            let A = a.querySelectorAll(".cell-text")[cellIndex].textContent,
+                B = b.querySelectorAll(".cell-text")[cellIndex].textContent;
+            return B - A
+        })
+        for (let i of newArray) {
+            tracksTable.appendChild(i);
+        }
+    }
+};
+
+// trackName.onclick = function() {
+//     console.log(this.dataset.index);
+// }
+
+// trackName.onclick = function() {
+//     ascName = !ascName;
+//     let sortArrow = this.querySelector(".arrow");
+//     if (ascName) {
+//         sortArrow.classList.remove("arrow_up");
+//         sortArrow.classList.add("arrow_down");
+//         let newArray = Array.from(rows);
+//         newArray.sort(function(a, b) {
+//             var nameA = a.querySelector(".track-name-cell").textContent,
+//                 nameB = b.querySelector(".track-name-cell").textContent;
+//             if (nameA < nameB) //сортируем строки по возрастанию
+//                 return -1
+//             if (nameA > nameB)
+//                 return 1
+//             return 0 // Никакой сортировки
+//         })
+//         for (let i of newArray) {
+//             tracksTable.appendChild(i);
+//         }
+//     } else {
+//         sortArrow.classList.remove("arrow_down");
+//         sortArrow.classList.add("arrow_up");
+//         let newArray = Array.from(rows);
+//         newArray.sort(function(a, b) {
+//             var nameA = a.querySelector(".track-name-cell").textContent,
+//                 nameB = b.querySelector(".track-name-cell").textContent;
+//             if (nameA > nameB) //сортируем строки по убывванию
+//                 return -1
+//             if (nameA < nameB)
+//                 return 1
+//             return 0 // Никакой сортировки
+//         })
+//         for (let i of newArray) {
+//             tracksTable.appendChild(i);
+//         }
+//     }
+// };
