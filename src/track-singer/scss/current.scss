@@ -913,9 +913,9 @@
     -webkit-overflow-scrolling: touch;
     margin-left: 36px;
     margin-right: 36px;
-    border-spacing: 0px;
-    border-spacing: 0px;
+    //border-spacing: 10px;
     position: relative;
+    border-collapse: collapse;
     @media (max-width: 991.9px) {
         width: 1000px;
     }
@@ -926,7 +926,7 @@
     }
     &__header-cell {
         box-sizing: border-box;
-        border-spacing: 0px;
+        // border-spacing: 0px;
         @include fontSize(13,
         18,
         500);
@@ -955,20 +955,12 @@
             }
         }
     }
-    &-body::before {
-        height: 10px;
-        display: table-row;
-        content: '';
-    }
     &-row {
+        border: 10px solid $main-bg;
         position: relative;
         background-color: $white;
-        &:hover {
-            border: 3px solid pink;
-        }
     }
     &__cell {
-        border-spacing: 0px;
         @include fontSize(14,
         20,
         400);

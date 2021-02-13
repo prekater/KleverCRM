@@ -1,3 +1,7 @@
+$(function() {
+    $("#singer_tracks").tablesorter();
+});
+
 //переключение между табами в информации об артисте
 let $tabSingerInfo = $('#tab-singer-info');
 let $tabSingerTracks = $('#tab-singer-tracks');
