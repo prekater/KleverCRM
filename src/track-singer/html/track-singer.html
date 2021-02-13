@@ -337,83 +337,124 @@
 
         <div class="singer-tracks" id="singer-tracks">
 
-
-
-
-            <table>
-
-                <tr class="table-header">
-                    <th class="image-cell"></th>
-                    <th class="wide-cell">Название <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </th>
-                    <th class="wide-cell">Релиз</th>
-                    <th>Сумма доходов (без УСН)</th>
-                    <th>Сумма доходов</th>
-                    <th>Прибыль лейбла сейчас</th>
-                    <th>Сумма долей лейбла</th>
-                    <th>Сумма долей артиста</th>
-                    <th class="buttons-cell"></th>
-                </tr>
-
-                <tbody class="section">
+            <table class="inner-table inner-table_singer-tracks">
+                <thead class="inner-table-header">
                     <tr>
-                        <td class="image-cell"><img src="./images/cover2.png" alt="Обложка" /></td>
-                        <td class="wide-cell">Don’t Say Goodbye, remember me</td>
-                        <td class="wide-cell">Send Them To Coventry (Mixtars)</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td class="buttons-cell">
+                        <th class="inner-table__header-cell inner-table__header-cell_image"></th>
+                        <th class="inner-table__header-cell inner-table__header-cell_wide">
+                            Название
+                            <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow">
+                        </th>
+                        <th class="inner-table__header-cell inner-table__header-cell_wide">Исполнитель</th>
+                        <th class="inner-table__header-cell inner-table__header-cell_wide">Релиз</th>
+                        <th class="inner-table__header-cell">Сумма доходов</th>
+                        <th class="inner-table__header-cell">Сумма долей лейбла</th>
+                        <th class="inner-table__header-cell">Сумма долей артиста</th>
+                        <th class="inner-table__header-cell">Денег к выплате</th>
+
+                        <th class="inner-table__header-cell">Выплачено артисту</th>
+                        <th class="inner-table__header-cell inner-table__header-cell_buttons"></th>
+                    </tr>
+                </thead>
+                <tbody class="inner-table-body">
+                    <tr class="inner-table-row">
+                        <td class="inner-table__cell">
+                            <img src="./images/cover2.png" alt="Обложка">
+                        </td>
+                        <td class="inner-table__cell inner-table__cell_bold inner-table__cell_wide">
+                            <span class="cell-text cell-text_2rows">Don’t Say Goodbye, remember me</span>
+                        </td>
+                        <td class="inner-table__cell inner-table__cell_wide">
+                            <span class="cell-text cell-text_2rows">Ivan Ivanov Ivanovich</span>
+                        </td>
+
+                        <td class="inner-table__cell inner-table__cell_green inner-table__cell_wide">
+                            <span class="cell-text cell-text_2rows">Send Them To Coventry (Mixtars)</span>
+                        </td>
+                        <td class="inner-table__cell">100 890 095 ₽</td>
+                        <td class="inner-table__cell">45 565 ₽</td>
+                        <td class="inner-table__cell">567 987 ₽</td>
+                        <td class="inner-table__cell">2 567 095 ₽</td>
+                        <td class="inner-table__cell inner-table__cell_bold">1 890 ₽</td>
+                        <td class="inner-table__cell inner-table__cell_buttons">
+
                             <a href="" class="singers-table-button">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз">
                             </a>
                             <a href="" class="singers-table-button">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз">
                             </a>
+
                         </td>
                     </tr>
                 </tbody>
-                <tbody class="section">
-                    <tr>
-                        <td class="image-cell"><img src="./images/cover2.png" alt="Обложка" /></td>
-                        <td class="wide-cell">Don’t Say Goodbye, remember me</td>
-                        <td class="wide-cell">Send Them To Coventry (Mixtars)</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td class="buttons-cell">
+                <tbody class="inner-table-body">
+                    <tr class="inner-table-row">
+                        <td class="inner-table__cell inner-table__cell_image">
+                            <img src="./images/cover2.png" alt="Обложка">
+                        </td>
+                        <td class="inner-table__cell inner-table__cell_bold inner-table__cell_wide">
+                            <span class="cell-text cell-text_2rows">Don’t Say Goodbye, remember me</span>
+                        </td>
+                        <td class="inner-table__cell inner-table__cell_wide">
+                            <span class="cell-text cell-text_2rows">Ivan Ivanov Ivanovich</span>
+                        </td>
+
+                        <td class="inner-table__cell inner-table__cell_green inner-table__cell_wide">
+                            <span class="cell-text cell-text_2rows">Send Them To Coventry (Mixtars)</span>
+                        </td>
+                        <td class="inner-table__cell">100 890 095 ₽</td>
+                        <td class="inner-table__cell">45 565 ₽</td>
+                        <td class="inner-table__cell">567 987 ₽</td>
+                        <td class="inner-table__cell">2 567 095 ₽</td>
+                        <td class="inner-table__cell inner-table__cell_bold">1 890 ₽</td>
+                        <td class="inner-table__cell inner-table__cell_buttons">
+
                             <a href="" class="singers-table-button">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз">
                             </a>
                             <a href="" class="singers-table-button">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз">
                             </a>
+
                         </td>
                     </tr>
                 </tbody>
-                <tbody class="section">
-                    <tr>
-                        <td class="image-cell"><img src="./images/cover2.png" alt="Обложка" /></td>
-                        <td class="wide-cell">Don’t Say Goodbye, remember me</td>
-                        <td class="wide-cell">Send Them To Coventry (Mixtars)</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td>1 890 095 ₽</td>
-                        <td class="buttons-cell">
+
+                <tbody class="inner-table-body">
+                    <tr class="inner-table-row">
+                        <td class="inner-table__cell inner-table__cell_image">
+
+                        </td>
+                        <td class="inner-table__cell inner-table__cell_bold inner-table__cell_wide">
+                            <span class="cell-text cell-text_2rows"></span>
+                        </td>
+                        <td class="inner-table__cell inner-table__cell_wide">
+                            <span class="cell-text cell-text_2rows"></span>
+                        </td>
+
+                        <td class="inner-table__cell inner-table__cell_green inner-table__cell_wide">
+                            <span class="cell-text cell-text_2rows"></span>
+                        </td>
+                        <td class="inner-table__cell"></td>
+                        <td class="inner-table__cell"></td>
+                        <td class="inner-table__cell"></td>
+                        <td class="inner-table__cell"></td>
+                        <td class="inner-table__cell inner-table__cell_bold"></td>
+                        <td class="inner-table__cell inner-table__cell_buttons">
+
                             <a href="" class="singers-table-button">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз">
                             </a>
                             <a href="" class="singers-table-button">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз">
                             </a>
+
                         </td>
                     </tr>
                 </tbody>
+
+
             </table>
 
         </div>
