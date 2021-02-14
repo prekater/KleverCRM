@@ -109,3 +109,89 @@ $(function() {
     });
 
 });
+
+//сортировка по названию
+let tracksBlock = document.getElementById("singer-tracks");
+let trackName = document.getElementById("track-name");
+let tracksTable = document.querySelector(".singer-tracks-table");
+let rows = tracksBlock.querySelectorAll(".tracks-table-row-wrapper");
+let rowBlock = tracksBlock.querySelector(".tracks-table-row-wrapper");
+let ascSort = true;
+
+
+
+
+let sortString = function(cellIndex) {
+    let target = event.target;
+    ascSort = !ascSort;
+    let sortArrow = target.querySelector(".arrow");
+    if (ascSort) {
+        sortArrow.classList.remove("arrow_up");
+        sortArrow.classList.add("arrow_down");
+        let newArray = Array.from(rows);
+        newArray.sort(function(a, b) {
+            let nameA = a.querySelectorAll(".cell-text")[cellIndex].textContent,
+                nameB = b.querySelectorAll(".cell-text")[cellIndex].textContent;
+            if (nameA < nameB) //сортируем строки по возрастанию
+                return -1
+            if (nameA > nameB)
+                return 1
+            return 0 // Никакой сортировки
+        })
+        for (let i of newArray) {
+            tracksTable.appendChild(i);
+        }
+    } else {
+        sortArrow.classList.remove("arrow_down");
+        sortArrow.classList.add("arrow_up");
+        let newArray = Array.from(rows);
+        newArray.sort(function(a, b) {
+            let nameA = a.querySelectorAll(".cell-text")[cellIndex].textContent,
+                nameB = b.querySelectorAll(".cell-text")[cellIndex].textContent;
+            if (nameA > nameB) //сортируем строки по убывванию
+                return -1
+            if (nameA < nameB)
+                return 1
+            return 0 // Никакой сортировки
+        })
+        for (let i of newArray) {
+            tracksTable.appendChild(i);
+        }
+    }
+};
+
+let sortNumber = function(cellIndex) {
+    let target = event.target;
+    ascSort = !ascSort;
+    let sortArrow = target.querySelector(".arrow");
+
+    if (ascSort) {
+        sortArrow.classList.remove("arrow_up");
+        sortArrow.classList.add("arrow_down");
+        let newArray = Array.from(rows);
+        newArray.sort(function(a, b) {
+            let valueA = a.querySelectorAll(".cell-text")[cellIndex].textContent,
+                valueB = b.querySelectorAll(".cell-text")[cellIndex].textContent,
+                numberA = valueA.replace(/[\s\p{Sc}]/gu, ""),
+                numberB = valueB.replace(/[\s\p{Sc}]/gu, "");
+            return numberA - numberB
+        })
+        for (let i of newArray) {
+            tracksTable.appendChild(i);
+        }
+    } else {
+        sortArrow.classList.remove("arrow_down");
+        sortArrow.classList.add("arrow_up");
+        let newArray = Array.from(rows);
+        newArray.sort(function(a, b) {
+            let valueA = a.querySelectorAll(".cell-text")[cellIndex].textContent,
+                valueB = b.querySelectorAll(".cell-text")[cellIndex].textContent,
+                numberA = valueA.replace(/[\s\p{Sc}]/gu, ""),
+                numberB = valueB.replace(/[\s\p{Sc}]/gu, "");
+            return numberB - numberA
+        })
+        for (let i of newArray) {
+            tracksTable.appendChild(i);
+        }
+    }
+};
