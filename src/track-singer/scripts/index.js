@@ -116,16 +116,16 @@ let trackName = document.getElementById("track-name");
 let tracksTable = document.querySelector(".singer-tracks-table");
 let rows = tracksBlock.querySelectorAll(".tracks-table-row-wrapper");
 let rowBlock = tracksBlock.querySelector(".tracks-table-row-wrapper");
-let ascName = true;
+let ascSort = true;
 
 
 
 
 let sortString = function(cellIndex) {
     let target = event.target;
-    ascName = !ascName;
+    ascSort = !ascSort;
     let sortArrow = target.querySelector(".arrow");
-    if (ascName) {
+    if (ascSort) {
         sortArrow.classList.remove("arrow_up");
         sortArrow.classList.add("arrow_down");
         let newArray = Array.from(rows);
@@ -162,18 +162,19 @@ let sortString = function(cellIndex) {
 
 let sortNumber = function(cellIndex) {
     let target = event.target;
-    ascName = !ascName;
+    ascSort = !ascSort;
     let sortArrow = target.querySelector(".arrow");
 
-    if (ascName) {
+    if (ascSort) {
         sortArrow.classList.remove("arrow_up");
         sortArrow.classList.add("arrow_down");
         let newArray = Array.from(rows);
         newArray.sort(function(a, b) {
-            let A = a.querySelectorAll(".cell-text")[cellIndex].textContent,
-                B = b.querySelectorAll(".cell-text")[cellIndex].textContent;
-            return A - B
-
+            let valueA = a.querySelectorAll(".cell-text")[cellIndex].textContent,
+                valueB = b.querySelectorAll(".cell-text")[cellIndex].textContent,
+                numberA = valueA.replace(/[\s\p{Sc}]/gu, ""),
+                numberB = valueB.replace(/[\s\p{Sc}]/gu, "");
+            return numberA - numberB
         })
         for (let i of newArray) {
             tracksTable.appendChild(i);
@@ -183,54 +184,14 @@ let sortNumber = function(cellIndex) {
         sortArrow.classList.add("arrow_up");
         let newArray = Array.from(rows);
         newArray.sort(function(a, b) {
-            let A = a.querySelectorAll(".cell-text")[cellIndex].textContent,
-                B = b.querySelectorAll(".cell-text")[cellIndex].textContent;
-            return B - A
+            let valueA = a.querySelectorAll(".cell-text")[cellIndex].textContent,
+                valueB = b.querySelectorAll(".cell-text")[cellIndex].textContent,
+                numberA = valueA.replace(/[\s\p{Sc}]/gu, ""),
+                numberB = valueB.replace(/[\s\p{Sc}]/gu, "");
+            return numberB - numberA
         })
         for (let i of newArray) {
             tracksTable.appendChild(i);
         }
     }
 };
-
-// trackName.onclick = function() {
-//     console.log(this.dataset.index);
-// }
-
-// trackName.onclick = function() {
-//     ascName = !ascName;
-//     let sortArrow = this.querySelector(".arrow");
-//     if (ascName) {
-//         sortArrow.classList.remove("arrow_up");
-//         sortArrow.classList.add("arrow_down");
-//         let newArray = Array.from(rows);
-//         newArray.sort(function(a, b) {
-//             var nameA = a.querySelector(".track-name-cell").textContent,
-//                 nameB = b.querySelector(".track-name-cell").textContent;
-//             if (nameA < nameB) //сортируем строки по возрастанию
-//                 return -1
-//             if (nameA > nameB)
-//                 return 1
-//             return 0 // Никакой сортировки
-//         })
-//         for (let i of newArray) {
-//             tracksTable.appendChild(i);
-//         }
-//     } else {
-//         sortArrow.classList.remove("arrow_down");
-//         sortArrow.classList.add("arrow_up");
-//         let newArray = Array.from(rows);
-//         newArray.sort(function(a, b) {
-//             var nameA = a.querySelector(".track-name-cell").textContent,
-//                 nameB = b.querySelector(".track-name-cell").textContent;
-//             if (nameA > nameB) //сортируем строки по убывванию
-//                 return -1
-//             if (nameA < nameB)
-//                 return 1
-//             return 0 // Никакой сортировки
-//         })
-//         for (let i of newArray) {
-//             tracksTable.appendChild(i);
-//         }
-//     }
-// };
