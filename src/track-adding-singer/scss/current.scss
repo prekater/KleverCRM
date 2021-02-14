@@ -1,154 +1,123 @@
 @import "./../../common/scss/variables";
-
-.main-block {
-  transition: padding 0.5s;
-
-  &_padding {
-    padding-top: 60px;
-    padding-left: 70px;
-
-    @media (max-width: 991.9px) {
-      padding-left: 0;
-    }
-  }
-}
-
 .adding-singer {
-  @media (max-width: 991.9px) {
-    width: 100%;
-  }
+    @media (max-width: 991.9px) {
+        width: 100%;
+    }
 }
 
 .main-form {
-  width: 61.4vw;
-
-  @media (max-width: 1399.9px) {
-    width: 76.7vw;
-  }
-
-  @media (max-width: 991.9px) {
-    width: 100%;
-  }
+    width: 61.4vw;
+    @media (max-width: 1399.9px) {
+        width: 76.7vw;
+    }
+    @media (max-width: 991.9px) {
+        width: 100%;
+    }
 }
 
 .form_margin-singers {
-  margin-top: 4vh;
-  margin-bottom: 3.25vh;
-
-  @media (max-width: 991.9px) {
-    margin-top: 30px;
-    margin-bottom: 36px;
-  }
-
-  @media (max-width: 575.9px) {
-    margin-top: 0;
-    margin-bottom: 22px;
-  }
+    margin-top: 4vh;
+    margin-bottom: 3.25vh;
+    @media (max-width: 991.9px) {
+        margin-top: 30px;
+        margin-bottom: 36px;
+    }
+    @media (max-width: 575.9px) {
+        margin-top: 0;
+        margin-bottom: 22px;
+    }
 }
 
 .form_padding-singers {
-  padding: 31px 36px 36px 36px;
-
-  @media (max-width: 991.9px) {
-    padding: 24px 18px 31px 20px;
-  }
-
-  @media (max-width: 575.9px) {
-    padding: 26px 20px 22px 20px;
-  }
+    padding: 31px 36px 36px 36px;
+    @media (max-width: 991.9px) {
+        padding: 24px 18px 31px 20px;
+    }
+    @media (max-width: 575.9px) {
+        padding: 26px 20px 22px 20px;
+    }
 }
 
 .grid {
-  box-sizing: border-box;
-  @include grid (1fr 1fr, auto, 1.6vw, 3vh);
-
-  @media (max-width: 991.9px) {
-    @include grid (1fr, auto, 24px, 24px);
-    padding-right: 50px;
-  }
-
-  @media (max-width: 575.9px) {
-    width: 100%;
-    @include grid (1fr, auto, auto, 22px);
-    padding-right: 0;
-  }
+    box-sizing: border-box;
+    @include grid (1fr 1fr, auto, 1.6vw, 3vh);
+    @media (max-width: 991.9px) {
+        @include grid (1fr, auto, 24px, 24px);
+        padding-right: 50px;
+    }
+    @media (max-width: 575.9px) {
+        width: 100%;
+        @include grid (1fr, auto, auto, 22px);
+        padding-right: 0;
+    }
 }
 
 .field_limit {
-  width: 190px;
+    width: 190px;
 }
 
 .field__question {
-  margin-left: 27px;
+    margin-left: 27px;
 }
 
 .field_is-group {
-
-  /*"родной" инпут не скрывается полностью, чтобы остатсья доступным для фокуса*/
-  .field__input_checkbox {
-    opacity: 0;
-  }
-
-  .input-wrapper {
-    height: 52px;
-  }
-
-  .field__input_checkbox~label::before {
-    transition: all 0.2s;
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-    vertical-align: middle;
-    background: #EBEFF2;
-    border-radius: 4px;
-  }
-
-  .field__input_checkbox:checked+label::before {
-    transition: all 0.2s;
-    background-color: #21BAA8;
-    background-image: url("./../images/white_check_mark.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .field__input_checkbox:focus+label::before {
-    border: 1px solid $light-gray;
-    outline: none;
-  }
+    /*"родной" инпут не скрывается полностью, чтобы остатсья доступным для фокуса*/
+    .field__input_checkbox {
+        opacity: 0;
+    }
+    .input-wrapper {
+        height: 52px;
+    }
+    .field__input_checkbox~label::before {
+        transition: all 0.2s;
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+        vertical-align: middle;
+        background: #EBEFF2;
+        border-radius: 4px;
+    }
+    .field__input_checkbox:checked+label::before {
+        transition: all 0.2s;
+        background-color: #21BAA8;
+        background-image: url("./../images/white_check_mark.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .field__input_checkbox:focus+label::before {
+        border: 1px solid $light-gray;
+        outline: none;
+    }
 }
 
 .input-wrapper {
-  &_instagram:after {
-    right: 7px;
-    bottom: 13.5px;
-    background-image: url("./../images/insta.svg");
-  }
-
-  &_vk:after {
-    right: 7px;
-    bottom: 13.5px;
-    background-image: url("./../images/vk.svg");
-  }
-
-  &_web:after {
-    right: 7px;
-    bottom: 13.5px;
-    background-image: url("./../images/web.svg");
-  }
-
-  &_apple:after {
-    right: 7px;
-    bottom: 13.5px;
-    background-image: url("./../images/apple.svg");
-  }
-
-  &_spotify:after {
-    right: 7px;
-    bottom: 13.5px;
-    background-image: url("./../images/spotify.svg");
-  }
+    &_instagram:after {
+        right: 7px;
+        bottom: 13.5px;
+        background-image: url("./../images/insta.svg");
+    }
+    &_vk:after {
+        right: 7px;
+        bottom: 13.5px;
+        background-image: url("./../images/vk.svg");
+    }
+    &_web:after {
+        right: 7px;
+        bottom: 13.5px;
+        background-image: url("./../images/web.svg");
+    }
+    &_apple:after {
+        right: 7px;
+        bottom: 13.5px;
+        background-image: url("./../images/apple.svg");
+    }
+    &_spotify:after {
+        right: 7px;
+        bottom: 13.5px;
+        background-image: url("./../images/spotify.svg");
+    }
 }
 
 // .button {
@@ -199,5 +168,5 @@
 //     }
 // }
 #added_success_singer {
-  display: none;
+    display: none;
 }
