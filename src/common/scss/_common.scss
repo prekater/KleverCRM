@@ -841,8 +841,18 @@ html {
     margin-left: 11px;
 }
 
-.sort-arrow {
+.arrow {
     display: inline-block;
     margin-left: 4px;
     margin-bottom: 2px;
+    border: solid #1a1a1a;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 2px;
+    &_up {
+        transform: rotate(-135deg);
+    }
+    &_down {
+        transform: rotate(45deg);
+    }
 }

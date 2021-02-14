@@ -903,47 +903,112 @@
     0);
 }
 
-table,
-th,
-td {
-    border-spacing: 0px;
-}
-
-table {
+.singer-tracks-table {
     align-self: flex-start;
+    width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin-left: 36px;
-    margin-right: 36px;
-    //width: 100%;
-    // @media (max-width: 991.9px) {
-    //     max-width: 98vw;
-    // }
-    tr {
-        position: relative;
-        background-color: $white;
-        text-align: left;
+    @include grid(1fr,
+    auto,
+    0,
+    10px);
+    @media (max-width: 991.9px) {
+        max-width: 98vw;
     }
-    .table-header {
-        background-color: $main-bg;
+    @media (max-width: 575.9px) {
+        width: auto;
     }
-    th {
-        @include fontSize(13,
-        18,
-        500);
-        color: $textsecondary;
-        padding: 0 2px 0 1vw;
-        @media (max-width: 991.9px) {
-            width: 120px;
+    &_padding {
+        padding-bottom: 30px;
+        padding-right: 2.3vw;
+        padding-left: 2.3vw;
+    }
+}
+
+.tracks-table-header {
+    @include fontSize(13,
+    18,
+    500);
+    color: $textsecondary;
+    @include grid (57px 1.3fr 1.3fr 1.3fr 1fr 1fr 1fr 1fr 1fr 28px,
+    auto,
+    0,
+    0);
+    align-items: flex-end;
+    padding-right: 11px;
+    padding-left: 11px;
+    @media (max-width: 991.9px) {
+        @include grid (57px 22vw 22vw 22vw 15vw 15vw 15vw 15vw 15vw 28px, auto, 0, 0);
+    }
+    @media (max-width: 575.9px) {
+        @include grid (57px 150px 150px 150px 100px 100px 100px 100px 100px 28px,
+        auto,
+        0,
+        0);
+    }
+    &__cell {
+        cursor: pointer;
+        padding-left: 1vw;
+        &_black {
+            color: $black;
         }
     }
-    td {
-        width: 10%;
-        @include fontSize(14,
-        20,
-        400);
-        padding: 11px 9px 11px 1vw;
+}
+
+.tracks-table-row-wrapper {
+    padding: 11px;
+    &:hover {
+        @include cardElevationHover();
+        z-index: 10;
+    }
+}
+
+.tracks-table-row {
+    @include fontSize(14,
+    20,
+    400);
+    @include grid (57px 1.3fr 1.3fr 1.3fr 1fr 1fr 1fr 1fr 1fr 28px,
+    auto,
+    0,
+    0);
+    align-items: center;
+    @media (max-width: 991.9px) {
+        @include grid (57px 22vw 22vw 22vw 15vw 15vw 15vw 15vw 15vw 28px, auto, 0, 0);
+    }
+    @media (max-width: 575.9px) {
+        @include grid (57px 150px 150px 150px 100px 100px 100px 100px 100px 28px,
+        auto,
+        0,
+        0);
+    }
+    &__cell {
         position: relative;
+        height: 100%;
+        padding: 11px 9px 11px 1vw;
+        @media (max-width: 991.9px) {
+            padding: 11px 9px 11px 16px;
+        }
+        &_cover {
+            padding: 5px 0 5px 5px;
+            @include flexCenter(row);
+            background: url("./../images/no_cover_track.svg") no-repeat 50% 50%;
+            height: 64px;
+        }
+        &_no-padding {
+            padding: 0;
+            @media (max-width: 991.9px) {
+                padding: 0;
+            }
+        }
+        &_green {
+            color: $green;
+        }
+        &gray {
+            color: $textsecondary;
+        }
+        &_bold {
+            font-weight: 700;
+        }
         &::after {
             position: absolute;
             content: '';
@@ -954,40 +1019,43 @@ table {
             border-right: 1px solid $line;
             width: 2px;
         }
-        &:nth-last-child(2)::after,
-        &:last-child::after {
-            display: none;
+        &:first-child::after,
+        &:last-child::after,
+        &:nth-last-child(2)::after {
+            border-right: 1px solid transparent;
         }
-        &:first-child {
-            border-top-left-radius: 12px;
-            border-bottom-left-radius: 12px;
-        }
-        &:last-child {
-            border-top-right-radius: 12px;
-            border-bottom-right-radius: 12px;
-        }
-        @media (max-width: 991.9px) {
-            width: 120px;
+        &:nth-child(2) {
+            cursor: pointer;
         }
     }
-    .section::before {
-        height: 10px;
-        display: table-row;
-        content: '';
+}
+
+.cell-text {
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    box-orient: vertical;
+    &_2rows {
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
     }
-    .image-cell {
-        width: 52px;
-    }
-    .wide-cell {
-        width: 20%;
-        @media (max-width: 991.9px) {
-            width: 160px;
-        }
-    }
-    .buttons-cell {
-        width: 28px;
-        padding-left: 0;
-    }
+}
+
+.singer-tracks-table-mobile {
+    display: none;
+    // @media (max-width: 575.9px) {
+    //     flex: 1 0;
+    //     @include grid(1fr,
+    //     auto,
+    //     0,
+    //     14px);
+    // }
 }
 
 .popup-singer {
