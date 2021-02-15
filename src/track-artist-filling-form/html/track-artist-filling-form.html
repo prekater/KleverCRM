@@ -36,7 +36,7 @@
                 <div class="step-title step-title_margin">Основная информация о треке</div>
 
                 <div class="groupped-fields-step1">
-                    <div class="field flex-column ">
+                    <div class="field flex-column">
                         <div class="flex-row flex-row_baseline">
                             <label for="nickname" class="field__label">Никнейм </label><span class="field__red-dot"><sup>&#8226;</sup></span><span class="field__question" tooltip="Ваш псевдоним">?</span>
                         </div>
@@ -52,7 +52,7 @@
                         <div class="field__error-track">Пожалуйста, заполните это поле</div>
                     </div>
 
-                    <div class="field flex-column ">
+                    <div class="field flex-column">
                         <div class="flex-row flex-row_baseline">
                             <label for="track_url" class="field__label">Ссылка на трек</label>
                             <span class="field__red-dot"><sup>&#8226;</sup></span>
@@ -66,7 +66,7 @@
                     <div class="field flex-column">
                         <div class="flex-row flex-row_baseline">
                             <label for="cover_url" class="field__label">Ссылка на обложку</label>
-                            <span class="field__white-dot "><sup>&#8226;</sup></span>
+                            <span class="field__white-dot"><sup>&#8226;</sup></span>
                             <span class="field__question" tooltip="Ссылка на файлообменник для загрузки обложки трека в формате .png">?</span>
                         </div>
                         <input type="text" id="cover_url" name="cover-url-field" class="field__input_text">
@@ -99,7 +99,7 @@
                     </div>
 
                     <div class="field flex-column">
-                        <div class="flex-row flex-row_baseline ">
+                        <div class="flex-row flex-row_baseline">
                             <label for="arranger" class="field__label">Аранжировщик</label>
                         </div>
                         <input type="text" id="arranger" name="arranger-field" class="field__input_text" placeholder="ФИО">
@@ -127,8 +127,8 @@
                             <div class="flex-row flex-row_baseline">
                                 <label for="date" class="field__label">Дата релиза</label>
                             </div>
-                            <div class="input-wrapper input-wrapper_calendar ">
-                                <input type="text" id="date" name="date-field" class="field__input_text ">
+                            <div class="input-wrapper input-wrapper_calendar">
+                                <input type="text" id="date" name="date-field" class="field__input_text">
                             </div>
                             <div class="field__error-date"></div>
                         </div>
@@ -267,14 +267,14 @@
             </div>
 
             <div class="form-bottom form-bottom_margin">
-                <div class="btn step-bottom step-bottom_padding step-bottom_prev flex-row "><img src="./images/arrow_to_left.svg" alt='Предыдущий шаг' class="step-bottom__arrow" />
+                <div class="btn step-bottom step-bottom_padding step-bottom_prev flex-row"><img src="./images/arrow_to_left.svg" alt='Предыдущий шаг' class="step-bottom__arrow" />
                     <div class="step-bottom__text">
                         Предыдущий
                     </div>
                 </div>
                 <div class="pages"><img src="./images/pages_checked.svg" class="pages__success" /><span class="pages__text">1 / 6</span></div>
-                <div class="btn step-bottom step-bottom_next step-bottom_padding flex-row flex-row_center-vertical"><img src="./images/arrow_to_right.svg " alt='Следующий шаг' class="step-bottom__arrow " />
-                    <div class="step-bottom__text ">
+                <div class="btn step-bottom step-bottom_next step-bottom_padding flex-row flex-row_center-vertical"><img src="./images/arrow_to_right.svg" alt='Следующий шаг' class="step-bottom__arrow" />
+                    <div class="step-bottom__text">
                         Следующий
                     </div>
                 </div>
@@ -289,14 +289,15 @@
 
 
     <div class="flex-row flex-row_full-width flex-row_center-vertical flex-row_full-height flex-row_center" id="success">
-        <div class="block block_rounded success flex-column flex-column_center flex-column_center-vertical">
-            <img src="./images/success.svg" alt="Заявка успешно создана" class="success__img">
+        <div class="block block_rounded success-artist-form flex-column flex-column_center flex-column_center-vertical">
+            <img src="./images/success.svg" alt="Заявка успешно создана" class="success-artist-form__img">
             <div class="step-title step-title_margin">Заявка успешно отправлена</div>
-            <div class="success__text">Мы свяжемся с Вами после обработки запроса.</div>
+            <div class="success-artist-form__text">Мы свяжемся с Вами после обработки запроса.</div>
         </div>
     </div>
 
 </div>
+
 <div class="popup__overlay">
     <div class="popup flex-column">
         <a href="#close" title="Close" class="popup__close">×</a>
@@ -304,10 +305,9 @@
     </div>
 </div>
 
-<footer class="copyright ">
+<footer class="copyright">
     © 2020 KleverCrm - Ivan Kostyashov
 </footer>
 
-
-<script src="http://code.jquery.com/jquery-1.8.3.js "></script>
-<script src="../track-artist-filling-form/scripts/index.js "></script>
+<script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script defer src="../track-artist-filling-form/scripts/index.js"></script>

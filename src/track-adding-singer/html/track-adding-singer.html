@@ -1,13 +1,13 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
     <div class="adding-singer" id="adding_singer">
-        <div class="to-singers flex-row flex-row_start flex-row_center-vertical">
-            Список исполнителей <img src="./images/to_releases.svg" alt="К списку исполнителей" class="to-singers__img" />
+        <div class="to-all-items flex-row flex-row_start flex-row_center-vertical">
+            Список исполнителей <img src="./images/to_releases.svg" alt="К списку исполнителей" class="to-all-items__img" />
         </div>
         <form class="block block_rounded form form_margin-singers form_padding-singers main-form" action="" id="create_singer">
             <div class="flex-row flex-row_between flex-row_top-vertical form-header form-header_margin">
                 <div class="form-header__title">Добавить исполнителя</div>
-                <a class="form-header__to-singers" href="./../track-all-singers/index.html">Список исполнителей <img src="./images/to_releases.svg" alt="К списку исполнителей" class="arrow-to-singers" /> </a>
+                <a class="form-header__to-all-items" href="./../track-all-singers/index.html">Список исполнителей <img src="./images/to_releases.svg" alt="К списку исполнителей" class="arrow-to-all-items" /> </a>
             </div>
             <div class="groupped-fields grid">
 
@@ -47,7 +47,7 @@
 
                 <div class="field flex-column field_is-group">
                     <div for="is_group" class="field__label">Является группой</div>
-                    <div class="input-wrapper ">
+                    <div class="input-wrapper">
                         <input type="checkbox" class="field__input_checkbox" id="is_group" name="is_group-field" checked>
                         <label for="is_group"></label>
                     </div>
@@ -88,13 +88,10 @@
                     </div>
                 </div>
 
-                <div class="two-buttons">
-                    <button type="submit" class="button ">Создать</button>
-                    <button class="button button_cancel" type="reset">Отменить</button>
+                <div class="form-two-buttons">
+                    <button type="submit" class="form-button">Создать</button>
+                    <button class="form-button form-button_cancel" type="reset">Отменить</button>
                 </div>
-
-
-
 
             </div>
         </form>
@@ -118,14 +115,13 @@
         </div>
     </div>
 
-
-    <div class="popup__overlay ">
-        <div class="popup flex-column ">
-            <a href="#close " title="Close " class="popup__close ">×</a>
-            <div class="popup__content "></div>
+    <div class="popup__overlay">
+        <div class="popup flex-column">
+            <a href="#close" title="Close" class="popup__close">×</a>
+            <div class="popup__content"></div>
         </div>
     </div>
 
 </div>
-<script async src="http://code.jquery.com/jquery-1.8.3.js "></script>
-<script async src="../track-adding-singer/scripts/index.js "></script>
+<script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script defer src="../track-adding-singer/scripts/index.js"></script>
