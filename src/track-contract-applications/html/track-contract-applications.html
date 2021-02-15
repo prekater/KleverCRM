@@ -6,7 +6,7 @@
                 <img src="./images/arrow_to_left.svg" alt="Вернуться к договорам" class="to-all-items-from-item__img" /> Все договоры
             </a>
 
-            <div class="cover-and-name cover-and-name_margin cover-and-name_padding">
+            <div class="cover-and-name cover-and-name_contract-applications cover-and-name_margin cover-and-name_padding">
                 <div class="item-name flex-column">
                     <span class="item-name__contract">Договор</span>
                     <span class="item-name__name">№254169</span>
@@ -28,49 +28,38 @@
                 <img src="./images/ellipses.svg" alt="Меню договора" class="cover-and-name__ellipses">
             </div>
 
-            <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_between">
+            <div class="tabs-and-add tabs-and-add_contract-applications tabs-and-add_margin flex-row flex-row_between flex-row_between">
                 <div class="tabs tabs_contract">
                     <a class="tabs__tab" href="./../track-contract-info/index.html">Сведения</a>
-                    <a class="tabs__tab tabs__tab_active">Релизы</a>
-                    <a class="tabs__tab" href="./../track-contract-applications/index.html">Приложения</a>
+                    <a class="tabs__tab" href="./../track-contract-releases/index.html">Релизы</a>
+                    <a class="tabs__tab tabs__tab_active">Приложения</a>
                 </div>
             </div>
         </div>
 
-        <div class="item-table-block" id="singer-tracks">
-            <div class="item-table item-table_padding item-table_contract-releases">
-                <div class="item-table-header item-table-header_contract-releases">
-                    <div class="item-table-header__cell"></div>
-                    <div class="item-table-header__cell item-table-header__cell_padding item-table-header__cell_black" id="track-name" data-index="0" onclick="sortString(0)">Название <span class="arrow arrow_down"></span> </div>
-                    <div class="item-table-header__cell" onclick="sortString(1)">Исполнитель <span class="arrow arrow_down"></span></div>
-                    <div class="item-table-header__cell" onclick="sortString(2)">Подлейбл <span class="arrow arrow_down"></span></div>
-                    <div class="item-table-header__cell" onclick="sortString(3)">Тип<span class="arrow arrow_down"></span></div>
-                    <div class="item-table-header__cell" onclick="sortNumber(4)">Дата релиза<span class=" arrow arrow_down "></span></div>
-                    <div class="item-table-header__cell" onclick="sortNumber(5)">Доля лейбла<span class="arrow arrow_down"></span></div>
+        <div class="item-table-block item-table-block_contract-applications">
+            <div class="item-table item-table_padding item-table_contract-applications">
+                <div class="item-table-header item-table-header_contract-applications">
+
+                    <div class="item-table-header__cell item-table-header__cell_padding item-table-header__cell_black" id="track-name" data-index="0" onclick="sortString(0)">Приложение к договору<span class="arrow arrow_down"></span> </div>
+                    <div class="item-table-header__cell" onclick="sortString(1)">Дата начала<span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell" onclick="sortString(2)">Статус договора<span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell" onclick="sortString(3)">Дата окончания<span class="arrow arrow_down"></span></div>
                     <div class="item-table-header__cell"></div>
                 </div>
                 <div class="item-table-row-wrapper block block_rounded">
-                    <div class="item-table-row item-table-row_contract-releases">
-                        <div class="item-table-row__cell item-table-row__cell_cover">
-                            <img src="./images/cover3.png" alt="Обложка" />
-                        </div>
+                    <div class="item-table-row item-table-row_contract-applications">
                         <a href="#" class="item-table-row__cell item-table-row__cell_bold">
-                            <div class="cell-text cell-text_2rows">Ололо пыщ пыщ</div>
+                            <div class="cell-text cell-text_2rows">№2998773</div>
                         </a>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text cell-text_2rows">Bolshevseh</div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_green">
-                            <div class="cell-text cell-text_2rows">Send Them To Coventry (Mixtars)</div>
+                        <div class="item-table-row__cell item-table-row__cell_gray">
+                            <div class="cell-text cell-text_2rows">29 дек 2019</div>
                         </div>
                         <div class="item-table-row__cell">
-                            <div class="cell-text">452 452 ₽</div>
+                            <div class="cell-text">Ожидание инф./рек.</div>
                         </div>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text">15 ₽</div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_bold">
-                            <div class="cell-text">1 452 095 ₽</div>
+                        <div class="item-table-row__cell item-table-row__cell_gray">
+                            <div class="cell-text cell-text_2rows">29 дек 2024</div>
                         </div>
                         <div class="item-table-row__cell item-table-row__cell_no-padding flex-column flex-column_between">
                             <a href="" class="singers-table-button">
@@ -84,111 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-table-row-wrapper block block_rounded">
-                    <div class="item-table-row item-table-row_contract-releases">
-                        <div class="item-table-row__cell item-table-row__cell_cover">
-                            <img src="./images/cover1.png" alt="Обложка" />
-                        </div>
-                        <a href="#" class="item-table-row__cell item-table-row__cell_bold">
-                            <div class="cell-text cell-text_2rows">Траляля</div>
-                        </a>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text cell-text_2rows">Ихтиандр</div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_green">
-                            <div class="cell-text cell-text_2rows">Февральский день</div>
-                        </div>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text">452.36 ₽</div>
-                        </div>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text">369 542 ₽</div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_bold">
-                            <div class="cell-text">3 268 369.36 ₽</div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_no-padding flex-column flex-column_between">
-                            <a href="" class="singers-table-button">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
 
-                            </a>
-                            <a href="" class="singers-table-button">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-table-row-wrapper block block_rounded">
-                    <div class="item-table-row item-table-row_contract-releases">
-                        <div class="item-table-row__cell item-table-row__cell_cover">
-                            <img src="./images/cover2.png" alt="Обложка" />
-                        </div>
-                        <a href="#" class="item-table-row__cell item-table-row__cell_bold">
-                            <div class="cell-text cell-text_2rows">Весёлая песня</div>
-                        </a>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text cell-text_2rows">Весельчак</div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_green">
-                            <div class="cell-text cell-text_2rows">Сплошное веселье</div>
-                        </div>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text">0 ₽</div>
-                        </div>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text">1 000 000 ₽</div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_bold">
-                            <div class="cell-text">36 789,14 ₽</div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_no-padding flex-column flex-column_between">
-                            <a href="" class="singers-table-button">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-
-                            </a>
-                            <a href="" class="singers-table-button">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-table-row-wrapper block block_rounded">
-                    <div class="item-table-row item-table-row_contract-releases">
-                        <div class="item-table-row__cell item-table-row__cell_cover">
-
-                        </div>
-                        <a href="#" class="item-table-row__cell item-table-row__cell_bold">
-                            <div class="cell-text cell-text_2rows"></div>
-                        </a>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text cell-text_2rows"></div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_green">
-                            <div class="cell-text cell-text_2rows"></div>
-                        </div>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text"></div>
-                        </div>
-                        <div class="item-table-row__cell">
-                            <div class="cell-text"></div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_bold">
-                            <div class="cell-text"></div>
-                        </div>
-                        <div class="item-table-row__cell item-table-row__cell_no-padding flex-column flex-column_between">
-                            <a href="" class="singers-table-button">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-
-                            </a>
-                            <a href="" class="singers-table-button">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -222,12 +107,9 @@
                     <span class="popup-contract-button__text">Деактивировать</span>
                 </a>
             </div>
-
-
-
         </div>
     </div>
 
 </div>
 <script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
-<script defer src="../track-contract-releases/scripts/index.js"></script>
+<script defer src="../track-contract-applications/scripts/index.js"></script>

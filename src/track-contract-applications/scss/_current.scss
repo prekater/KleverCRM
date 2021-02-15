@@ -10,6 +10,20 @@
     }
 }
 
+.cover-and-name_contract-applications {
+    @media (max-width: 991.9px) {
+        padding-left: 0;
+    }
+}
+
+.tabs-and-add {
+    @media (max-width: 991.9px) {
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 .tabs_contract {
     @include grid(auto auto auto, 26px, 2.625vw, auto);
     align-items: baseline;
@@ -19,39 +33,36 @@
     }
 }
 
-.item-table-header_contract-releases {
-    @include grid (57px 1.5fr 1.5fr 1.5fr 1fr 1fr 1fr 28px, auto, 0, 0);
+.item-table-block_contract-applications {
+    width: 100%;
     @media (max-width: 991.9px) {
-        @include grid (57px 22vw 22vw 22vw 20vw 20vw 20vw 28px, auto, 0, 0);
-    }
-    @media (max-width: 575.9px) {
-        @include grid (57px 150px 150px 150px 120px 120px 120px 28px, auto, 0, 0);
+        width: 100vw;
     }
 }
 
-.item-table-row-wrapper {
-    padding: 11px;
-    &:hover {
-        @include cardElevationHover();
-        z-index: 10;
+.item-table_contract-applications {
+    @media (max-width: 991.9px) {
+        width: 100vw;
+        justify-self: stretch;
     }
 }
 
-.item-table-row {
-    @include grid (57px 1.5fr 1.5fr 1.5fr 1fr 1fr 1fr 28px, auto, 0, 0);
-    @media (max-width: 991.9px) {
-        @include grid (57px 22vw 22vw 22vw 20vw 20vw 20vw 28px, auto, 0, 0);
-    }
+.item-table-header_contract-applications {
+    @include grid (1fr 1fr 1fr 1fr 28px, auto, 0, 0);
     @media (max-width: 575.9px) {
-        @include grid (57px 150px 150px 150px 120px 120px 120px 28px, auto, 0, 0);
+        @include grid (150px 125px 150px 150px 28px, auto, 0, 0);
     }
-    &_contract-releases {
-        .item-table-row__cell {
-            &:first-child::after,
-            &:last-child::after,
-            &:nth-last-child(2)::after {
-                border-right: 1px solid transparent;
-            }
+}
+
+.item-table-row_contract-applications {
+    @include grid (1fr 1fr 1fr 1fr 28px, auto, 0, 0);
+    @media (max-width: 575.9px) {
+        @include grid (150px 125px 150px 150px 28px, auto, 0, 0);
+    }
+    .item-table-row__cell {
+        &:last-child::after,
+        &:nth-last-child(2)::after {
+            border-right: 1px solid transparent;
         }
     }
 }
