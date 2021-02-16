@@ -1,7 +1,7 @@
 //переход с кнопки Отправить на экран Успешно создан
-let createContract = document.getElementById("create_contract");
-let addingContract = document.getElementById("adding_contract");
-let addedSuccessContract = document.getElementById("added_success_contract");
+let createContract = document.getElementById("create_application");
+let addingContract = document.getElementById("adding_application");
+let addedSuccessContract = document.getElementById("added_success_application");
 
 createContract.onsubmit = function(evt) {
     evt.preventDefault();
