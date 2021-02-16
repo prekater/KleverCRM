@@ -1,0 +1,300 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+
+    <div class="item-page item-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
+        <div class="item-header">
+            <a class="to-all-items-from-item flex-row flex-row_start" href="./../track-all-applications/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к приложеним" class="to-all-items-from-item__img" /> Все приложения
+            </a>
+
+            <div class="cover-and-name cover-and-name_margin cover-and-name_padding">
+                <div class="item-name flex-column">
+                    <span class="item-name__application">Приложение</span>
+                    <span class="item-name__name">№254169</span>
+                </div>
+                <div class="item-buttons">
+                    <a class="item-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать договор" class="item-button__img">
+                        <span class="item-button__text">Редактировать</span>
+                    </a>
+                    <a class="item-button" id="application-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить договор" class="item-button__img">
+                        <span class="item-button__text">Удалить</span>
+                    </a>
+                    <a class="item-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать  договор" class="item-button__img">
+                        <span class="item-button__text">Деактивировать</span>
+                    </a>
+                </div>
+                <img src="./images/ellipses.svg" alt="Меню приложения" class="cover-and-name__ellipses">
+            </div>
+
+            <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_between">
+                <div class="tabs tabs_application-tracks">
+                    <a class="tabs__tab" href="./../track-application-info/index.html">Сведения</a>
+                    <a class="tabs__tab tabs__tab_active">Треки</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-table-block" id="singer-table_application">
+            <div class="item-table item-table_padding item-table_application-tracks">
+                <div class="item-table-header item-table-header_application-tracks">
+                    <div class="item-table-header__cell"></div>
+                    <div class="item-table-header__cell item-table-header__cell_padding item-table-header__cell_black" onclick="sortString(0)">Название <span class="arrow arrow_down"></span> </div>
+                    <div class="item-table-header__cell" onclick="sortString(1)">Исполнитель <span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell" onclick="sortString(2)">Релиз <span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell" onclick="sortNumber(3)">Сумма доходов (без УСН)<span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell" onclick="sortNumber(4)">Сумма доходов<span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell" onclick="sortNumber(5)">Прибыль лейбла сейчас<span class="arrow arrow_down "></span></div>
+                    <div class="item-table-header__cell" onclick="sortNumber(6)">Сумма долей лейбла<span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell" onclick="sortNumber(7)">Сумма долей артиста<span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell"></div>
+                </div>
+
+                <div class="item-table-row-wrapper block block_rounded">
+                    <div class="item-table-row item-table-row_application-tracks">
+                        <div class="item-table-row__cell item-table-row__cell_cover">
+                            <img src="./images/cover3.png" alt="Обложка" />
+                        </div>
+                        <a href="#" class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text">Ололо пыщ пыщ</div>
+                        </a>
+                        <div class="item-table-row__cell item-table-row__cell_green">
+                            <div class="cell-text">Болконский Александр ...</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_green">
+                            <div class="cell-text">Send Them To Coventry (Mixtars)</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">452 452 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">1 452 452 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">15 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">23 415 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text">1 452 095 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_no-padding flex-column flex-column_between">
+                            <a href="" class="singers-table-button">
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+
+                            </a>
+                            <a href="" class="singers-table-button">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-table-row-wrapper block block_rounded">
+                    <div class="item-table-row item-table-row_application-tracks">
+                        <div class="item-table-row__cell item-table-row__cell_cover">
+                            <img src="./images/cover1.png" alt="Обложка" />
+                        </div>
+                        <a href="#" class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text">Playstation 2</div>
+                        </a>
+                        <div class="item-table-row__cell item-table-row__cell_green">
+                            <div class="cell-text">МОЛОДОЙ КАЙОТ</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_green">
+                            <div class="cell-text">Playstation 2</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">452 452 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">1 345.567 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">15.3 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">23 415.89 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text">1 452 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_no-padding flex-column flex-column_between">
+                            <a href="" class="singers-table-button">
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+
+                            </a>
+                            <a href="" class="singers-table-button">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-table-row-wrapper block block_rounded">
+                    <div class="item-table-row item-table-row_application-tracks">
+                        <div class="item-table-row__cell item-table-row__cell_cover">
+
+                        </div>
+                        <a href="#" class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text"> Я тебя больше не люблю</div>
+                        </a>
+                        <div class="item-table-row__cell item-table-row__cell_green">
+                            <div class="cell-text">PLANKINA</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_green">
+                            <div class="cell-text"> Я тебя больше не люблю</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">566 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">8 345.67 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">15 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">234 455.8 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text">23 567 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_no-padding flex-column flex-column_between">
+                            <a href="" class="singers-table-button">
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+
+                            </a>
+                            <a href="" class="singers-table-button">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-table-row-wrapper block block_rounded">
+                    <div class="item-table-row item-table-row_application-tracks">
+                        <div class="item-table-row__cell item-table-row__cell_cover">
+                            <img src="./images/cover2.png" alt="Обложка" />
+                        </div>
+                        <a href="#" class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text">Холода</div>
+                        </a>
+                        <div class="item-table-row__cell item-table-row__cell_green">
+                            <div class="cell-text">МКФАЕР</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_green">
+                            <div class="cell-text">Обычный сборник хитов</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">2 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">10 454 452 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">56 654 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">456.08 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text">1 657.54 ₽</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_no-padding flex-column flex-column_between">
+                            <a href="" class="singers-table-button">
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+
+                            </a>
+                            <a href="" class="singers-table-button">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-table-row-wrapper block block_rounded">
+                    <div class="item-table-row item-table-row_application-tracks">
+                        <div class="item-table-row__cell item-table-row__cell_cover">
+                        </div>
+                        <a href="#" class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text"></div>
+                        </a>
+                        <div class="item-table-row__cell item-table-row__cell_green">
+                            <div class="cell-text"></div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_green">
+                            <div class="cell-text"></div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text"></div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text"></div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text"></div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text"></div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text"></div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_no-padding flex-column flex-column_between">
+                            <a href="" class="singers-table-button">
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+
+                            </a>
+                            <a href="" class="singers-table-button">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-delete">
+        <div class="popup-delete-confirm block block_rounded">
+            <a href=" #close" title="Close" class="popup-delete__close">×</a>
+            <div class="popup-delete__text">Вы действительно хотите удалить приложение?</div>
+            <button class="popup-delete__button popup-delete__button_cancel" type="button">Отмена</button>
+            <button class="popup-delete__button popup-delete__button_confirm" type="button">Удалить</button>
+        </div>
+    </div>
+
+    <div class="popup-application">
+        <div class="popup-application-menu flex-column">
+            <div class="popup-application-menu__header flex-row flex-row_between flex-row_center-vertical">
+                Редактирование приложения
+                <a href=" #close" title="Close" class="popup-application__close">×</a>
+            </div>
+            <div class="popup-application-buttons flex-column">
+                <a class="popup-application-button">
+                    <img src="./images/edit.svg" alt="Редактировать приложение" class="popup-application-button__img">
+                    <span class="popup-application-button__text">Редактировать</span>
+                </a>
+                <a class="popup-application-button" id="application-delete_btn-mobile">
+                    <img src="./images/delete.svg" alt="Удалить приложение" class="popup-application-button__img">
+                    <span class="popup-application-button__text">Удалить</span>
+                </a>
+                <a class="popup-application-button">
+                    <img src="./images/deactivate.svg" alt="Деактивировать приложение" class="popup-application-button__img">
+                    <span class="popup-application-button__text">Деактивировать</span>
+                </a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+<script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script defer src="../track-application-tracks/scripts/index.js"></script>

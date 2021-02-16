@@ -783,7 +783,7 @@ html {
 .item-name {
     justify-self: flex-start;
     align-self: center;
-    &__contract {
+    &__item {
         margin-bottom: 0.5vh;
         color: $textsecondary;
         @include fontSize(14,
@@ -791,6 +791,7 @@ html {
         700);
     }
     &__name {
+        margin-top: 4px;
         @include fontSize(20,
         26,
         700);
@@ -1025,7 +1026,7 @@ html {
         @include cardElevationHover();
         z-index: 10;
     }
-    @media (max-width: 575.9px) {
+    @media (max-width: 991.9px) {
         margin-right: 20px;
     }
 }
