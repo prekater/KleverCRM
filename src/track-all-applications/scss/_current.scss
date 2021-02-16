@@ -1,0 +1,35 @@
+@import "./../../common/scss/variables";
+.main-block {
+    transition: padding 0.5s;
+    &_padding {
+        padding-top: 60px;
+        padding-left: 70px;
+        @media (max-width: 991.9px) {
+            padding-left: 0;
+        }
+    }
+}
+
+.tabs_all-applications {
+    @include grid (min-content min-content min-content, 26px, 42px, 0);
+}
+
+.all-items-table-header_all-applications {
+    @include grid (2.9fr 1fr 1.8fr 1.1fr 28px, auto, 0, 0);
+    @media (max-width: 991.9px) {
+        @include grid (55.7vw 19.1vw 35vw 21.9vw 28px, auto, 0, 0);
+    }
+}
+
+.all-items-table-row_all-applications {
+    @include grid (2.9fr 1fr 1.8fr 1.1fr 28px, auto, 0, 0);
+    @media (max-width: 991.9px) {
+        @include grid (55.7vw 19.1vw 35vw 21.9vw 28px, auto, 0, 0);
+    }
+    .all-items-table-row__cell {
+        &:last-child::after,
+        &:nth-last-child(2)::after {
+            border-right: 1px solid transparent;
+        }
+    }
+}
