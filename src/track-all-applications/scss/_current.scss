@@ -11,7 +11,7 @@
 }
 
 .tabs_all-applications {
-    @include grid (min-content min-content min-content, 26px, 42px, 0);
+    @include grid (min-content min-content min-content, auto, 42px, 0);
 }
 
 .all-items-table-header_all-applications {
