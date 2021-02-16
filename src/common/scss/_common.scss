@@ -730,7 +730,7 @@ html {
     }
 }
 
-.cover-and-name {
+.item-cover-and-name {
     width: calc(100%-74px);
     position: relative;
     @include grid(auto 1fr,
@@ -747,11 +747,6 @@ html {
         @media (max-width: 575.9px) {
             margin-bottom: 18px;
             margin-right: 17px;
-        }
-    }
-    &_padding {
-        @media (max-width: 991.9px) {
-            //padding-left: 20px;
         }
     }
     @media (max-width: 991.9px) {
