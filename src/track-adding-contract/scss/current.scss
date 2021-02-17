@@ -43,7 +43,7 @@
 
 .grid {
     box-sizing: border-box;
-    @include grid (190px 190px 190px, auto, 1.6vw, 3vh);
+    @include grid (190px 190px 190px, auto, 1.6vw, 25px);
     @media (max-width: 575.9px) {
         @include grid (1fr, auto, auto, 22px);
         padding-right: 0;

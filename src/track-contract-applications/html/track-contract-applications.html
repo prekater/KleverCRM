@@ -1,0 +1,115 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+
+    <div class="item-page item-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
+        <div class="item-header">
+            <a class="to-all-items-from-item flex-row flex-row_start" href="./../track-all-contracts/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к договорам" class="to-all-items-from-item__img" /> Все договоры
+            </a>
+
+            <div class="item-cover-and-name item-cover-and-name_margin">
+                <div class="item-name flex-column">
+                    <span class="item-name__item">Договор</span>
+                    <span class="item-name__name">№254169</span>
+                </div>
+                <div class="item-buttons">
+                    <a class="item-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать договор" class="item-button__img">
+                        <span class="item-button__text">Редактировать</span>
+                    </a>
+                    <a class="item-button" id="contract-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить договор" class="item-button__img">
+                        <span class="item-button__text">Удалить</span>
+                    </a>
+                    <a class="item-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать  договор" class="item-button__img">
+                        <span class="item-button__text">Деактивировать</span>
+                    </a>
+                </div>
+                <img src="./images/ellipses.svg" alt="Меню договора" class="item-cover-and-name__ellipses">
+            </div>
+
+            <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_between">
+                <div class="tabs tabs_contract">
+                    <a class="tabs__tab" href="./../track-contract-info/index.html">Сведения</a>
+                    <a class="tabs__tab" href="./../track-contract-releases/index.html">Релизы</a>
+                    <a class="tabs__tab tabs__tab_active">Приложения</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-table-block">
+            <div class="item-table item-table_padding">
+                <div class="item-table-header item-table-header_contract-applications">
+
+                    <div class="item-table-header__cell item-table-header__cell_padding item-table-header__cell_black" id="track-name" data-index="0" onclick="sortString(0)">Приложение к договору<span class="arrow arrow_down"></span> </div>
+                    <div class="item-table-header__cell" onclick="sortString(1)">Дата начала<span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell" onclick="sortString(2)">Статус договора<span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell" onclick="sortString(3)">Дата окончания<span class="arrow arrow_down"></span></div>
+                    <div class="item-table-header__cell"></div>
+                </div>
+                <div class="item-table-row-wrapper block block_rounded">
+                    <div class="item-table-row item-table-row_contract-applications">
+                        <a href="#" class="item-table-row__cell item-table-row__cell_bold">
+                            <div class="cell-text cell-text_2rows">№2998773</div>
+                        </a>
+                        <div class="item-table-row__cell item-table-row__cell_gray">
+                            <div class="cell-text cell-text_2rows">29 дек 2019</div>
+                        </div>
+                        <div class="item-table-row__cell">
+                            <div class="cell-text">Ожидание инф./рек.</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_gray">
+                            <div class="cell-text cell-text_2rows">29 дек 2024</div>
+                        </div>
+                        <div class="item-table-row__cell item-table-row__cell_no-padding flex-column flex-column_between">
+                            <a href="" class="singers-table-button">
+                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+
+                            </a>
+                            <a href="" class="singers-table-button">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-delete">
+        <div class="popup-delete-confirm block block_rounded">
+            <a href=" #close" title="Close" class="popup-delete__close">×</a>
+            <div class="popup-delete__text">Вы действительно хотите удалить договор?</div>
+            <button class="popup-delete__button popup-delete__button_cancel" type="button">Отмена</button>
+            <button class="popup-delete__button popup-delete__button_confirm" type="button">Удалить</button>
+        </div>
+    </div>
+
+    <div class="popup-contract">
+        <div class="popup-contract-menu flex-column">
+            <div class="popup-contract-menu__header flex-row flex-row_between flex-row_center-vertical">
+                Редактирование договора
+                <a href=" #close" title="Close" class="popup-contract__close">×</a>
+            </div>
+            <div class="popup-contract-buttons flex-column">
+                <a class="popup-contract-button">
+                    <img src="./images/edit.svg" alt="Редактировать договор" class="popup-contract-button__img">
+                    <span class="popup-contract-button__text">Редактировать</span>
+                </a>
+                <a class="popup-contract-button" id="contract-delete_btn-mobile">
+                    <img src="./images/delete.svg" alt="Удалить договор" class="popup-contract-button__img">
+                    <span class="popup-contract-button__text">Удалить</span>
+                </a>
+                <a class="popup-contract-button">
+                    <img src="./images/deactivate.svg" alt="Деактивировать договор" class="popup-contract-button__img">
+                    <span class="popup-contract-button__text">Деактивировать</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script defer src="../track-contract-applications/scripts/index.js"></script>

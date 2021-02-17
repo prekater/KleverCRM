@@ -183,7 +183,7 @@
         &_bold {
             font-weight: 700;
         }
-        &:first-child::after {
+        &::after {
             position: absolute;
             content: '';
             top: 11.5%;
@@ -192,6 +192,10 @@
             height: 77%;
             border-right: 1px solid $line;
             width: 2px;
+        }
+        &:last-child::after,
+        &:nth-last-child(2)::after {
+            border-right: 1px solid transparent;
         }
     }
 }

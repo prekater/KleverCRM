@@ -172,6 +172,20 @@
             line-height: 0.8rem;
         }
     }
+    &__error {
+        margin-top: 3px;
+        position: absolute;
+        color: $red;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: normal;
+        top: 100%;
+        @media (max-width: 575.9px) {
+            margin-top: 1px;
+            font-size: 0.7rem;
+            line-height: 0.8rem;
+        }
+    }
 }
 
 .input-wrapper {
@@ -191,7 +205,7 @@
 }
 
 .form-two-buttons {
-    margin-top: 1.25vh;
+    margin-top: 1vh;
     grid-column: 1 / 2;
     @include grid(180px 180px, auto, 1.25vw, auto);
     @media (max-width: 991.9px) {
