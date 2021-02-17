@@ -16,8 +16,6 @@
 }
 
 .all-sales-table {
-    // border: 1px solid red;
-    position: relative;
     box-sizing: border-box;
     align-self: center;
     &_margin {
@@ -36,8 +34,6 @@
         }
     }
     @media (max-width: 991.9px) {
-        // overflow-x: scroll;
-        // -webkit-overflow-scrolling: touch;
         width: auto;
         border-radius: 0;
     }
@@ -45,10 +41,8 @@
 
 .container {
     @media (min-width: 992px) {
-        // border: 1px solid #000;
-        height: 500px;
+        height: 400px;
         overflow: auto;
-        // width: 200px;
         @media (max-width: 991.9px) {
             height: 400px;
         }
@@ -57,11 +51,9 @@
 
 .container-tablet {
     @media (max-width: 991.9px) {
-        //border: 1px solid #000;
         height: 700px;
         width: auto;
         overflow: auto;
-        // width: 200px;
         background-color: #fff;
         @media (max-width: 991.9px) {
             height: 500px;
@@ -75,17 +67,11 @@
 }
 
 .all-items-table-header_all-sales {
-    //border: 1px solid hotpink;
-    position: sticky;
-    top: 0;
-    left: 0;
     padding-left: 0;
     padding-right: 0;
     margin-right: 30px;
     @include grid (1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 30px, auto, 0, 0);
     @media (max-width: 991.9px) {
-        //  border: 1px solid green;
-        // width: auto;
         @include grid (150px 150px 150px 150px 150px 150px 150px 150px 150px, auto, 0, 0);
         margin-left: 0;
         margin-right: 0;
@@ -103,14 +89,12 @@
 }
 
 .all-items-table-row_all-sales {
-    // border: 1px solid lightsalmon;
     border-bottom: 1px solid $line;
     position: relative;
     padding-bottom: 6px;
     border-radius: 0;
     @include grid (1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr, auto, 0, 0);
     @media (max-width: 991.9px) {
-        // width: 100%;
         @include grid (150px 150px 150px 150px 150px 150px 150px 150px 150px, auto, 0, 0);
     }
     &__cell {

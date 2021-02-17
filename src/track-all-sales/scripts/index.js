@@ -8,7 +8,7 @@
    if ($(window).width() > 992) {
 
        $(".container").mCustomScrollbar({
-           axis: "yx", // vertical and horizontal scrollbar
+           axis: "y", // vertical and horizontal scrollbar
            theme: "dark"
 
        });
