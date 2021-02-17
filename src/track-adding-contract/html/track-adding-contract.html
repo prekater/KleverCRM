@@ -13,28 +13,33 @@
                     <div class="input-wrapper input-wrapper_search">
                         <input type="text" class="field__input_text" name="contract-field" placeholder="№00000" id="contract">
                     </div>
+                    <div class="field__error"></div>
                 </div>
 
                 <div class="field flex-column field_status field_margin95px">
                     <label for="status" class="field__label">Статус</label>
 
                     <select id="status" name="status-field" class="">
-                        <option value="waiting-for-originals">Получен скан, ожидание оригинала</option>
-                        <option value="waiting-for-scan" >Ожидание скана</option>
-                        <option value="waiting-for-sign">Всё документы получены</option>
-                        <option value="done">Договор заключен</option>
+                        <option value="0">Ожидание инф./рек.</option>
+                        <option value="1">У юриста</option>
+                        <option value="2">Ожидание подписи артиста</option>
+                        <option value="3">Получен скан, ожидание оригинала</option>
+                        <option value="4">Получен оригинал</option>>
                     </select>
+                    <div class="field__error"></div>
                 </div>
                 <div class="field flex-column">
                     <label for="start_date" class="field__label">Дата начала</label>
                     <div class="input-wrapper input-wrapper_calendar">
                         <input type="text" class="field__input_text" id="start_date" name="start-date-field">
                     </div>
+                    <div class="field__error"></div>
                 </div>
 
                 <div class="field flex-column">
                     <label for="validity_name" class="field__label">Срок действия (лет)</label>
                     <input type="number" class="field__input_text" id="validity" name="validity-name-field" placeholder="1">
+                    <div class="field__error"></div>
                 </div>
 
                 <div class="field flex-column">
@@ -42,21 +47,25 @@
                     <div class="input-wrapper input-wrapper_calendar">
                         <input type="text" class="field__input_text" id="end_date" name="end-date-field">
                     </div>
+                    <div class="field__error"></div>
                 </div>
 
                 <div class="field flex-column field_licensor field_margin95px">
                     <label for="licensor" class="field__label">Лицензиар</label>
                     <input type="text" class="field__input_text" id="licensor" name="licensor-field">
+                    <div class="field__error"></div>
                 </div>
 
                 <div class="field flex-column field_requisites">
                     <label for="requisites" class="field__label">Реквизиты</label>
                     <textarea type="text" class="field__input_text textarea-height" id="requisites" name="requisites-field"></textarea>
+                    <div class="field__error"></div>
                 </div>
 
                 <div class="form-two-buttons">
                     <button type="submit" class="form-button">Создать</button>
                     <button class="form-button form-button_cancel" type="reset">Отменить</button>
+
                 </div>
 
             </div>
