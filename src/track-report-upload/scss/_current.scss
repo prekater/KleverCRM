@@ -1,0 +1,154 @@
+@import "./../../common/scss/variables";
+.main-block {
+    transition: padding 0.5s;
+    &_padding {
+        padding-top: 60px;
+        padding-left: 70px;
+        @media (max-width: 991.9px) {
+            padding-left: 0;
+        }
+    }
+}
+
+.adding-item_upload-report {
+    justify-content: flex-start;
+}
+
+.form_upload-report {
+    width: 450px;
+    justify-items: flex-start;
+    box-sizing: border-box;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    padding: 31px 36px 36px 36px;
+    @media (max-width: 991.9px) {
+        width: 450px;
+        border-radius: 12px;
+        margin-top: 30px;
+        margin-bottom: 36px;
+        padding: 24px 18px 31px 20px;
+    }
+    @media (max-width: 575.9px) {
+        width: 100vw;
+        margin-top: 24px;
+        border-radius: 0px;
+        margin-bottom: 22px;
+        padding: 26px 20px 22px 20px;
+    }
+}
+
+.grid {
+    box-sizing: border-box;
+    @include grid (1fr, auto minmax(250px, 1fr), 1.6vw, 25px);
+    @media (max-width: 575.9px) {
+        @include grid (1fr, auto, auto, 22px);
+        padding-right: 0;
+    }
+}
+
+.field_upload {
+    @media (max-width: 575.9px) {
+        display: none;
+    }
+}
+
+.report-upload-wrap {
+    border-radius: 12px;
+    border: 1.5px dashed $green;
+    color: $green;
+    position: relative;
+    @include flexCenter(column);
+    height: 100%;
+    width: 100%;
+    padding: 33px;
+    &__img {
+        height: 28px;
+        width: 28px;
+    }
+    &__text {
+        margin-top: 8px;
+        text-align: center;
+        color: $green;
+        @include fontSize(14, 20, 500);
+    }
+    @media (max-width: 575.9px) {
+        border: none;
+        padding: 10px;
+    }
+}
+
+.report-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.report-dropping,
+.report-upload-wrap:hover {
+    background-color: $main-bg;
+}
+
+.not-uploaded-yet {
+    @media (max-width: 575.9px) {
+        display: none;
+    }
+}
+
+.uploaded {
+    border: 1px solid #000;
+    display: none;
+}
+
+.uploaded-mobile {
+    display: none;
+}
+
+.report-name {
+    color: $black;
+    margin-bottom: 28px;
+    @media (max-width: 575.9px) {
+        margin-bottom: 0;
+    }
+}
+
+.form-two-buttons_report {
+    @media (max-width: 575.9px) {
+        @include grid(160px auto, auto, 20px, auto);
+    }
+}
+
+.form-button {
+    width: 100%;
+    &_report {
+        @media (max-width: 575.9px) {
+            @include fontSize(13, 16, 400);
+            @include flexCenter(row);
+        }
+    }
+    &__content {
+        @include flexCenter(row);
+    }
+    @media (max-width: 575.9px) {
+        height: 36px;
+    }
+}
+
+.upload-button {
+    &_desktop {
+        @media (max-width: 575.9px) {
+            display: none;
+        }
+    }
+    &_mobile {
+        display: none;
+        @media (max-width: 575.9px) {
+            display: block;
+            @include fontSize(13, 16, 400);
+        }
+    }
+}
