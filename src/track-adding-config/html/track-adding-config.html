@@ -1,114 +1,39 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
-    <div class="adding-contract" id="adding_application">
-        <div class="to-all-items flex-row flex-row_start flex-row_center-vertical">Список договоров <img src="./images/to_releases.svg" alt="К списку договоров" class="to-all-items__img" /> </div>
-        <form class="block block_rounded form form_margin-applications form_padding-applications main-form" action="" id="create_application">
+    <div class="adding-item-page flex-column flex-column_center flex-column_top-vertical">
+        <form class=" block block_rounded form form_margin-adding-config form_padding-adding-config main-form" action="" id="create_config">
             <div class="flex-row flex-row_between flex-row_top-vertical form-header form-header_margin">
-                <div class="form-header__title">Добавить приложение</div>
-                <a class="form-header__to-all-items" href="./../track-all-contracts/index.html">Список приложений <img src="./images/to_releases.svg" alt="К списку договоров" class="arrow-to-all-items" /> </a>
+                <div class="form-header__title">Создать конфигурацию загрузки</div>
             </div>
             <div class="groupped-fields grid">
 
                 <div class="field flex-column">
-                    <label for="contract" class="field__label">Договор</label>
-                    <div class="input-wrapper input-wrapper_search">
-                        <input type="text" class="field__input_text" name="contract-field" placeholder="№00000" id="contract">
-                    </div>
-                    <div class="field__error"></div>
-
+                    <label for="config_name" class="field__label">Название</label>
+                    <div class="input-wrapper"></div>
+                    <input type="text" class="field__input_text" name="config_name" id="config_name">
+                    <div class="field__error">Errorish error</div>
                 </div>
+
 
                 <div class="field flex-column">
-                    <label for="contract" class="field__label">Номер приложения</label>
+                    <label for="entity_priority" class="field__label">Приоритет сущностей</label>
                     <div class="input-wrapper">
-                        <input type="text" class="field__input_text" name="contract-field" placeholder="№00000" id="contract">
+                        <input type="text" class="field__input_text" name="entity_priority-field" placeholder="№00000" id="entity_priority">
                     </div>
-                    <div class="field__error"></div>
-
-                </div>
-
-
-                <div class="field flex-column field_status field_margin95px">
-                    <label for="status" class="field__label">Статус</label>
-                    <select id="status" name="status-field" class="">
-                        <option value="0">Ожидание инф./рек.</option>
-                        <option value="1">У юриста</option>
-                        <option value="2">Ожидание подписи артиста</option>
-                        <option value="3">Получен скан, ожидание оригинала</option>
-                        <option value="4">Получен оригинал</option>
-                    </select>
-                    <div class="field__error"></div>
-
-                </div>
-
-                <div class="field flex-column field-start-date">
-                    <label for="start_date" class="field__label">Дата начала</label>
-                    <div class="input-wrapper input-wrapper_calendar">
-                        <input type="text" class="field__input_text" id="start_date" name="start-date-field">
-                    </div>
-                    <div class="field__error"></div>
-
-                </div>
-
-                <div class="field flex-column field-validity">
-                    <label for="validity_name" class="field__label">Срок действия (лет)</label>
-                    <input type="number" class="field__input_text" id="validity" name="validity-name-field" placeholder="1">
-                    <div class="field__error"></div>
-
-                </div>
-
-                <div class="field flex-column field-end-date">
-                    <label for="end_date" class="field__label">Дата окончания</label>
-                    <div class="input-wrapper input-wrapper_calendar">
-                        <input type="text" class="field__input_text" id="end_date" name="end-date-field">
-                    </div>
-                    <div class="field__error"></div>
-
-                </div>
-
-                <div class="field flex-column field_licensor field_margin95px">
-                    <label for="licensor" class="field__label">Лицензиар</label>
-                    <input type="text" class="field__input_text" id="licensor" name="licensor-field">
-                    <div class="field__error"></div>
-
-                </div>
-
-                <div class="field flex-column field_requisites">
-                    <label for="requisites" class="field__label">Реквизиты</label>
-                    <textarea type="text" class="field__input_text textarea-height" id="requisites" name="requisites-field"></textarea>
-                    <div class="field__error"></div>
-
+                    <div class="field__error">Errorish error</div>
                 </div>
 
                 <div class="form-two-buttons">
                     <button type="submit" class="form-button">Создать</button>
                     <button class="form-button form-button_cancel" type="reset">Отменить</button>
-                    <div class="field__error"></div>
-
                 </div>
-
             </div>
+
         </form>
-
     </div>
 
-    <div class="flex-column flex-column_center flex-column_top-vertical flex-column_adaptive-height added-success" id="added_success_application">
-        <div class="block block_rounded success success_margin success_padding flex-column flex-column_center flex-column_center-vertical" id="success">
-            <img src="./images/success.svg" alt="договор успешно создан" class="success__img" />
-            <span class="success__text">Договор успешно создан!</span>
-            <div class="success-buttons">
-                <a href="#" class="success__btn btn">
-                    <img src="./images/agreements_black.svg" class="success-buttons__img" />
-                    <span class="success-buttons__text">Создать договор</span>
-                </a>
-                <a href="#" class="success__btn btn">
-                    <img src="./images/singers_black.svg" class="success-buttons__img success-buttons__img_changing-rmargin" />
-                    <span class="success-buttons__text">Создать исполнителя</span>
-                </a>
-            </div>
-        </div>
-    </div>
+
+</div>
 
 </div>
 <script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
 <script defer src="../track-adding-application/scripts/index.js"></script>
-<script defer src="../track-adding-application/scripts/jquery.nice-select.js"></script>

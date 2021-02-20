@@ -432,6 +432,15 @@ html {
     }
 }
 
+.adding-item-page {
+    box-sizing: border-box;
+    width: 100%;
+    @include flexCenter(column);
+    @media (max-width: 575.9px) {
+        width: 100vw;
+    }
+}
+
 .all-items-page {
     // border: 1px solid red;
     width: 100%;
