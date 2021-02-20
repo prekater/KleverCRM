@@ -737,6 +737,7 @@ html {
     @media (max-width: 991.9px) {
         padding-left: 20px;
         padding-right: 20px;
+        // width: 100vw;
     }
 }
 
@@ -924,9 +925,6 @@ html {
     @media (max-width: 991.9px) {
         border-radius: 0;
     }
-    @media (max-width: 991.9px) {
-        border-radius: 0;
-    }
 }
 
 .item-info-block-grid-cell {
@@ -942,6 +940,7 @@ html {
     }
     &__title {
         color: $textsecondary;
+        margin-bottom: 6px;
     }
     &__text {
         &_grid {
