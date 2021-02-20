@@ -158,7 +158,7 @@ html {
     }
 }
 
-.adding-item {
+.adding-item-page {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -429,15 +429,6 @@ html {
     }
     &_down {
         transform: rotate(45deg);
-    }
-}
-
-.adding-item-page {
-    box-sizing: border-box;
-    width: 100%;
-    @include flexCenter(column);
-    @media (max-width: 575.9px) {
-        width: 100vw;
     }
 }
 

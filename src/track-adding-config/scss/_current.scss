@@ -10,36 +10,29 @@
     }
 }
 
+.adding-item-page_adding-conf {
+    justify-content: flex-start;
+}
+
 .main-form {
     box-sizing: border-box;
-    @media (max-width: 991.9px) {
-        width: 100%;
-        border-radius: 0px;
-    }
     @media (max-width: 575.9px) {
         width: 100vw;
     }
 }
 
-.form_margin-adding-config {
+.form_adding-config {
     margin-top: 3.5vh;
     margin-bottom: 3vh;
+    padding: 31px 36px 36px 36px;
     @media (max-width: 991.9px) {
         margin-top: 30px;
         margin-bottom: 36px;
-    }
-    @media (max-width: 575.9px) {
-        margin-top: 0;
-        margin-bottom: 22px;
-    }
-}
-
-.form_padding-adding-config {
-    padding: 31px 36px 36px 36px;
-    @media (max-width: 991.9px) {
         padding: 24px 18px 31px 20px;
     }
     @media (max-width: 575.9px) {
+        margin-top: 24px;
+        margin-bottom: 22px;
         padding: 26px 20px 22px 20px;
     }
 }
