@@ -112,6 +112,21 @@ gulp.task('moduleNiceSelect', async() => {
     })
 })
 
+gulp.task('moduleCustomScrollbar', async() => {
+    const folders = getFolders('./build');
+    return folders.map((folder) => {
+        gulp
+            .src('./src/common/scripts/jquery.mCustomScrollbar.js')
+            // .pipe(uglify())
+            .pipe(rename((p) => ({
+                dirname: `./${folder}/scripts`,
+                basename: p.basename,
+                extname: p.extname
+            })))
+            .pipe(gulp.dest('./build'));
+    })
+})
+
 gulp.task('scripts', async() => {
     const folders = getFolders('./build');
 
@@ -206,5 +221,5 @@ gulp.task('watch', (cb) => {
     cb();
 });
 
-gulp.task('start', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'watch', 'browser'));
-gulp.task('build', gulp.series('pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'all-css', 'all-images', 'all-scripts', 'all-fonts'));
+gulp.task('start', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'moduleCustomScrollbar', 'scripts', 'watch', 'browser'));
+gulp.task('build', gulp.series('pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'moduleCustomScrollbar', 'scripts', 'all-css', 'all-images', 'all-scripts', 'all-fonts'));

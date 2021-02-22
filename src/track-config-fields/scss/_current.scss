@@ -63,19 +63,17 @@
 
 #mCSB_1_scrollbar_vertical {
     margin-top: 10px;
-    @media (max-width: 575.9px) {}
 }
 
 .all-items-table-header_config-fields {
+    padding-right: 0px;
     padding-left: 0;
-    padding-right: 0;
-    margin-right: 30px;
-    @include grid (20vw 20vw 15vw 15vw 1fr 1fr 90px 30px, auto, 0, 0);
+    @include grid (20vw 20vw 10vw 10vw 10vw 1fr 90px, auto, 0, 0);
     @media (max-width: 1399.9px) {
-        @include grid (15vw 15vw 15vw 15vw 1fr 1fr 90px 30px, auto, 0, 0);
+        @include grid (15vw 15vw 15vw 15vw 10vw 1fr 90px, auto, 0, 0);
     }
     @media (max-width: 991.9px) {
-        @include grid (200px 200px 150px 150px 100px 100px 90px, auto, 0, 0);
+        @include grid (200px 200px 150px 150px 100px 100px 90px 30px, auto, 0, 0);
         margin-left: 0;
         margin-right: 0;
         padding-right: 0;
@@ -85,29 +83,35 @@
     .all-items-table-header__cell {
         border-bottom: 1px solid $line;
         padding-bottom: 17px;
-        // &:last-child {
-        //     border-bottom: 1px solid white;
-        // }
     }
 }
 
 .all-items-table-row_config-fields {
     border-bottom: 1px solid $line;
     position: relative;
-    padding-bottom: 6px;
     border-radius: 0;
-    @include grid (20vw 20vw 15vw 15vw 1fr 1fr 90px, auto, 0, 0);
+    @include grid (20vw 20vw 10vw 10vw 10vw 1fr 90px, auto, 0, 0);
     @media (max-width: 1399.9px) {
-        @include grid (15vw 15vw 15vw 15vw 1fr 1fr 90px, auto, 0, 0);
+        @include grid (15vw 15vw 15vw 15vw 10vw 1fr 90px, auto, 0, 0);
     }
     @media (max-width: 991.9px) {
-        @include grid (200px 200px 150px 150px 100px 100px 90px, auto, 0, 0);
+        @include grid (200px 200px 150px 150px 100px 100px 90px 30px, auto, 0, 0);
     }
     &__cell {
         border-bottom: 1px solid $line;
     }
     .all-items-table-row__cell::after {
         border-right: 1px solid transparent;
+    }
+    &:hover {
+        background-color: $main-bg;
+    }
+}
+
+.cell-for-tablet-align {
+    display: none;
+    @media (max-width: 991.9px) {
+        display: flex;
     }
 }
 
