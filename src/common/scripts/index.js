@@ -93,9 +93,15 @@ $searchFormTablet.on("mouseenter", function() {
     $searchFormTabletInput.css("display", "block");
 });
 
-$searchFormTablet.on("mouseleave", function() {
-    $(this).css("width", "200px");
-    $searchFormTabletInput.css("display", "block");
+$searchFormTablet.on("focusout", function() {
+
+    if (!(($searchFormTabletInput.val() === null) || ($searchFormTabletInput.val() === "") || ($searchFormTabletInput.val() === undefined))) {
+        $(this).css("width", "200px");
+        $searchFormTabletInput.css("display", "block");
+    } else {
+        $(this).css("width", "42px");
+        $searchFormTabletInput.css("display", "none");
+    }
 });
 
 $searchFormHeader.on("focusin", function() {
@@ -165,11 +171,14 @@ $(function() {
 $("input").on("change", function() {
     if ((!(($(this).val() === null) || ($(this).val() === "") || ($(this).val() === undefined)))) {
         $(this).css("background-color", "#EEF4F6");
-    } else {
+    } else if ($(this).hasClass("white-void-input")) {
         $(this).css("background-color", "white");
+    } else {
+        $(this).css("background-color", "#F3F8FA");
     }
-});
+}); {
 
+}
 // подсказки в формах по вопросительному знаку popup в мобилке
 $(function() {
     if ($(window).width() <= 575.9) {
