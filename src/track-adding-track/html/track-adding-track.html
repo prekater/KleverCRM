@@ -1,0 +1,126 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+    <div class="adding-item" id="adding-track">
+
+        <form class="block block_rounded form form_adding-track main-form" action="" id="create_track">
+            <div class="flex-row flex-row_between flex-row_top-vertical form-header form-header_margin">
+                <div class="form-header__title">Добавить трек</div>
+
+            </div>
+            <div class="groupped-fields grid">
+
+                <div class="field field_singer flex-column">
+                    <label for="singer" class="field__label">Исполнитель</label>
+                    <div class="input-wrapper input-wrapper_search">
+                        <input type="text" class="field__input_text" name="singer-field" id="singer">
+                    </div>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_contract flex-column">
+                    <label for="contract" class="field__label">Номер договора</label>
+                    <div class="input-wrapper input-wrapper_search">
+                        <input type="text" class="field__input_text" name="contract-field" placeholder="№00000" id="contract">
+                    </div>
+                    <div class="field__error"></div>
+
+                </div>
+
+                <div class="field field_release flex-column">
+                    <label for="release" class="field__label">Релиз</label>
+                    <div class="input-wrapper input-wrapper_search">
+                        <input type="text" class="field__input_text" name="release-field" id="release">
+                    </div>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_isrc flex-column field-start-date">
+                    <label for="isrc" class="field__label">ISRC</label>
+                    <div class="input-wrapper input-wrapper_calendar">
+                        <input type="text" class="field__input_text" id="isrc" name="isrc-field">
+                    </div>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_track-name flex-column field-validity">
+                    <label for="track_name" class="field__label">Название трека</label>
+                    <input type="text" class="field__input_text" id="track_name" name="track_name-field" placeholder="1">
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_cover-url flex-column">
+                    <div class="flex-row flex-row_baseline">
+                        <label for="cover_url" class="field__label">Ссылка на обложку</label>
+                        <span class="field__question" tooltip="Ссылка на обложку в формате png">?</span>
+                    </div>
+                    <input type="text" class="field__input_text" id="cover_url" name="cover_url-field">
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_genre flex-column field-end-date">
+                    <label for="genre" class="field__label">Жанр</label>
+                    <div class="input-wrapper">
+                        <input type="text" class="field__input_text" id="genre" name="genre-field">
+                    </div>
+                    <div class="field__error"></div>
+
+                </div>
+
+                <div class="field field_duration flex-column">
+                    <label for="duration" class="field__label">Длительность</label>
+                    <input type="text" class="field__input_text" id="duration" name="duration-field" pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}" placeholder="00:00:00">
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_start-listening flex-column">
+                    <label for="duration" class="field__label">Начало предв. прослушивания</label>
+                    <input type="text" class="field__input_text" id="duration" name="duration-field" pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}" placeholder="00:00:00">
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_has-explicit-content flex-column field_is-group">
+                    <div for="is_group" class="field__label">Есть ли мат?</div>
+                    <div class="input-wrapper">
+                        <input type="checkbox" class="field__input_checkbox" id="has_explicit_content" name="has_explicit_content-field" checked>
+                        <label for="is_group"></label>
+                    </div>
+
+                </div>
+                <div class="field flex-column field_requisites">
+                    <label for="requisites" class="field__label">Реквизиты</label>
+                    <textarea type="text" class="field__input_text textarea-height" id="requisites" name="requisites-field"></textarea>
+                    <div class="field__error"></div>
+
+                </div>
+
+                <div class="form-two-buttons">
+                    <button type="submit" class="form-button">Создать</button>
+                    <button class="form-button form-button_cancel" type="reset">Отменить</button>
+                    <div class="field__error"></div>
+
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+    <div class="flex-column flex-column_center flex-column_top-vertical flex-column_adaptive-height added-success" id="added_success_track">
+        <div class="block block_rounded success success_margin success_padding flex-column flex-column_center flex-column_center-vertical" id="success">
+            <img src="./images/success.svg" alt="Трек успешно создан" class="success__img" />
+            <span class="success__text">Трек успешно создан!</span>
+            <div class="success-buttons">
+                <a href="#" class="success__btn btn">
+                    <img src="./images/agreements_black.svg" class="success-buttons__img" />
+                    <span class="success-buttons__text">Создать договор</span>
+                </a>
+                <a href="#" class="success__btn btn">
+                    <img src="./images/singers_black.svg" class="success-buttons__img success-buttons__img_changing-rmargin" />
+                    <span class="success-buttons__text">Создать исполнителя</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script defer src="../track-adding-track/scripts/index.js"></script>

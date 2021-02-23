@@ -1,0 +1,102 @@
+@import "./../../common/scss/variables";
+.main-block {
+    transition: padding 0.5s;
+    &_padding {
+        padding-top: 60px;
+        padding-left: 70px;
+        @media (max-width: 991.9px) {
+            padding-left: 0;
+        }
+    }
+}
+
+.main-form {
+    box-sizing: border-box;
+    @media (max-width: 991.9px) {
+        width: 100%;
+        border-radius: 0px;
+    }
+    @media (max-width: 575.9px) {
+        width: 100vw;
+    }
+}
+
+.form_adding-track {
+    width: 77vw;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    padding: 31px 36px 36px 36px;
+    @media (max-width: 991.9px) {
+        margin-top: 30px;
+        margin-bottom: 36px;
+        padding: 24px 18px 31px 20px;
+    }
+    @media (max-width: 575.9px) {
+        margin-top: 0;
+        margin-bottom: 22px;
+        padding: 26px 20px 22px 20px;
+    }
+}
+
+.field {
+    &_singer {
+        grid-area: singer;
+    }
+    &_contract {
+        grid-area: contract;
+    }
+    &_release {
+        grid-area: release;
+    }
+    &_isrc {
+        grid-area: isrc;
+    }
+    &_track-name {
+        grid-area: track-name;
+    }
+    &_cover-url {
+        grid-area: cover-url;
+    }
+    &_genre {
+        grid-area: genre;
+    }
+    &_duration {
+        grid-area: duration;
+    }
+    &_start-listening {
+        grid-area: start-listening;
+    }
+    &_has-explicit-content {
+        grid-area: explicit;
+    }
+}
+
+.grid {
+    box-sizing: border-box;
+    @include grid (190px 190px 190px, auto, 1.6vw, 25px);
+    @media (max-width: 575.9px) {
+        @include grid (1fr, auto, auto, 22px);
+        padding-right: 0;
+    }
+}
+
+.input-wrapper {
+    &_calendar {
+        &:after {
+            right: 7px;
+            bottom: 13.5px;
+            background-image: url("./../images/calendar.svg");
+        }
+    }
+    &_search {
+        &:after {
+            right: 7px;
+            bottom: 13.5px;
+            background-image: url("./../images/search.svg");
+        }
+    }
+}
+
+#added_success_track {
+    display: none;
+}
