@@ -207,4 +207,4 @@ gulp.task('watch', (cb) => {
 });
 
 gulp.task('start', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'watch', 'browser'));
-gulp.task('build', gulp.series('pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'all-css', 'all-images', 'all-scripts', 'all-fonts'));
+gulp.task('build', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'scripts', 'all-css', 'all-images', 'all-scripts', 'all-fonts', 'watch', 'browser'));
