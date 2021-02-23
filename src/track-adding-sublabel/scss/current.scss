@@ -1,18 +1,7 @@
 @import "./../../common/scss/variables";
-.main-block {
-    transition: padding 0.5s;
-    &_padding {
-        padding-top: 60px;
-        padding-left: 70px;
-        @media (max-width: 991.9px) {
-            padding-left: 0;
-        }
-    }
-}
-
 .adding-sublabel {
     width: 40.2vw;
-    @include grid(190px 1fr, auto auto auto auto, 0, 25px);
+    @include grid(190px 1fr, auto auto auto auto, 0, 20px);
     &__2column {
         grid-column: 1/3;
     }
