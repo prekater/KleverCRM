@@ -31,6 +31,20 @@ html {
   }
 }
 
+.main-block {
+    transition: padding 0.5s;
+    &_padding {
+        padding-top: 60px;
+        padding-left: 70px;
+        @media (max-width: 991.9px) {
+            padding-left: 0;
+        }
+    }
+    &_full-width {
+        width: 100%;
+    }
+}
+
 .flex-row {
   @include flex(row);
 
