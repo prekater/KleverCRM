@@ -1,5 +1,5 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
-    <div class="adding-item" id="adding-track">
+    <div class="adding-item" id="adding_track">
 
         <form class="block block_rounded form form_adding-track main-form" action="" id="create_track">
             <div class="flex-row flex-row_between flex-row_top-vertical form-header form-header_margin">
@@ -35,7 +35,7 @@
 
                 <div class="field field_isrc flex-column field-start-date">
                     <label for="isrc" class="field__label">ISRC</label>
-                    <div class="input-wrapper input-wrapper_calendar">
+                    <div class="input-wrapper">
                         <input type="text" class="field__input_text" id="isrc" name="isrc-field">
                     </div>
                     <div class="field__error"></div>
@@ -43,7 +43,7 @@
 
                 <div class="field field_track-name flex-column field-validity">
                     <label for="track_name" class="field__label">Название трека</label>
-                    <input type="text" class="field__input_text" id="track_name" name="track_name-field" placeholder="1">
+                    <input type="text" class="field__input_text" id="track_name" name="track_name-field">
                     <div class="field__error"></div>
                 </div>
 
@@ -77,26 +77,99 @@
                     <div class="field__error"></div>
                 </div>
 
-                <div class="field field_has-explicit-content flex-column field_is-group">
+                <div class="field field_has-explicit flex-column">
                     <div for="is_group" class="field__label">Есть ли мат?</div>
                     <div class="input-wrapper">
-                        <input type="checkbox" class="field__input_checkbox" id="has_explicit_content" name="has_explicit_content-field" checked>
-                        <label for="is_group"></label>
+                        <input type="checkbox" class="field__input_checkbox" id="has_explicit" name="has_explicit-field">
+                        <label for="has_explicit"></label>
                     </div>
-
                 </div>
-                <div class="field flex-column field_requisites">
-                    <label for="requisites" class="field__label">Реквизиты</label>
-                    <textarea type="text" class="field__input_text textarea-height" id="requisites" name="requisites-field"></textarea>
-                    <div class="field__error"></div>
 
+                <div class="field field_other-singers groupped-inputs flex-column">
+                    <label for="other_singers" class="field__label">Другие Исполнители (при наличии)</label>
+                    <div class="input-with-btns">
+                        <input type="text" class="field__input_text" id="other_singers" name="other_singers-field" placeholder="ФИО">
+                        <div class="input-with-btns__row flex-row flex-row_start flex-row_bottom-vertical">
+                            <button type="button" class="input-btn input-btn__remove" tooltip="Удалить исполнителя"><img src="./images/remove_input.svg" class="input-btn__img remove-img"></button>
+                            <button type="button" class="input-btn input-btn__add" tooltip="Добавить исполнителя"><img src="./images/add_input.svg" class="input-btn__img add-img"></button>
+                        </div>
+                    </div>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_text-author groupped-inputs flex-column">
+                    <label for="text_author" class="field__label">Авторы текста</label>
+                    <div class="input-with-btns">
+                        <input type="text" class="field__input_text" id="text_author" name="text_author-field" placeholder="ФИО">
+                        <div class="input-with-btns__row flex-row flex-row_start flex-row_bottom-vertical">
+                            <button type="button" class="input-btn input-btn__remove"><img src="./images/remove_input.svg" class="input-btn__img remove-img" tooltip="Удалить исполнителя"></button>
+                            <button type="button" class="input-btn input-btn__add" tooltip="Добавить исполнителя"><img src="./images/add_input.svg" class="input-btn__img add-img"></button>
+                        </div>
+                    </div>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_music-author groupped-inputs flex-column">
+                    <label for="music_author" class="field__label">Авторы музыки</label>
+                    <div class="input-with-btns">
+                        <input type="text" class="field__input_text" id="music_author" name="music_author-field" placeholder="ФИО">
+                        <div class="input-with-btns__row flex-row flex-row_start flex-row_bottom-vertical">
+                            <button type="button" class="input-btn input-btn__remove" tooltip="Удалить исполнителя"><img src="./images/remove_input.svg" class="input-btn__img remove-img"></button>
+                            <button type="button" class="input-btn input-btn__add" tooltip="Добавить исполнителя"><img src="./images/add_input.svg" class="input-btn__img add-img"></button>
+                        </div>
+                    </div>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_arrangers groupped-inputs flex-column">
+                    <label for="arrangers" class="field__label">Аранжировщики</label>
+                    <div class="input-with-btns">
+                        <input type="text" class="field__input_text" id="arrangers" name="arrangers-field" placeholder="ФИО">
+                        <div class="input-with-btns__row flex-row flex-row_start flex-row_bottom-vertical">
+                            <button type="button" class="input-btn input-btn__remove" tooltip="Удалить исполнителя"><img src="./images/remove_input.svg" class="input-btn__img remove-img"></button>
+                            <button type="button" class="input-btn input-btn__add" tooltip="Добавить исполнителя"><img src="./images/add_input.svg" class="input-btn__img add-img"/></button>
+                        </div>
+                    </div>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_song-text flex-column">
+                    <label for="song_text" class="field__label">Текст песни</label>
+                    <textarea type="text" class="field__input_text textarea-height" id="song_text" name="song_text-field"></textarea>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_promo-text flex-column">
+                    <div class="flex-row flex-row_baseline">
+                        <label for="promo_text" class="field__label">Промо текст</label>
+                        <span class="field__question" tooltip="Промо текст">?</span>
+                    </div>
+                    <textarea type="text" class="field__input_text textarea-height" id="promo_text" name="promo_text-field"></textarea>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_percent flex-column field_limit">
+                    <label for="percent" class="field__label">Процент</label>
+                    <input type="number" class="field__input_text" id="percent" name="percent-field" placeholder="00">
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_prepayment flex-column field_limit">
+                    <label for="prepayment" class="field__label">Аванс</label>
+                    <input type="number" step="0.01" class="field__input_text" id="prepayment" name="prepayment-field" placeholder="0.00">
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_investments flex-column field_limit">
+                    <label for="limit" class="field__label">Инвестиции</label>
+                    <input type="number" step="0.01" class="field__input_text" id="limit" name="investments-field" placeholder="0.00">
+                    <div class="field__error"></div>
                 </div>
 
                 <div class="form-two-buttons">
                     <button type="submit" class="form-button">Создать</button>
                     <button class="form-button form-button_cancel" type="reset">Отменить</button>
                     <div class="field__error"></div>
-
                 </div>
 
             </div>
