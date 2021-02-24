@@ -228,6 +228,14 @@ html {
         @include fontSize(24, 29, 600);
         margin-bottom: 40px;
     }
+    &__goto {
+        text-decoration: none;
+        color: $green;
+        @include fontSize(14, 20, 400);
+    }
+    &__arrow {
+        margin-left: 8px;
+    }
     &__btn {
         width: 200px;
         @include fontSize(14, 20, 400);
