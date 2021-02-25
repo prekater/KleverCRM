@@ -1,10 +1,11 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="sublabels sublabels_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
-        <div class="sublabels-header sublabels-header_margin sublabels-header_padding">
-            <div class="sublabels-header__title">Подлейблы</div>
+    <div class="all-items-page all-items-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
 
-            <div class="tabs tabs_grid">
+        <div class="all-items-header all-items-header_margin all-items-header_padding">
+            <div class="all-items-header__title">Подлейблы</div>
+
+            <div class="tabs tabs_all-sublabels">
                 <a class="tabs__tab tabs__tab_active">Все подлейблы</a>
                 <a class="tabs__tab" href="./../track-sublabels-errors/index.html">Ошибки</a>
             </div>
@@ -16,64 +17,29 @@
                 <div class="search-table__clear"><img src="././images/clear_input.svg" /></div>
             </form>
         </div>
-        <div class="sublabels">
-            <div class="sublabels-table table">
-                <div class="table-header">
-                    <div class="table-header__cell table-header__cell_black">Название <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
-                    <div class="table-header__cell">Процент</div>
-                    <div class="table-header__cell"></div>
+
+        <div class="all-items-block">
+            <div class="all-items-table all-items-table_all-sublabels all-items-table_padding">
+                <div class="all-items-table-header all-items-table-header_all-sublabels">
+                    <div class="all-items-table-header__cell all-items-table-header__cell_black">Название <span class="arrow arrow_down"></span> </div>
+                    <div class="all-items-table-header__cell">Процент</div>
+                    <div class="all-items-table-header__cell"></div>
                 </div>
 
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            Alex Rudi Pell
+                <div class="all-items-table-row-wrapper all-items-table-row-wrapper_all-sublabels block block_rounded">
+                    <div class="all-items-table-row all-items-table-row_all-sublabels">
+                        <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                            Asd
                         </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            70%
+                        <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                            345
                         </div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="releases-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
+                        <div class="all-items-table-row__cell all-items-table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="all-items-table-button" href="#">
+                                <img src="./images/edit_bg.svg" alt="Редактировать подлейбл" />
                             </a>
-                            <a class="releases-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" class="releases-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, qui.
-                        </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            80%
-                        </div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="releases-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-                            </a>
-                            <a class="releases-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" class="releases-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            Asdasd qweqwe
-                        </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            60%
-                        </div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="releases-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-                            </a>
-                            <a class="releases-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" class="releases-table-button" />
+                            <a class="all-items-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить подлейбл" />
                             </a>
                         </div>
                     </div>
@@ -81,68 +47,43 @@
 
             </div>
 
-            <div class="sublabels-table-mobile sublabels-table-mobile_margin">
-                <div class="rows-block">
-                    <div class="sublabels-card-mobile block">
-                        <div class="sublabels-card-mobile__cell">Название:</div>
-                        <div class="sublabels-card-mobile__cell sublabels-card-mobile__cell_black">Alex Rudi Pell</div>
-                        <div class="sublabels-card-mobile__cell">Процент:</div>
-                        <div class="sublabels-card-mobile__cell sublabels-card-mobile__cell_black">70%</div>
-                        <div class="sublabels-card-mobile__buttons">
-                            <a class="sublabels-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-                            </a>
-                            <a class="sublabels-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
-                            </a>
+            <div class="all-items-table-mobile all-items-table-mobile_margin">
+                <div class="cards-block">
+                    <div class="all-items-card-mobile block">
+                        <div class="all-items-card-mobile__cell">Название:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black">Alex Rudi Pell</div>
+                        <div class="all-items-card-mobile__cell">Процент:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black">70%</div>
+                        <div class="all-items-card-mobile-2buttons">
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать подлейбл" class="all-items-card-mobile-2buttons__img" /> Редактировать</a>
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить подлейбл" class="all-items-card-mobile-2buttons__img" /> Удалить</a>
                         </div>
 
                     </div>
-                    <div class="sublabels-card-mobile block">
-                        <div class="sublabels-card-mobile__cell">Название:</div>
-                        <div class="sublabels-card-mobile__cell sublabels-card-mobile__cell_black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officiis perspiciatis facilis atque </div>
-                        <div class="sublabels-card-mobile__cell">Процент:</div>
-                        <div class="sublabels-card-mobile__cell sublabels-card-mobile__cell_black">70%</div>
-                        <div class="sublabels-card-mobile__buttons">
-                            <a class="sublabels-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-                            </a>
-                            <a class="sublabels-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
-                            </a>
+                    <div class="all-items-card-mobile block">
+                        <div class="all-items-card-mobile__cell">Название:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black">Alex Rudi Pell</div>
+                        <div class="all-items-card-mobile__cell">Процент:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black">70%</div>
+                        <div class="all-items-card-mobile-2buttons">
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать подлейбл" class="all-items-card-mobile-2buttons__img" /> Редактировать</a>
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить подлейбл" class="all-items-card-mobile-2buttons__img" /> Удалить</a>
                         </div>
 
                     </div>
-                    <div class="sublabels-card-mobile block">
-                        <div class="sublabels-card-mobile__cell">Название:</div>
-                        <div class="sublabels-card-mobile__cell sublabels-card-mobile__cell_black">Alex Rudi Pell</div>
-                        <div class="sublabels-card-mobile__cell">Процент:</div>
-                        <div class="sublabels-card-mobile__cell sublabels-card-mobile__cell_black">70%</div>
-                        <div class="sublabels-card-mobile__buttons">
-                            <a class="sublabels-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-                            </a>
-                            <a class="sublabels-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
-                            </a>
+
+                    <div class="all-items-card-mobile block">
+                        <div class="all-items-card-mobile__cell">Название:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black"></div>
+                        <div class="all-items-card-mobile__cell">Процент:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black"></div>
+                        <div class="all-items-card-mobile-2buttons">
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать подлейбл" class="all-items-card-mobile-2buttons__img" /> Редактировать</a>
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить подлейбл" class="all-items-card-mobile-2buttons__img" /> Удалить</a>
                         </div>
 
                     </div>
-                    <div class="sublabels-card-mobile block">
-                        <div class="sublabels-card-mobile__cell">Название:</div>
-                        <div class="sublabels-card-mobile__cell sublabels-card-mobile__cell_black">Alex Rudi Pell</div>
-                        <div class="sublabels-card-mobile__cell">Процент:</div>
-                        <div class="sublabels-card-mobile__cell sublabels-card-mobile__cell_black">70%</div>
-                        <div class="sublabels-card-mobile__buttons">
-                            <a class="sublabels-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-                            </a>
-                            <a class="sublabels-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" />
-                            </a>
-                        </div>
 
-                    </div>
                 </div>
 
                 <div class="pagination-mobile flex-row flex-row_between flex-row_center-vertical">
@@ -151,6 +92,7 @@
                     <a href="/sublabels?page=15&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__next PagedList-skipToNext"><img src="./images/page-right.svg" alt="Вперед"></a>
                 </div>
             </div>
+
 
             <div class="pagination-container">
                 <ul class="pagination">
