@@ -44,7 +44,7 @@ $(function() {
 //меню приложения в мобильном
 $(function() {
     if ($(window).width() <= 575.9) {
-        $('.cover-and-name__ellipses').on("click", function() {
+        $('#ellipses_app').on("click", function() {
             $('.popup-application').css('display', 'block')
             $('body').css('overflow', 'hidden')
             $(".popup-application-menu").css('animation', 'translating 0.3s linear 1')

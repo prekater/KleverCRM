@@ -19,7 +19,7 @@
     }
 }
 
-.item-info-block {
+.item-info-block_application {
     @include grid (1fr 1fr auto, auto auto 230px auto, 4.5vw, 3.25vh);
     @media (max-width: 991.9px) {
         @include grid (1fr 1fr, auto auto auto 220px auto, 65px, 14px);

@@ -23,19 +23,19 @@
     transition: background-color .3s;
     margin-right: 12px;
     margin-top: 30px;
-    &:first-child,
-    &:last-child,
-    &:nth-child(2),
-    &:nth-last-child(2) {
-        background: none;
-        width: auto;
-    }
-    &_disabled {
-        background: none;
-    }
     &:hover {
         background-color: $light-gray;
     }
+}
+
+.PagedList-skipToFirst,
+.PagedList-skipToPrevious,
+.PagedList-ellipses,
+.PagedList-skipToNext,
+.PagedList-skipToLast,
+.disabled {
+    background: none;
+    width: auto;
 }
 
 .active {

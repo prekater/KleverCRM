@@ -1,7 +1,7 @@
 //меню релиза в мобильном
 $(function() {
     if ($(window).width() <= 575.9) {
-        $('.cover-and-name__ellipses').on("click", function() {
+        $('#ellipses_sublabel').on("click", function() {
             $('.popup-sublabel').css('display', 'block')
             $('body').css('overflow', 'hidden')
             $(".popup-sublabel-menu").css('animation', 'translating 0.3s linear 1')
