@@ -33,16 +33,16 @@ $preloader.delay(500).fadeOut('slow');
 let inactivateProfitItem = function() {
     $profit.removeClass('li-sidebar_active');
     $sidebarProfit.hide(300);
-    $expandProfitImg.attr("src", "./images/arrow_down.svg");
-    $profitIcon.attr("src", "./images/sales.svg");
+    $expandProfitImg.attr("src", "~/assets/arrow_down.svg");
+    $profitIcon.attr("src", "~/assets/sales.svg");
 }
 
 //скрыть секцию Настройки
 let inactivateSettingsItem = function() {
     $settings.removeClass('li-sidebar_active');
-    $settingsIcon.attr("src", "./images/settings.svg");
+    $settingsIcon.attr("src", "~/assets/settings.svg");
     $sidebarSettings.hide(300);
-    $expandSettingsImg.attr("src", "./images/arrow_down.svg");
+    $expandSettingsImg.attr("src", "~/assets/arrow_down.svg");
 }
 
 //раскрыть секцию Прибыль
@@ -50,8 +50,8 @@ let activateProfitItem = function() {
     $sidebarProfit.show(300);
     $sidebarProfit.css("display", "flex");
     $profit.addClass('li-sidebar_active');
-    $profitIcon.attr("src", "./images/sales_black.svg");
-    $expandProfitImg.attr("src", "./images/arrow_up.svg");
+    $profitIcon.attr("src", "~/assets/sales_black.svg");
+    $expandProfitImg.attr("src", "~/assets/arrow_up.svg");
 }
 
 //раскрыть секцию Настройки
@@ -59,8 +59,8 @@ let activateSettingsItem = function() {
     $sidebarSettings.show(300);
     $sidebarSettings.css("display", "flex");
     $settings.addClass('li-sidebar_active');
-    $settingsIcon.attr("src", "./images/settings_black.svg");
-    $expandSettingsImg.attr("src", "./images/arrow_up.svg");
+    $settingsIcon.attr("src", "~/assets/settings_black.svg");
+    $expandSettingsImg.attr("src", "~/assets/arrow_up.svg");
 }
 
 $profit.on("click", function() {
