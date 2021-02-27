@@ -454,3 +454,45 @@ $('.image-upload-wrap').on('dragover', function() {
 $('.image-upload-wrap').on('dragleave', function() {
     $('.image-upload-wrap').removeClass('image-dropping');
 });
+
+
+//подтверждение удаления артиста/релиза/подлейбла и т.п.
+$(function() {
+    popupDeleteOverlay = $('.popup-delete')
+    popupConfirm = $(".popup-delete-confirm")
+    $('#item-delete_btn').on("click", function() {
+        popupDeleteOverlay.css('display', 'flex')
+        $('body').css('overflow', 'hidden')
+        popupConfirm.css('animation', 'translating 0.3s linear 1')
+    });
+    $('#item-delete_btn-mobile').on("click", function() {
+        popupDeleteOverlay.css('display', 'flex')
+        $('body').css('overflow', 'hidden')
+        popupConfirm.css('animation', 'translating 0.3s linear 1')
+    });
+    popupDeleteOverlay.click(function(event) {
+        e = event || window.event
+        if (e.target === this) {
+            popupDeleteOverlay.css('display', 'none')
+            $('body').css('overflow', 'auto')
+        }
+    })
+
+    $('.popup-delete__close').on("click", function() {
+        popupDeleteOverlay.css('display', 'none')
+        $('body').css('overflow', 'auto')
+    });
+
+    $('.popup-delete__button_cancel').on("click", function() {
+        popupDeleteOverlay.css('display', 'none')
+        $('body').css('overflow', 'auto')
+    });
+
+    $('.popup-delete__button_confirm').on("click", function() {
+        console.log("Наташ, мы всё удалили");
+        popupDeleteOverlay.css('display', 'none')
+        $('body').css('overflow', 'auto')
+
+    });
+
+});

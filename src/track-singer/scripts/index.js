@@ -55,7 +55,7 @@ $(function() {
             $('body').css('overflow', 'auto')
         });
 
-        $('#singer-delete_btn-mobile').on("click", function() {
+        $('#item-delete_btn-mobile').on("click", function() {
             console.log("dfsdf")
             $(".popup-singer").hide()
             $(".popup-delete").css('display', 'flex')
@@ -69,46 +69,6 @@ $(function() {
     }
 });
 
-//подтверждение удаления артиста
-$(function() {
-    popupDeleteOverlay = $('.popup-delete')
-    popupConfirm = $(".popup-delete-confirm")
-    $('#singer-delete_btn').on("click", function() {
-        popupDeleteOverlay.css('display', 'flex')
-        $('body').css('overflow', 'hidden')
-        popupConfirm.css('animation', 'translating 0.3s linear 1')
-    });
-    $('#singer-delete_btn-mobile').on("click", function() {
-        popupDeleteOverlay.css('display', 'flex')
-        $('body').css('overflow', 'hidden')
-        popupConfirm.css('animation', 'translating 0.3s linear 1')
-    });
-    popupDeleteOverlay.click(function(event) {
-        e = event || window.event
-        if (e.target === this) {
-            popupDeleteOverlay.css('display', 'none')
-            $('body').css('overflow', 'auto')
-        }
-    })
-
-    $('.popup-delete__close').on("click", function() {
-        popupDeleteOverlay.css('display', 'none')
-        $('body').css('overflow', 'auto')
-    });
-
-    $('.popup-delete__button_cancel').on("click", function() {
-        popupDeleteOverlay.css('display', 'none')
-        $('body').css('overflow', 'auto')
-    });
-
-    $('.popup-delete__button_confirm').on("click", function() {
-        console.log("Наташ, мы всё удалили");
-        popupDeleteOverlay.css('display', 'none')
-        $('body').css('overflow', 'auto')
-
-    });
-
-});
 
 //сортировка по названию
 let tracksBlock = document.getElementById("singer-tracks");
@@ -117,9 +77,6 @@ let tracksTable = document.querySelector(".singer-tracks-table");
 let rows = tracksBlock.querySelectorAll(".tracks-table-row-wrapper");
 let rowBlock = tracksBlock.querySelector(".tracks-table-row-wrapper");
 let ascSort = true;
-
-
-
 
 let sortString = function(cellIndex) {
     let target = event.target;
