@@ -39,6 +39,11 @@
             }
         }
     }
+    &__general-error {
+        color: $red;
+        @include fontSize(14, 20, 400);
+        margin-bottom: 10px;
+    }
 }
 
 .form-header {
