@@ -1,22 +1,27 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_top-vertical flex-column_adaptive-height">
 
-    <form action="" class="block block_rounded form_margin form_padding flex-column form adding-sublabel" id="adding_sublabel">
-        <div class="form__title adding-sublabel__2column">
-            Добавить подлейбл
+    <form action="" class="block block_rounded form_margin form_padding flex-column form" id="adding_sublabel">
+        <div class="flex-row flex-row_between flex-row_top-vertical form-header form-header_margin">
+            <div class="form-header__title">Добавить подлейбл</div>
         </div>
-        <div class="field flex-column adding-sublabel__2column">
-            <label for="sublabel_name" class="field__label">Название подлейбла</label>
-            <input type="text" id="sublabel_name" class="field__input_text">
-            <div class="field__error"></div>
-        </div>
-        <div class="field flex-column">
-            <label for="percent" class="field__label">Процент</label>
-            <input type="number" id="percent" class="field__input_text" placeholder="00">
-            <div class="field__error"></div>
-        </div>
-        <div class="adding-sublabel__2column form-two-buttons">
-            <button type="submit" class="form-button">Сохранить</button>
-            <input type="reset" class="form-button form-button_cancel" value="Отменить">
+
+        <div class="form__general-error">Пример ошибки</div>
+
+        <div class="groupped-fields adding-sublabel-grid">
+            <div class="field flex-column adding-sublabel-grid__2column">
+                <label for="sublabel_name" class="field__label">Название подлейбла</label>
+                <input type="text" id="sublabel_name" class="field__input_text">
+                <div class="field__error"></div>
+            </div>
+            <div class="field flex-column">
+                <label for="percent" class="field__label">Процент</label>
+                <input type="number" id="percent" class="field__input_text" placeholder="00">
+                <div class="field__error"></div>
+            </div>
+            <div class="adding-sublabel-grid__2column form-two-buttons">
+                <button type="submit" class="form-button">Сохранить</button>
+                <input type="reset" class="form-button form-button_cancel" value="Отменить">
+            </div>
         </div>
     </form>
 
