@@ -544,8 +544,11 @@ html {
         @include cardElevationHover();
         z-index: 10;
     }
-    margin-left: 20px;
-    margin-right: 20px;
+    @media (max-width: 991.9px) {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 .all-items-table-row {
@@ -598,6 +601,16 @@ html {
 
 .all-items-table-button {
     text-decoration: none;
+}
+
+.wrapper-for-border-top {
+    padding-top: 9px;
+    border-top: 1px solid $line;
+    grid-column: 1/3;
+    @include grid(1fr 2fr,
+    auto,
+    20px,
+    9px);
 }
 
 .all-items-table-mobile {
@@ -674,6 +687,37 @@ html {
         9px);
         align-content: space-between;
     }
+}
+
+.all-items-card-mobile-header {
+    grid-column: 1 / 3;
+    @include grid (52px 1fr,
+    auto,
+    20px,
+    0);
+    &__cover {
+        background: url("./../images/no_cover_track.svg") no-repeat 50% 0%;
+        background-size: 33px 33px;
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+    }
+    &__title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: $green;
+        font-weight: 700;
+    }
+}
+
+.wrapper-for-border-top {
+    padding-top: 9px;
+    border-top: 1px solid $line;
+    grid-column: 1/3;
+    // @include grid(1fr 150px,
+    // auto,
+    // 20px,
+    // 18px);
 }
 
 .all-items-card-mobile-2buttons {
