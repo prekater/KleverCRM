@@ -602,6 +602,7 @@ html {
     @include fontSize(14, 20, 400);
     align-items: center;
     &__cell {
+        text-decoration: none;
         position: relative;
         height: 100%;
         padding: 11px 9px 11px 1vw;
