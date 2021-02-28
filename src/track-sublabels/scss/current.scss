@@ -1,8 +1,4 @@
 @import "./../../common/scss/variables";
-.tabs_all-sublabels {
-    @include grid (min-content min-content min-content, auto, 42px, 0);
-}
-
 .all-items-table_all-sublabels {
     box-sizing: content-box;
     @include grid(1fr, auto, 0, 10px);

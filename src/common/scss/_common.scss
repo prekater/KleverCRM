@@ -139,6 +139,7 @@ html {
 
 .tabs {
     //    border: 1px solid orange;
+    @include grid (min-content min-content min-content, auto, 42px, 0);
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     color: $dark-gray;
@@ -205,6 +206,9 @@ html {
     }
     @media (max-width: 575.9px) {
         width: 100%;
+    }
+    &-text-lowacse {
+        text-transform: lowercase;
     }
 }
 
