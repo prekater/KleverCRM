@@ -250,4 +250,7 @@
     &_cancel {
         background: $line;
     }
+    &_non-fix-width {
+        width: auto;
+    }
 }

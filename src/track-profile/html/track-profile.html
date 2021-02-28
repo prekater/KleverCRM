@@ -1,31 +1,31 @@
 <div class="main-block main-block_padding">
     <div class="main-info main-info_padding flex-row flex-top-vertical flex-row_between">
-        <div class="avatar avatar_margin flex-row flex-row_center-vertical">
+        <div class="avatar flex-row flex-row_center-vertical">
             <img src="././images/avatar_big.png" alt="Фотография пользователя" class="avatar__photo" />
             <a href="#" class="avatar__add">
                 <img src="././images/add_avatar.svg" alt="Добавить новую фотографию" class="avatar__add-img">
             </a>
         </div>
-        <div class="flex-row flex-row_adaptive-width flex-row_between">
-            <div class="user-full-name flex-column flex-column_center-vertical">
-                <div class="user-full-name__profile">Личный профиль</div>
-                <div class="user-full-name__full-name">Васильевская Екатерина Петровна</div>
-            </div>
-            <!-- <button href="" class="log-out log-out_desktop flex-row flex-row_between flex-row_top-vertical"> <img src="././images/log-out.svg" alt="Выйти" class="log-out__img" /> Выйти</button> -->
-            <form class="flex-row flex-row_between flex-row_center-vertical">
-                <button id="logout" type="submit" class="log-out log-out_desktop "> <img src="././images/log-out.svg" alt="Выйти" class="log-out__img" /> Выйти</button>
-            </form>
+
+        <div class="user-full-name flex-column flex-column_center-vertical">
+            <div class="user-full-name__profile">Личный профиль</div>
+            <div class="user-full-name__full-name">Васильевская Екатерина Петровна</div>
         </div>
+        <form class="flex-row flex-row_between flex-row_center-vertical logout-form_desktop">
+            <button id="logout" type="submit" class="log-out log-out_desktop "> <img src="././images/log-out.svg" alt="Выйти" class="log-out__img" /> Выйти</button>
+        </form>
+
+        <ul class="tabs tabs_profile">
+            <li>
+                <div class="tabs__tab tabs__tab_active" id="tab-profile-settings">Настройки профиля</div>
+            </li>
+            <li>
+                <div class="tabs__tab" id="tab-change-password">Смена пароля</div>
+            </li>
+        </ul>
+
     </div>
 
-    <ul class="tabs tabs_profile">
-        <li>
-            <div class="tabs__tab tabs__tab_active" id="tab-profile-settings">Настройки профиля</div>
-        </li>
-        <li>
-            <div class="tabs__tab" id="tab-change-password">Смена пароля</div>
-        </li>
-    </ul>
 
     <div class="flex-column flex-column_center-vertical flex-column_center">
         <!-- <form action="" class="block block_rounded form_margin form_padding flex-column form form_profile" id="profile-settings">
@@ -83,7 +83,7 @@
             </div>
 
         </form> -->
-        <form action="" class="block block_rounded form_margin form_padding flex-column form form_profile" id="change-password">
+        <form action="" class="block block_rounded form_margin form_padding flex-column form form_profile form_login" id="change-password">
             <div class="form__general-error"></div>
             <div class="groupped-fields profile-grid">
                 <div class="field flex-column">
@@ -96,21 +96,15 @@
                     <input type="text" id="new-password" class="field__input_text">
                     <div class="field__error"></div>
                 </div>
-
                 <div class="field flex-row flex-row_start field_remember">
-
-
                     <input type="checkbox" class="field__input_checkbox" id="is_group" name="is_group-field">
                     <label for="is_group">Запомнить меня?</label>
-
                 </div>
-
-                <div class="profile-form-buttons flex-row flex-row_between">
-                    <button type="submit" class="form-button">Обновить пароль</button>
-                    <button class="form-button form-button_cancel" type="reset">Отменить</button>
+                <div class="profile-form-buttons">
+                    <button type="submit" class="btn btn_profile">Обновить пароль</button>
+                    <button class="btn btn_profile btn_cancel" type="reset">Отменить</button>
                 </div>
             </div>
-
         </form>
 
         <!-- <a href="" class="log-out log-out_tablet flex-row flex-row_between flex-row_top-vertical"> <img src="././images/log-out.svg" alt="Выйти" class="log-out__img" /> Выйти</a> -->

@@ -106,6 +106,9 @@ html {
     &_top-vertical {
         justify-content: flex-start;
     }
+    &_left {
+        align-items: flex-start;
+    }
 }
 
 .block {
@@ -139,7 +142,6 @@ html {
 
 .tabs {
     //    border: 1px solid orange;
-    @include grid (min-content min-content min-content, auto, 42px, 0);
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     color: $dark-gray;

@@ -1,6 +1,7 @@
 @import "./../../common/scss/variables";
 .main-info {
     width: 100%;
+    justify-self: flex-start;
     &_padding {
         padding: 33px 34px 30px 37px;
         @media (max-width: 991.9px) {
@@ -9,6 +10,11 @@
         @media (max-width: 575.9px) {
             padding: 23px 20px 28px 20px;
         }
+    }
+    @include grid(auto 1fr auto, auto auto, 26px, 20px);
+    @media (max-width: 991.9px) {
+        width: 100vw;
+        @include grid(auto 1fr, auto auto, 26px, 20px);
     }
 }
 
@@ -71,6 +77,12 @@
     }
 }
 
+.logout-form_desktop {
+    @media (max-width: 991.9px) {
+        display: none;
+    }
+}
+
 .log-out {
     text-decoration: none;
     color: $black;
@@ -105,29 +117,26 @@
     }
 }
 
-.tabs {
-    &_profile {
-        width: 100%;
-        height: 30px;
-        padding-left: 37px;
-        @media (max-width: 991.9px) {
-            padding-left: 20px;
-        }
+.tabs_profile {
+    @include grid (min-content min-content, auto, 42px, 0);
+    height: 30px;
+    //padding-left: 37px;
+    @media (max-width: 991.9px) {
+        //padding-left: 20px;
     }
+    grid-column: 1 / 4;
 }
 
 .form_profile {
-    width: 28vw;
-    @media (max-width: 1399.9px) {
-        width: 35vw;
-    }
+    width: 450px;
+    margin-bottom: 40px;
     @media (max-width: 991.9px) {
-        width: 65vw;
         border-radius: 12px;
     }
     @media (max-width: 575.9px) {
-        width: 100%;
+        width: 100vw;
         border-radius: 0;
+        margin-bottom: 22px;
     }
 }
 
@@ -135,16 +144,31 @@
     @include grid(1fr, auto, 0, 20px);
 }
 
+.form_login {
+    justify-self: center;
+}
+
 .profile-form-buttons {
     margin-top: 1vh;
     //grid-column: 1 / 2;
-    @include grid(180px 180px, auto, 1.25vw, 0);
+    @include grid(1fr 1fr, auto, 1.25vw, 0);
     // @media (max-width: 991.9px) {
     //     @include grid(180px 180px, auto, 20px, auto);
     // }
     @media (max-width: 575.9px) {
-        @include grid(130px 130px, auto, 20px, 0);
+        @include grid(1fr 1fr, auto, 20px, 0);
     }
+}
+
+.btn_profile {
+    height: 52px;
+    @media (max-width: 575.9px) {
+        padding: 1px 4px 1px 4px;
+    }
+}
+
+.btn_cancel {
+    background: $line;
 }
 
 .field_remember {
