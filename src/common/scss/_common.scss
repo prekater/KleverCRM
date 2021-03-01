@@ -40,6 +40,9 @@ html {
     }
     &_full-width {
         width: 100%;
+        @media (max-width: 991.9px) {
+            width: 100vw;
+        }
     }
 }
 
@@ -173,6 +176,10 @@ html {
     @media (max-width: 575.9px) {
         width: 100%;
     }
+}
+
+.tabs-text-lowcase {
+    text-transform: lowercase;
 }
 
 .adding-item {

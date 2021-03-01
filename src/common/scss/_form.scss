@@ -46,6 +46,34 @@
     }
 }
 
+.form-header {
+    &__title {
+        @include fontSize(20, 26, 600);
+        @media (max-width: 575.9px) {
+            @include fontSize(18, 24, 600);
+        }
+    }
+    &__to-all-items {
+        color: $black;
+        text-decoration: none;
+        @include fontSize(14, 20, normal);
+        display: flex;
+        cursor: pointer;
+        @media (max-width: 575.9px) {
+            display: none;
+        }
+    }
+    &_margin {
+        margin-bottom: 3.875vh;
+        @media (max-width: 991.9px) {
+            margin-bottom: 26px;
+        }
+        @media (max-width: 575.9px) {
+            margin-bottom: 18px;
+        }
+    }
+}
+
 .field {
     position: relative;
     &__label {
