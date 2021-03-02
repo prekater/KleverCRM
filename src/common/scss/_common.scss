@@ -151,6 +151,7 @@ html {
     @include fontSize14();
     flex-wrap: nowrap;
     align-items: baseline;
+    @include grid (min-content min-content, auto, 42px, 0);
     &__tab {
         white-space: nowrap;
         text-decoration: none;
@@ -609,6 +610,12 @@ html {
     }
 }
 
+.cover-in-table {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+}
+
 .all-items-table-button {
     text-decoration: none;
 }
@@ -819,6 +826,23 @@ html {
         0);
         width: 100wv;
     }
+    &__cover {
+        height: 110px;
+        width: 110px;
+        @media (max-width: 991.9px) {
+            grid-row: 1/3;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @media (max-width: 575.9px) {
+            grid-row: 1/2;
+            height: 84px;
+            width: 84px;
+            background-size: 60px 60px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
     &__ellipses {
         display: none;
         @media (max-width: 575.9px) {
@@ -1002,9 +1026,15 @@ html {
         }
         &_bold {
             font-weight: 700;
+            a {
+                font-weight: 700;
+            }
         }
         &_green {
             color: $green;
+            a {
+                color: $green;
+            }
         }
     }
     &_padding {

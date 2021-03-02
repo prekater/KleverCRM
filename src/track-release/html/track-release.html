@@ -1,42 +1,42 @@
-<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+<div class="main-block main-block_full-width main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="release release_padding flex-column flex-column_top-vertical" id="release">
-        <div class="release-header">
-            <a class="to-all-releases to-all-releases_margin to-all-releases_padding flex-row flex-row_start" href="./../track-all-releases/index.html">
-                <img src="./images/arrow_to_left.svg" alt="Вернуться к релизам" class="to-all-releases__img" /> Все релизы
+    <div class="item-page item-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center" id="release">
+        <div class="item-header">
+            <a class="to-all-items-from-item to-all-items-from-item_padding flex-row flex-row_start" href="./../track-all-releases/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к релизам" class="to-all-items-from-item__img" /> Все релизы
             </a>
 
-            <div class="cover-and-name cover-and-name_margin cover-and-name_padding">
+            <div class="item-cover-and-name item-cover-and-name_margin item-cover-and-name_release">
                 <div class="cover-change">
-                    <div class="cover-and-name__cover">
+                    <div class="item-cover-and-name__cover">
                         <!-- <img src="./images/cover110.png" alt=""> -->
                     </div>
                     <div class="cover-change__hover"></div>
                 </div>
-                <div class="release-name flex-column">
-                    <span class="release-name__release">Релиз</span>
-                    <span class="release-name__name">Золото / Kartashow</span>
+                <div class="item-name flex-column">
+                    <span class="item-name__item">Релиз</span>
+                    <span class="item-name__name">Золото / Kartashow</span>
                 </div>
-                <div class="release-buttons">
-                    <a class="release-button" tooltip="Редактировать">
-                        <img src="./images/edit.svg" alt="Редактировать релиз" class="release-button__img">
-                        <span class="release-button__text">Редактировать</span>
+                <div class="item-buttons">
+                    <a class="item-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать релиз" class="item-button__img">
+                        <span class="item-button__text">Редактировать</span>
                     </a>
-                    <a class="release-button" id="release-delete_btn" tooltip="Удалить">
-                        <img src="./images/delete.svg" alt="Удалить релиз" class="release-button__img">
-                        <span class="release-button__text">Удалить</span>
+                    <a class="item-button" id="release-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить релиз" class="item-button__img">
+                        <span class="item-button__text">Удалить</span>
                     </a>
-                    <a class="release-button" tooltip="Деактивировать">
-                        <img src="./images/deactivate.svg" alt="Деактивировать  релиз" class="release-button__img">
-                        <span class="release-button__text">Деактивировать</span>
+                    <a class="item-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать  релиз" class="item-button__img">
+                        <span class="item-button__text">Деактивировать</span>
                     </a>
                 </div>
-                <img src="./images/ellipses.svg" alt="Меню релиза" class="cover-and-name__ellipses">
+                <img src="./images/ellipses.svg" alt="Меню релиза" class="item-cover-and-name__ellipses" id="ellipses_release">
             </div>
 
 
-            <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_between">
-                <div class="tabs tabs_grid">
+            <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_baseline">
+                <div class="tabs tabs_release">
                     <div class="tabs__tab tabs__tab_active" id="tab-release-info">Сведения</div>
                     <div class="tabs__tab" id="tab-release-tracks">Треки</div>
                     <div class="tabs__tab" id="tab-release-stat">Статистика</div>
@@ -67,8 +67,12 @@
 
 
                 <div class="info-cell info-cell_contract">
-                    <div class="info-cell__title">Договор:</div>
-                    <div class="info-cell__text info-cell__text_green info-cell__text_bold">№25913</div>
+                    <div class="contract-wrapper">
+                        <div class="info-cell__title">Договор:</div>
+                        <div class="info-cell__text info-cell__text_green info-cell__text_bold">
+                            <a>№25913</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="info-cell">
                     <div class="info-cell__title">Подлейбл:</div>
@@ -201,8 +205,6 @@
                         <div class="info-cell__text info-cell__text_bold info-cell__text_padding">10 000 ₽</div>
                     </div>
                 </div>
-
-
 
             </div>
 
@@ -455,22 +457,22 @@
                 Редактирование релиза
                 <a href=" #close" title="Close" class="popup-release__close">×</a>
             </div>
-            <div class="popup-release-buttons flex-column">
-                <a class="popup-release-button">
-                    <img src="./images/edit.svg" alt="Редактировать релиз" class="popup-release-button__img">
-                    <span class="popup-release-button__text">Редактировать</span>
+            <div class="popup-item-buttons flex-column">
+                <a class="popup-item-button">
+                    <img src="./images/edit.svg" alt="Редактировать релиз" class="popup-item-button__img">
+                    <span class="popup-item-button__text">Редактировать</span>
                 </a>
-                <a class="popup-release-button" id="release-delete_btn-mobile">
-                    <img src="./images/delete.svg" alt="Удалить релиз" class="popup-release-button__img">
-                    <span class="popup-release-button__text">Удалить</span>
+                <a class="popup-item-button" id="release-delete_btn-mobile">
+                    <img src="./images/delete.svg" alt="Удалить релиз" class="popup-item-button__img">
+                    <span class="popup-item-button__text">Удалить</span>
                 </a>
-                <a class="popup-release-button">
-                    <img src="./images/deactivate.svg" alt="Деактивировать релиз" class="popup-release-button__img">
-                    <span class="popup-release-button__text">Деактивировать</span>
+                <a class="popup-item-button">
+                    <img src="./images/deactivate.svg" alt="Деактивировать релиз" class="popup-item-button__img">
+                    <span class="popup-item-button__text">Деактивировать</span>
                 </a>
-                <a class="popup-release-button">
-                    <img src="./images/note.svg" alt="Добавить трек" class="popup-release-button__img" />
-                    <div class="popup-release-button__text">Добавить трек</div>
+                <a class="popup-item-button">
+                    <img src="./images/note.svg" alt="Добавить трек" class="popup-item-button__img" />
+                    <div class="popup-item-button__text">Добавить трек</div>
                 </a>
             </div>
         </div>

@@ -1,12 +1,4 @@
 @import "./../../common/scss/variables";
-.tabs_all-releases {
-    @include grid (min-content min-content, auto, 42px, 0);
-    @media (max-width: 991.9px) {
-        grid-row: 2/3;
-        grid-column: 1/3;
-    }
-}
-
 .all-items-table-header_all-releases {
     @include grid (57px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 28px, auto, 0, 0);
     @media (max-width: 991.9px) {
