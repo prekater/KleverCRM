@@ -1,11 +1,11 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="all-contracts all-contracts_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
+    <div class="all-items-page all-items-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
 
-        <div class="all-contracts-header all-contracts-header_margin all-contracts-header_padding">
-            <div class="all-contracts-header__title">Контракты</div>
+        <div class="all-items-header all-items-header_margin all-items-header_padding">
+            <div class="all-items-header__title">Контракты</div>
 
-            <div class="tabs tabs_grid">
+            <div class="tabs tabs_all-contracts">
                 <a class="tabs__tab tabs__tab_active">Все контракты</a>
                 <a class="tabs__tab" href="./../track-all-contracts-errors/index.html">Ошибки</a>
             </div>
@@ -18,88 +18,31 @@
             </form>
         </div>
 
-        <div class="all-contracts">
-            <div class="all-contracts-table all-contracts-table_padding table">
-                <div class="table-header">
-                    <div class="table-header__cell table-header__cell_black">Номер договора <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
-                    <div class="table-header__cell">Дата начала</div>
-                    <div class="table-header__cell">Статус</div>
-                    <div class="table-header__cell">Дата окончания</div>
-                    <div class="table-header__cell"></div>
+        <div class="all-items-block">
+            <div class="all-items-table all-items-table_padding table">
+                <div class="all-items-table-header all-items-table-header_all-contracts">
+                    <div class="all-items-table-header__cell all-items-table-header__cell_black">Номер договора <span class="arrow arrow_down"></span> </div>
+                    <div class="all-items-table-header__cell">Дата начала</div>
+                    <div class="all-items-table-header__cell">Статус</div>
+                    <div class="all-items-table-header__cell">Дата окончания</div>
+                    <div class="all-items-table-header__cell"></div>
                 </div>
 
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell table-row__cell_bold flex-row flex-row_center-vertical">
+                <div class="all-items-table-row-wrapper block block_rounded">
+                    <div class="all-items-table-row all-items-table-row_all-contracts">
+                        <div class="all-items-table-row__cell all-items-table-row__cell_bold flex-row flex-row_center-vertical">
                             Договор №2998773
                         </div>
-                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">29 дек 2019</div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical">Ожидание инф./рек.</div>
-                        <div class="table-row__cell flex-row table-row__cell_gray flex-row_center-vertical">29 дек 2024</div>
+                        <div class="all-items-table-row__cell all-items-table-row__cell_gray flex-row flex-row_center-vertical">29 дек 2019</div>
+                        <div class="all-items-table-row__cell flex-row flex-row_center-vertical">Ожидание инф./рек.</div>
+                        <div class="all-items-table-row__cell flex-row all-items-table-row__cell_gray flex-row_center-vertical">29 дек 2024</div>
 
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="contracts-table-button" href="#">
+                        <div class="all-items-table-row__cell all-items-table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="all-items-table-button" href="#">
                                 <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
                             </a>
-                            <a class="contracts-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить контракт" class="contracts-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell table-row__cell_bold flex-row flex-row_center-vertical">
-                            Договор №2998773
-                        </div>
-                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">29 дек 2019</div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical">Ожидание инф./рек.</div>
-                        <div class="table-row__cell flex-row table-row__cell_gray flex-row_center-vertical">29 дек 2024</div>
-
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="contracts-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
-                            </a>
-                            <a class="contracts-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить контракт" class="contracts-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell table-row__cell_bold flex-row flex-row_center-vertical">
-                            Договор №2998773
-                        </div>
-                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">29 дек 2019</div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical">Ожидание инф./рек.</div>
-                        <div class="table-row__cell flex-row table-row__cell_gray flex-row_center-vertical">29 дек 2024</div>
-
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="contracts-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
-                            </a>
-                            <a class="contracts-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить контракт" class="contracts-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell table-row__cell_bold flex-row flex-row_center-vertical">
-                            Договор №2998773
-                        </div>
-                        <div class="table-row__cell table-row__cell_gray flex-row flex-row_center-vertical">29 дек 2019</div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical">Ожидание инф./рек.</div>
-                        <div class="table-row__cell flex-row table-row__cell_gray flex-row_center-vertical">29 дек 2024</div>
-
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="contracts-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
-                            </a>
-                            <a class="contracts-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить контракт" class="contracts-table-button" />
+                            <a class="all-items-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить контракт" />
                             </a>
                         </div>
                     </div>
@@ -107,50 +50,20 @@
 
             </div>
 
-            <div class="all-contracts-table-mobile all-contracts-table-mobile_margin">
-                <div class="rows-block">
-                    <div class="all-contracts-card-mobile block">
-                        <div class="all-contracts-card-mobile__cell">Номер договора:</div>
-                        <div class="all-contracts-card-mobile__cell all-contracts-card-mobile__cell_black all-contracts-card-mobile__cell_bold">Договор №2998773</div>
-                        <div class="all-contracts-card-mobile__cell">Дата начала:</div>
-                        <div class="all-contracts-card-mobile__cell">29 дек 2019</div>
-                        <div class="all-contracts-card-mobile__cell">Статус</div>
-                        <div class="all-contracts-card-mobile__cell all-contracts-card-mobile__cell_black">Ожидание инф./рек.</div>
-                        <div class="all-contracts-card-mobile__cell">Дата окончания</div>
-                        <div class="all-contracts-card-mobile__cell">29 дек 2024</div>
-                        <div class="two-buttons-mobile">
-                            <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать релиз" class="two-buttons-mobile__img" /> Редактировать</a>
-                            <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить релиз" class="two-buttons-mobile__img" /> Удалить</a>
-                        </div>
-
-                    </div>
-                    <div class="all-contracts-card-mobile block">
-                        <div class="all-contracts-card-mobile__cell">Номер договора:</div>
-                        <div class="all-contracts-card-mobile__cell all-contracts-card-mobile__cell_black all-contracts-card-mobile__cell_bold">Договор №2998773</div>
-                        <div class="all-contracts-card-mobile__cell">Дата начала:</div>
-                        <div class="all-contracts-card-mobile__cell">29 дек 2019</div>
-                        <div class="all-contracts-card-mobile__cell">Статус</div>
-                        <div class="all-contracts-card-mobile__cell all-contracts-card-mobile__cell_black">Ожидание инф./рек.</div>
-                        <div class="all-contracts-card-mobile__cell">Дата окончания</div>
-                        <div class="all-contracts-card-mobile__cell">29 дек 2024</div>
-                        <div class="two-buttons-mobile">
-                            <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать релиз" class="two-buttons-mobile__img" /> Редактировать</a>
-                            <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить релиз" class="two-buttons-mobile__img" /> Удалить</a>
-                        </div>
-
-                    </div>
-                    <div class="all-contracts-card-mobile block">
-                        <div class="all-contracts-card-mobile__cell">Номер договора:</div>
-                        <div class="all-contracts-card-mobile__cell all-contracts-card-mobile__cell_black all-contracts-card-mobile__cell_bold">Договор №2998773</div>
-                        <div class="all-contracts-card-mobile__cell">Дата начала:</div>
-                        <div class="all-contracts-card-mobile__cell">29 дек 2019</div>
-                        <div class="all-contracts-card-mobile__cell">Статус</div>
-                        <div class="all-contracts-card-mobile__cell all-contracts-card-mobile__cell_black">Ожидание инф./рек.</div>
-                        <div class="all-contracts-card-mobile__cell">Дата окончания</div>
-                        <div class="all-contracts-card-mobile__cell">29 дек 2024</div>
-                        <div class="two-buttons-mobile">
-                            <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать релиз" class="two-buttons-mobile__img" /> Редактировать</a>
-                            <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить релиз" class="two-buttons-mobile__img" /> Удалить</a>
+            <div class="all-items-table-mobile all-items-table-mobile_margin">
+                <div class="cards-block">
+                    <div class="all-items-card-mobile block">
+                        <div class="all-items-card-mobile__cell">Номер договора:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black all-items-card-mobile__cell_bold">Договор №2998773</div>
+                        <div class="all-items-card-mobile__cell">Дата начала:</div>
+                        <div class="all-items-card-mobile__cell">29 дек 2019</div>
+                        <div class="all-items-card-mobile__cell">Статус</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black">Ожидание инф./рек.</div>
+                        <div class="all-items-card-mobile__cell">Дата окончания</div>
+                        <div class="all-items-card-mobile__cell">29 дек 2024</div>
+                        <div class="all-items-card-mobile-2buttons">
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать релиз" class="all-items-card-mobile-2buttons__img" /> Редактировать</a>
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить релиз" class="all-items-card-mobile-2buttons__img" /> Удалить</a>
                         </div>
 
                     </div>
