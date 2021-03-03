@@ -1,12 +1,12 @@
 //переход с кнопки Отправить на экран Успешно создан
-let createContract = document.getElementById("create_application");
-let addingContract = document.getElementById("adding_application");
-let addedSuccessContract = document.getElementById("added_success_application");
+let createApp = document.getElementById("create_application");
+let addingApp = document.getElementById("adding_application");
+let addedSuccessApp = document.getElementById("added_success_application");
 
-createContract.onsubmit = function(evt) {
+createApp.onsubmit = function(evt) {
     evt.preventDefault();
-    addingContract.style.display = "none";
-    addedSuccessContract.style.display = "block";
+    addingApp.style.display = "none";
+    addedSuccessApp.style.display = "block";
 }
 
 // плагин для  выпадающего меню в форме добавления релиза и договора

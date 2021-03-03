@@ -1,0 +1,193 @@
+@import "./../../common/scss/variables";
+@import "./../../common/scss/custom-scrollbar";
+.main-block {
+    transition: padding 0.5s;
+    &_padding {
+        padding-top: 60px;
+        padding-left: 70px;
+        @media (max-width: 991.9px) {
+            padding-left: 0;
+        }
+    }
+}
+
+.tabs_config-fields {
+    @include grid (min-content min-content min-content, auto, 42px, 0);
+}
+
+.config-fields-table {
+    box-sizing: border-box;
+    align-self: center;
+    &_margin {
+        margin: 0 36px 0 36px;
+        @media (max-width: 991.9px) {
+            margin: 0;
+        }
+    }
+    &_padding {
+        padding: 31px 10px 20px 20px;
+        @media (max-width: 991.9px) {
+            padding: 20px 10px 20px 20px;
+        }
+        @media (max-width: 575.9px) {
+            padding: 10px 10px 20px 20px;
+        }
+    }
+    @media (max-width: 991.9px) {
+        width: auto;
+        border-radius: 0;
+    }
+}
+
+.container {
+    @media (min-width: 992px) {
+        height: 400px;
+        overflow: auto;
+        @media (max-width: 991.9px) {
+            height: 400px;
+        }
+    }
+}
+
+.container-tablet {
+    @media (max-width: 991.9px) {
+        height: 700px;
+        width: auto;
+        overflow: auto;
+        background-color: #fff;
+        @media (max-width: 991.9px) {
+            height: 500px;
+        }
+    }
+}
+
+#mCSB_1_scrollbar_vertical {
+    margin-top: 10px;
+}
+
+.all-items-table-header_config-fields {
+    padding-right: 0px;
+    padding-left: 0;
+    @include grid (20vw 20vw 10vw 10vw 10vw 1fr 90px, auto, 0, 0);
+    @media (max-width: 1399.9px) {
+        @include grid (15vw 15vw 15vw 15vw 10vw 1fr 90px, auto, 0, 0);
+    }
+    @media (max-width: 991.9px) {
+        @include grid (200px 200px 150px 150px 100px 100px 90px 30px, auto, 0, 0);
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+        border-radius: 0;
+    }
+    .all-items-table-header__cell {
+        border-bottom: 1px solid $line;
+        padding-bottom: 17px;
+    }
+}
+
+.all-items-table-row_config-fields {
+    border-bottom: 1px solid $line;
+    position: relative;
+    border-radius: 0;
+    @include grid (20vw 20vw 10vw 10vw 10vw 1fr 90px, auto, 0, 0);
+    @media (max-width: 1399.9px) {
+        @include grid (15vw 15vw 15vw 15vw 10vw 1fr 90px, auto, 0, 0);
+    }
+    @media (max-width: 991.9px) {
+        @include grid (200px 200px 150px 150px 100px 100px 90px 30px, auto, 0, 0);
+    }
+    &__cell {
+        border-bottom: 1px solid $line;
+    }
+    .all-items-table-row__cell::after {
+        border-right: 1px solid transparent;
+    }
+    &:hover {
+        background-color: $main-bg;
+    }
+}
+
+.cell-for-tablet-align {
+    display: none;
+    @media (max-width: 991.9px) {
+        display: flex;
+    }
+}
+
+.popup-config {
+    display: none;
+    @include fontSize(14, 20, 400);
+    padding: 0;
+    z-index: 200;
+    @media (max-width: 575.9px) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(118, 137, 137, 0.5);
+        text-align: center;
+    }
+    &-menu {
+        @keyframes translating {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        transition: all 0.5s;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        background-clip: padding-box;
+        border-radius: 12px 12px 0 0;
+        outline: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        &__header {
+            background-color: $main-bg;
+            height: 38px;
+            width: 100%;
+            padding-right: 20px;
+            padding-left: 20px;
+            border-radius: 12px 12px 0 0;
+        }
+    }
+    &__close {
+        color: $textsecondary;
+        font-size: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        &:hover {
+            color: $black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    &-buttons {
+        @include grid(1fr, 44px 44px 44px, 0, 0);
+        justify-items: start;
+    }
+    &-button {
+        width: 100%;
+        -webkit-tap-highlight-color: transparent;
+        @include flexCenter(row);
+        justify-content: flex-start;
+        padding: 0;
+        &__text {
+            display: inline;
+            @include fontSize(13, 16, 400);
+            margin-left: 12px;
+        }
+        &__img {
+            height: 18px;
+            width: 18px;
+            margin-left: 20px;
+        }
+    }
+}

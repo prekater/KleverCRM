@@ -399,14 +399,14 @@
             </div>
 
             <div class="image-upload-wrap popup-change__place-here flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
-                <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                <input class="file-upload-input" type='file' onchange="readURL(this);" />
                 <div class="drag-text flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
                     <img src="./images/pic_cover.svg" alt="" class="">
                     <span class="popup-change__text">Перетащите файл формата JPG или PNG в это поле</span>
                 </div>
             </div>
 
-            <div class="file-upload-content">
+            <div class="file-upload-content file-upload-content_u">
                 <img class="file-upload-image" src="#" alt="your image" />
                 <div class="image-title-wrap">
                     <button type="button" onclick="removeUpload()" class="popup-change__cover-close"><span class="flex-row flex-row_center flex-row_center-vertical">×</span></button>

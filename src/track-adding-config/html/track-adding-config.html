@@ -1,0 +1,30 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+    <div class="adding-item-page adding-item-page_adding-conf flex-column flex-column_center flex-column_top-vertical">
+        <form class=" block block_rounded form form_adding-config main-form" action="" id="create_config">
+            <div class="flex-row flex-row_between flex-row_top-vertical form-header form-header_margin">
+                <div class="form-header__title">Создать конфигурацию загрузки</div>
+            </div>
+            <div class="form__general-error"></div>
+            <div class="groupped-fields grid">
+                <div class="field flex-column">
+                    <label for="config_name" class="field__label">Название</label>
+                    <div class="input-wrapper"></div>
+                    <input type="text" class="field__input_text" name="config_name" id="config_name">
+                    <div class="field__error"></div>
+                </div>
+                <div class="field flex-column">
+                    <label for="entity_priority" class="field__label">Приоритет сущностей</label>
+                    <div class="input-wrapper">
+                        <input type="text" class="field__input_text" name="entity_priority-field" id="entity_priority">
+                    </div>
+                    <div class="field__error"></div>
+                </div>
+                <div class="form-two-buttons">
+                    <button type="submit" class="form-button">Создать</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script defer src="../track-adding-config/scripts/index.js"></script>

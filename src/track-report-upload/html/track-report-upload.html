@@ -1,0 +1,60 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+    <div class="adding-item adding-item_upload-report" id="uploading_report">
+        <form class="block block_rounded form form_upload-report main-form" action="" id="upload_report">
+            <div class="flex-row flex-row_between flex-row_top-vertical form-header form-header_margin">
+                <div class="form-header__title">Загрузить отчет</div>
+            </div>
+            <div class="groupped-fields grid">
+
+                <div class="field flex-column">
+                    <label for="status" class="field__label">Статус</label>
+                    <select id="status" name="status-field" class="">
+                            <option value="0">Шаблон 1</option>
+                            <option value="1">Шаблон 2</option>
+                            <option value="2">Шаблон 3</option>
+                        </select>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="field field_upload flex-column">
+                    <div class="report-upload-wrap">
+                        <input class="report-upload-input" type='file' onchange="readURL(this);" />
+                        <div class="not-uploaded-yet flex-column flex-column_center flex-column_center-vertical">
+                            <img src=" ./images/upload-report_green.svg" alt="Загрузить отчёт" class="report-upload-wrap__img">
+                            <div class="report-upload-wrap__text">
+                                Перетащите файл сюда или кликните по полю, чтобы загрузить файл
+                            </div>
+                        </div>
+                        <div class="uploaded flex-column flex-column_center flex-column_center-vertical ">
+                            <img src=" ./images/uploaded_report.svg" class="report-upload-wrap__img">
+                            <div class="report-name "></div>
+                            <div class="report-upload-wrap__text">
+                                Для замены перетащите файл сюда или кликните по полю, чтобы загрузить файл
+                            </div>
+                        </div>
+                        <div class="uploaded-mobile flex-column flex-column_center flex-column_center-vertical">
+                            <img src="./images/uploaded_report.svg" class="uploaded-mobile__img">
+                            <div class="report-name"></div>
+                        </div>
+                    </div>
+                    <div class="field__error"></div>
+                </div>
+
+                <div class="form-two-buttons form-two-buttons_report">
+                    <button type="submit" class="form-button form-button_report upload-button_desktop">Загрузить</button>
+                    <button type="button" class="form-button upload-button_mobile" onclick="$('.report-upload-input').trigger( 'click' )"> <span class="form-button__content"><img src="./images/upload.svg" alt=""> <span class="upload-text">Загрузить файл</span></span></button>
+
+                    <button class="form-button form-button_report form-button_cancel" type="reset" onclick="removeUpload()"><span class="form-button__content">Отменить</span></button>
+                    <div class="field__error"></div>
+
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+</div>
+<script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script defer src="../track-report-upload/scripts/index.js"></script>
+<script defer src="../track-report-upload/scripts/jquery.nice-select.js"></script>
