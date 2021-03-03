@@ -1,36 +1,36 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="contract-info contract-info_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
-        <div class="contract-info-header">
-            <a class="to-all-contracts to-all-contracts to-all-contracts_padding flex-row flex-row_start" href="./../track-all-contracts/index.html">
-                <img src="./images/arrow_to_left.svg" alt="Вернуться к договорам" class="to-all-contracts__img" /> Все договоры
+    <div class="item-page item-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
+        <div class="item-header">
+            <a class="to-all-items-from-item to-all-items-from-item_padding flex-row flex-row_start" href="./../track-all-contracts/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к договорам" class="to-all-items__img" /> Все договоры
             </a>
 
-            <div class="cover-and-name cover-and-name_margin cover-and-name_padding">
-                <div class="contract-name flex-column">
-                    <span class="contract-name__contract">Договор</span>
-                    <span class="contract-name__name">№254169</span>
+            <div class="item-cover-and-name item-cover-and-name_margin item-cover-and-name_padding">
+                <div class="item-name flex-column">
+                    <span class="item-name__item">Договор</span>
+                    <span class="item-name__name">№254169</span>
                 </div>
-                <div class="contract-buttons">
-                    <a class="contract-button" tooltip="Редактировать">
-                        <img src="./images/edit.svg" alt="Редактировать договор" class="contract-button__img">
-                        <span class="contract-button__text">Редактировать</span>
+                <div class="item-buttons">
+                    <a class="item-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать договор" class="item-button__img">
+                        <span class="item-button__text">Редактировать</span>
                     </a>
-                    <a class="contract-button" id="contract-delete_btn" tooltip="Удалить">
-                        <img src="./images/delete.svg" alt="Удалить договор" class="contract-button__img">
-                        <span class="contract-button__text">Удалить</span>
+                    <a class="item-button" id="item-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить договор" class="item-button__img">
+                        <span class="item-button__text">Удалить</span>
                     </a>
-                    <a class="contract-button" tooltip="Деактивировать">
-                        <img src="./images/deactivate.svg" alt="Деактивировать  договор" class="contract-button__img">
-                        <span class="contract-button__text">Деактивировать</span>
+                    <a class="item-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать  договор" class="item-button__img">
+                        <span class="item-button__text">Деактивировать</span>
                     </a>
                 </div>
-                <img src="./images/ellipses.svg" alt="Меню договора" class="cover-and-name__ellipses">
+                <img src="./images/ellipses.svg" alt="Меню договора" class="item-cover-and-name__ellipses" id="ellipses_contract">
             </div>
 
 
             <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_between">
-                <div class="tabs tabs_grid">
+                <div class="tabs tabs_contract">
                     <a class="tabs__tab tabs__tab_active">Сведения</a>
                     <a class="tabs__tab" href="./../track-contract-releases/index.html">Релизы</a>
                     <a class="tabs__tab" href="./../track-contract-applications/index.html">Приложения</a>
@@ -38,38 +38,38 @@
             </div>
         </div>
 
-        <div class="contract-info-block contract-info-block_padding block block_rounded">
-            <div class="grid-cell">
-                <div class="info-cell info-cell_padding">
-                    <div class="info-cell__title">Дата начала:</div>
-                    <div class="info-cell__text info-cell__text_bold">30 сен 2019</div>
+        <div class="item-info-block item-info-block_contract item-info-block_padding item-info-block_margin block block_rounded">
+            <div class="item-info-block-grid-cell">
+                <div class="item-info-block-info-cell item-info-block-info-cell_padding">
+                    <div class="item-info-block-info-cell__title">Дата начала:</div>
+                    <div class="item-info-block-info-cell__text">30 сен 2019</div>
                 </div>
             </div>
-            <div class="grid-cell">
-                <div class="info-cell info-cell_padding info-cell_gray">
-                    <div class="info-cell__title">Дата окончания:</div>
-                    <div class="info-cell__text info-cell__text_bold">30 сен 2024</div>
-                </div>
-            </div>
-
-            <div class="grid-cell">
-                <div class="info-cell info-cell_padding">
-                    <div class="info-cell__title">Статус договора:</div>
-                    <div class="info-cell__text info-cell__text_bold">Ожидание инф./рек.</div>
+            <div class="item-info-block-grid-cell">
+                <div class="item-info-block-info-cell item-info-block-info-cell_padding item-info-block-info-cell_gray">
+                    <div class="item-info-block-info-cell__title">Дата окончания:</div>
+                    <div class="item-info-block-info-cell__text">30 сен 2024</div>
                 </div>
             </div>
 
-            <div class="grid-cell">
-                <div class="info-cell info-cell_padding">
-                    <div class="info-cell__title">Лицензиар:</div>
-                    <div class="info-cell__text info-cell__text_bold">KleverService</div>
+            <div class="item-info-block-grid-cell">
+                <div class="item-info-block-info-cell item-info-block-info-cell_padding">
+                    <div class="item-info-block-info-cell__title">Статус договора:</div>
+                    <div class="item-info-block-info-cell__text">Ожидание инф./рек.</div>
                 </div>
             </div>
 
-            <div class="grid-cell grid-cell_requisites">
-                <div class="info-cell info-cell_requisites info-cell_gray info-cell_padding">
-                    <div class="info-cell__title">Реквизиты:</div>
-                    <div class="info-cell__text info-cell__text_grid">
+            <div class="item-info-block-grid-cell">
+                <div class="item-info-block-info-cell item-info-block-info-cell_padding">
+                    <div class="item-info-block-info-cell__title">Лицензиар:</div>
+                    <div class="item-info-block-info-cell__tex">KleverService</div>
+                </div>
+            </div>
+
+            <div class="item-info-block-grid-cell item-info-block-grid-cell_requisites">
+                <div class="item-info-block-info-cell item-info-block-info-cell_requisites item-info-block-info-cell_gray item-info-block-info-cell_padding">
+                    <div class="item-info-block-info-cell__title">Реквизиты:</div>
+                    <div class="item-info-block-info-cell__text item-info-block-info-cell__text_grid">
                         <span>Кор. счет: 30101810400000000225 в Главном управлении Центрального банка Российской Федераци по Центральному федеральному округу г. Москва (ГУ Банка России по ЦФО)</span>
                         <span>БИК: 044525225</span>
                         <span>КПП: 773601001</span>
@@ -78,16 +78,16 @@
                 </div>
             </div>
 
-            <div class="grid-cell">
-                <div class="info-cell info-cell_padding">
-                    <div class="info-cell__title">Создано:</div>
-                    <div class="info-cell__text info-cell__text_bold">Admin, KleverService, 08 мая 2020</div>
+            <div class="item-info-block-grid-cell">
+                <div class="item-info-block-info-cell item-info-block-info-cell_padding">
+                    <div class="item-info-block-info-cell__title">Создано:</div>
+                    <div class="item-info-block-info-cell__text">Admin, KleverService, 08 мая 2020</div>
                 </div>
             </div>
-            <div class="grid-cell">
-                <div class="info-cell info-cell_padding">
-                    <div class="info-cell__title">Изменено:</div>
-                    <div class="info-cell__text info-cell__text_bold">Admin, KleverService, 18 мая 2020</div>
+            <div class="item-info-block-grid-cell">
+                <div class="item-info-block-info-cell item-info-block-info-cell_padding">
+                    <div class="item-info-block-info-cell__title">Изменено:</div>
+                    <div class="item-info-block-info-cell__text">Admin, KleverService, 18 мая 2020</div>
                 </div>
             </div>
 
@@ -98,7 +98,7 @@
     <div class="popup-delete">
         <div class="popup-delete-confirm block block_rounded">
             <a href=" #close" title="Close" class="popup-delete__close">×</a>
-            <div class="popup-delete__text">Вы действительно хотите удалить трек?</div>
+            <div class="popup-delete__text">Вы действительно хотите удалить договор?</div>
 
             <button class="popup-delete__button popup-delete__button_cancel" type="button">Отмена</button>
             <button class="popup-delete__button popup-delete__button_confirm" type="button">Удалить</button>
