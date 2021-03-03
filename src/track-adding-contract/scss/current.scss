@@ -1,47 +1,25 @@
 @import "./../../common/scss/variables";
-.adding-contract {
-    width: 100%;
-    @include flexCenter(column);
-    @media (max-width: 575.9px) {
-        width: 100vw;
-    }
-}
-
-.main-form {
+.form_adding-contract {
     box-sizing: border-box;
+    margin-top: 4vh;
+    margin-bottom: 3.25vh;
+    padding: 31px 36px 36px 36px;
     @media (max-width: 991.9px) {
         width: 100%;
         border-radius: 12px;
-    }
-    @media (max-width: 575.9px) {
-        width: 100vw;
-    }
-}
-
-.form_margin-contracts {
-    margin-top: 4vh;
-    margin-bottom: 3.25vh;
-    @media (max-width: 991.9px) {
         margin-top: 30px;
         margin-bottom: 36px;
-    }
-    @media (max-width: 575.9px) {
-        margin-top: 0;
-        margin-bottom: 22px;
-    }
-}
-
-.form_padding-contracts {
-    padding: 31px 36px 36px 36px;
-    @media (max-width: 991.9px) {
         padding: 24px 18px 31px 20px;
     }
     @media (max-width: 575.9px) {
+        width: 100vw;
+        margin-top: 0;
+        margin-bottom: 22px;
         padding: 26px 20px 22px 20px;
     }
 }
 
-.grid {
+.grid_adding-contract {
     box-sizing: border-box;
     @include grid (190px 190px 190px, auto, 1.6vw, 25px);
     @media (max-width: 575.9px) {
