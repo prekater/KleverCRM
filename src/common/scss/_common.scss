@@ -1103,6 +1103,9 @@ html {
         -webkit-line-clamp: 2;
         line-clamp: 2;
     }
+    &__img {
+        margin-right: 10px;
+    }
 }
 
 .popup__overlay {

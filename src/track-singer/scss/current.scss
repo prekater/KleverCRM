@@ -1,16 +1,4 @@
 @import "./../../common/scss/variables";
-.main-block {
-    transition: padding 0.5s;
-    width: 100%;
-    &_padding {
-        padding-top: 60px;
-        padding-left: 70px;
-        @media (max-width: 991.9px) {
-            padding-left: 0;
-        }
-    }
-}
-
 .button {
     @include fontSize14();
     font-weight: 400;

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Структура</title>
     <style type="text/css" media="all">
-        .table {
+            .table {
             display: grid;
             grid-template: repeat(15, auto)/repeat(3, 1fr);
             grid-row-gap: 10px;
@@ -26,6 +26,13 @@
             display: flex;
             flex-direction: column;
         }
+        
+        @media only screen and (max-width: 575.9px) {
+            .table {
+                display: grid;
+                grid-template: auto/1fr;
+                grid-row-gap: 10px;
+            }
     </style>
 </head>
 
@@ -126,8 +133,14 @@
             <a href="./build/track-platform/index.html">Вёрстка Платформа</a>
         </div>
         <h2>11. Payments and sales</h2>
-        <div></div>
-        <div></div>
+        <div class="cell">
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=307%3A8827">Все продажи в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=308%3A8496">Все платежи в Figma</a>
+        </div>
+        <div class="cell">
+            <a href="./build/track-all-sales/index.html">Вёрстка Все продажи</a>
+            <a href="./build/track-all-payments/index.html">Вёрстка Все платежи</a>
+        </div>
         <h2>12. Reports, boot configuration</h2>
         <div class="cell">
             <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=279%3A6384">Загрузить отчет в Figma</a>
