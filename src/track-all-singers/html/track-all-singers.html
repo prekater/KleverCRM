@@ -1,13 +1,13 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="all-singers all-singers_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center" id="all_singers">
-        <div class="all-singers-header all-singers-header_margin all-singers-header_padding">
-            <div class="all-singers-header__title">Исполнители</div>
-            <div class="tabs tabs_margin flex-row">
-                <a class="tabs__tab tabs__tab_active tabs__tab_margin">Все исполнители</a>
+    <div class="all-items-page all-items-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center" id="all_singers">
+        <div class="all-items-header all-items-header_margin all-items-header_padding">
+            <div class="all-items-header__title">Исполнители</div>
+
+            <div class="tabs tabs_all-contracts">
+                <a class="tabs__tab tabs__tab_active">Все исполнители</a>
                 <a class="tabs__tab" href="./../track-all-singers-errors/index.html">Ошибки</a>
             </div>
-
 
             <form class="search-table" id="search-table">
                 <input type="search" placeholder="Поиск" class="search-table__input">
@@ -18,146 +18,82 @@
             </form>
         </div>
 
-        <div class="all-singers-block" id="all-singers-block">
-            <div class="all-singers-table table">
-                <div class="table-header">
-                    <div class="table-header__cell"></div>
-                    <div class="table-header__cell table-header__cell_black">Никнейм <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
-                    <div class="table-header__cell">Сумма долей лейбла</div>
-                    <div class="table-header__cell">Аванс</div>
-                    <div class="table-header__cell">Инвестиции</div>
-                    <div class="table-header__cell">К выплате</div>
-                    <div class="table-header__cell">Кол-во треков</div>
-                    <div class="table-header__cell"></div>
+        <div class="all-items-block" id="all-singers-block">
+            <div class="all-items-table all-items-table_padding table">
+                <div class="all-items-table-header all-items-table-header_all-singers">
+                    <div class="all-items-table-header__cell"></div>
+                    <div class="all-items-table-header__cell all-items-table-header__cell_black">Никнейм</div>
+                    <div class="all-items-table-header__cell">Сумма долей лейбла</div>
+                    <div class="all-items-table-header__cell">Аванс</div>
+                    <div class="all-items-table-header__cell">Инвестиции</div>
+                    <div class="all-items-table-header__cell">К выплате</div>
+                    <div class="all-items-table-header__cell">Кол-во треков</div>
+                    <div class="all-items-table-header__cell"></div>
                 </div>
 
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell table-row__cell_cover">
+                <div class="all-items-table-row-wrapper block block_rounded">
+                    <div class="all-items-table-row all-items-table-row_all-singers">
+                        <div class="all-items-table-row__cell all-items-table-row__cell_cover">
                             <img src="./images/cover1.png" alt="">
                         </div>
-                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-singer/index.html">
-                        Alex Rudi Pell
-                    </a>
-                        <div class="table-row__cell">
+                        <div class="all-items-table-row__cell  all-items-table-row__cell_green all-items-table-row__cell_bold" href="./../track-singer/index.html">
+                            Alex Rudi Pell
+                        </div>
+                        <div class="all-items-table-row__cell">
                             1 890 095 ₽
                         </div>
-                        <div class="table-row__cell">
+                        <div class="all-items-table-row__cell">
                             1 890 095 ₽
                         </div>
 
-                        <div class="table-row__cell">
+                        <div class="all-items-table-row__cell">
                             1 890 095 ₽
                         </div>
-                        <div class="table-row__cell table-row__cell_bold">
+                        <div class="all-items-table-row__cell all-items-table-row__cell_bold">
                             1 890 095 ₽
                         </div>
-                        <div class="table-row__cell">
+                        <div class="all-items-table-row__cell">
                             10
                         </div>
 
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="singers-table-button" href="#">
+                        <div class="all-items-table-row__cell all-items-table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="all-items-table-button" href="#">
                                 <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
                             </a>
-                            <a class="singers-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="item-delete_btn" class="singers-table-button" />
+                            <a class="all-items-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="item-delete_btn" />
                             </a>
                         </div>
                     </div>
                 </div>
-
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell table-row__cell_cover">
-
-                        </div>
-                        <a class="table-row__cell  table-row__cell_green table-row__cell_bold" href="./../track-singer/index.html">
-
-                        </a>
-                        <div class="table-row__cell">
-
-                        </div>
-                        <div class="table-row__cell">
-
-                        </div>
-
-                        <div class="table-row__cell">
-
-                        </div>
-                        <div class="table-row__cell table-row__cell_bold">
-
-                        </div>
-                        <div class="table-row__cell">
-
-                        </div>
-
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="singers-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать релиз" />
-                            </a>
-                            <a class="singers-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить релиз" id="delete-singer" class="singers-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
 
-            <div class="all-singers-table-mobile all-singers-table-mobile_margin">
-                <div class="all-singers-card-mobile block">
-                    <a class="all-singers-card-mobile-header" href="./../track-singer/index.html">
-                        <div class="all-singers-card-mobile__cell all-singers-card-mobile-header__cover">
-                            <img src="./images/cover1.png" alt="Обложка" />
+            <div class="all-items-table-mobile all-items-table-mobile_margin">
+                <div class="cards-block">
+                    <div class="all-items-card-mobile block">
+                        <div class="all-items-card-mobile-header">
+                            <div class="all-items-card-mobile-header__cover">
+                                <img src="./images/cover1.png" alt="Обложка" />
+                            </div>
+                            <div class="all-items-card-mobile-header__title">Don’t Say goodbye, remember me</div>
                         </div>
-                        <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_green all-singers-card-mobile__cell_bold">Don’t Say goodbye, remember me</div>
-                    </a>
-                    <div class="wrapper-for-border-top">
-                        <div class="all-singers-card-mobile__cell">Сумма долей лейбла:</div>
-                        <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black">1 291 536 ₽</div>
-                    </div>
-                    <div class="all-singers-card-mobile__cell">Аванс:</div>
-                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black">1 236 397 ₽</div>
-
-                    <div class="all-singers-card-mobile__cell">Инвестиции:</div>
-                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black">1 236 397 ₽</div>
-
-                    <div class="all-singers-card-mobile__cell">К выплате:</div>
-                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black all-singers-card-mobile__cell_bold">1 291 536 ₽</div>
-                    <div class="all-singers-card-mobile__cell">Кол-во треков:</div>
-                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black">15</div>
-
-                    <div class="two-buttons-mobile">
-                        <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать артиста" class="two-buttons-mobile__img" /> Редактировать</a>
-                        <a class="btn btn_padding flex-row flex-column_between" id="item-delete_btn-mobile"> <img src="./images/delete.svg" alt="Удалить артиста" class="two-buttons-mobile__img" /> Удалить</a>
-                    </div>
-                </div>
-                <div class="all-singers-card-mobile block">
-                    <a class="all-singers-card-mobile-header" href="./../track-singer/index.html">
-                        <div class="all-singers-card-mobile__cell all-singers-card-mobile-header__cover">
+                        <div class="wrapper-for-border-top">
+                            <div class="all-items-card-mobile__cell">Сумма долей лейбла:</div>
+                            <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black">1 291 536 ₽</div>
                         </div>
-                        <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_green all-singers-card-mobile__cell_bold"></div>
-                    </a>
-                    <div class="wrapper-for-border-top">
-                        <div class="all-singers-card-mobile__cell">Сумма долей лейбла:</div>
-                        <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black"></div>
-
-                    </div>
-                    <div class="all-singers-card-mobile__cell">Аванс:</div>
-                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black"></div>
-
-                    <div class="all-singers-card-mobile__cell">Инвестиции:</div>
-                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black"></div>
-
-                    <div class="all-singers-card-mobile__cell">К выплате:</div>
-                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black all-singers-card-mobile__cell_bold"></div>
-                    <div class="all-singers-card-mobile__cell">Кол-во треков:</div>
-                    <div class="all-singers-card-mobile__cell all-singers-card-mobile__cell_black"></div>
-                    <div class="two-buttons-mobile">
-                        <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать артиста" class="two-buttons-mobile__img" /> Редактировать</a>
-                        <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить артиста" class="two-buttons-mobile__img" /> Удалить</a>
+                        <div class="all-items-card-mobile__cell">Аванс:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black">1 236 397 ₽</div>
+                        <div class="all-items-card-mobile__cell">Инвестиции:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black">1 236 397 ₽</div>
+                        <div class="all-items-card-mobile__cell">К выплате:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black all-items-card-mobile__cell_bold">1 291 536 ₽</div>
+                        <div class="all-items-card-mobile__cell">Кол-во треков:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black">15</div>
+                        <div class="all-items-card-mobile-2buttons">
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать артиста" class="all-items-card-mobile-2buttons__img" /> Редактировать</a>
+                            <a class="btn btn_padding flex-row flex-column_between" id="item-delete_btn-mobile"> <img src="./images/delete.svg" alt="Удалить артиста" class="all-items-card-mobile-2buttons__img" /> Удалить</a>
+                        </div>
                     </div>
                 </div>
 
