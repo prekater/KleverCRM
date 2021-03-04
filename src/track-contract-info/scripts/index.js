@@ -13,14 +13,12 @@ $(function() {
                 $('.popup-contract').css('display', 'none')
                 $('body').css('overflow', 'auto')
             }
-
         })
 
         $('.popup-contract__close').on("click", function() {
             $('.popup-contract').css('display', 'none')
             $('body').css('overflow', 'auto')
         });
-
 
         $('#contract-delete_btn-mobile').on("click", function() {
             $(".popup-contract").hide()
