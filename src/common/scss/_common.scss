@@ -764,6 +764,9 @@ html {
             padding: 14px 0 10px 0;
         }
     }
+    @media (max-width: 575.9px) {
+        width: 100vw;
+    }
 }
 
 .to-all-items-from-item {
@@ -1000,9 +1003,7 @@ html {
     }
     @media (max-width: 991.9px) {
         border-radius: 0;
-    }
-    @media (max-width: 991.9px) {
-        border-radius: 0;
+        width: 100vw;
     }
 }
 

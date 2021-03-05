@@ -22,28 +22,20 @@
 .item-table-header_contract-releases {
     @include grid (57px 1.5fr 1.5fr 1.5fr 1fr 1fr 1fr 28px, auto, 0, 0);
     @media (max-width: 991.9px) {
-        @include grid (57px 22vw 22vw 22vw 20vw 20vw 20vw 28px, auto, 0, 0);
-    }
-    @media (max-width: 575.9px) {
         @include grid (57px 150px 150px 150px 120px 120px 120px 28px, auto, 0, 0);
     }
 }
 
-.item-table-row {
+.item-table-row_contract-releases {
     @include grid (57px 1.5fr 1.5fr 1.5fr 1fr 1fr 1fr 28px, auto, 0, 0);
     @media (max-width: 991.9px) {
-        @include grid (57px 22vw 22vw 22vw 20vw 20vw 20vw 28px, auto, 0, 0);
-    }
-    @media (max-width: 575.9px) {
         @include grid (57px 150px 150px 150px 120px 120px 120px 28px, auto, 0, 0);
     }
-    &_contract-releases {
-        .item-table-row__cell {
-            &:first-child::after,
-            &:last-child::after,
-            &:nth-last-child(2)::after {
-                border-right: 1px solid transparent;
-            }
+    .item-table-row__cell {
+        &:first-child::after,
+        &:last-child::after,
+        &:nth-last-child(2)::after {
+            border-right: 1px solid transparent;
         }
     }
 }
