@@ -865,6 +865,63 @@ html {
     }
 }
 
+.cover-change {
+    border-radius: 12px;
+    background-color: $white;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    &:hover:after {
+        opacity: 0.7;
+    }
+    &:hover:before {
+        opacity: 1;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $green;
+        opacity: 0;
+        border-radius: 12px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("./../images/pic_cover_white.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        opacity: 0;
+        z-index: 10;
+    }
+    @media (max-width: 991.9px) {
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+    }
+    @media (max-width: 575.9px) {
+        grid-row: 1 / 2;
+        height: 84px;
+        width: 84px;
+    }
+}
+
+.cover-image {
+    border-radius: 12px;
+    height: 110px;
+    width: 110px;
+    @media (max-width: 575.9px) {
+        height: 84px;
+        width: 84px;
+    }
+}
+
 .item-name {
     justify-self: flex-start;
     align-self: center;

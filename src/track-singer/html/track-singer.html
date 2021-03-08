@@ -1,42 +1,41 @@
 <div class="main-block main-block_full-width main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="singer singer_padding flex-column flex-column_top-vertical" id="singer">
-        <div class="singer-header singer-header_padding">
-            <a class="to-all-singers to-all-singers_margin to-all-singers_padding flex-row flex-row_start" href="./../track-all-singers/index.html">
-                <img src="./images/arrow_to_left.svg" alt="Вернуться к исполнителям" class="to-all-singers__img" /> Все исполнители
+    <div class="item-page item-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center" id="singer">
+        <div class="item-header">
+            <a class="to-all-items-from-item to-all-items-from-item_padding flex-row flex-row_start" href="./../track-all-singers/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к исполнителям" class="to-all-items__img" /> Все исполнители
             </a>
 
-            <div class="cover-and-name cover-and-name_margin cover-and-name_padding">
+            <div class="item-cover-and-name item-cover-and-name_margin item-cover-and-name_singer">
                 <div class="cover-change">
-                    <div class="cover-and-name__cover">
+                    <div class="item-cover-and-name__cover">
                         <img src="./images/cover1.jpg" alt="" class="cover-image">
                     </div>
                     <div class="cover-change__hover"></div>
                 </div>
-                <div class="singer-name flex-column">
-                    <span class="singer-name__singer">Исполнитель</span>
-                    <span class="singer-name__name">Мельница</span>
+                <div class="item-name item-name_singer flex-column">
+                    <span class="item-name__singer">Исполнитель</span>
+                    <span class="item-name__name">Мельница</span>
                 </div>
-                <div class="singer-buttons">
-                    <a class="singer-button" tooltip="Редактировать">
-                        <img src="./images/edit.svg" alt="Редактировать исполнителя" class="singer-button__img">
-                        <span class="singer-button__text">Редактировать</span>
+                <div class="item-buttons item-buttons_singer">
+                    <a class="item-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать исполнителя" class="item-button__img">
+                        <span class="item-button__text">Редактировать</span>
                     </a>
-                    <a class="singer-button" id="item-delete_btn" tooltip="Удалить">
-                        <img src="./images/delete.svg" alt="Удалить исполнителя" class="singer-button__img">
-                        <span class="singer-button__text">Удалить</span>
+                    <a class="item-button" id="item-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить исполнителя" class="item-button__img">
+                        <span class="item-button__text">Удалить</span>
                     </a>
-                    <a class="singer-button" tooltip="Деактивировать">
-                        <img src="./images/deactivate.svg" alt="Деактивировать  исполнителя" class="singer-button__img">
-                        <span class="singer-button__text">Деактивировать</span>
+                    <a class="item-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать  исполнителя" class="item-button__img">
+                        <span class="item-button__text">Деактивировать</span>
                     </a>
                 </div>
-                <img src="./images/ellipses.svg" alt="Меню исполнителя" class="cover-and-name__ellipses">
+                <img src="./images/ellipses.svg" alt="Меню исполнителя" class="item-cover-and-name__ellipses" id="ellipses_singer">
             </div>
 
-
             <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_between">
-                <div class="tabs tabs_grid">
+                <div class="tabs tabs_singer">
                     <div class="tabs__tab tabs__tab_active" id="tab-singer-info">Сведения</div>
                     <div class="tabs__tab" id="tab-singer-releases">Релизы</div>
 
@@ -44,8 +43,8 @@
                 </div>
                 <div class="wrapper-for-adding-btns flex-row">
                     <a class="btn add-release flex-row flex-row_center-vertical flex-row_center" href="./../track-adding-release/index.html">
-                        <img src="./images/releases_black.svg" alt="Добавить релиз" class="add-track__img" />
-                        <span class="add-track__text">Добавить релиз</span>
+                        <img src="./images/releases_black.svg" alt="Добавить релиз" class="add-release__img" />
+                        <span class="add-release__text">Добавить релиз</span>
                     </a>
                     <a class="btn add-track flex-row flex-row_center-vertical flex-row_center" href="">
                         <img src="./images/note.svg" alt="Добавить трек" class="add-track__img" />
