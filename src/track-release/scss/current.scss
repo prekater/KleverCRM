@@ -59,8 +59,12 @@
         }
     }
     &_margin {
+        margin-left: 20px;
+        margin-right: 20px;
         @media (max-width: 575.9px) {
             margin-bottom: 38px;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
     @media (max-width: 991.9px) {

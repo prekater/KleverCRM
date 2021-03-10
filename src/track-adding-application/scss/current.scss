@@ -1,59 +1,35 @@
 @import "./../../common/scss/variables";
-.main-block {
-    transition: padding 0.5s;
-    &_padding {
-        padding-top: 60px;
-        padding-left: 70px;
-        @media (max-width: 991.9px) {
-            padding-left: 0;
-        }
-    }
-}
-
-.adding-contract {
-    box-sizing: border-box;
-    width: 100%;
-    @include flexCenter(column);
-    @media (max-width: 575.9px) {
-        width: 100vw;
-    }
-}
-
 .main-form {
-    box-sizing: border-box;
-    @media (max-width: 991.9px) {
-        width: 100%;
-        border-radius: 0px;
-    }
-    @media (max-width: 575.9px) {
-        width: 100vw;
-    }
+    @media (max-width: 991.9px) {}
+    @media (max-width: 575.9px) {}
 }
 
-.form_margin-applications {
+.form_applications {
     margin-top: 3.5vh;
     margin-bottom: 3vh;
+    box-sizing: border-box;
+    padding: 31px 36px 36px 36px;
     @media (max-width: 991.9px) {
         margin-top: 30px;
         margin-bottom: 36px;
+        width: 100%;
+        border-radius: 0px;
+        padding: 24px 18px 31px 20px;
     }
     @media (max-width: 575.9px) {
         margin-top: 0;
         margin-bottom: 22px;
-    }
-}
-
-.form_padding-applications {
-    padding: 31px 36px 36px 36px;
-    @media (max-width: 991.9px) {
-        padding: 24px 18px 31px 20px;
-    }
-    @media (max-width: 575.9px) {
+        width: 100vw;
         padding: 26px 20px 22px 20px;
     }
 }
 
-.grid {
+.form_padding-applications {
+    @media (max-width: 991.9px) {}
+    @media (max-width: 575.9px) {}
+}
+
+.grid_adding-application {
     box-sizing: border-box;
     @include grid (190px 190px 190px, auto, 1.6vw, 25px);
     @media (max-width: 575.9px) {
