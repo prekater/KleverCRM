@@ -1,12 +1,13 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="all-platforms all-platforms_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
-        <div class="all-platforms-header all-platforms-header_margin all-platforms-header_padding">
-            <div class="all-platforms-header__title">Платформы</div>
+    <div class="all-items-page all-items-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
 
-            <div class="tabs tabs_grid">
+        <div class="all-items-header all-items-header_margin all-items-header_padding">
+            <div class="all-items-header__title">Платформы</div>
+
+            <div class="tabs">
                 <a class="tabs__tab tabs__tab_active">Все платформы</a>
-                <a class="tabs__tab" href="./../track-all-platforms-errors/index.html">Ошибки</a>
+                <a class="tabs__tab" href="./../track-all-items-errors/index.html">Ошибки</a>
             </div>
 
             <form class="search-table" id="search-table">
@@ -16,179 +17,82 @@
                 <div class="search-table__clear"><img src="././images/clear_input.svg" /></div>
             </form>
         </div>
-        <div class="all-platforms">
-            <div class="all-platforms-table table">
-                <div class="table-header">
-                    <div class="table-header__cell table-header__cell_black">Название <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
-                    <div class="table-header__cell">Участвует в отчете</div>
-                    <div class="table-header__cell"></div>
+
+        <div class="all-items-block">
+            <div class="all-items-table all-items-table_padding all-items-table_all-platforms table">
+                <div class="all-items-table-header all-items-table-header_all-platforms">
+                    <div class="all-items-table-header__cell all-items-table-header__cell_black">Название <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
+                    <div class="all-items-table-header__cell">Участвует в отчете</div>
+                    <div class="all-items-table-header__cell"></div>
                 </div>
 
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            <img src="./images/tiktok.svg" alt="TikTok" class="all-platforms__icon"> TikTok
+                <div class="all-items-table-row-wrapper block block_rounded">
+                    <div class="all-items-table-row all-items-table-row_all-platforms">
+                        <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                            <img src="./images/flag_rus.svg" alt="Российский флаг" class="all-items__flag"> Tiktok
                         </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical in-report">Да</div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="platforms-table-button" href="#">
+                        <div class="all-items-table-row__cell flex-row flex-row_center-vertical in-report">Да</div>
+                        <div class="all-items-table-row__cell all-items-table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="all-items-table-button" href="#">
                                 <img src="./images/edit_bg.svg" alt="Редактировать платформу" />
                             </a>
-                            <a class="platforms-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить платформу" class="platforms-table-button" />
+                            <a class="all-items-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить платформу" />
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            <img src="./images/deezer.svg" alt="Deezer" class="all-platforms__icon">Deezer
-                        </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical in-report">Да</div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="platforms-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать платформу" />
-                            </a>
-                            <a class="platforms-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить платформу" class="platforms-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            <img src="./images/apple_black.svg" alt="Apple Music" class="all-platforms__icon"> Apple Music
-                        </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical in-report">Нет</div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="platforms-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать платформу" />
-                            </a>
-                            <a class="platforms-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить платформу" class="platforms-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            <img src="./images/spotify_green.svg" alt="Spotify Stream" class="all-platforms__icon">Spotify Stream
-                        </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical in-report">Дa</div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="platforms-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать платформу" />
-                            </a>
-                            <a class="platforms-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить платформу" class="platforms-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
 
-            <div class="all-platforms-table-mobile all-platforms-table-mobile_margin">
-                <div class="rows-block">
-                    <div class="all-platforms-card-mobile block">
-                        <div class="all-platforms-card-mobile__cell">Название:</div>
-                        <div class="all-platforms-card-mobile__cell all-platforms-card-mobile__cell_black"> <img src="./images/tiktok.svg" alt="TikTok" class="all-platforms__icon"> TikTok</div>
-                        <div class="all-platforms-card-mobile__cell">Участвует в отчете:</div>
-                        <div class="all-platforms-card-mobile__cell all-platforms-card-mobile__cell_black in-report">Да</div>
-                        <div class="all-platforms-card-mobile__buttons">
-                            <a class="all-platforms-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать платформу" />
-                            </a>
-                            <a class="all-platforms-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить платформу" />
-                            </a>
+            <div class="all-items-table-mobile all-items-table-mobile_margin">
+                <div class="cards-block">
+                    <div class="all-items-card-mobile block">
+                        <div class="all-items-card-mobile__cell">Название:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black"><img src="./images/flag_rus.svg" alt="Российский флаг" class="all-items__flag"> Tiktok</div>
+                        <div class="all-items-card-mobile__cell">Участвует в отчете:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black in-report">Да</div>
+                        <div class="all-items-card-mobile-2buttons">
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать платформу" class="all-items-card-mobile-2buttons__img" /> Редактировать</a>
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить платформу" class="all-items-card-mobile-2buttons__img" /> Удалить</a>
                         </div>
                     </div>
-                    <div class="all-platforms-card-mobile block">
-                        <div class="all-platforms-card-mobile__cell">Название:</div>
-                        <div class="all-platforms-card-mobile__cell all-platforms-card-mobile__cell_black"><img src="./images/deezer.svg" alt="Deezer" class="all-platforms__icon">Deezer</div>
-                        <div class="all-platforms-card-mobile__cell">Участвует в отчете:</div>
-                        <div class="all-platforms-card-mobile__cell all-platforms-card-mobile__cell_black in-report">Да</div>
-                        <div class="all-platforms-card-mobile__buttons">
-                            <a class="all-platforms-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать платформу" />
-                            </a>
-                            <a class="all-platforms-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить платформу" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="all-platforms-card-mobile block">
-                        <div class="all-platforms-card-mobile__cell">Название:</div>
-                        <div class="all-platforms-card-mobile__cell all-platforms-card-mobile__cell_black"><img src="./images/apple_black.svg" alt="Apple Music" class="all-platforms__icon"> Apple Music</div>
-                        <div class="all-platforms-card-mobile__cell">Участвует в отчете:</div>
-                        <div class="all-platforms-card-mobile__cell all-platforms-card-mobile__cell_black in-report">Нет</div>
-                        <div class="all-platforms-card-mobile__buttons">
-                            <a class="all-platforms-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать платформу" />
-                            </a>
-                            <a class="all-platforms-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить платформу" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="all-platforms-card-mobile block">
-                        <div class="all-platforms-card-mobile__cell">Название:</div>
-                        <div class="all-platforms-card-mobile__cell all-platforms-card-mobile__cell_black"><img src="./images/spotify_green.svg" alt="Spotify Stream" class="all-platforms__icon">Spotify Stream</div>
-                        <div class="all-platforms-card-mobile__cell">Участвует в отчете:</div>
-                        <div class="all-platforms-card-mobile__cell all-platforms-card-mobile__cell_black in-report">Да</div>
-                        <div class="all-platforms-card-mobile__buttons">
-                            <a class="all-platforms-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать платформу" />
-                            </a>
-                            <a class="all-platforms-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить платформу" />
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
 
                 <div class="pagination-mobile flex-row flex-row_between flex-row_center-vertical">
-                    <a href="/all-platforms?page=1&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__prev PagedList-skipToPrevious" rel="prev"><img src="./images/page-left.svg" alt="Назад"></a>
+                    <a href="/all-items?page=1&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__prev PagedList-skipToPrevious" rel="prev"><img src="./images/page-left.svg" alt="Назад"></a>
                     <div class="pagination-mobile__select flex-row flex-row_between flex-row_center-vertical"><span id="mobile_page_number">1</span><img src="./images/arrow_down.svg" alt=""> </div>
-                    <a href="/all-platforms?page=15&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__next PagedList-skipToNext"><img src="./images/page-right.svg" alt="Вперед"></a>
+                    <a href="/all-items?page=15&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__next PagedList-skipToNext"><img src="./images/page-right.svg" alt="Вперед"></a>
                 </div>
             </div>
 
             <div class="pagination-container">
                 <ul class="pagination">
                     <li class="page-item PagedList-skipToFirst">
-                        <a href="/Platforms?page=15&amp;desc=False&amp;hasErrors=False" class="page-link">
+                        <a href="/platforms?page=15&amp;desc=False&amp;hasErrors=False" class="page-link">
                             <img src="./images/page_first.svg" alt="Вперёд">
                         </a>
                     </li>
                     <li class="page-item PagedList-skipToPrevious">
-                        <a href="/Platforms?page=1&amp;desc=False&amp;hasErrors=False" class="page-link" rel="prev"><img src="./images/page-left.svg" alt="Назад"></a>
+                        <a href="/platforms?page=1&amp;desc=False&amp;hasErrors=False" class="page-link" rel="prev"><img src="./images/page-left.svg" alt="Назад"></a>
                     </li>
                     <li class="page-item page-item_disabled PeageList-ellipses">...</li>
-
-                    <li class="page-item"><a href="/Platforms?page=1&amp;desc=False&amp;hasErrors=False" class="page-link">1</a></li>
+                    <li class="page-item"><a href="/platforms?page=1&amp;desc=False&amp;hasErrors=False" class="page-link">1</a></li>
                     <li class="page-item active">
                         <span class="page-link">2</span></li>
-                    <li class="page-item"><a href="/Platforms?page=3&amp;desc=False&amp;hasErrors=False" class="page-link">3</a></li>
-                    <li class="page-item"><a href="/Platforms?page=4&amp;desc=False&amp;hasErrors=False" class="page-link">4</a></li>
-                    <li class="page-item"><a href="/Platforms?page=5&amp;desc=False&amp;hasErrors=False" class="page-link">5</a></li>
-                    <li class="page-item"><a href="/Platforms?page=6&amp;desc=False&amp;hasErrors=False" class="page-link">6</a></li>
-                    <li class="page-item"><a href="/Platforms?page=7&amp;desc=False&amp;hasErrors=False" class="page-link">7</a></li>
-                    <li class="page-item"><a href="/Platforms?page=8&amp;desc=False&amp;hasErrors=False" class="page-link">8</a></li>
-                    <li class="page-item"><a href="/Platforms?page=9&amp;desc=False&amp;hasErrors=False" class="page-link">9</a></li>
-                    <li class="page-item"><a href="/Platforms?page=10&amp;desc=False&amp;hasErrors=False" class="page-link">10</a></li>
+                    <li class="page-item"><a href="/platforms?page=3&amp;desc=False&amp;hasErrors=False" class="page-link">3</a></li>
+                    <li class="page-item"><a href="/platforms?page=4&amp;desc=False&amp;hasErrors=False" class="page-link">4</a></li>
+                    <li class="page-item"><a href="/platforms?page=5&amp;desc=False&amp;hasErrors=False" class="page-link">5</a></li>
+                    <li class="page-item"><a href="/platforms?page=6&amp;desc=False&amp;hasErrors=False" class="page-link">6</a></li>
+                    <li class="page-item"><a href="/platforms?page=7&amp;desc=False&amp;hasErrors=False" class="page-link">7</a></li>
+                    <li class="page-item"><a href="/platforms?page=8&amp;desc=False&amp;hasErrors=False" class="page-link">8</a></li>
+                    <li class="page-item"><a href="/platforms?page=9&amp;desc=False&amp;hasErrors=False" class="page-link">9</a></li>
+                    <li class="page-item"><a href="/platforms?page=10&amp;desc=False&amp;hasErrors=False" class="page-link">10</a></li>
                     <li class="page-item page-item_disabled PeageList-ellipses">...</li>
                     <li class="page-item PagedList-skipToNext">
-                        <a href="/all-platforms?page=3&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page-right.svg" alt="Вперёд"></a>
+                        <a href="/all-items?page=3&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page-right.svg" alt="Вперёд"></a>
                     </li>
                     <li class="page-item PagedList-skipToLast">
-                        <a href="/all-platforms?page=15&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page_last.svg" alt="Вперёд"></a>
+                        <a href="/all-items?page=15&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page_last.svg" alt="Вперёд"></a>
                     </li>
                 </ul>
             </div>
@@ -202,22 +106,22 @@
                     <a href=" #close" title="Close" class="popup-pagination__close">×</a>
                 </div>
                 <ul class="popup-pagination-block__body">
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=1&amp;desc=False&amp;hasErrors=False">1</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=2&amp;desc=False&amp;hasErrors=False">2</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=3&amp;desc=False&amp;hasErrors=False">3</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=4&amp;desc=False&amp;hasErrors=False">4</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=5&amp;desc=False&amp;hasErrors=False">5</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=6&amp;desc=False&amp;hasErrors=False">6</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=7&amp;desc=False&amp;hasErrors=False">7</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=8&amp;desc=False&amp;hasErrors=False">8</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=9&amp;desc=False&amp;hasErrors=False">9</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=10&amp;desc=False&amp;hasErrors=False">10</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=11&amp;desc=False&amp;hasErrors=False">11</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=12&amp;desc=False&amp;hasErrors=False">12</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=13&amp;desc=False&amp;hasErrors=False">13</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=14&amp;desc=False&amp;hasErrors=False">14</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=15&amp;desc=False&amp;hasErrors=False">15</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-platforms?page=16&amp;desc=False&amp;hasErrors=False">16</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=1&amp;desc=False&amp;hasErrors=False">1</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=2&amp;desc=False&amp;hasErrors=False">2</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=3&amp;desc=False&amp;hasErrors=False">3</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=4&amp;desc=False&amp;hasErrors=False">4</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=5&amp;desc=False&amp;hasErrors=False">5</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=6&amp;desc=False&amp;hasErrors=False">6</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=7&amp;desc=False&amp;hasErrors=False">7</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=8&amp;desc=False&amp;hasErrors=False">8</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=9&amp;desc=False&amp;hasErrors=False">9</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=10&amp;desc=False&amp;hasErrors=False">10</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=11&amp;desc=False&amp;hasErrors=False">11</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=12&amp;desc=False&amp;hasErrors=False">12</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=13&amp;desc=False&amp;hasErrors=False">13</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=14&amp;desc=False&amp;hasErrors=False">14</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=15&amp;desc=False&amp;hasErrors=False">15</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=16&amp;desc=False&amp;hasErrors=False">16</a></li>
 
 
 
