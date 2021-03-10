@@ -1,48 +1,56 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="country country_padding flex-column flex-column_top-vertical" id="country">
-        <div class="country-header">
-            <a class="to-all-countries to-all-countries_margin to-all-countries_padding flex-row flex-row_start" href="./../track-all-countries/index.html">
-                <img src="./images/arrow_to_left.svg" alt="Вернуться к релизам" class="to-all-countries__img" /> Все страны
+    <div class="item-page item-page_padding flex-column flex-column_top-vertical">
+        <div class="item-header">
+            <a class="to-all-items-from-item to-all-items-from-item_padding flex-row flex-row_start" href="./../track-all-countries/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к релизам" class="to-all-items-from-item__img" /> Все страны
             </a>
 
-            <div class="cover-and-name cover-and-name_margin cover-and-name_padding">
-                <div class="country-name flex-column">
-                    <span class="country-name__country">Страна</span>
-                    <span class="country-name__name"><img src="./images/flag_rus.svg" alt="Российский флаг" class="country__flag"> Russian Federation</span>
+            <div class="item-cover-and-name item-cover-and-name_margin">
+                <div class="item-name flex-column">
+                    <span class="item-item">Страна</span>
+                    <span class="item-name__name"><img src="./images/flag_rus.svg" alt="Российский флаг" class="item__flag"> Russian Federation</span>
                 </div>
-                <div class="country-buttons">
-                    <a class="country-button" tooltip="Редактировать">
-                        <img src="./images/edit.svg" alt="Редактировать страну" class="country-button__img">
-                        <span class="country-button__text">Редактировать</span>
+                <div class="item-buttons">
+                    <a class="item-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать страну" class="item-button__img">
+                        <span class="item-button__text">Редактировать</span>
                     </a>
-                    <a class="country-button" id="country-delete_btn" tooltip="Удалить">
-                        <img src="./images/delete.svg" alt="Удалить страну" class="country-button__img">
-                        <span class="country-button__text">Удалить</span>
+                    <a class="item-button" id="item-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить страну" class="item-button__img">
+                        <span class="item-button__text">Удалить</span>
                     </a>
-                    <a class="country-button" tooltip="Деактивировать">
-                        <img src="./images/deactivate.svg" alt="Деактивировать страну" class="country-button__img">
-                        <span class="country-button__text">Деактивировать</span>
+                    <a class="item-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать страну" class="item-button__img">
+                        <span class="item-button__text">Деактивировать</span>
                     </a>
                 </div>
-                <img src="./images/ellipses.svg" alt="Меню страны" class="cover-and-name__ellipses">
+                <img src="./images/ellipses.svg" alt="Меню страны" class="item-cover-and-name__ellipses" id="ellipses_country">
             </div>
 
 
         </div>
 
-        <div class="country-info country-info_padding block block_rounded">
-            <div class="country-big-cell flex-column country-big-cell_in-report">
-                <div class="country-info__title">Участвует в отчете:</div>
-                <div class="country-info__value">Да</div>
+        <div class="item-info-block item-info-block_country item-info-block_padding item-info-block_margin block block_rounded">
+            <div class="item-info-block-grid-cell">
+                <div class="item-info-block-info-cell item-info-block-info-cell_gray item-info-block-info-cell_padding">
+                    <div class="item-info-block-info-cell__title">Участвует в отчёте:</div>
+                    <div class="item-info-block-info-cell__tex">Да</div>
+                </div>
             </div>
-            <div class="country-big-cell flex-column country-big-cell_created">
-                <div class="country-info__title">Создано:</div>
-                <div class="country-info__value">Admin, KleverService, 08 мая 2020</div>
+
+            <div class="item-info-block-grid-cell item-info-block-grid-cell_app-created">
+                <div class="item-info-block-info-cell item-info-block-info-cell_padding">
+                    <div class="item-info-block-info-cell__title">Создано:</div>
+                    <div class="item-info-block-info-cell__text">Admin, KleverService, 08 мая 2020</div>
+                </div>
             </div>
-            <div class="country-big-cell flex-column country-big-cell_changed">
-                <div class="country-info__title">Изменено:</div>
-                <div class="country-info__value">Admin, KleverService, 18 мая 2020</div>
+
+            <div class="item-info-block-grid-cell item-info-block-grid-cell_app-changed">
+                <div class="item-info-block-info-cell item-info-block-info-cell_padding">
+                    <div class="item-info-block-info-cell__title">Изменено:</div>
+                    <div class="item-info-block-info-cell__text">Admin, KleverService, 18 мая 2020</div>
+                </div>
             </div>
         </div>
 
@@ -62,7 +70,7 @@
     <div class="popup-country">
         <div class="popup-country-menu flex-column">
             <div class="popup-country-menu__header flex-row flex-row_between flex-row_center-vertical">
-                Редактирование релиза
+                Редактирование страны
                 <a href=" #close" title="Close" class="popup-country__close">×</a>
             </div>
             <div class="popup-country-buttons flex-column">
@@ -79,9 +87,6 @@
                     <span class="popup-country-button__text">Деактивировать</span>
                 </a>
             </div>
-
-
-
         </div>
     </div>
 
