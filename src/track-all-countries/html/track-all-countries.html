@@ -1,13 +1,13 @@
 <div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
 
-    <div class="all-countries all-countries_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
+    <div class="all-items-page all-items-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
 
-        <div class="all-countries-header all-countries-header_margin all-countries-header_padding">
-            <div class="all-countries-header__title">Страны</div>
+        <div class="all-items-header all-items-header_margin all-items-header_padding">
+            <div class="all-items-header__title">Страны</div>
 
-            <div class="tabs tabs_grid">
+            <div class="tabs">
                 <a class="tabs__tab tabs__tab_active">Все страны</a>
-                <a class="tabs__tab" href="./../track-all-countries-errors/index.html">Ошибки</a>
+                <a class="tabs__tab" href="./../track-all-items-errors/index.html">Ошибки</a>
             </div>
 
             <form class="search-table" id="search-table">
@@ -18,147 +18,50 @@
             </form>
         </div>
 
-        <div class="all-countries">
-            <div class="all-countries-table table">
-                <div class="table-header">
-                    <div class="table-header__cell table-header__cell_black">Название <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
-                    <div class="table-header__cell">Участвует в отчете</div>
-                    <div class="table-header__cell"></div>
+        <div class="all-items-block">
+            <div class="all-items-table all-items-table_padding all-items-table_all-countries table">
+                <div class="all-items-table-header all-items-table-header_all-countries">
+                    <div class="all-items-table-header__cell all-items-table-header__cell_black">Название <img src="./images/small_sort_arrow.svg" alt="Сортировка" class="sort-arrow" /> </div>
+                    <div class="all-items-table-header__cell">Участвует в отчете</div>
+                    <div class="all-items-table-header__cell"></div>
                 </div>
 
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            <img src="./images/flag_rus.svg" alt="Российский флаг" class="all-countries__flag"> Russian Federation
+                <div class="all-items-table-row-wrapper block block_rounded">
+                    <div class="all-items-table-row all-items-table-row_all-countries">
+                        <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                            <img src="./images/flag_rus.svg" alt="Российский флаг" class="all-items__flag"> Russian Federation
                         </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical in-report">Да</div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="countries-table-button" href="#">
+                        <div class="all-items-table-row__cell flex-row flex-row_center-vertical in-report">Да</div>
+                        <div class="all-items-table-row__cell all-items-table-row__cell_no-padding flex-column flex-column_between">
+                            <a class="all-items-table-button" href="#">
                                 <img src="./images/edit_bg.svg" alt="Редактировать страну" />
                             </a>
-                            <a class="countries-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить страну" class="countries-table-button" />
+                            <a class="all-items-table-button" href="#">
+                                <img src="./images/delete_bg.svg" alt="Удалить страну" />
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            <img src="./images/flag_ua.svg" alt="Украинский флаг" class="all-countries__flag"> Ukraine
-                        </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical in-report">Да</div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="countries-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать страну" />
-                            </a>
-                            <a class="countries-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить страну" class="countries-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            <img src="./images/flag_pol.svg" alt="Польский флаг" class="all-countries__flag"> Poland
-                        </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical in-report">Нет</div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="countries-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать страну" />
-                            </a>
-                            <a class="countries-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить страну" class="countries-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-row-wrapper block block_rounded">
-                    <div class="table-row">
-                        <div class="table-row__cell flex-row flex-row_center-vertical">
-                            <img src="./images/flag_uk.svg" alt="Флаг Великобритании" class="all-countries__flag"> United Kingdom
-                        </div>
-                        <div class="table-row__cell flex-row flex-row_center-vertical in-report">Дa</div>
-                        <div class="table-row__cell table-row__cell_no-padding flex-column flex-column_between">
-                            <a class="countries-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать страну" />
-                            </a>
-                            <a class="countries-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить страну" class="countries-table-button" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
 
-            <div class="all-countries-table-mobile all-countries-table-mobile_margin">
-                <div class="rows-block">
-                    <div class="all-countries-card-mobile block">
-                        <div class="all-countries-card-mobile__cell">Название:</div>
-                        <div class="all-countries-card-mobile__cell all-countries-card-mobile__cell_black"><img src="./images/flag_rus.svg" alt="Российский флаг" class="all-countries__flag"> Russian Federation</div>
-                        <div class="all-countries-card-mobile__cell">Участвует в отчете:</div>
-                        <div class="all-countries-card-mobile__cell all-countries-card-mobile__cell_black in-report">Да</div>
-                        <div class="all-countries-card-mobile__buttons">
-                            <a class="all-countries-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать страну" />
-                            </a>
-                            <a class="all-countries-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить страну" />
-                            </a>
+            <div class="all-items-table-mobile all-items-table-mobile_margin">
+                <div class="cards-block">
+                    <div class="all-items-card-mobile block">
+                        <div class="all-items-card-mobile__cell">Название:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black"><img src="./images/flag_rus.svg" alt="Российский флаг" class="all-items__flag"> Russian Federation</div>
+                        <div class="all-items-card-mobile__cell">Участвует в отчете:</div>
+                        <div class="all-items-card-mobile__cell all-items-card-mobile__cell_black in-report">Да</div>
+                        <div class="all-items-card-mobile-2buttons">
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src=" ./images/edit.svg" alt="Редактировать страну" class="all-items-card-mobile-2buttons__img" /> Редактировать</a>
+                            <a class="btn btn_padding flex-row flex-column_between"> <img src="./images/delete.svg" alt="Удалить страну" class="all-items-card-mobile-2buttons__img" /> Удалить</a>
                         </div>
                     </div>
-                    <div class="all-countries-card-mobile block">
-                        <div class="all-countries-card-mobile__cell">Название:</div>
-                        <div class="all-countries-card-mobile__cell all-countries-card-mobile__cell_black"><img src="./images/flag_ua.svg" alt="Украинский флаг" class="all-countries__flag"> Ukraine</div>
-                        <div class="all-countries-card-mobile__cell">Участвует в отчете:</div>
-                        <div class="all-countries-card-mobile__cell all-countries-card-mobile__cell_black in-report">Да</div>
-                        <div class="all-countries-card-mobile__buttons">
-                            <a class="all-countries-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать страну" />
-                            </a>
-                            <a class="all-countries-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить страну" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="all-countries-card-mobile block">
-                        <div class="all-countries-card-mobile__cell">Название:</div>
-                        <div class="all-countries-card-mobile__cell all-countries-card-mobile__cell_black"><img src="./images/flag_pol.svg" alt="Польский флаг" class="all-countries__flag"> Poland</div>
-                        <div class="all-countries-card-mobile__cell">Участвует в отчете:</div>
-                        <div class="all-countries-card-mobile__cell all-countries-card-mobile__cell_black in-report">Нет</div>
-                        <div class="all-countries-card-mobile__buttons">
-                            <a class="all-countries-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать страну" />
-                            </a>
-                            <a class="all-countries-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить страну" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="all-countries-card-mobile block">
-                        <div class="all-countries-card-mobile__cell">Название:</div>
-                        <div class="all-countries-card-mobile__cell all-countries-card-mobile__cell_black"><img src="./images/flag_uk.svg" alt="Флаг Великобритании" class="all-countries__flag"> United Kingdom</div>
-                        <div class="all-countries-card-mobile__cell">Участвует в отчете:</div>
-                        <div class="all-countries-card-mobile__cell all-countries-card-mobile__cell_black in-report">Да</div>
-                        <div class="all-countries-card-mobile__buttons">
-                            <a class="all-countries-table-button" href="#">
-                                <img src="./images/edit_bg.svg" alt="Редактировать страну" />
-                            </a>
-                            <a class="all-countries-table-button" href="#">
-                                <img src="./images/delete_bg.svg" alt="Удалить страну" />
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
 
                 <div class="pagination-mobile flex-row flex-row_between flex-row_center-vertical">
-                    <a href="/all-countries?page=1&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__prev PagedList-skipToPrevious" rel="prev"><img src="./images/page-left.svg" alt="Назад"></a>
+                    <a href="/all-items?page=1&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__prev PagedList-skipToPrevious" rel="prev"><img src="./images/page-left.svg" alt="Назад"></a>
                     <div class="pagination-mobile__select flex-row flex-row_between flex-row_center-vertical"><span id="mobile_page_number">1</span><img src="./images/arrow_down.svg" alt=""> </div>
-                    <a href="/all-countries?page=15&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__next PagedList-skipToNext"><img src="./images/page-right.svg" alt="Вперед"></a>
+                    <a href="/all-items?page=15&amp;desc=False&amp;hasErrors=False" class="pagination-mobile__next PagedList-skipToNext"><img src="./images/page-right.svg" alt="Вперед"></a>
                 </div>
             </div>
 
@@ -186,10 +89,10 @@
                     <li class="page-item"><a href="/Countries?page=10&amp;desc=False&amp;hasErrors=False" class="page-link">10</a></li>
                     <li class="page-item page-item_disabled PeageList-ellipses">...</li>
                     <li class="page-item PagedList-skipToNext">
-                        <a href="/all-countries?page=3&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page-right.svg" alt="Вперёд"></a>
+                        <a href="/all-items?page=3&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page-right.svg" alt="Вперёд"></a>
                     </li>
                     <li class="page-item PagedList-skipToLast">
-                        <a href="/all-countries?page=15&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page_last.svg" alt="Вперёд"></a>
+                        <a href="/all-items?page=15&amp;desc=False&amp;hasErrors=False" class="page-link"><img src="./images/page_last.svg" alt="Вперёд"></a>
                     </li>
                 </ul>
             </div>
@@ -203,22 +106,22 @@
                     <a href=" #close" title="Close" class="popup-pagination__close">×</a>
                 </div>
                 <ul class="popup-pagination-block__body">
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=1&amp;desc=False&amp;hasErrors=False">1</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=2&amp;desc=False&amp;hasErrors=False">2</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=3&amp;desc=False&amp;hasErrors=False">3</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=4&amp;desc=False&amp;hasErrors=False">4</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=5&amp;desc=False&amp;hasErrors=False">5</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=6&amp;desc=False&amp;hasErrors=False">6</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=7&amp;desc=False&amp;hasErrors=False">7</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=8&amp;desc=False&amp;hasErrors=False">8</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=9&amp;desc=False&amp;hasErrors=False">9</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=10&amp;desc=False&amp;hasErrors=False">10</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=11&amp;desc=False&amp;hasErrors=False">11</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=12&amp;desc=False&amp;hasErrors=False">12</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=13&amp;desc=False&amp;hasErrors=False">13</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=14&amp;desc=False&amp;hasErrors=False">14</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=15&amp;desc=False&amp;hasErrors=False">15</a></li>
-                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-countries?page=16&amp;desc=False&amp;hasErrors=False">16</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=1&amp;desc=False&amp;hasErrors=False">1</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=2&amp;desc=False&amp;hasErrors=False">2</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=3&amp;desc=False&amp;hasErrors=False">3</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=4&amp;desc=False&amp;hasErrors=False">4</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=5&amp;desc=False&amp;hasErrors=False">5</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=6&amp;desc=False&amp;hasErrors=False">6</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=7&amp;desc=False&amp;hasErrors=False">7</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=8&amp;desc=False&amp;hasErrors=False">8</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=9&amp;desc=False&amp;hasErrors=False">9</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=10&amp;desc=False&amp;hasErrors=False">10</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=11&amp;desc=False&amp;hasErrors=False">11</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=12&amp;desc=False&amp;hasErrors=False">12</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=13&amp;desc=False&amp;hasErrors=False">13</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=14&amp;desc=False&amp;hasErrors=False">14</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=15&amp;desc=False&amp;hasErrors=False">15</a></li>
+                    <li class="mobile-page-item"><a class="mobile-page-link" href="/all-items?page=16&amp;desc=False&amp;hasErrors=False">16</a></li>
 
 
 
