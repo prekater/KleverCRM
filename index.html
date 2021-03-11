@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Структура</title>
     <style type="text/css" media="all">
-        .table {
+            .table {
             display: grid;
             grid-template: repeat(15, auto)/repeat(3, 1fr);
             grid-row-gap: 10px;
@@ -26,6 +26,13 @@
             display: flex;
             flex-direction: column;
         }
+        
+        @media only screen and (max-width: 575.9px) {
+            .table {
+                display: grid;
+                grid-template: auto/1fr;
+                grid-row-gap: 10px;
+            }
     </style>
 </head>
 
@@ -113,27 +120,51 @@
 
         </div>
         <h2>10. Countries and platforms</h2>
-        <div class="cell ">
-            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=306%3A8925 ">Все страны в Figma</a>
-            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=306%3A8967 ">Страна в Figma</a>
-            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=306%3A8946 ">Все платформы в Figma</a>
-            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=306%3A8996 ">Платформа в Figma</a>
+        <div class="cell">
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=306%3A8925">Все страны в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=306%3A8967">Страна в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=306%3A8946">Все платформы в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=306%3A8996">Платформа в Figma</a>
         </div>
-        <div class="cell ">
-            <a href="./build/track-all-countries/index.html ">Вёрстка Все страны</a>
-            <a href="./build/track-country/index.html ">Вёрстка Страна</a>
-            <a href="./build/track-all-platforms/index.html ">Вёрстка Все платформы</a>
-            <a href="./build/track-platform/index.html ">Вёрстка Платформа</a>
+        <div class="cell">
+            <a href="./build/track-all-countries/index.html">Вёрстка Все страны</a>
+            <a href="./build/track-country/index.html">Вёрстка Страна</a>
+            <a href="./build/track-all-platforms/index.html">Вёрстка Все платформы</a>
+            <a href="./build/track-platform/index.html">Вёрстка Платформа</a>
         </div>
         <h2>11. Payments and sales</h2>
-        <div></div>
-        <div></div>
+        <div class="cell">
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=307%3A8827">Все продажи в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=308%3A8496">Все платежи в Figma</a>
+        </div>
+        <div class="cell">
+            <a href="./build/track-all-sales/index.html">Вёрстка Все продажи</a>
+            <a href="./build/track-all-payments/index.html">Вёрстка Все платежи</a>
+        </div>
         <h2>12. Reports, boot configuration</h2>
-        <div></div>
-        <div></div>
+        <div class="cell">
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=279%3A6384">Загрузить отчет в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=279%3A7320">Создать конфигурацию загрузки в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=279%3A7064">Все конфигурации загрузки в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=279%3A7436">Конфигурация &#10230; Сведения в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=279%3A7574">Конфигурация &#10230; Поля в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=279%3A8120">Результаты импорта в Figma</a>
+            <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/KleverCrm?node-id=279%3A8429">Результат импорта в Figma</a>
+
+        </div>
+        <div class="cell">
+            <a href="./build/track-report-upload/index.html">Вёрстка Загрузить отчет</a>
+            <a href="./build/track-adding-config/index.html">Вёрстка Создать конфигурацию загрузки</a>
+            <a href="./build/track-all-configs/index.html">Вёрстка Все конфигурации загрузки</a>
+            <a href="./build/track-config-info/index.html">Вёрстка Конфигурация &#10230; Сведения</a>
+            <a href="./build/track-config-fields/index.html">Вёрстка Конфигурация &#10230; Поля</a>
+            <a href="./build/track-all-import-results/index.html">Вёрстка Результаты импорта</a>
+            <a href="./build/track-import-result/index.html">Вёрстка Результат импорта</a>
+
+        </div>
         <h2>13. 404 page</h2>
-        <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/?node-id=586%3A25088 ">404 ошибка в Figma</a>
-        <a href="./build/track-404/index.html ">Вёрстка 404 ошибка</a>
+        <a href="https://www.figma.com/file/mPmiJDB46EtViEuU5yvfGa/?node-id=586%3A25088">404 ошибка в Figma</a>
+        <a href="./build/track-404/index.html">Вёрстка 404 ошибка</a>
     </div>
 </body>
 

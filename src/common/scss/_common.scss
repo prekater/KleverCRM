@@ -29,23 +29,6 @@ html {
     }
 }
 
-.main-block {
-    transition: padding 0.5s;
-    &_padding {
-        padding-top: 60px;
-        padding-left: 70px;
-        @media (max-width: 991.9px) {
-            padding-left: 0;
-        }
-    }
-    &_full-width {
-        width: 100%;
-        @media (max-width: 991.9px) {
-            width: 100vw;
-        }
-    }
-}
-
 .flex-row {
     @include flex(row);
     &_adaptive-width {
@@ -74,6 +57,9 @@ html {
     }
     &_full-width {
         width: 100%;
+        @media (max-width: 991.9px) {
+            width: 100vw;
+        }
     }
     &_full-height {
         height: 100%;
@@ -675,11 +661,13 @@ html {
         @include cardElevation();
     }
     &__cell {
+        text-decoration: none;
         // border: 1px solid yellow;
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
         color: $textsecondary;
+        text-decoration: none;
         &_green {
             color: $green;
         }
