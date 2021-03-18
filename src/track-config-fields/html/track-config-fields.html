@@ -1,0 +1,415 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+
+    <div class="all-items-page all-items-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
+        <div class="item-header">
+            <a class="to-all-items-from-item to-all-items-from-item_padding flex-row flex-row_start" href="./../track-all-configs/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к конфигурациям" class="to-all-items-from-item__img" /> Все конфигурации загрузки
+            </a>
+
+            <div class="item-cover-and-name item-cover-and-name_margin">
+                <div class="item-name flex-column">
+                    <span class="item-name__name">Сведения</span>
+                </div>
+                <div class="item-buttons">
+                    <a class="item-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать конфигурацию" class="item-button__img">
+                        <span class="item-button__text">Редактировать</span>
+                    </a>
+                    <a class="item-button" id="config-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить конфигурацию" class="item-button__img">
+                        <span class="item-button__text">Удалить</span>
+                    </a>
+                    <a class="item-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать конфигурацию" class="item-button__img">
+                        <span class="item-button__text">Деактивировать</span>
+                    </a>
+                </div>
+                <img src="./images/ellipses.svg" alt="Меню конфигурации" class="item-cover-and-name__ellipses">
+            </div>
+
+
+            <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_between">
+                <div class="tabs tabs_config-fields">
+                    <a class="tabs__tab" href="./../track-config-info/index.html">Сведения</a>
+                    <a class="tabs__tab  tabs__tab_active">Поля</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="all-items-block">
+            <div class="container-tablet">
+                <div class="config-fields-table config-fields-table_margin config-fields-table_padding block block_rounded">
+                    <div class="all-items-table-header all-items-table-header_config-fields">
+                        <div class="all-items-table-header__cell all-items-table-header__cell_black">Имя столбца<span class="arrow arrow_down"></span> </div>
+                        <div class="all-items-table-header__cell">Сущность</div>
+                        <div class="all-items-table-header__cell">Поле</div>
+                        <div class="all-items-table-header__cell">Предопределенное значение</div>
+                        <div class="all-items-table-header__cell">Ключевое поле</div>
+                        <div class="all-items-table-header__cell">Связь
+                        </div>
+                        <div class="all-items-table-header__cell">
+                        </div>
+                        <div class="all-items-table-header__cell cell-for-tablet-align">
+                        </div>
+
+
+                    </div>
+                    <div class="container">
+                        <div class="content">
+                            <div class="all-items-table-row all-items-table-row_config-fields">
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Дата окончания договора</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">KleverCrm.Domain.Entities.Contract</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">ContractEndDate</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text"></div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Да</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Нет</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_between">
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
+                                    </a>
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/delete_bg.svg" alt="Удалить контракт" />
+                                    </a>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical cell-for-tablet-align">
+                                </div>
+                            </div>
+
+
+
+
+                            <!-- начало множества строк -->
+                            <div class="all-items-table-row all-items-table-row_config-fields">
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Дата окончания договора</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">KleverCrm.Domain.Entities.Contract</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">ContractEndDate</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text"></div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Да</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Нет</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_between">
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
+                                    </a>
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/delete_bg.svg" alt="Удалить контракт" />
+                                    </a>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical cell-for-tablet-align">
+                                </div>
+                            </div>
+                            <div class="all-items-table-row all-items-table-row_config-fields">
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Дата окончания договора</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">KleverCrm.Domain.Entities.Contract</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">ContractEndDate</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text"></div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Да</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Нет</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_between">
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
+                                    </a>
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/delete_bg.svg" alt="Удалить контракт" />
+                                    </a>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical cell-for-tablet-align">
+                                </div>
+                            </div>
+                            <div class="all-items-table-row all-items-table-row_config-fields">
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Дата окончания договора</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">KleverCrm.Domain.Entities.Contract</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">ContractEndDate</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text"></div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Да</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Нет</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_between">
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
+                                    </a>
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/delete_bg.svg" alt="Удалить контракт" />
+                                    </a>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical cell-for-tablet-align">
+                                </div>
+                            </div>
+                            <div class="all-items-table-row all-items-table-row_config-fields">
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Дата окончания договора</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">KleverCrm.Domain.Entities.Contract</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">ContractEndDate</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text"></div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Да</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Нет</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_between">
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
+                                    </a>
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/delete_bg.svg" alt="Удалить контракт" />
+                                    </a>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical cell-for-tablet-align">
+                                </div>
+                            </div>
+                            <div class="all-items-table-row all-items-table-row_config-fields">
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Дата окончания договора</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">KleverCrm.Domain.Entities.Contract</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">ContractEndDate</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text"></div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Да</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Нет</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_between">
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
+                                    </a>
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/delete_bg.svg" alt="Удалить контракт" />
+                                    </a>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical cell-for-tablet-align">
+                                </div>
+                            </div>
+                            <div class="all-items-table-row all-items-table-row_config-fields">
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Дата окончания договора</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">KleverCrm.Domain.Entities.Contract</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">ContractEndDate</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text"></div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Да</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Нет</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_between">
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
+                                    </a>
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/delete_bg.svg" alt="Удалить контракт" />
+                                    </a>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical cell-for-tablet-align">
+                                </div>
+                            </div>
+                            <div class="all-items-table-row all-items-table-row_config-fields">
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Дата окончания договора</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">KleverCrm.Domain.Entities.Contract</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">ContractEndDate</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text"></div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Да</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Нет</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_between">
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
+                                    </a>
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/delete_bg.svg" alt="Удалить контракт" />
+                                    </a>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical cell-for-tablet-align">
+                                </div>
+                            </div>
+                            <div class="all-items-table-row all-items-table-row_config-fields">
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Дата окончания договора</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">KleverCrm.Domain.Entities.Contract</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">ContractEndDate</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text"></div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Да</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Нет</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_between">
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
+                                    </a>
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/delete_bg.svg" alt="Удалить контракт" />
+                                    </a>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical cell-for-tablet-align">
+                                </div>
+                            </div>
+                            <div class="all-items-table-row all-items-table-row_config-fields">
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Дата окончания договора</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">KleverCrm.Domain.Entities.Contract</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">ContractEndDate</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text"></div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Да</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical">
+                                    <div class="cell-text">Нет</div>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_between">
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/edit_bg.svg" alt="Редактировать контракт" />
+                                    </a>
+                                    <a class="all-items-table-button" href="#">
+                                        <img src="./images/delete_bg.svg" alt="Удалить контракт" />
+                                    </a>
+                                </div>
+                                <div class="all-items-table-row__cell flex-row flex-row_center-vertical cell-for-tablet-align">
+                                </div>
+                            </div>
+
+
+                            <!-- конец множества строк -->
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-delete">
+        <div class="popup-delete-confirm block block_rounded">
+            <a href=" #close" title="Close" class="popup-delete__close">×</a>
+            <div class="popup-delete__text">Вы действительно хотите удалить конфигурацию?</div>
+
+            <button class="popup-delete__button popup-delete__button_cancel" type="button">Отмена</button>
+            <button class="popup-delete__button popup-delete__button_confirm" type="button">Удалить</button>
+
+        </div>
+    </div>
+
+    <div class="popup-config">
+        <div class="popup-config-menu flex-column">
+            <div class="popup-config-menu__header flex-row flex-row_between flex-row_center-vertical">
+                Редактирование конфигурации
+                <a href=" #close" title="Close" class="popup-config__close">×</a>
+            </div>
+            <div class="popup-config-buttons flex-column">
+                <a class="popup-config-button">
+                    <img src="./images/edit.svg" alt="Редактировать конфигурацию" class="popup-config-button__img">
+                    <span class="popup-config-button__text">Редактировать</span>
+                </a>
+                <a class="popup-config-button" id="config-delete_btn-mobile">
+                    <img src="./images/delete.svg" alt="Удалить конфигурацию" class="popup-config-button__img">
+                    <span class="popup-config-button__text">Удалить</span>
+                </a>
+                <a class="popup-config-button">
+                    <img src="./images/deactivate.svg" alt="Деактивировать конфигурацию" class="popup-config-button__img">
+                    <span class="popup-config-button__text">Деактивировать</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script defer src="../track-config-fields/scripts/jquery.mCustomScrollbar.js"></script>
+<script defer src="../track-config-fields/scripts/index.js"></script>
