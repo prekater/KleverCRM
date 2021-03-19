@@ -22,41 +22,42 @@
    }
 
 
-   //подтверждение удаления конфигурации
+   //добавление поля конфигурации
    $(function() {
-       popupDeleteOverlay = $('.popup-delete')
-       popupConfirm = $(".popup-delete-confirm")
-       $('#config-delete_btn').on("click", function() {
-           popupDeleteOverlay.css('display', 'flex')
+       popupAddFieldOverlay = $('.popup-add-field')
+       popupConfirm = $(".popup-add-field-confirm")
+       $('#add_field').on("click", function() {
+           console.log("qeqweqweqwe");
+           popupAddFieldOverlay.css('display', 'flex')
            $('body').css('overflow', 'hidden')
            popupConfirm.css('animation', 'translating 0.3s linear 1')
        });
-       $('#config-delete_btn-mobile').on("click", function() {
-           popupDeleteOverlay.css('display', 'flex')
+       $('#add_field-mobile').on("click", function() {
+           popupAddFieldOverlay.css('display', 'flex')
            $('body').css('overflow', 'hidden')
            popupConfirm.css('animation', 'translating 0.3s linear 1')
        });
-       popupDeleteOverlay.click(function(event) {
+       popupAddFieldOverlay.click(function(event) {
            e = event || window.event
            if (e.target === this) {
-               popupDeleteOverlay.css('display', 'none')
+               popupAddFieldOverlay.css('display', 'none')
                $('body').css('overflow', 'auto')
            }
        })
 
-       $('.popup-delete__close').on("click", function() {
-           popupDeleteOverlay.css('display', 'none')
+       $('.popup-config__close').on("click", function() {
+           popupAddFieldOverlay.css('display', 'none')
            $('body').css('overflow', 'auto')
        });
 
-       $('.popup-delete__button_cancel').on("click", function() {
-           popupDeleteOverlay.css('display', 'none')
+       $('.popup-config__button_cancel').on("click", function() {
+           popupAddFieldOverlay.css('display', 'none')
            $('body').css('overflow', 'auto')
        });
 
-       $('.popup-delete__button_confirm').on("click", function() {
+       $('.popup-config__button_confirm').on("click", function() {
            console.log("Наташ, мы всё удалили");
-           popupDeleteOverlay.css('display', 'none')
+           popupAddFieldOverlay.css('display', 'none')
            $('body').css('overflow', 'auto')
 
        });

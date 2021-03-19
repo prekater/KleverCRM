@@ -6,11 +6,11 @@
                 <img src="./images/arrow_to_left.svg" alt="Вернуться к конфигурациям" class="to-all-items-from-item__img" /> Все конфигурации загрузки
             </a>
 
-            <div class="item-cover-and-name item-cover-and-name_margin">
-                <div class="item-name flex-column">
+            <div class="item-cover-and-name item-cover-and-name_margin item-cover-and-name_config-info">
+                <div class="item-name item-name_config-info flex-column">
                     <span class="item-name__name">Сведения</span>
                 </div>
-                <div class="item-buttons">
+                <div class="item-buttons item-buttons_config-info">
                     <a class="item-button" tooltip="Редактировать">
                         <img src="./images/edit.svg" alt="Редактировать конфигурацию" class="item-button__img">
                         <span class="item-button__text">Редактировать</span>
@@ -29,10 +29,14 @@
 
 
             <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_between">
-                <div class="tabs tabs_config-fields">
+                <div class="tabs tabs_config-info">
                     <a class="tabs__tab" href="./../track-config-info/index.html">Сведения</a>
                     <a class="tabs__tab  tabs__tab_active">Поля</a>
                 </div>
+                <a class="btn add-field flex-row flex-row_center-vertical flex-row_center" id="add_field">
+                    <img src="./images/incomes.svg" alt="Добавить поле" class="add-field__img" />
+                    <span class="add-field__text">Добавить поле</span>
+                </a>
             </div>
         </div>
 
@@ -386,6 +390,33 @@
         </div>
     </div>
 
+    <div class="popup-add-field">
+        <div class="popup-add-field-confirm block block_rounded">
+            <a href=" #close" title="Close" class="popup-add-field__close">×</a>
+            <div class="popup-add-field-form">
+                <div class="field flex-column">
+                    <label for="contract" class="field__label">Договор</label>
+                    <input type="text" class="field__input_text">
+                </div>
+                <div class="field flex-column">
+                    <label for="contract" class="field__label">Договор</label>
+                    <input type="text" class="field__input_text">
+                </div>
+                <div class="field flex-column">
+                    <label for="contract" class="field__label">Договор</label>
+                    <input type="text" class="field__input_text">
+                </div>
+                <div class="popup-add-field-form-two-buttons">
+                    <button class="popup-add-field__button popup-add-field__button_confirm" type="button">Сохранить</button>
+                    <button class="popup-add-field__button popup-add-field__button_cancel" type="button">Отмена</button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
     <div class="popup-config">
         <div class="popup-config-menu flex-column">
             <div class="popup-config-menu__header flex-row flex-row_between flex-row_center-vertical">
@@ -404,6 +435,10 @@
                 <a class="popup-config-button">
                     <img src="./images/deactivate.svg" alt="Деактивировать конфигурацию" class="popup-config-button__img">
                     <span class="popup-config-button__text">Деактивировать</span>
+                </a>
+                <a class="popup-config-button" id="add_field_mobile">
+                    <img src="./images/incomes.svg" alt="Добавить трек" class="popup-config-button__img" />
+                    <div class="popup-config-button__text">Добавить поле</div>
                 </a>
             </div>
         </div>
