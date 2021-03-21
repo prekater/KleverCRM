@@ -1,31 +1,29 @@
-//подтверждение удаления перенесено в общий скрипт 
-
 //меню приложения в мобильном
 $(function() {
     if ($(window).width() <= 575.9) {
-        $('.cover-and-name__ellipses').on("click", function() {
-            $('.popup-application').css('display', 'block')
+        $('#ellipses_track').on("click", function() {
+            $('.popup-track').css('display', 'block')
             $('body').css('overflow', 'hidden')
-            $(".popup-application-menu").css('animation', 'translating 0.3s linear 1')
+            $(".popup-track-menu").css('animation', 'translating 0.3s linear 1')
         });
 
-        $('.popup-application').on("click", function(event) {
+        $('.popup-track').on("click", function(event) {
             e = event || window.event
             if (e.target === this) {
-                $('.popup-application').css('display', 'none')
+                $('.popup-track').css('display', 'none')
                 $('body').css('overflow', 'auto')
             }
 
         })
 
-        $('.popup-application').on("click", function() {
-            $('.popup-application').css('display', 'none')
+        $('.popup-track').on("click", function() {
+            $('.popup-track').css('display', 'none')
             $('body').css('overflow', 'auto')
         });
 
 
-        $('#item-delete_btn-mobile').on("click", function() {
-            $(".popup-application").hide()
+        $('#track-delete_btn-mobile').on("click", function() {
+            $(".popup-track").hide()
             $(".popup-delete").css('display', 'flex')
             $(".popup-delete-confirm").css('animation', 'translating 0.3s linear 1')
 

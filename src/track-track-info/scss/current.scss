@@ -1,82 +1,391 @@
 @import "./../../common/scss/variables";
-.main-block {
-    transition: padding 0.5s;
-    &_padding {
-        padding-top: 60px;
-        padding-left: 70px;
-        @media (max-width: 991.9px) {
-            padding-left: 0;
+.item-cover-and-name_track {
+    @include grid(auto 1fr auto, auto, 1.625vw, 0);
+    @media (max-width: 991.9px) {
+        @include grid (auto 1fr, auto, 26px, 14px);
+    }
+    @media (max-width: 575.9px) {
+        margin-left: 0;
+        margin-right: 0;
+        @include grid (84px auto, auto, 26px, 14px);
+    }
+}
+
+.item-cover-and-name__cover_track {
+    @media (max-width: 575.9px) {
+        &>img {
+            width: 84px;
+            height: 84px;
         }
     }
 }
 
-.tabs_application {
-    @include grid(auto auto auto, auto, 2.625vw, auto);
+.item-name_track {
+    @media (max-width: 991.9px) {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+}
+
+.item-buttons_track {
+    @media (max-width: 991.9px) {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+}
+
+.tabs_track {
+    @include grid(min-content min-content min-content min-content, auto, 2.625vw, 0);
     align-items: baseline;
     @media (max-width: 575.9px) {
         width: 100%;
-        @include grid(auto auto auto, 26px, 42px, auto);
+        @include grid(min-content min-content min-content min-content, auto, 42px, 0);
     }
 }
 
-.item-info-block {
-    @include grid (1fr 1fr auto, auto auto 230px auto, 4.5vw, 3.25vh);
+#tab-track-sales,
+#tab-track-stat {
     @media (max-width: 991.9px) {
-        @include grid (1fr 1fr, auto auto auto 220px auto, 65px, 14px);
+        display: none;
+    }
+}
+
+.download-phonogram {
+    border: none;
+    width: 200px;
+    height: 36px;
+    &__img {
+        margin-right: 10.8px;
+    }
+    &__text {
+        @include fontSize(13, 16, 400);
     }
     @media (max-width: 575.9px) {
-        @include grid (1fr, auto, 0, 7px);
+        display: none;
     }
 }
 
-.item-info-block-grid-cell {
-    &_app-requisites {
-        grid-column: 1 / span 2;
+.track-info-block {
+    width: 95%;
+    @include fontSize(14, 20, 400);
+    @include grid (1fr, auto, 0, 4.4vh);
+    @media (max-width: 991.9px) {
+        width: 100vw;
+        border-radius: 0px;
+        @include grid (1fr, auto, 0, 30px);
+    }
+    @media (max-width: 575.9px) {
+        @include grid (1fr, auto, 0, 24px);
+    }
+    &_padding {
+        padding: 5.5vh 3.9vw 5.5vh 4.7vw;
         @media (max-width: 991.9px) {
-            grid-column: 1 / span 2;
+            padding: 34px 20px 31px 20px;
         }
         @media (max-width: 575.9px) {
-            grid-column: 1 / 2;
+            padding: 18px;
         }
     }
-    &_app-created {
-        // grid-column: 1 / 2;
-        grid-row: 4 / 5;
+    &__title {
+        @include fontSize(14, 20, 700);
+        grid-column: 1/4;
+        justify-items: flex-start;
         @media (max-width: 991.9px) {
-            //  grid-column: 1 / span 2;
-            grid-row: 5 / 6;
+            grid-column: 1/3;
         }
         @media (max-width: 575.9px) {
-            grid-column: 1 / 2;
-            grid-row: 8 / 9;
-        }
-    }
-    &_app-changed {
-        //  grid-column: 2 / 3;
-        grid-row: 4 / 5;
-        @media (max-width: 991.9px) {
-            // grid-column: 1 / span 2;
-            grid-row: 5 / 6;
-        }
-        @media (max-width: 575.9px) {
-            grid-column: 1 / 2;
-            grid-row: 9 / 10;
+            grid-column: 1/2;
+            margin-bottom: 20px;
         }
     }
 }
 
-.item-info-block-info-cell {
-    &_app-requisites {
-        height: 100%;
-        margin-right: 75px;
+.cell {
+    &-singer {
         @media (max-width: 575.9px) {
+            grid-row: 1/2;
+        }
+    }
+    &-duration {
+        @media (max-width: 575.9px) {
+            grid-row: 4/5;
+        }
+    }
+    &-app {
+        @media (max-width: 575.9px) {
+            grid-row: 3/4;
+        }
+    }
+    &-release {
+        @media (max-width: 575.9px) {
+            grid-row: 2/3;
+        }
+    }
+}
+
+.track-info-block-main {
+    border-bottom: 1px solid $line;
+    @media (max-width: 575.9px) {
+        width: 95%;
+    }
+    &_padding {
+        padding-bottom: 35px;
+    }
+}
+
+.track-info-main-desktop {
+    width: 100%;
+    height: 100%;
+    @include grid(auto auto auto, auto, 2.7vw, 3.25vh);
+    @media (max-width: 991.9px) {
+        display: none;
+    }
+}
+
+.track-info-main-mobile {
+    display: none;
+    @media (max-width: 991.9px) {
+        @include grid(1fr 1fr, auto, 100px, 0);
+    }
+    @media (max-width: 575.9px) {
+        @include grid(1fr, auto, 0, 0);
+    }
+}
+
+.wrapper-for-line {
+    display: none;
+    @media (max-width: 991.9px) {
+        @include grid(1.5fr 1fr, auto, 0, 0);
+        border-bottom: 1px solid $line;
+        grid-column: 1/3;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 575.9px) {
+        @include grid(1fr, auto, 0, 0);
+        grid-column: 1/2;
+        width: 95%;
+    }
+}
+
+.item-info-block-cell-img {
+    @include grid(auto 1fr, auto, 14px, 0);
+}
+
+.item-img {
+    width: 40px;
+    height: 40px;
+}
+
+.item-row-cell {
+    //border: 1px solid #000;
+    @include grid (1fr 150px, auto, 20px, 14px);
+    align-content: flex-end;
+    .item-info-block-info-cell__text {
+        align-self: flex-end;
+    }
+}
+
+.track-info-block-profit {
+    border-bottom: 1px solid $line;
+    @include grid (1fr, auto, 0, 1.5vh);
+    &_margin {
+        margin-top: 4vh;
+    }
+    &_padding {
+        padding-bottom: 35px;
+    }
+    @media (max-width: 575.9px) {
+        @include grid (1fr, auto, 0, 0);
+        width: 95%;
+    }
+}
+
+.track-profit-info-grid {
+    @include grid (1fr 1fr, auto, 5px, 5px);
+    @media (max-width: 575.9px) {
+        @include grid (1fr, auto, 0, 0);
+    }
+}
+
+.profit-info-title {
+    font-weight: 700;
+    @media (max-width: 575.9px) {
+        padding-left: 20px;
+        margin-bottom: 25px;
+    }
+}
+
+.profit-info-cell {
+    height: 34px;
+    @include grid (1fr 1fr, auto, 0, 0);
+    @media (max-width: 991.9px) {
+        @include grid (185px auto, auto, 0, 0);
+    }
+    &_margin {
+        margin-bottom: 15px;
+    }
+    &_margin-left {
+        @media (max-width: 575.9px) {
+            margin-left: 7px;
+        }
+    }
+    @media (max-width: 575.9px) {
+        padding: 7px 16px 8px 0px;
+        height: auto;
+        @include grid (1fr 1fr, 1fr, 0, 0);
+        align-items: stretch;
+    }
+}
+
+.info-cell {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 17px 8px 22px;
+    @media (max-width: 991.9px) {
+        padding: 8px 11px 8px 11px;
+    }
+    @media (max-width: 575.9px) {
+        grid-column: 1/2;
+        @include grid (1fr 1fr, auto, 0, 14px);
+        align-content: flex-end;
+    }
+    &_gray {
+        border-radius: 12px;
+        background-color: $main-bg;
+    }
+    &_margin {
+        margin-right: 33px;
+    }
+    &__title {
+        color: $textsecondary;
+        &_profit {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: right;
+            @media (max-width: 575.9px) {
+                justify-content: flex-start;
+                //padding-left: 11px;
+                height: 100%;
+                text-align: left;
+            }
+        }
+        &_padding {
+            padding-left: 22px;
+            @media (max-width: 575.9px) {
+                padding-left: 11px;
+            }
+        }
+    }
+    &__text {
+        &_green {
+            color: $green;
+        }
+        &_bold {
+            font-weight: 700;
+        }
+        &_right {
+            justify-self: end;
+        }
+        &_padding {
+            padding-left: 35px;
+            @media (max-width: 575.9px) {
+                padding-left: 15px;
+            }
+        }
+        &_profit {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             height: 100%;
-            margin-right: 0;
+        }
+        @media (max-width: 575.9px) {
+            align-self: flex-end;
         }
     }
 }
 
-.popup-application {
+.marked-title {
+    height: 100%;
+    background-color: $main-bg;
+    border-radius: 12px 0 0 12px;
+    position: relative;
+    @include flexCenter(row);
+    padding-left: 20px;
+    z-index: 1;
+    &::after {
+        content: " ";
+        background-color: $main-bg;
+        width: 80px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 99%;
+        z-index: 0;
+    }
+    @media (max-width: 575.9px) {
+        padding-left: 11px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+
+.marked-text {
+    @include flexCenter(row);
+    height: 100%;
+    background-color: $main-bg;
+    border-radius: 0 12px 12px 0;
+    z-index: 1;
+    padding-right: 16px;
+    @media (max-width: 575.9px) {
+        padding-right: 16px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        align-items: flex-end;
+    }
+}
+
+.track-info-block-track {
+    @include grid(1fr 1fr, auto, 75px, 30px);
+    .track-info-block__title {
+        grid-column: 1/3;
+        @media (max-width: 575.9px) {
+            grid-column: 1/2;
+        }
+    }
+    padding-right: 20px;
+    @media (max-width: 575.9px) {
+        @include grid(1fr, auto, 0, 30px);
+    }
+}
+
+.cell {
+    &-text {
+        @media (max-width: 991.9px) {
+            justify-self: center;
+            width: 400px;
+            grid-column: 1/3;
+        }
+        @media (max-width: 575.9px) {
+            width: auto;
+            grid-column: 1/2;
+        }
+    }
+    &-promo {
+        @media (max-width: 991.9px) {
+            justify-self: center;
+            width: 400px;
+            grid-column: 1/3;
+        }
+        @media (max-width: 575.9px) {
+            width: auto;
+            grid-column: 1/2;
+        }
+    }
+}
+
+.popup-track {
     display: none;
     @include fontSize(14, 20, 400);
     padding: 0;
@@ -131,7 +440,7 @@
         }
     }
     &-buttons {
-        @include grid(1fr, 44px 44px 44px, 0, 0);
+        @include grid(1fr, 44px 44px 44px 54px, 0, 0);
         justify-items: start;
     }
     &-button {
@@ -149,6 +458,9 @@
             height: 18px;
             width: 18px;
             margin-left: 20px;
+        }
+        &:last-child {
+            background: $main-gradient;
         }
     }
 }

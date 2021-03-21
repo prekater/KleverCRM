@@ -125,7 +125,7 @@
     @media (max-width: 575.9px) {
         grid-column: 1/2;
         @include grid (1fr 1fr, auto, 0, 14px);
-        align-content: e;
+        align-content: flex-end;
     }
     &_wide {
         grid-column: 1/4;
