@@ -75,30 +75,40 @@
     border-collapse: collapse;
 }
 
-td,
-th {
+.table-header,
+.track-profit-table__row {
+    border-bottom: 1px solid $line;
+}
+
+.track-profit-table__row:hover {
+    background-color: $line;
+}
+
+.table-header__cell,
+.table-body__cell {
     //border: 1px solid #000;
     width: 16.6%;
     padding: 16px 5px 16px 5px;
 }
 
-th {
+.table-header__cell {
     text-align: left;
+    &_gray {
+        color: $textsecondary;
+    }
 }
 
-thead,
-tr {
-    border-bottom: 1px solid $line;
-}
-
-.bold-text {
-    font-weight: 700;
-}
-
-.gray-text {
-    color: $textsecondary;
-}
-
-.track-profit-table__row:hover {
-    background-color: $line;
+.table-body__cell {
+    &_gray {
+        color: $textsecondary;
+    }
+    &_bold {
+        font-weight: 700;
+    }
+    &:first-child {
+        text-align: left;
+    }
+    &:not(:first-child) {
+        text-align: right;
+    }
 }

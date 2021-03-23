@@ -127,6 +127,22 @@ gulp.task('moduleCustomScrollbar', async() => {
     })
 })
 
+gulp.task('moduleTableSorter', async() => {
+    const folders = getFolders('./build');
+    return folders.map((folder) => {
+        gulp
+            .src('./src/common/scripts/jquery.tablesorter.js')
+            // .pipe(uglify())
+            .pipe(rename((p) => ({
+                dirname: `./${folder}/scripts`,
+                basename: p.basename,
+                extname: p.extname
+            })))
+            .pipe(gulp.dest('./build'));
+    })
+})
+
+
 gulp.task('scripts', async() => {
     const folders = getFolders('./build');
 
@@ -221,5 +237,5 @@ gulp.task('watch', (cb) => {
     cb();
 });
 
-gulp.task('start', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'moduleCustomScrollbar', 'scripts', 'watch', 'browser'));
-gulp.task('build', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'moduleCustomScrollbar', 'scripts', 'all-css', 'all-images', 'all-scripts', 'all-fonts', 'watch', 'browser'));
+gulp.task('start', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'moduleCustomScrollbar', 'moduleTableSorter', 'scripts', 'watch', 'browser'));
+gulp.task('build', gulp.series('scss', 'pug', 'images', 'common-images', 'fonts', 'moduleNiceSelect', 'moduleCustomScrollbar', 'moduleTableSorter', 'scripts', 'all-css', 'all-images', 'all-scripts', 'all-fonts', 'watch', 'browser'));
