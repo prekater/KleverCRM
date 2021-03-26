@@ -68,11 +68,24 @@
 .item-info-block_track-profit {
     width: 95%;
     padding: 15px 25px 15px 25px;
+    //   border: 1px solid #000;
+    position: relative;
+    overflow: auto;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // flex: 1 0 auto;
+    // width: 100%;
 }
 
 .track-profit-table {
     width: 100%;
     border-collapse: collapse;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    @media (max-width: 575.9px) {
+        width: 800px;
+    }
 }
 
 .table-header,
@@ -89,6 +102,10 @@
     //border: 1px solid #000;
     width: 16.6%;
     padding: 16px 5px 16px 5px;
+    @media (max-width: 575.9px) {
+        //width: 100px;
+        padding: 16px 25px 16px 5px;
+    }
 }
 
 .table-header__cell {
