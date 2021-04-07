@@ -1,0 +1,120 @@
+<div class="main-block main-block_padding flex-column flex-column_center flex-column_center-vertical flex-column_adaptive-height">
+
+    <div class="item-page item-page_padding flex-column flex-column_adaptive-height flex-column_top-vertical flex-column_center">
+        <div class="item-header">
+            <a class="to-all-items-from-item to-all-items-from-item_padding flex-row flex-row_start" href="./../track-all-singers/index.html">
+                <img src="./images/arrow_to_left.svg" alt="Вернуться к исполнителям" class="to-all-items__img" /> Все исполнители
+            </a>
+
+            <div class="item-cover-and-name item-cover-and-name_margin item-cover-and-name_singer">
+                <div class="cover-change">
+                    <div class="item-cover-and-name__cover">
+                        <img src="./images/cover1.jpg" alt="" class="cover-image">
+                    </div>
+                    <div class="cover-change__hover"></div>
+                </div>
+                <div class="item-name item-name_singer flex-column">
+                    <span class="item-name__singer">Исполнитель</span>
+                    <span class="item-name__name">Мельница</span>
+                </div>
+                <div class="item-buttons item-buttons_singer">
+                    <a class="item-button" tooltip="Редактировать">
+                        <img src="./images/edit.svg" alt="Редактировать исполнителя" class="item-button__img">
+                        <span class="item-button__text">Редактировать</span>
+                    </a>
+                    <a class="item-button" id="item-delete_btn" tooltip="Удалить">
+                        <img src="./images/delete.svg" alt="Удалить исполнителя" class="item-button__img">
+                        <span class="item-button__text">Удалить</span>
+                    </a>
+                    <a class="item-button" tooltip="Деактивировать">
+                        <img src="./images/deactivate.svg" alt="Деактивировать  исполнителя" class="item-button__img">
+                        <span class="item-button__text">Деактивировать</span>
+                    </a>
+                </div>
+                <img src="./images/ellipses.svg" alt="Меню исполнителя" class="item-cover-and-name__ellipses" id="ellipses_singer">
+            </div>
+
+            <div class="tabs-and-add tabs-and-add_margin flex-row flex-row_between flex-row_between">
+                <div class="tabs tabs_singer">
+                    <div class="tabs__tab tabs__tab_active" id="tab-singer-info">Сведения</div>
+                    <div class="tabs__tab" id="tab-singer-releases">Релизы</div>
+
+                    <div class="tabs__tab" id="tab-singer-tracks">Треки</div>
+                </div>
+                <div class="wrapper-for-adding-btns flex-row">
+                    <a class="btn add-release flex-row flex-row_center-vertical flex-row_center" href="./../track-adding-release/index.html">
+                        <img src="./images/releases_black.svg" alt="Добавить релиз" class="add-release__img" />
+                        <span class="add-release__text">Добавить релиз</span>
+                    </a>
+                    <a class="btn add-track flex-row flex-row_center-vertical flex-row_center" href="">
+                        <img src="./images/note.svg" alt="Добавить трек" class="add-track__img" />
+                        <span class="add-track__text">Добавить трек</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-info-block item-info-block_track-profit item-info-block_margin block block_rounded">
+            <table class="track-profit-table tablesorter">
+                <thead class="table-header">
+                    <th class="table-header__cell">Наименование</th>
+                    <th class="table-header__cell table-body__cell table-body__cell_gray">Доход с учетом НДС</th>
+                    <th class="table-header__cell table-body__cell table-body__cell_gray">Доля артиста</th>
+                    <th class="table-header__cell table-body__cell table-body__cell_gray">Доля лейбла</th>
+                    <th class="table-header__cell table-body__cell table-body__cell_gray">Дата отчета</th>
+                    <th class="table-header__cell table-body__cell table-body__cell_gray">Дата продажи</th>
+                </thead>
+                <tbody class="table-body">
+                    <tr class="track-profit-table__row">
+                        <td class="table-body__cell">
+                            <div class="cell-text cell-text_2rows">Alex Rudi Pell “Dont say goodbye, remember me”</div>
+                        </td>
+                        <td class="table-body__cell table-body__cell_bold">1 558 962 ₽ </td>
+                        <td class="table-body__cell">1 558 962 ₽</td>
+                        <td class="table-body__cell">1 558 962 ₽</td>
+                        <td class="table-body__cell table-body__cell_gray">8 сен 2020</td>
+                        <td class="table-body__cell table-body__cell_gray">8 сен 2020</td>
+                    </tr>
+                    <tr class="track-profit-table__row">
+                        <td class="table-body__cell">
+                            <div class="cell-text cell-text_2rows">“Dont say goodbye, remember me”</div>
+                        </td>
+                        <td class="table-body__cell table-body__cell_bold">3 558 962 ₽ </td>
+                        <td class="table-body__cell">1 558 962 ₽</td>
+                        <td class="table-body__cell">1 000 962 ₽</td>
+                        <td class="table-body__cell table-body__cell_gray">9 сен 2020</td>
+                        <td class="table-body__cell table-body__cell_gray">8 сен 2020</td>
+                    </tr>
+                    <tr class="track-profit-table__row">
+                        <td class="table-body__cell">
+                            <div class="cell-text cell-text_2rows">Rudi Pell “Dont say goodbye, remember me”</div>
+                        </td>
+                        <td class="table-body__cell table-body__cell_bold">1 500 962 ₽ </td>
+                        <td class="table-body__cell">1 558 002 ₽</td>
+                        <td class="table-body__cell">1 424 962 ₽</td>
+                        <td class="table-body__cell table-body__cell_gray">16 сен 2020</td>
+                        <td class="table-body__cell table-body__cell_gray">8 сен 2020</td>
+                    </tr>
+                    <tr class="track-profit-table__row">
+                        <td class="table-body__cell">
+                            <div class="cell-text cell-text_2rows">remember me”</div>
+                        </td>
+                        <td class="table-body__cell table-body__cell_bold">8 962 ₽ </td>
+                        <td class="table-body__cell">58 962 ₽</td>
+                        <td class="table-body__cell">1 562 ₽</td>
+                        <td class="table-body__cell table-body__cell_gray">8 окт 2020</td>
+                        <td class="table-body__cell table-body__cell_gray">8 сен 2020</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</div>
+
+<script defer src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script defer src="../track-track-profit/scripts/jquery.tablesorter.js"></script>
+<script defer src="../track-track-profit/scripts/index.js"></script>

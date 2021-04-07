@@ -117,23 +117,60 @@ $searchFormHeader.on("focusout", function() {
     }
 });
 
+$(document).on("ready", function() {
+    console.log(localStorage.getItem('open'))
+        // if (localStorage.getItem('open') == 'null') {
+        //     console.log('open=null')
+        // } else {
+        //     $sidebarExpanded.css("left", "-250px");
+        //     $sidebarCollapsed.css("left", "0");
+
+    //     $mainBlock.css("padding-left", "70px");
+    //     $searchForm.css("margin-left", "76px");
+    //     localStorage.setItem('open', false);
+    // }
+    if (localStorage.getItem('open') === 'true') {
+        // $sidebarExpanded.css("left", "0");
+        // $sidebarCollapsed.css("left", "-70px");
+        $sidebarExpanded.css("display", "block");
+        $mainBlock.css("padding-left", "226px");
+        $searchForm.css("margin-left", "232px");
+        localStorage.setItem('open', true);
+    } else {
+        // $sidebarExpanded.css("left", "-250px");
+        // $sidebarCollapsed.css("left", "0");
+        $sidebarCollapsed.css("display", "block");
+
+        $mainBlock.css("padding-left", "70px");
+        $searchForm.css("margin-left", "76px");
+        localStorage.setItem('open', false);
+    }
+});
+
 //боковое меню на планшете
 $(function() {
     if ($(window).width() >= 992) {
         $arrowToExpand.on("click", function() {
-            $sidebarExpanded.css("left", "0");
-            $sidebarCollapsed.css("left", "-70px");
+            // $sidebarExpanded.css("left", "0");
+            // $sidebarCollapsed.css("left", "-70px");
+            $sidebarExpanded.css("display", "block");
+            $sidebarCollapsed.css("display", "none");
+
             $mainBlock.css("padding-left", "226px");
             $searchForm.css("margin-left", "232px");
+            localStorage.setItem('open', true);
         });
         $arrowToCollapse.on("click", function() {
-            $sidebarExpanded.css("left", "-250px");
-            $sidebarCollapsed.css("left", "0");
+            // $sidebarExpanded.css("left", "-250px");
+            // $sidebarCollapsed.css("left", "0");
+            $sidebarExpanded.css("display", "none");
+            $sidebarCollapsed.css("display", "block");
 
             $mainBlock.css("padding-left", "70px");
             $searchForm.css("margin-left", "76px");
             inactivateProfitItem();
             inactivateSettingsItem();
+            localStorage.setItem('open', false);
         });
     }
 });

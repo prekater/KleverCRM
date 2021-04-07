@@ -15,14 +15,19 @@
 }
 
 .sidebar {
+    display: none;
     position: fixed;
-    left: -250px;
+    left: 0px;
     z-index: 101;
     box-shadow: $shadow;
     width: 226px;
     height: 100%;
     box-sizing: border-box;
     transition: all 0.5s;
+    @media (max-width: 991.9px) {
+        left: -250px;
+        width: 100%;
+    }
     @media (max-width: 575.9px) {
         left: -600px;
         width: 100%;
@@ -83,6 +88,7 @@
         overflow: auto;
     }
     &_collapsed {
+        display: none;
         width: 70px;
         left: 0;
         transition: 0.5s;
